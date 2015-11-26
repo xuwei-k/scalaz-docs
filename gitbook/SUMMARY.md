@@ -1,6 +1,8 @@
 - [Scalazとは](generated_src/overview.md)
 - [セットアップ](generated_src/setup.md)
+- [バイナリ互換とバージョン](generated_src/binary_compatibility.md)
 - [モジュール構成](generated_src/modules.md)
 - [NonEmptyList](generated_src/nel.md)
 - [\/](generated_src/disjunction.md)
 - [Validation](generated_src/validation.md)
+- [著者について](generated_src/about_author.md)
