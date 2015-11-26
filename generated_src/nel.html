@@ -49,11 +49,11 @@
         
         
     <div class="book"
-        data-level="4"
+        data-level="5"
         data-chapter-title="NonEmptyList"
         data-filepath="generated_src/nel.md"
         data-basepath=".."
-        data-revision="Thu Nov 26 2015 14:29:34 GMT+0000 (UTC)"
+        data-revision="Thu Nov 26 2015 16:28:54 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -112,14 +112,29 @@
             
         </li>
     
-        <li class="chapter " data-level="3" data-path="generated_src/modules.html">
+        <li class="chapter " data-level="3" data-path="generated_src/binary_compatibility.html">
+            
+                
+                    <a href="../generated_src/binary_compatibility.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        バイナリ互換とバージョン
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="generated_src/modules.html">
             
                 
                     <a href="../generated_src/modules.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.</b>
+                            <b>4.</b>
                         
                         モジュール構成
                     </a>
@@ -127,14 +142,14 @@
             
         </li>
     
-        <li class="chapter active" data-level="4" data-path="generated_src/nel.html">
+        <li class="chapter active" data-level="5" data-path="generated_src/nel.html">
             
                 
                     <a href="../generated_src/nel.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>4.</b>
+                            <b>5.</b>
                         
                         NonEmptyList
                     </a>
@@ -142,14 +157,14 @@
             
         </li>
     
-        <li class="chapter " data-level="5" data-path="generated_src/disjunction.html">
+        <li class="chapter " data-level="6" data-path="generated_src/disjunction.html">
             
                 
                     <a href="../generated_src/disjunction.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>5.</b>
+                            <b>6.</b>
                         
                         \/
                     </a>
@@ -157,16 +172,31 @@
             
         </li>
     
-        <li class="chapter " data-level="6" data-path="generated_src/validation.html">
+        <li class="chapter " data-level="7" data-path="generated_src/validation.html">
             
                 
                     <a href="../generated_src/validation.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>6.</b>
+                            <b>7.</b>
                         
                         Validation
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="generated_src/about_author.html">
+            
+                
+                    <a href="../generated_src/about_author.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        著者について
                     </a>
             
             
@@ -206,6 +236,46 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="nonemptylist">NonEmptyList</h1>
+<ul>
+<li><a href="https://github.com/scalaz/scalaz/blob/v7.1.5/core/src/main/scala/scalaz/NonEmptyList.scala" target="_blank">&#x30BD;&#x30FC;&#x30B9;&#x30B3;&#x30FC;&#x30C9;</a></li>
+<li><a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/scalaz/scalaz_2.11/7.1.5/scalaz_2.11-7.1.5-javadoc.jar/!/index.html#scalaz.NonEmptyList" target="_blank">scaladoc</a></li>
+<li>&#x540D;&#x524D;&#x306E;&#x901A;&#x308A;&#x3001;<strong>Non Empty</strong>&#x306A;List&#x3067;&#x3059;&#x3002;&#x8981;&#x7D20;&#x304C;1&#x3064;&#x4EE5;&#x4E0A;&#x306A;&#x3053;&#x3068;&#x304C;&#x5FC5;&#x305A;&#x4FDD;&#x8A3C;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;</li>
+<li>&#x5185;&#x90E8;&#x5B9F;&#x88C5;&#x306F;&#x3001;&#x4EE5;&#x4E0B;&#x306E;&#x3082;&#x306E;&#x304C;&#x4F7F;&#x308F;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;<ul>
+<li><code>7.1.x</code> &#x307E;&#x3067;&#x306F;Scala&#x6A19;&#x6E96;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x306E;List</li>
+<li><code>7.2.x</code> &#x4EE5;&#x964D;&#x306F;&#x3001;Scalaz&#x72EC;&#x81EA;&#x306E;IList(&#x6027;&#x80FD;&#x7279;&#x6027;&#x306F;&#x6A19;&#x6E96;&#x306E;List&#x3068;&#x540C;&#x3058;)</li>
+</ul>
+</li>
+<li>&#x4E0A;&#x8A18;&#x306E;&#x3088;&#x3046;&#x306A;&#x5185;&#x90E8;&#x5B9F;&#x88C5;&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x308B;&#x306E;&#x3067;&#x3001;&#x6027;&#x80FD;&#x7279;&#x6027;&#x3082;List&#x3068;&#x540C;&#x3058;&#x3067;&#x3059;&#x3002;&#x3064;&#x307E;&#x308A;<ul>
+<li>&#x5148;&#x982D;&#x306E;&#x8981;&#x7D20;&#x3078;&#x306E;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x306F;&#x5B9A;&#x6570;&#x6642;&#x9593;</li>
+<li>&#x672B;&#x5C3E;&#x306E;&#x8981;&#x7D20;&#x3078;&#x306E;&#x30A2;&#x30AF;&#x30BB;&#x30B9;&#x3001;&#x672B;&#x5C3E;&#x3078;&#x306E;&#x8FFD;&#x52A0;&#x3001;size&#x306E;&#x53D6;&#x5F97;&#x306A;&#x3069;&#x306F;&#x3001;&#x9577;&#x3055;&#x306B;&#x6BD4;&#x4F8B;&#x3057;&#x305F;&#x6642;&#x9593;&#x304C;&#x304B;&#x304B;&#x308B;</li>
+</ul>
+</li>
+<li>&#x3044;&#x304F;&#x3064;&#x304B;&#x306E;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306E;&#x4F7F;&#x7528;&#x4F8B;&#x3092;&#x66F8;&#x3044;&#x3066;&#x304A;&#x304D;&#x307E;&#x3059;</li>
+</ul>
+<pre><code class="lang-scala">scala&gt; <span class="hljs-keyword">import</span> scalaz._
+<span class="hljs-keyword">import</span> scalaz._
+
+scala&gt; <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">a</span> =</span> <span class="hljs-type">NonEmptyList</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>) <span class="hljs-comment">// apply&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306B;&#x3088;&#x308B;&#x751F;&#x6210;</span>
+a: scalaz.<span class="hljs-type">NonEmptyList</span>[<span class="hljs-type">Int</span>] = <span class="hljs-type">NonEmptyList</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>)
+
+scala&gt; <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">b</span> =</span> <span class="hljs-number">100</span> &lt;:: a <span class="hljs-comment">// &#x5148;&#x982D;&#x3078;&#x4E00;&#x3064;&#x8FFD;&#x52A0;</span>
+b: scalaz.<span class="hljs-type">NonEmptyList</span>[<span class="hljs-type">Int</span>] = <span class="hljs-type">NonEmptyList</span>(<span class="hljs-number">100</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>)
+
+scala&gt; a.head <span class="hljs-comment">// &#x5148;&#x982D;&#x3092;&#x53D6;&#x308A;&#x51FA;&#x3057;</span>
+res0: <span class="hljs-type">Int</span> = <span class="hljs-number">1</span>
+
+scala&gt; a.size <span class="hljs-comment">// &#x30B5;&#x30A4;&#x30BA;&#x53D6;&#x5F97;</span>
+res1: <span class="hljs-type">Int</span> = <span class="hljs-number">3</span>
+
+scala&gt; a.reverse <span class="hljs-comment">// &#x53CD;&#x8EE2;</span>
+res2: scalaz.<span class="hljs-type">NonEmptyList</span>[<span class="hljs-type">Int</span>] = <span class="hljs-type">NonEmptyList</span>(<span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>)
+
+scala&gt; a.map(_ + <span class="hljs-number">1</span>) <span class="hljs-comment">// &#x8981;&#x7D20;&#x3092;map</span>
+res3: scalaz.<span class="hljs-type">NonEmptyList</span>[<span class="hljs-type">Int</span>] = <span class="hljs-type">NonEmptyList</span>(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>)
+
+scala&gt; a.flatMap(x =&gt; <span class="hljs-type">NonEmptyList</span>(x, x + <span class="hljs-number">10</span>)) <span class="hljs-comment">// Monad&#x3067;&#x3042;&#x308A;&#x3001;flatMap&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x304C;&#x3042;&#x308B;</span>
+res4: scalaz.<span class="hljs-type">NonEmptyList</span>[<span class="hljs-type">Int</span>] = <span class="hljs-type">NonEmptyList</span>(<span class="hljs-number">1</span>, <span class="hljs-number">11</span>, <span class="hljs-number">2</span>, <span class="hljs-number">12</span>, <span class="hljs-number">3</span>, <span class="hljs-number">13</span>)
+</code></pre>
 
                     
                     </section>
