@@ -1,0 +1,26 @@
+*.png.bak
+*.asta.bak
+*~
+.DS_Store
+
+### gitbook ###
+gitbook/generated_src
+gitbook/_book
+gitbook/book.epub
+gitbook/book.pdf
+
+### npm ###
+node_modules
+npm-debug.log
+
+### sbt ###
+target/
+lib_managed/
+src_managed/
+project/boot/
+.history
+.cache
+
+### IntelliJ ###
+*.iml
+.idea/

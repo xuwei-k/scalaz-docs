@@ -1,0 +1,11 @@
+{
+  "structure": {
+    "readme": "INTRODUCTION.md",
+    "summary": "SUMMARY.md"
+  },
+  "plugins": [
+    "include-codeblock",
+    "japanese-support",
+    "footnote-string-to-number"
+  ]
+}

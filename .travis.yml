@@ -1,0 +1,40 @@
+sudo: false
+language: scala
+jdk:
+- oraclejdk8
+before_install:
+- npm install
+cache:
+  directories:
+  - $HOME/.ivy2/cache
+  - $HOME/.sbt/boot
+  - node_modules
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - gcc-4.8
+    - g++-4.8
+script:
+- sbt build
+after_success:
+- echo -e "Host github.com\n\tStrictHostKeyChecking no\nIdentityFile ~/.ssh/deploy.key\n"
+  >> ~/.ssh/config
+- openssl aes-256-cbc -k "$SERVER_KEY" -in .travis/deploy_key.enc -d -a -out deploy.key
+- cp deploy.key ~/.ssh/
+- chmod 600 ~/.ssh/deploy.key
+- git config --global user.email "6b656e6a69@gmail.com"
+- git config --global user.name "xuwei-k"
+- mv gitbook/_book ../ && git fetch origin gh-pages:gh-pages && git clean -fdx &&
+  git checkout gh-pages && rm -rf ./* && cp -r ../_book/* ./ && git add . && git commit
+  -a -m "auto commit on travis $TRAVIS_JOB_NUMBER $TRAVIS_COMMIT"
+- if [[ "${TRAVIS_BRANCH}" == "master" && "${TRAVIS_PULL_REQUEST}" == "false" ]];
+  then git push git@github.com:xuwei-k/scalaz-docs.git gh-pages:gh-pages ; fi
+after_script:
+- find $HOME/.sbt -name "*.lock" | xargs rm
+- find $HOME/.ivy2 -name "ivydata-*.properties" | xargs rm
+- find $HOME/.ivy2/cache -name "*SNAPSHOT*" | xargs rm -rf
+env:
+  global:
+    secure: sD3fD7EM+X3Afm+CodPiPJ8u/kfNfzUWt++pKcLQe+oSnbbx6Tu2zI25yAcY8Q43CDthiAEjnAz0bf3hukpeznWyd3VssNcFwu/9nNT47E2i3bWpZLp532/8kgdh4EE7b5D4im0F1xj/8/F1jucFtfO003ZIn5iTpB726fXcnsDt2zCvUE4+ks76lyyxltMxxHRIxmaTLU9e+AIclrBjq8BxTpYAwUH+iCxObwG+CZSN2HMBIbNC9nwkTJUJBhgPnSABPw8HP71bnmKbTxYC/HdBV5uc5HRGpH5kEfPT48Ksddj+khl6ZmAvwiiNDXDQ4ViijCfDh2F+zR6/t1wKYR51jifxbU5wakU9xAkS7gov8A/g6nurutE9sgGNWbo6FfcSS8iqNkjIzg/bLOuBggvbCh/bxoSQkRPjuigzzp6xkoiMslo3khj9M4O+2w48eCkupVJqeNzVVL6ktw3eUJZfLGRbg0KDHWE8SssbOcSi4Z/HRB5k9tpGgQitqjN4Db348hundHj6uDm+Qquw2yG1KyuGN4GExOt2DPtf8Y32p6Vj4xGTdp3+1cj4CJey1j26oJzKZZQMKYFqnRogxTMUXZMQ3M3I9ABdYo86AMaqrtqK1+IUSUTNwYVnV8jjzogybjo7hga/lm2+SJ7BY5NMdwAMuNjQ1JagCkTxdNA=
