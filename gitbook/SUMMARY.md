@@ -4,6 +4,7 @@
 - [モジュール構成](generated_src/modules.md)
 - [NonEmptyList](generated_src/nel.md)
 - [\/](generated_src/disjunction.md)
+- [Maybe](generated_src/maybe.md)
 - [Validation](generated_src/validation.md)
 - [DList](generated_src/dlist.md)
 - [==>>](generated_src/imap.md)
