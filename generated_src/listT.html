@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>FreeT | Scalaz日本語ドキュメント</title>
+        <title>ListT | Scalaz日本語ドキュメント</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.2">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../generated_src/about_author.html" />
+    <link rel="next" href="../generated_src/kleisli.html" />
     
     
-    <link rel="prev" href="../generated_src/bindRec.html" />
+    <link rel="prev" href="../generated_src/eitherT.html" />
     
 
         
@@ -49,9 +49,9 @@
         
         
     <div class="book"
-        data-level="20"
-        data-chapter-title="FreeT"
-        data-filepath="generated_src/freeT.md"
+        data-level="15"
+        data-chapter-title="ListT"
+        data-filepath="generated_src/listT.md"
         data-basepath=".."
         data-revision="Sat Nov 28 2015 14:36:44 GMT+0000 (UTC)"
         data-innerlanguage="">
@@ -292,7 +292,7 @@
             
         </li>
     
-        <li class="chapter " data-level="15" data-path="generated_src/listT.html">
+        <li class="chapter active" data-level="15" data-path="generated_src/listT.html">
             
                 
                     <a href="../generated_src/listT.html">
@@ -367,7 +367,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="20" data-path="generated_src/freeT.html">
+        <li class="chapter " data-level="20" data-path="generated_src/freeT.html">
             
                 
                     <a href="../generated_src/freeT.html">
@@ -430,10 +430,13 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="freet">FreeT</h1>
-<p>Free&#x30E2;&#x30CA;&#x30C9;&#x306E;&#x30E2;&#x30CA;&#x30C9;&#x30C8;&#x30E9;&#x30F3;&#x30B9;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30FC;&#x3067;&#x3059;&#x3002;&#x73FE;&#x5728;&#x3001;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;7.2&#x4EE5;&#x964D;&#x306E;&#x307F;&#x3067;&#x3042;&#x308A;&#x3001;7.1&#x7CFB;&#x306B;&#x306F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x3002;</p>
-<p>Haskell&#x3067;&#x306F;&#x6570;&#x5E74;&#x524D;&#x304B;&#x3089;&#x5B58;&#x5728;&#x3057;&#x3066;&#x3044;&#x307E;&#x3057;&#x305F;&#x304C;&#x3001;Scala&#x3067;&#x5B9F;&#x88C5;&#x3055;&#x308C;&#x305F;&#x306E;&#x306F;&#x6700;&#x8FD1;(2015&#x5E74;)&#x3067;&#x3059;&#x3002;&#x30B9;&#x30BF;&#x30C3;&#x30AF;&#x30AA;&#x30FC;&#x30D0;&#x30FC;&#x30D5;&#x30ED;&#x30FC;&#x3057;&#x306A;&#x3044;FreeT&#x306E;&#x5B9F;&#x88C5;&#x306F;&#x4E0D;&#x53EF;&#x80FD;&#x304B;&#x3068;&#x601D;&#x308F;&#x308C;&#x3066;&#x3044;&#x307E;&#x3057;&#x305F;&#x304C;&#x3001;&#x307E;&#x305A;purescript&#x3068;&#x3044;&#x3046;&#x8A00;&#x8A9E;&#x3067;&#x5B9F;&#x73FE;&#x3055;&#x308C;&#x3001;&#x305D;&#x308C;&#x304C;Scalaz&#x306B;&#x79FB;&#x690D;&#x3055;&#x308C;&#x307E;&#x3057;&#x305F;&#x3002;</p>
-<p><a href="http://functorial.com/stack-safety-for-free/index.pdf" target="_blank">Stack Safety for Free</a></p>
+                        <h1 id="listt">ListT</h1>
+<p><strong>&#x9593;&#x9055;&#x3063;&#x305F;</strong>&#x30E2;&#x30CA;&#x30C9;&#x30C8;&#x30E9;&#x30F3;&#x30B9;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30FC;&#x3067;&#x3059;&#x3002;&#x53EF;&#x63DB;(commutative)&#x306A;&#x30E2;&#x30CA;&#x30C9;&#x4EE5;&#x5916;&#x3068;&#x7D44;&#x307F;&#x5408;&#x308F;&#x305B;&#x305F;&#x5834;&#x5408;&#x306F;&#x3001;&#x30E2;&#x30CA;&#x30C9;&#x5247;&#x3092;&#x6E80;&#x305F;&#x3057;&#x307E;&#x305B;&#x3093;&#x3002;&#x53EF;&#x63DB;&#x306A;&#x30E2;&#x30CA;&#x30C9;&#x4EE5;&#x5916;&#x3068;&#x7D44;&#x307F;&#x5408;&#x308F;&#x305B;&#x305F;&#x3044;&#x5834;&#x5408;&#x306F;&#x3001;<code>StreamT</code>&#x3092;&#x4F7F;&#x7528;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
+<ul>
+<li><a href="https://github.com/scalaz/scalaz/issues/921" target="_blank">Scalaz Issue 921. ListT violate the associative law</a></li>
+<li><a href="https://wiki.haskell.org/ListT_done_right" target="_blank">https://wiki.haskell.org/ListT_done_right</a></li>
+<li><a href="http://togetter.com/li/800229" target="_blank">http://togetter.com/li/800229</a></li>
+</ul>
 
                     
                     </section>
@@ -444,10 +447,10 @@
         </div>
 
         
-        <a href="../generated_src/bindRec.html" class="navigation navigation-prev " aria-label="Previous page: BindRec"><i class="fa fa-angle-left"></i></a>
+        <a href="../generated_src/eitherT.html" class="navigation navigation-prev " aria-label="Previous page: EitherT"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../generated_src/about_author.html" class="navigation navigation-next " aria-label="Next page: 著者について"><i class="fa fa-angle-right"></i></a>
+        <a href="../generated_src/kleisli.html" class="navigation navigation-next " aria-label="Next page: Kleisli"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
