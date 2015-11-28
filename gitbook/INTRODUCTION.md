@@ -1,7 +1,7 @@
 # Scalaz日本語ドキュメント
 
 - これは、scalazに関する日本語ドキュメントです。
-- ソースコードのリポジトリはこちらです。 <https://github.com/xuwei-k/scalaz-doc>
+- ソースコードのリポジトリはこちらです。 <https://github.com/xuwei-k/scalaz-docs>
 - 文章内のコードは[tut](https://github.com/tpolecat/tut)によって、コンパイル、実行されています。
 - ライセンスはCreative Common BY-NC-SAです。
 
