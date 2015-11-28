@@ -12,6 +12,7 @@
 - [Tree](generated_src/tree.md)
 - [OptionT](generated_src/optionT.md)
 - [EitherT](generated_src/eitherT.md)
+- [ListT](generated_src/listT.md)
 - [Kleisli](generated_src/kleisli.md)
 - [Free](generated_src/free.md)
 - [Inject](generated_src/inject.md)
