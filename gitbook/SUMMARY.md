@@ -15,5 +15,6 @@
 - [Kleisli](generated_src/kleisli.md)
 - [Free](generated_src/free.md)
 - [Inject](generated_src/inject.md)
+- [BindRec](generated_src/bindRec.md)
 - [FreeT](generated_src/freeT.md)
 - [著者について](generated_src/about_author.md)
