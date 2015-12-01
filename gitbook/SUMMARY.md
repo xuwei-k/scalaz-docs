@@ -10,6 +10,7 @@
 - [==>>](generated_src/imap.md)
 - [ISet](generated_src/iset.md)
 - [Tree](generated_src/tree.md)
+- [NotNothing](generated_src/notNothing.md)
 - [OptionT](generated_src/optionT.md)
 - [EitherT](generated_src/eitherT.md)
 - [ListT](generated_src/listT.md)
