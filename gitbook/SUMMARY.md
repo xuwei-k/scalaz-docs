@@ -16,6 +16,7 @@
 - [StreamT](generated_src/streamT.md)
 - [Kleisli](generated_src/kleisli.md)
 - [Free](generated_src/free.md)
+- [FreeAp](generated_src/freeAp.md)
 - [Inject](generated_src/inject.md)
 - [BindRec](generated_src/bindRec.md)
 - [FreeT](generated_src/freeT.md)
