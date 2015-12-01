@@ -12,7 +12,7 @@ case class StreamT[F[_], A](run: F[Stream[A]])
 
 にすると、すべての場合でモナド則を満たさないので、
 Scala標準のStreamを使って上記のような実装にするわけにはいきません。
-また、現状の`scalaz.ListT`は間違っているので、**正しいListモナドトランスフォーマー**が必要な場合は、Scalazの範囲内では`StreamT`がある意味唯一の選択肢であるとも言えます。
+また、現状の`scalaz.ListT`は間違っているので、**正しいListモナドトランスフォーマー**が必要な場合は、Scalazの範囲内では`StreamT`がある意味唯一の選択肢であるとも言えます。[^listT-freeT]
 StreamTはListTと同じ間違いはしていません。
 
 
@@ -24,3 +24,6 @@ StreamTはListTと同じ間違いはしていません。
 
 
 さて、前置きはこれくらいにして、実際に`StreamT`そのものの説明に入っていきます。
+
+
+[^listT-freeT]: ただし、FreeTを使ってListTを作成できるかもしれない？という話はあります https://gist.github.com/paf31/eac16f0795165a285820
