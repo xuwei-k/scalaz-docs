@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Free | Scalaz日本語ドキュメント</title>
+        <title>IList | Scalaz日本語ドキュメント</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.2">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../generated_src/freeAp.html" />
+    <link rel="next" href="../generated_src/validation.html" />
     
     
-    <link rel="prev" href="../generated_src/kleisli.html" />
+    <link rel="prev" href="../generated_src/maybe.html" />
     
 
         
@@ -49,9 +49,9 @@
         
         
     <div class="book"
-        data-level="20"
-        data-chapter-title="Free"
-        data-filepath="generated_src/free.md"
+        data-level="8"
+        data-chapter-title="IList"
+        data-filepath="generated_src/iList.md"
         data-basepath=".."
         data-revision="Tue Dec 01 2015 23:10:02 GMT+0000 (UTC)"
         data-innerlanguage="">
@@ -187,7 +187,7 @@
             
         </li>
     
-        <li class="chapter " data-level="8" data-path="generated_src/iList.html">
+        <li class="chapter active" data-level="8" data-path="generated_src/iList.html">
             
                 
                     <a href="../generated_src/iList.html">
@@ -367,7 +367,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="20" data-path="generated_src/free.html">
+        <li class="chapter " data-level="20" data-path="generated_src/free.html">
             
                 
                     <a href="../generated_src/free.html">
@@ -520,15 +520,9 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="free">Free</h1>
-<p>Free&#x30E2;&#x30CA;&#x30C9;&#x3067;&#x3059;&#x3002;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;7.1&#x4EE5;&#x524D;&#x3068;7.2&#x4EE5;&#x964D;&#x3067;&#x3001;&#x3042;&#x308B;&#x7A0B;&#x5EA6;&#x69CB;&#x9020;&#x304C;&#x7570;&#x306A;&#x3063;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;
-7.2&#x4EE5;&#x964D;&#x306F;&#x3001;&#x3044;&#x308F;&#x3086;&#x308B;</p>
-<p><strong>Operational Monad</strong></p>
-<p>&#x3068;&#x547C;&#x3070;&#x308C;&#x308B;&#x5F62;&#x5F0F;&#x306B;&#x306A;&#x3063;&#x3066;&#x304A;&#x308A;&#x3001;&#x5927;&#x62B5;&#x306E;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3067;<code>Functor</code>&#x306E;&#x5236;&#x7D04;&#x304C;&#x5FC5;&#x8981;&#x306A;&#x304F;&#x306A;&#x3063;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
-<p>Haskell&#x3068;&#x7570;&#x306A;&#x308A;&#x3001;Haskell&#x306E;&#x3082;&#x306E;&#x3092;&#x5358;&#x7D14;&#x306B;&#x771F;&#x4F3C;&#x3066;&#x5B9F;&#x88C5;&#x3059;&#x308B;&#x3068;stack overflow&#x3057;&#x3066;&#x3057;&#x307E;&#x3046;&#x306E;&#x3067;&#x3001;&#x4E00;&#x5DE5;&#x592B;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;&#x305D;&#x308C;&#x306B;&#x3064;&#x3044;&#x3066;&#x306E;&#x8A73;&#x7D30;&#x306F;&#x3001;<a href="https://github.com/runarorama" target="_blank">@runarorama</a>&#x3055;&#x3093;&#x304C;&#x66F8;&#x3044;&#x305F;</p>
-<p><a href="http://blog.higher-order.com/assets/trampolines.pdf" target="_blank">Stackless Scala With Free Monads</a></p>
-<p>&#x3092;&#x8AAD;&#x3080;&#x3068;&#x3044;&#x3044;&#x3067;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-<p><a href="https://github.com/runarorama" target="_blank">@runarorama</a>&#x3055;&#x3093;&#x306F;&#x3001;<a href="https://www.manning.com/books/functional-programming-in-scala" target="_blank">FP in Scala</a>&#x306E;&#x8457;&#x8005;&#x3067;&#x3042;&#x308A;&#x3001;Scalaz&#x306E;&#x4E3B;&#x8981;&#x30B3;&#x30DF;&#x30C3;&#x30BF;&#x30FC;&#x306E;&#x4E00;&#x4EBA;&#x3067;&#x3059;&#x3002;</p>
+                        <h1 id="ilist">IList</h1>
+<p><code>scala.List</code>&#x3068;&#x540C;&#x3058;&#x3088;&#x3046;&#x306A;&#x3001;&#x7247;&#x65B9;&#x5411;&#x306E;Linked List&#x3067;&#x3059;&#x3002;
+<code>scalaz.Maybe</code>&#x3068;&#x540C;&#x3058;&#x3088;&#x3046;&#x306A;&#x7406;&#x7531;&#x3067;&#x3001;Scalaz&#x72EC;&#x81EA;&#x306A;&#x3082;&#x306E;&#x304C;&#x518D;&#x5B9F;&#x88C5;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
 
                     
                     </section>
@@ -539,10 +533,10 @@
         </div>
 
         
-        <a href="../generated_src/kleisli.html" class="navigation navigation-prev " aria-label="Previous page: Kleisli"><i class="fa fa-angle-left"></i></a>
+        <a href="../generated_src/maybe.html" class="navigation navigation-prev " aria-label="Previous page: Maybe"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../generated_src/freeAp.html" class="navigation navigation-next " aria-label="Next page: FreeAp"><i class="fa fa-angle-right"></i></a>
+        <a href="../generated_src/validation.html" class="navigation navigation-next " aria-label="Next page: Validation"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
