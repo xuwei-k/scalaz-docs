@@ -13,6 +13,7 @@
 - [OptionT](generated_src/optionT.md)
 - [EitherT](generated_src/eitherT.md)
 - [ListT](generated_src/listT.md)
+- [StreamT](generated_src/streamT.md)
 - [Kleisli](generated_src/kleisli.md)
 - [Free](generated_src/free.md)
 - [Inject](generated_src/inject.md)
