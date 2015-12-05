@@ -7,7 +7,7 @@ object build extends Build with NpmCliBase {
   lazy val testAll = taskKey[Unit]("test scala, links")
   lazy val buildWithCheck = taskKey[Unit]("lintAll testAll build")
 
-  val root = project.settings(
+  val root = project.in(file(".")).settings(
     tutSettings,
     tutSourceDirectory := srcDir,
     tutTargetDirectory := compiledSrcDir,
@@ -20,6 +20,7 @@ object build extends Build with NpmCliBase {
       ("org.scalaz" %% "scalaz-scalacheck-binding" % "7.2.0") ::
       Nil
     ),
+    watchSources ++= ((baseDirectory.value / "gitbook") * "*.md").get,
     lintAll := Def.sequential(LinkTest.eslint, TextLint.textlint.toTask("")).value,
     testAll := Def.sequential(compile in Test, LinkTest.linkTest).value,
     buildWithCheck := Def.sequential(lintAll, testAll, GitBook.build)
