@@ -3,6 +3,7 @@
  - [セットアップ](generated_src/setup.md)
  - [バイナリ互換とバージョン](generated_src/binary_compatibility.md)
  - [モジュール構成](generated_src/modules.md)
+ - [型クラスの継承関係](generated_src/diagram.md)
 - データ型
  - [NonEmptyList](generated_src/nel.md)
  - [\/](generated_src/disjunction.md)
