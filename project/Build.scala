@@ -17,7 +17,7 @@ object build extends Build with NpmCliBase {
     fullResolvers ~= {_.filterNot(_.name == "jcenter")},
     libraryDependencies <+= sbtDependency,
     libraryDependencies ++= (
-      ("org.scalaz" %% "scalaz-scalacheck-binding" % "7.1.5") ::
+      ("org.scalaz" %% "scalaz-scalacheck-binding" % "7.2.0") ::
       Nil
     ),
     lintAll := Def.sequential(LinkTest.eslint, TextLint.textlint.toTask("")).value,
