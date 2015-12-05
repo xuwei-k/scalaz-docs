@@ -7,4 +7,4 @@
 - https://hackage.haskell.org/package/containers-0.5.6.3/docs/Data-Map.html
 
 
-[^imap-name]: (あえて言うなら、invarinatもしくはimmutableあたりが由来?)
+[^imap-name]: (あえて言うなら、invariantもしくはimmutableあたりが由来?)
