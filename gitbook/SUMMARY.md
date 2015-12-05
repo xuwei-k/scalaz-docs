@@ -28,6 +28,7 @@
  - [BindRec](generated_src/bindRec.md)
  - [Inject](generated_src/inject.md)
  - [Traverse](generated_src/traverse.md)
+ - [Traverse1](generated_src/traverse1.md)
 - その他
  - [NotNothing](generated_src/notNothing.md)
 - [著者について](generated_src/about_author.md)
