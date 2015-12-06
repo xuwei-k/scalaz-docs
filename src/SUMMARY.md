@@ -28,6 +28,7 @@
 - 型クラス
  - [Plus](plus.md)
  - [ApplicativePlus](applicativePlus.md)
+ - [Bind](bind.md)
  - [BindRec](bindRec.md)
  - [Inject](inject.md)
  - [Traverse](traverse.md)
