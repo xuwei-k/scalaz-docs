@@ -26,6 +26,8 @@
  - [Kleisli](kleisli.md)
  - [FreeT](freeT.md)
 - 型クラス
+ - [Equal](equal.md)
+ - [Order](order.md)
  - [Plus](plus.md)
  - [ApplicativePlus](applicativePlus.md)
  - [Bind](bind.md)
