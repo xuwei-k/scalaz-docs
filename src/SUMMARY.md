@@ -28,6 +28,7 @@
 - 型クラス
  - [Equal](equal.md)
  - [Order](order.md)
+ - [Enum](enum.md)
  - [Plus](plus.md)
  - [ApplicativePlus](applicativePlus.md)
  - [Bind](bind.md)
