@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Foldable1 | Scalaz日本語ドキュメント</title>
+        <title>ApplicativePlus | Scalaz日本語ドキュメント</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.4">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="./traverse1.html" />
+    <link rel="next" href="./bindRec.html" />
     
     
-    <link rel="prev" href="./traverse.html" />
+    <link rel="prev" href="./plus.html" />
     
 
         
@@ -49,9 +49,9 @@
         
         
     <div class="book"
-        data-level="4.6"
-        data-chapter-title="Foldable1"
-        data-filepath="foldable1.md"
+        data-level="4.2"
+        data-chapter-title="ApplicativePlus"
+        data-filepath="applicativePlus.md"
         data-basepath="."
         data-revision="Sun Dec 06 2015 15:23:43 GMT+0000 (UTC)"
         data-innerlanguage="">
@@ -504,7 +504,7 @@
             
         </li>
     
-        <li class="chapter " data-level="4.2" data-path="applicativePlus.html">
+        <li class="chapter active" data-level="4.2" data-path="applicativePlus.html">
             
                 
                     <a href="./applicativePlus.html">
@@ -564,7 +564,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="4.6" data-path="foldable1.html">
+        <li class="chapter " data-level="4.6" data-path="foldable1.html">
             
                 
                     <a href="./foldable1.html">
@@ -675,15 +675,11 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="foldable1">Foldable1</h1>
-<p>Foldable&#x3092;&#x7D99;&#x627F;&#x3057;&#x305F;&#x578B;&#x30AF;&#x30E9;&#x30B9;&#x3067;&#x3059;&#x3002;Traverse1&#x3082;&#x542B;&#x3081;&#x3066;&#x3001;&#x57FA;&#x672C;&#x7684;&#x306B;&#x306F;<a href="https://hackage.haskell.org/package/semigroupoids-5.0.0.4/docs/Data-Semigroup-Foldable-Class.html#t:Foldable1" target="_blank">ekmett/semigroupoids</a>&#x306B;&#x3042;&#x308B;&#x3082;&#x306E;&#x3068;&#x540C;&#x3058;&#x3067;&#x3059;&#x3002;</p>
-<p>&#x4E00;&#x8A00;&#x3067;&#x8868;&#x3059;&#x3068;&#x3001;&#x300C;&#x8981;&#x7D20;&#x304C;1&#x3064;&#x4EE5;&#x4E0A;&#x3042;&#x308B;&#x3053;&#x3068;&#x304C;&#x5FC5;&#x305A;&#x4FDD;&#x8A3C;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x3082;&#x306E;&#x300D;&#x304C;&#x3001;Foldable1&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;&#x5177;&#x4F53;&#x7684;&#x306B;&#x306F;&#x3001;&#x4EE5;&#x4E0B;&#x306E;&#x3082;&#x306E;&#x304C;Foldable1&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x3067;&#x3059;</p>
-<ul>
-<li>NonEmptyList</li>
-<li>Tree</li>
-<li>TreeLoc</li>
-</ul>
-<p>&#x4ED6;&#x306B;&#x3082;&#x3001;<code>OneAnd</code>, <code>Cofree</code>, <code>Coproduct</code>, <code>Free</code> &#x306A;&#x3069;&#x306F;&#x3001;&#x7279;&#x5B9A;&#x306E;&#x6761;&#x4EF6;&#x3092;&#x6E80;&#x305F;&#x3059;&#x5834;&#x5408;&#x306B;Foldable1&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+                        <h1 id="applicativeplus">ApplicativePlus</h1>
+<p><a href="https://hackage.haskell.org/package/base-4.8.1.0/docs/Control-Applicative.html#t:Alternative" target="_blank">Haskell&#x3067;&#x306E;Alternative</a>&#x306B;&#x76F8;&#x5F53;&#x3059;&#x308B;&#x578B;&#x30AF;&#x30E9;&#x30B9;&#x3067;&#x3059;&#x3002;Scalaz&#x5185;&#x306B;&#x3082;<a href="https://github.com/scalaz/scalaz/blob/v7.2.0/core/src/main/scala/scalaz/package.scala#L200" target="_blank">Alternative&#x306E;alias&#x304C;&#x5B9A;&#x7FA9;</a>&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;<sup><a href="#fn_1" id="reffn_1">1</a></sup></p>
+<blockquote id="fn_1">
+<sup>1</sup>. Traverse&#x306E;&#x5834;&#x5408;&#x306F;&#x3001;&#x6A19;&#x6E96;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x3068;&#x306E;&#x540D;&#x524D;&#x885D;&#x7A81;&#x3068;&#x3044;&#x3046;&#x554F;&#x984C;&#x3067;Haskell&#x3068;&#x7570;&#x306A;&#x308B;&#x540D;&#x524D;&#x306B;&#x3057;&#x305F;&#x306E;&#x306F;&#x59A5;&#x5F53;&#x3060;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;&#x304C;&#x3001;&#x306A;&#x305C;Alternative&#x3092;ApplicativePlus&#x3068;&#x9055;&#x3046;&#x540D;&#x524D;&#x306B;&#x3057;&#x305F;&#x306E;&#x304B;&#x306F;&#x4E0D;&#x660E;&#x3067;&#x3059;<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#x21A9;</a>
+</blockquote>
 
                     
                     </section>
@@ -694,10 +690,10 @@
         </div>
 
         
-        <a href="./traverse.html" class="navigation navigation-prev " aria-label="Previous page: Traverse"><i class="fa fa-angle-left"></i></a>
+        <a href="./plus.html" class="navigation navigation-prev " aria-label="Previous page: Plus"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="./traverse1.html" class="navigation navigation-next " aria-label="Next page: Traverse1"><i class="fa fa-angle-right"></i></a>
+        <a href="./bindRec.html" class="navigation navigation-next " aria-label="Next page: BindRec"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
