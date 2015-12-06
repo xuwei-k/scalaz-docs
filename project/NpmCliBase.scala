@@ -8,7 +8,7 @@ trait NpmCliBase {
   def srcMarkdowns = srcDir.listFiles("*.md")
 
   val bookBuildDir = file("gitbook")
-  val compiledSrcDir = bookBuildDir / "generated_src"
+  val compiledSrcDir = bookBuildDir
 
   val testDir = file("test")
 

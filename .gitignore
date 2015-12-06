@@ -4,11 +4,11 @@
 .DS_Store
 
 ### gitbook ###
-gitbook/generated_src
 gitbook/_book
 gitbook/book.epub
 gitbook/book.pdf
 gitbook/*.svg
+gitbook/*.md
 
 ### npm ###
 node_modules

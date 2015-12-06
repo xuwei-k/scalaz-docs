@@ -77,7 +77,6 @@ object build extends Build with NpmCliBase {
       IO.move(svg, file("gitbook") / "diagram2.svg")
     },
     TaskKey[Unit]("scalazDiagram") := Def.sequential(scalazDiagram1, scalazDiagram2).value,
-    watchSources ++= ((baseDirectory.value / "gitbook") * "*.md").get,
     lintAll := Def.sequential(LinkTest.eslint, TextLint.textlint.toTask("")).value,
     testAll := Def.sequential(compile in Test, LinkTest.linkTest).value,
     buildWithCheck := Def.sequential(lintAll, testAll, GitBook.build)
