@@ -37,7 +37,7 @@
         
     
     
-    <link rel="next" href="./bindRec.html" />
+    <link rel="next" href="./bind.html" />
     
     
     <link rel="prev" href="./plus.html" />
@@ -53,7 +53,7 @@
         data-chapter-title="ApplicativePlus"
         data-filepath="applicativePlus.md"
         data-basepath="."
-        data-revision="Sun Dec 06 2015 15:31:00 GMT+0000 (UTC)"
+        data-revision="Sun Dec 06 2015 15:39:35 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -535,14 +535,29 @@
             
         </li>
     
-        <li class="chapter " data-level="4.3" data-path="bindRec.html">
+        <li class="chapter " data-level="4.3" data-path="bind.html">
+            
+                
+                    <a href="./bind.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        Bind
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="bindRec.html">
             
                 
                     <a href="./bindRec.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>4.3.</b>
+                            <b>4.4.</b>
                         
                         BindRec
                     </a>
@@ -550,14 +565,14 @@
             
         </li>
     
-        <li class="chapter " data-level="4.4" data-path="inject.html">
+        <li class="chapter " data-level="4.5" data-path="inject.html">
             
                 
                     <a href="./inject.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>4.4.</b>
+                            <b>4.5.</b>
                         
                         Inject
                     </a>
@@ -565,14 +580,14 @@
             
         </li>
     
-        <li class="chapter " data-level="4.5" data-path="traverse.html">
+        <li class="chapter " data-level="4.6" data-path="traverse.html">
             
                 
                     <a href="./traverse.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>4.5.</b>
+                            <b>4.6.</b>
                         
                         Traverse
                     </a>
@@ -580,14 +595,14 @@
             
         </li>
     
-        <li class="chapter " data-level="4.6" data-path="foldable1.html">
+        <li class="chapter " data-level="4.7" data-path="foldable1.html">
             
                 
                     <a href="./foldable1.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>4.6.</b>
+                            <b>4.7.</b>
                         
                         Foldable1
                     </a>
@@ -595,14 +610,14 @@
             
         </li>
     
-        <li class="chapter " data-level="4.7" data-path="traverse1.html">
+        <li class="chapter " data-level="4.8" data-path="traverse1.html">
             
                 
                     <a href="./traverse1.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>4.7.</b>
+                            <b>4.8.</b>
                         
                         Traverse1
                     </a>
@@ -692,7 +707,8 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="applicativeplus">ApplicativePlus</h1>
-<p><a href="https://hackage.haskell.org/package/base-4.8.1.0/docs/Control-Applicative.html#t:Alternative" target="_blank">Haskell&#x3067;&#x306E;Alternative</a>&#x306B;&#x76F8;&#x5F53;&#x3059;&#x308B;&#x578B;&#x30AF;&#x30E9;&#x30B9;&#x3067;&#x3059;&#x3002;Scalaz&#x5185;&#x306B;&#x3082;<a href="https://github.com/scalaz/scalaz/blob/v7.2.0/core/src/main/scala/scalaz/package.scala#L200" target="_blank">Alternative&#x306E;alias&#x304C;&#x5B9A;&#x7FA9;</a>&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;<sup><a href="#fn_1" id="reffn_1">1</a></sup></p>
+<p><a href="https://hackage.haskell.org/package/base-4.8.1.0/docs/Control-Applicative.html#t:Alternative" target="_blank">Haskell&#x3067;&#x306E;Alternative</a>&#x306B;&#x76F8;&#x5F53;&#x3059;&#x308B;&#x578B;&#x30AF;&#x30E9;&#x30B9;&#x3067;&#x3059;&#x3002;Scalaz&#x5185;&#x306B;&#x3082;<a href="https://github.com/scalaz/scalaz/blob/v7.2.0/core/src/main/scala/scalaz/package.scala#L200" target="_blank">Alternative&#x306E;alias&#x304C;&#x5B9A;&#x7FA9;</a>&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;<sup><a href="#fn_1" id="reffn_1">1</a></sup>
+&#x305D;&#x306E;&#x540D;&#x306E;&#x901A;&#x308A;&#x3001;Applicative&#x3068;Plus&#x3092;&#x7D99;&#x627F;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
 <blockquote id="fn_1">
 <sup>1</sup>. Traverse&#x306E;&#x5834;&#x5408;&#x306F;&#x3001;&#x6A19;&#x6E96;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x3068;&#x306E;&#x540D;&#x524D;&#x885D;&#x7A81;&#x3068;&#x3044;&#x3046;&#x554F;&#x984C;&#x3067;Haskell&#x3068;&#x7570;&#x306A;&#x308B;&#x540D;&#x524D;&#x306B;&#x3057;&#x305F;&#x306E;&#x306F;&#x59A5;&#x5F53;&#x3060;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;&#x304C;&#x3001;&#x306A;&#x305C;Alternative&#x3092;ApplicativePlus&#x3068;&#x9055;&#x3046;&#x540D;&#x524D;&#x306B;&#x3057;&#x305F;&#x306E;&#x304B;&#x306F;&#x4E0D;&#x660E;&#x3067;&#x3059;<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#x21A9;</a>
 </blockquote>
@@ -709,7 +725,7 @@
         <a href="./plus.html" class="navigation navigation-prev " aria-label="Previous page: Plus"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="./bindRec.html" class="navigation navigation-next " aria-label="Next page: BindRec"><i class="fa fa-angle-right"></i></a>
+        <a href="./bind.html" class="navigation navigation-next " aria-label="Next page: Bind"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
