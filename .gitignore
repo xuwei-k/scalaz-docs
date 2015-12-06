@@ -8,6 +8,7 @@ gitbook/generated_src
 gitbook/_book
 gitbook/book.epub
 gitbook/book.pdf
+gitbook/*.svg
 
 ### npm ###
 node_modules

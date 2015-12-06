@@ -6,3 +6,5 @@ resolvers += Resolver.url(
 addSbtPlugin("org.tpolecat" % "tut-plugin" % "0.4.0")
 
 fullResolvers ~= {_.filterNot(_.name == "jcenter")}
+
+addSbtPlugin("com.github.xuwei-k" % "sbt-class-diagram" % "0.1.6")

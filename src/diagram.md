@@ -1,3 +1,7 @@
 # 型クラスの継承関係
 
-<http://xuwei-k.github.io/scalaz7.2.0.svg>
+<embed src="../diagram1.svg" type="image/svg+xml" />
+
+<hr />
+
+<embed src="../diagram2.svg" type="image/svg+xml" />

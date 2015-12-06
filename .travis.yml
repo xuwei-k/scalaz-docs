@@ -16,8 +16,9 @@ addons:
     packages:
     - gcc-4.8
     - g++-4.8
+    - graphviz
 script:
-- sbt build
+- sbt scalazDiagram build
 after_success:
 - echo -e "Host github.com\n\tStrictHostKeyChecking no\nIdentityFile ~/.ssh/deploy.key\n"
   >> ~/.ssh/config
