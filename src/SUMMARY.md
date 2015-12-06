@@ -4,7 +4,7 @@
  - [バイナリ互換とバージョン](binary_compatibility.md)
  - [モジュール構成](modules.md)
  - [型クラスの継承関係](diagram.md)
-- データ型
+- [データ型](dataStructures.md)
  - [NonEmptyList](nel.md)
  - [\/](disjunction.md)
  - [Maybe](maybe.md)
@@ -18,7 +18,7 @@
  - [FreeAp](freeAp.md)
  - [Alpha](alpha.md)
  - [Digit](digit.md)
-- モナドトランスフォーマー
+- [モナドトランスフォーマー](monadTransformers.md)
  - [OptionT](optionT.md)
  - [EitherT](eitherT.md)
  - [ListT](listT.md)
