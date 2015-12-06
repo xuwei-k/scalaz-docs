@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>OptionT | Scalaz日本語ドキュメント</title>
+        <title>Enum | Scalaz日本語ドキュメント</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.4">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="./eitherT.html" />
+    <link rel="next" href="./plus.html" />
     
     
-    <link rel="prev" href="./monadTransformers.html" />
+    <link rel="prev" href="./order.html" />
     
 
         
@@ -49,9 +49,9 @@
         
         
     <div class="book"
-        data-level="3.1"
-        data-chapter-title="OptionT"
-        data-filepath="optionT.md"
+        data-level="4.3"
+        data-chapter-title="Enum"
+        data-filepath="enum.md"
         data-basepath="."
         data-revision="Sun Dec 06 2015 15:53:23 GMT+0000 (UTC)"
         data-innerlanguage="">
@@ -402,7 +402,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="3.1" data-path="optionT.html">
+        <li class="chapter " data-level="3.1" data-path="optionT.html">
             
                 
                     <a href="./optionT.html">
@@ -535,7 +535,7 @@
             
         </li>
     
-        <li class="chapter " data-level="4.3" data-path="enum.html">
+        <li class="chapter active" data-level="4.3" data-path="enum.html">
             
                 
                     <a href="./enum.html">
@@ -751,11 +751,12 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="optiont">OptionT</h1>
-<p><code>scala.Option</code> &#x306E;&#x30E2;&#x30CA;&#x30C9;&#x30C8;&#x30E9;&#x30F3;&#x30B9;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30FC;&#x3067;&#x3059;&#x3002;&#x95A2;&#x9023;&#x3059;&#x308B;&#x3082;&#x306E;&#x3068;&#x3057;&#x3066;&#x3001;<code>scalaz.MaybeT</code>, <code>scalaz.LazyOptionT</code> &#x3068;&#x3044;&#x3046;&#x3082;&#x306E;&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x5B9F;&#x88C5;&#x3068;&#x3057;&#x3066;&#x306F;&#x3001;&#x5358;&#x306B;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;<code>run</code>&#x3068;&#x3044;&#x3046;&#x30D5;&#x30A3;&#x30FC;&#x30EB;&#x30C9;&#x3092;1&#x3064;&#x3060;&#x3051;&#x4FDD;&#x6301;&#x3057;&#x305F;case class&#x3067;&#x3059;&#x3002;</p>
-<pre><code class="lang-scala"><span class="hljs-keyword">final</span> <span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OptionT</span>[</span><span class="hljs-type">F</span>[_], <span class="hljs-type">A</span>](run: <span class="hljs-type">F</span>[<span class="hljs-type">Option</span>[<span class="hljs-type">A</span>]])
-</code></pre>
+                        <h1 id="enum">Enum</h1>
+<p><a href="http://hackage.haskell.org/package/base-4.8.1.0/docs/Prelude.html#t:Enum" target="_blank">Haskell&#x306B;&#x304A;&#x3051;&#x308B;Enum</a>&#x3068;&#x3042;&#x308B;&#x7A0B;&#x5EA6;&#x8FD1;&#x3044;&#x3067;&#x3059;&#x304C;&#x3001;Scalaz&#x306E;&#x3082;&#x306E;&#x306F;&#x3001;&#x3044;&#x304F;&#x3064;&#x306E;&#x70B9;&#x3067;Haskell&#x306E;&#x3082;&#x306E;&#x3068;&#x306F;&#x7570;&#x306A;&#x3063;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<ul>
+<li>Scalaz&#x306E;Enum&#x306F;Order&#x3092;&#x7D99;&#x627F;&#x3057;&#x3066;&#x3044;&#x308B;&#x304C;&#x3001;Haskell&#x306E;Enum&#x306B;&#x89AA;&#x306E;&#x30AF;&#x30E9;&#x30B9;&#x306F;&#x306A;&#x3044;</li>
+<li>Scalaz&#x306E;Enum&#x306B;&#x306F;<a href="http://hackage.haskell.org/package/base-4.8.1.0/docs/Prelude.html#t:Bounded" target="_blank">Haskell&#x306E;Bounded</a>&#x306E;&#x3088;&#x3046;&#x306A;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3082;&#x3042;&#x308B;&#x304C;&#x3001;Haskell&#x306B;&#x304A;&#x3044;&#x3066;Enum&#x3068;Bounded&#x306F;&#x7D99;&#x627F;&#x95A2;&#x4FC2;&#x306E;&#x306A;&#x3044;&#x5225;&#x306E;&#x30AF;&#x30E9;&#x30B9;</li>
+</ul>
 
                     
                     </section>
@@ -766,10 +767,10 @@
         </div>
 
         
-        <a href="./monadTransformers.html" class="navigation navigation-prev " aria-label="Previous page: モナドトランスフォーマー"><i class="fa fa-angle-left"></i></a>
+        <a href="./order.html" class="navigation navigation-prev " aria-label="Previous page: Order"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="./eitherT.html" class="navigation navigation-next " aria-label="Next page: EitherT"><i class="fa fa-angle-right"></i></a>
+        <a href="./plus.html" class="navigation navigation-next " aria-label="Next page: Plus"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
