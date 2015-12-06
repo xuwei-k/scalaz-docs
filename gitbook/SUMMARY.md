@@ -26,6 +26,7 @@
  - [Kleisli](generated_src/kleisli.md)
  - [FreeT](generated_src/freeT.md)
 - 型クラス
+ - [Plus](generated_src/plus.md)
  - [BindRec](generated_src/bindRec.md)
  - [Inject](generated_src/inject.md)
  - [Traverse](generated_src/traverse.md)
