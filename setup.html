@@ -5,9 +5,9 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Introduction | Scalaz日本語ドキュメント</title>
+        <title>セットアップ | Scalaz日本語ドキュメント</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <meta name="description" content="by-nc-sa">
+        <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.4">
         
         
@@ -37,8 +37,10 @@
         
     
     
-    <link rel="next" href="./overview.html" />
+    <link rel="next" href="./binary_compatibility.html" />
     
+    
+    <link rel="prev" href="./overview.html" />
     
 
         
@@ -47,9 +49,9 @@
         
         
     <div class="book"
-        data-level="0"
-        data-chapter-title="Introduction"
-        data-filepath="INTRODUCTION.md"
+        data-level="1.2"
+        data-chapter-title="セットアップ"
+        data-filepath="setup.md"
         data-basepath="."
         data-revision="Sun Dec 06 2015 15:12:11 GMT+0000 (UTC)"
         data-innerlanguage="">
@@ -67,7 +69,7 @@
 
             
     
-        <li class="chapter active" data-level="0" data-path="index.html">
+        <li class="chapter " data-level="0" data-path="index.html">
             
                 
                     <a href="./index.html">
@@ -103,7 +105,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="setup.html">
+        <li class="chapter active" data-level="1.2" data-path="setup.html">
             
                 
                     <a href="./setup.html">
@@ -658,15 +660,13 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="scalaz&#x65E5;&#x672C;&#x8A9E;&#x30C9;&#x30AD;&#x30E5;&#x30E1;&#x30F3;&#x30C8;">Scalaz&#x65E5;&#x672C;&#x8A9E;&#x30C9;&#x30AD;&#x30E5;&#x30E1;&#x30F3;&#x30C8;</h1>
-<ul>
-<li>&#x3053;&#x308C;&#x306F;&#x3001;scalaz&#x306B;&#x95A2;&#x3059;&#x308B;&#x65E5;&#x672C;&#x8A9E;&#x30C9;&#x30AD;&#x30E5;&#x30E1;&#x30F3;&#x30C8;&#x3067;&#x3059;&#x3002;</li>
-<li>&#x30BD;&#x30FC;&#x30B9;&#x30B3;&#x30FC;&#x30C9;&#x306E;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306F;&#x3053;&#x3061;&#x3089;&#x3067;&#x3059;&#x3002; <a href="https://github.com/xuwei-k/scalaz-docs" target="_blank">https://github.com/xuwei-k/scalaz-docs</a></li>
-<li>&#x6587;&#x7AE0;&#x5185;&#x306E;&#x30B3;&#x30FC;&#x30C9;&#x306F;<a href="https://github.com/tpolecat/tut" target="_blank">tut</a>&#x306B;&#x3088;&#x3063;&#x3066;&#x3001;&#x30B3;&#x30F3;&#x30D1;&#x30A4;&#x30EB;&#x3001;&#x5B9F;&#x884C;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</li>
-<li>&#x30E9;&#x30A4;&#x30BB;&#x30F3;&#x30B9;&#x306F;Creative Common BY-NC-SA&#x3067;&#x3059;&#x3002;</li>
-</ul>
-<p><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja" target="_blank"><img src="https://komtmt.files.wordpress.com/2015/04/by-nc-sa.png?w=225&amp;h=78" alt="by-nc-sa"></a></p>
-<p>Kenji Yoshida <a href="https://github.com/xuwei-k" target="_blank">@xuwei-k</a></p>
+                        <h1 id="&#x30BB;&#x30C3;&#x30C8;&#x30A2;&#x30C3;&#x30D7;">&#x30BB;&#x30C3;&#x30C8;&#x30A2;&#x30C3;&#x30D7;</h1>
+<p>Scalaz&#x306B;&#x306F;&#x3044;&#x304F;&#x3064;&#x304B;&#x306E;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x304C;&#x3001;<code>&quot;scalaz-core&quot;</code> &#x304C;&#x4E00;&#x756A;&#x5927;&#x304D;&#x304F;&#x3088;&#x304F;&#x5229;&#x7528;&#x3055;&#x308C;&#x308B;&#x3053;&#x3068;&#x304C;&#x591A;&#x3044;&#x3067;&#x3059;&#x3002;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x306E;&#x8A73;&#x7D30;&#x306B;&#x3064;&#x3044;&#x3066;&#x306F;&#x3001;&#x5225;&#x306E;&#x30DA;&#x30FC;&#x30B8;&#x3067;&#x8AAC;&#x660E;&#x3057;&#x307E;&#x3059;&#x3002;&#x3072;&#x3068;&#x307E;&#x305A; <code>&quot;scalaz-core&quot;</code> &#x306E;&#x307F;&#x3092;&#x4F7F;&#x3046;&#x5834;&#x5408;&#x306F;&#x3001;<code>build.sbt</code> &#x306B;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x8A18;&#x8FF0;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
+<pre><code class="lang-scala">libraryDependencies += <span class="hljs-string">&quot;org.scalaz&quot;</span> %% <span class="hljs-string">&quot;scalaz-core&quot;</span> % <span class="hljs-string">&quot;7.2.0&quot;</span>
+</code></pre>
+<p>&#x5FC5;&#x8981;&#x306B;&#x5FDC;&#x3058;&#x3066;&#x3001;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B; <code>scalaVersion</code> &#x306A;&#x3069;&#x4ED6;&#x306E;key&#x306E;&#x8A2D;&#x5B9A;&#x3092;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
+<pre><code class="lang-scala">scalaVersion := <span class="hljs-string">&quot;2.11.7&quot;</span>
+</code></pre>
 
                     
                     </section>
@@ -677,8 +677,10 @@
         </div>
 
         
+        <a href="./overview.html" class="navigation navigation-prev " aria-label="Previous page: Scalazとは"><i class="fa fa-angle-left"></i></a>
         
-        <a href="./overview.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Scalazとは"><i class="fa fa-angle-right"></i></a>
+        
+        <a href="./binary_compatibility.html" class="navigation navigation-next " aria-label="Next page: バイナリ互換とバージョン"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

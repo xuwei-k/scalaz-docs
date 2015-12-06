@@ -5,9 +5,9 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Introduction | Scalaz日本語ドキュメント</title>
+        <title>OptionT | Scalaz日本語ドキュメント</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <meta name="description" content="by-nc-sa">
+        <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.4">
         
         
@@ -37,8 +37,10 @@
         
     
     
-    <link rel="next" href="./overview.html" />
+    <link rel="next" href="./eitherT.html" />
     
+    
+    <link rel="prev" href="./digit.html" />
     
 
         
@@ -47,9 +49,9 @@
         
         
     <div class="book"
-        data-level="0"
-        data-chapter-title="Introduction"
-        data-filepath="INTRODUCTION.md"
+        data-level="3.1"
+        data-chapter-title="OptionT"
+        data-filepath="optionT.md"
         data-basepath="."
         data-revision="Sun Dec 06 2015 15:12:11 GMT+0000 (UTC)"
         data-innerlanguage="">
@@ -67,7 +69,7 @@
 
             
     
-        <li class="chapter active" data-level="0" data-path="index.html">
+        <li class="chapter " data-level="0" data-path="index.html">
             
                 
                     <a href="./index.html">
@@ -384,7 +386,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.1" data-path="optionT.html">
+        <li class="chapter active" data-level="3.1" data-path="optionT.html">
             
                 
                     <a href="./optionT.html">
@@ -658,15 +660,11 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="scalaz&#x65E5;&#x672C;&#x8A9E;&#x30C9;&#x30AD;&#x30E5;&#x30E1;&#x30F3;&#x30C8;">Scalaz&#x65E5;&#x672C;&#x8A9E;&#x30C9;&#x30AD;&#x30E5;&#x30E1;&#x30F3;&#x30C8;</h1>
-<ul>
-<li>&#x3053;&#x308C;&#x306F;&#x3001;scalaz&#x306B;&#x95A2;&#x3059;&#x308B;&#x65E5;&#x672C;&#x8A9E;&#x30C9;&#x30AD;&#x30E5;&#x30E1;&#x30F3;&#x30C8;&#x3067;&#x3059;&#x3002;</li>
-<li>&#x30BD;&#x30FC;&#x30B9;&#x30B3;&#x30FC;&#x30C9;&#x306E;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306F;&#x3053;&#x3061;&#x3089;&#x3067;&#x3059;&#x3002; <a href="https://github.com/xuwei-k/scalaz-docs" target="_blank">https://github.com/xuwei-k/scalaz-docs</a></li>
-<li>&#x6587;&#x7AE0;&#x5185;&#x306E;&#x30B3;&#x30FC;&#x30C9;&#x306F;<a href="https://github.com/tpolecat/tut" target="_blank">tut</a>&#x306B;&#x3088;&#x3063;&#x3066;&#x3001;&#x30B3;&#x30F3;&#x30D1;&#x30A4;&#x30EB;&#x3001;&#x5B9F;&#x884C;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</li>
-<li>&#x30E9;&#x30A4;&#x30BB;&#x30F3;&#x30B9;&#x306F;Creative Common BY-NC-SA&#x3067;&#x3059;&#x3002;</li>
-</ul>
-<p><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja" target="_blank"><img src="https://komtmt.files.wordpress.com/2015/04/by-nc-sa.png?w=225&amp;h=78" alt="by-nc-sa"></a></p>
-<p>Kenji Yoshida <a href="https://github.com/xuwei-k" target="_blank">@xuwei-k</a></p>
+                        <h1 id="optiont">OptionT</h1>
+<p><code>scala.Option</code> &#x306E;&#x30E2;&#x30CA;&#x30C9;&#x30C8;&#x30E9;&#x30F3;&#x30B9;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30FC;&#x3067;&#x3059;&#x3002;&#x95A2;&#x9023;&#x3059;&#x308B;&#x3082;&#x306E;&#x3068;&#x3057;&#x3066;&#x3001;<code>scalaz.MaybeT</code>, <code>scalaz.LazyOptionT</code> &#x3068;&#x3044;&#x3046;&#x3082;&#x306E;&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<p>&#x5B9F;&#x88C5;&#x3068;&#x3057;&#x3066;&#x306F;&#x3001;&#x5358;&#x306B;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;<code>run</code>&#x3068;&#x3044;&#x3046;&#x30D5;&#x30A3;&#x30FC;&#x30EB;&#x30C9;&#x3092;1&#x3064;&#x3060;&#x3051;&#x4FDD;&#x6301;&#x3057;&#x305F;case class&#x3067;&#x3059;&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">final</span> <span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OptionT</span>[</span><span class="hljs-type">F</span>[_], <span class="hljs-type">A</span>](run: <span class="hljs-type">F</span>[<span class="hljs-type">Option</span>[<span class="hljs-type">A</span>]])
+</code></pre>
 
                     
                     </section>
@@ -677,8 +675,10 @@
         </div>
 
         
+        <a href="./digit.html" class="navigation navigation-prev " aria-label="Previous page: Digit"><i class="fa fa-angle-left"></i></a>
         
-        <a href="./overview.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Scalazとは"><i class="fa fa-angle-right"></i></a>
+        
+        <a href="./eitherT.html" class="navigation navigation-next " aria-label="Next page: EitherT"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

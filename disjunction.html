@@ -5,9 +5,9 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Introduction | Scalaz日本語ドキュメント</title>
+        <title>\/ | Scalaz日本語ドキュメント</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <meta name="description" content="by-nc-sa">
+        <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.4">
         
         
@@ -37,8 +37,10 @@
         
     
     
-    <link rel="next" href="./overview.html" />
+    <link rel="next" href="./maybe.html" />
     
+    
+    <link rel="prev" href="./nel.html" />
     
 
         
@@ -47,9 +49,9 @@
         
         
     <div class="book"
-        data-level="0"
-        data-chapter-title="Introduction"
-        data-filepath="INTRODUCTION.md"
+        data-level="2.2"
+        data-chapter-title="\/"
+        data-filepath="disjunction.md"
         data-basepath="."
         data-revision="Sun Dec 06 2015 15:12:11 GMT+0000 (UTC)"
         data-innerlanguage="">
@@ -67,7 +69,7 @@
 
             
     
-        <li class="chapter active" data-level="0" data-path="index.html">
+        <li class="chapter " data-level="0" data-path="index.html">
             
                 
                     <a href="./index.html">
@@ -191,7 +193,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="disjunction.html">
+        <li class="chapter active" data-level="2.2" data-path="disjunction.html">
             
                 
                     <a href="./disjunction.html">
@@ -658,15 +660,40 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="scalaz&#x65E5;&#x672C;&#x8A9E;&#x30C9;&#x30AD;&#x30E5;&#x30E1;&#x30F3;&#x30C8;">Scalaz&#x65E5;&#x672C;&#x8A9E;&#x30C9;&#x30AD;&#x30E5;&#x30E1;&#x30F3;&#x30C8;</h1>
+                        <h1 id="">\/</h1>
 <ul>
-<li>&#x3053;&#x308C;&#x306F;&#x3001;scalaz&#x306B;&#x95A2;&#x3059;&#x308B;&#x65E5;&#x672C;&#x8A9E;&#x30C9;&#x30AD;&#x30E5;&#x30E1;&#x30F3;&#x30C8;&#x3067;&#x3059;&#x3002;</li>
-<li>&#x30BD;&#x30FC;&#x30B9;&#x30B3;&#x30FC;&#x30C9;&#x306E;&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306F;&#x3053;&#x3061;&#x3089;&#x3067;&#x3059;&#x3002; <a href="https://github.com/xuwei-k/scalaz-docs" target="_blank">https://github.com/xuwei-k/scalaz-docs</a></li>
-<li>&#x6587;&#x7AE0;&#x5185;&#x306E;&#x30B3;&#x30FC;&#x30C9;&#x306F;<a href="https://github.com/tpolecat/tut" target="_blank">tut</a>&#x306B;&#x3088;&#x3063;&#x3066;&#x3001;&#x30B3;&#x30F3;&#x30D1;&#x30A4;&#x30EB;&#x3001;&#x5B9F;&#x884C;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</li>
-<li>&#x30E9;&#x30A4;&#x30BB;&#x30F3;&#x30B9;&#x306F;Creative Common BY-NC-SA&#x3067;&#x3059;&#x3002;</li>
+<li><a href="https://github.com/scalaz/scalaz/blob/v7.2.0/core/src/main/scala/scalaz/Either.scala" target="_blank">&#x30BD;&#x30FC;&#x30B9;&#x30B3;&#x30FC;&#x30C9;</a></li>
+<li><a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/scalaz/scalaz_2.11/7.2.0/scalaz_2.11-7.2.0-javadoc.jar/!/index.html#scalaz.$bslash$div" target="_blank">scaladoc</a></li>
+<li>&#x8A18;&#x53F7;&#x306E;&#x30AF;&#x30E9;&#x30B9;&#x540D;&#x3067;&#x3068;&#x3063;&#x3064;&#x304D;&#x306B;&#x304F;&#x305D;&#x3046;&#x3067;&#x3059;&#x304C;&#x3001;&#x304B;&#x306A;&#x308A;&#x591A;&#x304F;&#x4F7F;&#x308F;&#x308C;&#x3066;&#x3044;&#x308B;&#x3001;&#x3068;&#x3066;&#x3082;&#x4FBF;&#x5229;&#x306A;&#x30AF;&#x30E9;&#x30B9;&#x3067;&#x3059;</li>
+<li>&#x8AAD;&#x307F;&#x65B9;&#x306F;<code>Disjunction</code>&#x3042;&#x308B;&#x3044;&#x306F;<code>Either</code>&#x3067;&#x3059;</li>
+<li>&#x6570;&#x5B66;&#x306E;&#x8AD6;&#x7406;&#x548C; &#x2228; &#x306E;&#x8A18;&#x53F7;&#x7531;&#x6765;&#x3067;&#x3059;</li>
+<li><code>\/</code> &#x81EA;&#x4F53;&#x306F;<code>sealed abstract class</code>&#x3067;&#x3042;&#x308A;&#x3001;<code>\/-</code>&#x3068;<code>-\/</code>&#x3068;&#x3044;&#x3046;&#x30B5;&#x30D6;&#x30AF;&#x30E9;&#x30B9;&#x304C;&#x5B58;&#x5728;&#x3059;&#x308B;</li>
+<li>&#x53F3;&#x306B;<code>-</code>&#x304C;&#x304F;&#x3063;&#x3064;&#x3044;&#x3066;&#x3044;&#x308B;&#x306E;&#x304C;Right&#x3001;&#x5DE6;&#x306B;<code>-</code>&#x304C;&#x304F;&#x3063;&#x3064;&#x3044;&#x3066;&#x3044;&#x308B;&#x306E;&#x304C;Left</li>
 </ul>
-<p><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja" target="_blank"><img src="https://komtmt.files.wordpress.com/2015/04/by-nc-sa.png?w=225&amp;h=78" alt="by-nc-sa"></a></p>
-<p>Kenji Yoshida <a href="https://github.com/xuwei-k" target="_blank">@xuwei-k</a></p>
+<pre><code class="lang-scala">scala&gt; <span class="hljs-keyword">import</span> scalaz._
+<span class="hljs-keyword">import</span> scalaz._
+
+scala&gt; <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">a</span>:</span> <span class="hljs-type">Int</span> \/ <span class="hljs-type">String</span> = \/-(<span class="hljs-string">&quot;foo&quot;</span>)  <span class="hljs-comment">// right&#x3092;&#x751F;&#x6210;</span>
+a: scalaz.\/[<span class="hljs-type">Int</span>,<span class="hljs-type">String</span>] = \/-(foo)
+
+scala&gt; <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">b</span>:</span> \/[<span class="hljs-type">Int</span>, <span class="hljs-type">String</span>] = a <span class="hljs-comment">// &#x578B;&#x306F;&#x4E2D;&#x7F6E;&#x8A18;&#x6CD5;&#x3067;&#x66F8;&#x304B;&#x308C;&#x308B;&#x3053;&#x3068;&#x304C;&#x591A;&#x3044;&#x304C;&#x3001;&#x4E2D;&#x7F6E;&#x8A18;&#x6CD5;&#x3092;&#x4F7F;&#x308F;&#x306A;&#x304F;&#x3066;&#x3082;&#x66F8;&#x3051;&#x308B;</span>
+b: scalaz.\/[<span class="hljs-type">Int</span>,<span class="hljs-type">String</span>] = \/-(foo)
+
+scala&gt; <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">c</span>:</span> <span class="hljs-type">Int</span> \/ <span class="hljs-type">String</span>  = \/.right(<span class="hljs-string">&quot;foo&quot;</span>) <span class="hljs-comment">// right&#x3068;&#x3044;&#x3046;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3082;&#x3042;&#x308B;</span>
+c: scalaz.\/[<span class="hljs-type">Int</span>,<span class="hljs-type">String</span>] = \/-(foo)
+
+scala&gt; <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">d</span> =</span> a.map(_ + <span class="hljs-string">&quot;bar&quot;</span>) <span class="hljs-comment">// right&#x3092;map&#x3059;&#x308B;&#x3068;&#x53CD;&#x6620;&#x3055;&#x308C;&#x308B;</span>
+d: scalaz.\/[<span class="hljs-type">Int</span>,<span class="hljs-type">String</span>] = \/-(foobar)
+
+scala&gt; <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">e</span>:</span> <span class="hljs-type">Int</span> \/ <span class="hljs-type">String</span>  = \/.left(<span class="hljs-number">42</span>)
+e: scalaz.\/[<span class="hljs-type">Int</span>,<span class="hljs-type">String</span>] = -\/(<span class="hljs-number">42</span>)
+
+scala&gt; e.map(_ + <span class="hljs-string">&quot;bar&quot;</span>) <span class="hljs-comment">// left&#x3092;map&#x3057;&#x3066;&#x3082;&#x5909;&#x308F;&#x3089;&#x306A;&#x3044;</span>
+res0: scalaz.\/[<span class="hljs-type">Int</span>,<span class="hljs-type">String</span>] = -\/(<span class="hljs-number">42</span>)
+
+scala&gt; e.leftMap(_ * <span class="hljs-number">100</span>) <span class="hljs-comment">// left&#x306E;&#x5834;&#x5408;&#x306B;map&#x3059;&#x308B;&#x306B;&#x306F;&#x3001;leftMap&#x3092;&#x4F7F;&#x3046;</span>
+res1: scalaz.\/[<span class="hljs-type">Int</span>,<span class="hljs-type">String</span>] = -\/(<span class="hljs-number">4200</span>)
+</code></pre>
 
                     
                     </section>
@@ -677,8 +704,10 @@
         </div>
 
         
+        <a href="./nel.html" class="navigation navigation-prev " aria-label="Previous page: NonEmptyList"><i class="fa fa-angle-left"></i></a>
         
-        <a href="./overview.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Scalazとは"><i class="fa fa-angle-right"></i></a>
+        
+        <a href="./maybe.html" class="navigation navigation-next " aria-label="Next page: Maybe"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
