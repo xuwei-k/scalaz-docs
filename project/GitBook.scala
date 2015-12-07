@@ -13,12 +13,13 @@ object GitBook extends NpmCliBase {
 
   def buildBook(format: Format) = Def.inputTask[Unit] {
     val options = rawStringArg("<gitbook command>").parsed
-    printRun(Process(s"$gitbookBin  ${format.command} $bookBuildDir $options"))
+    printRun(Process(s"$gitbookBin ${format.command} $bookBuildDir $options"))
   }
 
   lazy val pluginInstall = taskKey[Unit]("install GitBook plugin")
   lazy val helpGitBook = taskKey[Unit]("help GitBook")
   lazy val build = taskKey[Unit]("build GitBook to html (an alias of html)")
+  lazy val pdf = taskKey[Unit]("build GitBook to pdf")
   lazy val html = inputKey[Unit]("build GitBook to html")
   lazy val epub = inputKey[Unit]("build GitBook to epub")
   lazy val buildAll = taskKey[Unit]("build GitBook to all format")
@@ -29,6 +30,7 @@ object GitBook extends NpmCliBase {
     html := buildBook(Format.Html).dependsOn(tut).evaluated,
     build <<= html.toTask(""),
     epub := buildBook(Format.Epub).dependsOn(tut).evaluated,
+    pdf <<= buildBook(Format.Pdf).dependsOn(tut).toTask(""),
     buildAll <<= epub.toTask("") dependsOn html.toTask("")
   )
 }

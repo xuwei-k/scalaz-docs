@@ -4,6 +4,8 @@ jdk:
 - oraclejdk8
 before_install:
 - npm install
+- wget -nv -O- https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py | python -c "import sys; main=lambda x,y:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main('~/calibre-bin', True)"
+- export PATH="~/calibre-bin/calibre/:/home/travis/calibre-bin/calibre/:$PATH"
 cache:
   directories:
   - $HOME/.ivy2/cache
@@ -19,7 +21,7 @@ addons:
     - g++-4.8
     - graphviz
 script:
-- sbt scalazDiagram build
+- sbt scalazDiagram build epub pdf
 after_success:
 - echo -e "Host github.com\n\tStrictHostKeyChecking no\nIdentityFile ~/.ssh/deploy.key\n"
   >> ~/.ssh/config
@@ -28,9 +30,10 @@ after_success:
 - chmod 600 ~/.ssh/deploy.key
 - git config --global user.email "6b656e6a69@gmail.com"
 - git config --global user.name "xuwei-k"
-- mv gitbook/_book ../ && git fetch origin gh-pages:gh-pages && git clean -fdx &&
+- mv gitbook/_book ../ && mv gitbook/book.pdf ../_book/scalaz-docs.pdf &&
+  mv gitbook/book.epub ../_book/scalaz-docs.epub && git fetch origin gh-pages:gh-pages && git clean -fdx &&
   git checkout gh-pages && rm -rf ./* && cp -r ../_book/* ./ && git add . && git commit
-  -a -m "auto commit on travis $TRAVIS_JOB_NUMBER $TRAVIS_COMMIT"
+  -a -m "auto commit on travis $TRAVIS_JOB_NUMBER $TRAVIS_COMMIT" && tree ./
 - if [[ "${TRAVIS_BRANCH}" == "master" && "${TRAVIS_PULL_REQUEST}" == "false" ]];
   then git push git@github.com:xuwei-k/scalaz-docs.git gh-pages:gh-pages ; fi
 after_script:
