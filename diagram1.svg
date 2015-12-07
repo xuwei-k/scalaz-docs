@@ -24,7 +24,7 @@
 </a>
 </g>
 <!-- scalaz.Applicative&#45;&gt;scalaz.Apply -->
-<g id="edge14" class="edge"><title>scalaz.Applicative&#45;&gt;scalaz.Apply</title>
+<g id="edge18" class="edge"><title>scalaz.Applicative&#45;&gt;scalaz.Apply</title>
 <path fill="none" stroke="black" d="M227.446,-198.352C226.613,-190.491 225.563,-180.593 224.608,-171.589"/>
 <polygon fill="black" stroke="black" points="228.084,-171.182 223.549,-161.607 221.123,-171.92 228.084,-171.182"/>
 </g>
@@ -36,7 +36,7 @@
 </a>
 </g>
 <!-- scalaz.ApplicativePlus&#45;&gt;scalaz.Applicative -->
-<g id="edge16" class="edge"><title>scalaz.ApplicativePlus&#45;&gt;scalaz.Applicative</title>
+<g id="edge4" class="edge"><title>scalaz.ApplicativePlus&#45;&gt;scalaz.Applicative</title>
 <path fill="none" stroke="black" d="M295.136,-264.352C283.581,-255.38 268.608,-243.755 255.832,-233.834"/>
 <polygon fill="black" stroke="black" points="257.857,-230.975 247.812,-227.607 253.564,-236.504 257.857,-230.975"/>
 </g>
@@ -48,7 +48,7 @@
 </a>
 </g>
 <!-- scalaz.ApplicativePlus&#45;&gt;scalaz.PlusEmpty -->
-<g id="edge18" class="edge"><title>scalaz.ApplicativePlus&#45;&gt;scalaz.PlusEmpty</title>
+<g id="edge6" class="edge"><title>scalaz.ApplicativePlus&#45;&gt;scalaz.PlusEmpty</title>
 <path fill="none" stroke="black" d="M314,-264.352C314,-256.577 314,-246.808 314,-237.883"/>
 <polygon fill="black" stroke="black" points="317.5,-237.607 314,-227.607 310.5,-237.607 317.5,-237.607"/>
 </g>
@@ -60,7 +60,7 @@
 </a>
 </g>
 <!-- scalaz.Apply&#45;&gt;scalaz.Functor -->
-<g id="edge4" class="edge"><title>scalaz.Apply&#45;&gt;scalaz.Functor</title>
+<g id="edge12" class="edge"><title>scalaz.Apply&#45;&gt;scalaz.Functor</title>
 <path fill="none" stroke="black" d="M222,-132.352C222,-124.577 222,-114.808 222,-105.883"/>
 <polygon fill="black" stroke="black" points="225.5,-105.607 222,-95.6066 218.5,-105.607 225.5,-105.607"/>
 </g>
@@ -96,7 +96,7 @@
 </a>
 </g>
 <!-- scalaz.Cobind&#45;&gt;scalaz.Functor -->
-<g id="edge22" class="edge"><title>scalaz.Cobind&#45;&gt;scalaz.Functor</title>
+<g id="edge20" class="edge"><title>scalaz.Cobind&#45;&gt;scalaz.Functor</title>
 <path fill="none" stroke="black" d="M172.204,-132.352C180.572,-123.722 191.322,-112.637 200.691,-102.975"/>
 <polygon fill="black" stroke="black" points="203.387,-105.222 207.836,-95.6066 198.362,-100.349 203.387,-105.222"/>
 </g>
@@ -108,7 +108,7 @@
 </a>
 </g>
 <!-- scalaz.Comonad&#45;&gt;scalaz.Cobind -->
-<g id="edge20" class="edge"><title>scalaz.Comonad&#45;&gt;scalaz.Cobind</title>
+<g id="edge22" class="edge"><title>scalaz.Comonad&#45;&gt;scalaz.Cobind</title>
 <path fill="none" stroke="black" d="M97.3107,-198.352C107.813,-189.466 121.392,-177.976 133.042,-168.118"/>
 <polygon fill="black" stroke="black" points="135.365,-170.738 140.738,-161.607 130.843,-165.394 135.365,-170.738"/>
 </g>
@@ -211,12 +211,12 @@
 </a>
 </g>
 <!-- scalaz.Monad&#45;&gt;scalaz.Applicative -->
-<g id="edge6" class="edge"><title>scalaz.Monad&#45;&gt;scalaz.Applicative</title>
+<g id="edge14" class="edge"><title>scalaz.Monad&#45;&gt;scalaz.Applicative</title>
 <path fill="none" stroke="black" d="M227.444,-264.352C227.679,-256.577 227.976,-246.808 228.246,-237.883"/>
 <polygon fill="black" stroke="black" points="231.753,-237.708 228.557,-227.607 224.756,-237.496 231.753,-237.708"/>
 </g>
 <!-- scalaz.Monad&#45;&gt;scalaz.Bind -->
-<g id="edge8" class="edge"><title>scalaz.Monad&#45;&gt;scalaz.Bind</title>
+<g id="edge16" class="edge"><title>scalaz.Monad&#45;&gt;scalaz.Bind</title>
 <path fill="none" stroke="black" d="M211.687,-264.352C202.575,-255.637 190.845,-244.417 180.675,-234.689"/>
 <polygon fill="black" stroke="black" points="182.916,-231.99 173.271,-227.607 178.078,-237.048 182.916,-231.99"/>
 </g>
@@ -317,7 +317,7 @@
 </a>
 </g>
 <!-- scalaz.PlusEmpty&#45;&gt;scalaz.Plus -->
-<g id="edge12" class="edge"><title>scalaz.PlusEmpty&#45;&gt;scalaz.Plus</title>
+<g id="edge8" class="edge"><title>scalaz.PlusEmpty&#45;&gt;scalaz.Plus</title>
 <path fill="none" stroke="black" d="M306.232,-198.352C301.928,-190.235 296.471,-179.945 291.574,-170.711"/>
 <polygon fill="black" stroke="black" points="294.523,-168.801 286.746,-161.607 288.339,-172.081 294.523,-168.801"/>
 </g>
