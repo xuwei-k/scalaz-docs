@@ -10,6 +10,7 @@
  - [Maybe](maybe.md)
  - [IList](iList.md)
  - [Validation](validation.md)
+ - [\&/](these.md)
  - [DList](dlist.md)
  - [==>>](imap.md)
  - [ISet](iset.md)
