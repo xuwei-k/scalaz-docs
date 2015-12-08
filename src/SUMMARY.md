@@ -39,6 +39,7 @@
  - [Foldable1](foldable1.md)
  - [Traverse1](traverse1.md)
  - [Cobind](cobind.md)
+ - [Align](align.md)
 - その他
  - [NotNothing](notNothing.md)
 - [著者について](about_author.md)
