@@ -70,7 +70,7 @@ object build extends Build with NpmCliBase {
     },
     scalazDiagram2 := {
       val svg = DiagramKeys.classDiagramWrite.toTask(
-        "Enum Bitraverse Choice Arrow Associative ProChoice".split(' ').map{
+        "Monoid Enum Bitraverse Choice Arrow Associative ProChoice".split(' ').map{
           "scalaz." + _
         }.mkString(" ", " ", "")
       ).value
