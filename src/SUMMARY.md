@@ -21,6 +21,7 @@
  - [Digit](digit.md)
 - [モナドトランスフォーマー](monadTransformers.md)
  - [OptionT](optionT.md)
+ - [MaybeT](maybeT.md)
  - [EitherT](eitherT.md)
  - [ListT](listT.md)
  - [StreamT](streamT.md)
