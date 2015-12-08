@@ -11,3 +11,5 @@ Free Applicative Functorは、Freeモナドなどと比べて比較的最近出�
 ScalaにおいてのFree Applicativeの発表があったので、それも参照するとよいでしょう。
 
 https://github.com/jdegoes/scalaworld-2015/
+
+Haskellの場合は、[ekmett/freeにFree Applicative Functorの実装があります。](https://github.com/ekmett/free/blob/v4.12.1/src/Control/Applicative/Free.hs)
