@@ -30,6 +30,7 @@
  - [Order](order.md)
  - [Enum](enum.md)
  - [Plus](plus.md)
+ - [Apply](apply.md)
  - [ApplicativePlus](applicativePlus.md)
  - [Bind](bind.md)
  - [BindRec](bindRec.md)
