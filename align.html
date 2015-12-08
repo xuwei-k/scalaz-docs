@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>StreamT | Scalaz日本語ドキュメント</title>
+        <title>Align | Scalaz日本語ドキュメント</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.4">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="./kleisli.html" />
+    <link rel="next" href="./notNothing.html" />
     
     
-    <link rel="prev" href="./listT.html" />
+    <link rel="prev" href="./cobind.html" />
     
 
         
@@ -49,9 +49,9 @@
         
         
     <div class="book"
-        data-level="3.4"
-        data-chapter-title="StreamT"
-        data-filepath="streamT.md"
+        data-level="4.14"
+        data-chapter-title="Align"
+        data-filepath="align.md"
         data-basepath="."
         data-revision="Tue Dec 08 2015 16:44:17 GMT+0000 (UTC)"
         data-innerlanguage="">
@@ -447,7 +447,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.4" data-path="streamT.html">
+        <li class="chapter " data-level="3.4" data-path="streamT.html">
             
                 
                     <a href="./streamT.html">
@@ -700,7 +700,7 @@
             
         </li>
     
-        <li class="chapter " data-level="4.14" data-path="align.html">
+        <li class="chapter active" data-level="4.14" data-path="align.html">
             
                 
                     <a href="./align.html">
@@ -796,22 +796,13 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="streamt">StreamT</h1>
-<p><code>Stream</code>&#x306E;&#x30E2;&#x30CA;&#x30C9;&#x30C8;&#x30E9;&#x30F3;&#x30B9;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30FC;&#x3001;&#x3068;&#x3044;&#x3063;&#x3066;&#x9593;&#x9055;&#x3044;&#x3067;&#x306F;&#x306A;&#x3044;&#x306E;&#x3067;&#x3059;&#x304C;&#x3001;&#x3053;&#x306E;&#x30AF;&#x30E9;&#x30B9;&#x306E;&#x4F7F;&#x3044;&#x65B9;&#x306A;&#x3069;&#x306E;&#x8AAC;&#x660E;&#x306B;&#x5165;&#x308B;&#x524D;&#x306B;&#x3001;&#x591A;&#x5C11;&#x524D;&#x63D0;&#x306E;&#x8AAC;&#x660E;&#x304C;&#x5FC5;&#x8981;&#x3067;&#x3059;&#x3002;</p>
-<p>&#x307E;&#x305A;&#x3001;Scala&#x6A19;&#x6E96;&#x306E;Stream&#x304C;&#x5B9F;&#x88C5;&#x306B;&#x4F7F;&#x308F;&#x308C;&#x3066;&#x3044;&#x308B;&#x308F;&#x3051;&#x3067;&#x306F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x3002;
-<code>ListT</code>&#x306E;&#x30DA;&#x30FC;&#x30B8;&#x306B;&#x3082;&#x66F8;&#x304D;&#x307E;&#x3057;&#x305F;&#x304C;&#x5358;&#x7D14;&#x306B;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;&#x30AF;&#x30E9;&#x30B9;</p>
-<pre><code class="lang-scala"><span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StreamT</span>[</span><span class="hljs-type">F</span>[_], <span class="hljs-type">A</span>](run: <span class="hljs-type">F</span>[<span class="hljs-type">Stream</span>[<span class="hljs-type">A</span>]])
+                        <h1 id="align">Align</h1>
+<p>Zip&#x3068;&#x4F3C;&#x305F;&#x3088;&#x3046;&#x306A;&#x578B;&#x30AF;&#x30E9;&#x30B9;&#x3067;&#x3059;&#x304C;&#x3001;Zip&#x3088;&#x308A;&#x3042;&#x308B;&#x610F;&#x5473;&#x6C4E;&#x7528;&#x7684;&#x306B;&#x4F7F;&#x3048;&#x308B;&#x578B;&#x30AF;&#x30E9;&#x30B9;&#x3067;&#x3059;&#x3002;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;&#x30B7;&#x30B0;&#x30CD;&#x30C1;&#x30E3;&#x306E;<code>alignWith</code>&#x3068;&#x3044;&#x3046;&#x62BD;&#x8C61;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">alignWith</span>[</span><span class="hljs-type">A</span>, <span class="hljs-type">B</span>, <span class="hljs-type">C</span>](f: <span class="hljs-type">A</span> \&amp;/ <span class="hljs-type">B</span> =&gt; <span class="hljs-type">C</span>): (<span class="hljs-type">F</span>[<span class="hljs-type">A</span>], <span class="hljs-type">F</span>[<span class="hljs-type">B</span>]) =&gt; <span class="hljs-type">F</span>[<span class="hljs-type">C</span>]
 </code></pre>
-<p>&#x306B;&#x3059;&#x308B;&#x3068;&#x3001;&#x3059;&#x3079;&#x3066;&#x306E;&#x5834;&#x5408;&#x3067;&#x30E2;&#x30CA;&#x30C9;&#x5247;&#x3092;&#x6E80;&#x305F;&#x3055;&#x306A;&#x3044;&#x306E;&#x3067;&#x3001;
-Scala&#x6A19;&#x6E96;&#x306E;Stream&#x3092;&#x4F7F;&#x3063;&#x3066;&#x4E0A;&#x8A18;&#x306E;&#x3088;&#x3046;&#x306A;&#x5B9F;&#x88C5;&#x306B;&#x3059;&#x308B;&#x308F;&#x3051;&#x306B;&#x306F;&#x3044;&#x304D;&#x307E;&#x305B;&#x3093;&#x3002;&#x307E;&#x305F;&#x3001;&#x73FE;&#x72B6;&#x306E;<code>scalaz.ListT</code>&#x306F;&#x9593;&#x9055;&#x3063;&#x3066;&#x3044;&#x308B;&#x306E;&#x3067;&#x3001;<strong>&#x6B63;&#x3057;&#x3044;List&#x30E2;&#x30CA;&#x30C9;&#x30C8;&#x30E9;&#x30F3;&#x30B9;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30FC;</strong>&#x304C;&#x5FC5;&#x8981;&#x306A;&#x5834;&#x5408;&#x306F;&#x3001;Scalaz&#x306E;&#x7BC4;&#x56F2;&#x5185;&#x3067;&#x306F;<code>StreamT</code>&#x304C;&#x3042;&#x308B;&#x610F;&#x5473;&#x552F;&#x4E00;&#x306E;&#x9078;&#x629E;&#x80A2;&#x3067;&#x3042;&#x308B;&#x3068;&#x3082;&#x8A00;&#x3048;&#x307E;&#x3059;&#x3002;<sup><a href="#fn_1" id="reffn_1">1</a></sup>
-StreamT&#x306F;ListT&#x3068;&#x540C;&#x3058;&#x9593;&#x9055;&#x3044;&#x306F;&#x3057;&#x3066;&#x3044;&#x307E;&#x305B;&#x3093;&#x3002;</p>
-<p>&#x8A00;&#x3044;&#x63DB;&#x3048;&#x308B;&#x3068;</p>
-<p><strong>StreamT&#x306F;&#x5358;&#x306A;&#x308B;ListT&#x306E;&#x9045;&#x5EF6;&#x8A55;&#x4FA1;&#x7248;&#x3067;&#x306F;&#x306A;&#x304F;&#x3001;&#x69CB;&#x9020;&#x304C;&#x5168;&#x304F;&#x7570;&#x306A;&#x308B;&#x5225;&#x306E;&#x3082;&#x306E;</strong></p>
-<p>&#x3068;&#x3044;&#x3046;&#x3053;&#x3068;&#x3067;&#x3059;&#x3002;</p>
-<p>&#x3055;&#x3066;&#x3001;&#x524D;&#x7F6E;&#x304D;&#x306F;&#x3053;&#x308C;&#x304F;&#x3089;&#x3044;&#x306B;&#x3057;&#x3066;&#x3001;&#x5B9F;&#x969B;&#x306B;<code>StreamT</code>&#x305D;&#x306E;&#x3082;&#x306E;&#x306E;&#x8AAC;&#x660E;&#x306B;&#x5165;&#x3063;&#x3066;&#x3044;&#x304D;&#x307E;&#x3059;&#x3002;</p>
-<blockquote id="fn_1">
-<sup>1</sup>. &#x305F;&#x3060;&#x3057;&#x3001;FreeT&#x3092;&#x4F7F;&#x3063;&#x3066;ListT&#x3092;&#x4F5C;&#x6210;&#x3067;&#x304D;&#x308B;&#x304B;&#x3082;&#x3057;&#x308C;&#x306A;&#x3044;&#xFF1F;&#x3068;&#x3044;&#x3046;&#x8A71;&#x306F;&#x3042;&#x308A;&#x307E;&#x3059; <a href="https://gist.github.com/paf31/eac16f0795165a285820" target="_blank">https://gist.github.com/paf31/eac16f0795165a285820</a><a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#x21A9;</a>
-</blockquote>
+<p><code>\&amp;/</code>&#x306F;These&#x3068;&#x3082;&#x547C;&#x3070;&#x308C;&#x308B;&#x30C7;&#x30FC;&#x30BF;&#x69CB;&#x9020;&#x3067;&#x3059;&#x3002;
+Align&#x306F;<code>\&amp;/</code>&#x3068;&#x5BC6;&#x63A5;&#x306B;&#x95A2;&#x9023;&#x3057;&#x3066;&#x304A;&#x308A;&#x3001;<code>\&amp;/</code>&#x3092;&#x7406;&#x89E3;&#x3057;&#x3066;&#x3044;&#x306A;&#x3044;&#x3068;Align&#x306E;&#x8AAC;&#x660E;&#x3092;&#x3059;&#x308B;&#x306E;&#x306F;&#x96E3;&#x3057;&#x3044;&#x306E;&#x3067;&#x3001;
+<code>\&amp;/</code>&#x3092;&#x77E5;&#x3089;&#x306A;&#x3044;&#x4EBA;&#x306F;&#x307E;&#x305A;&#x305D;&#x3061;&#x3089;&#x306E;&#x8AAC;&#x660E;&#x3092;&#x53C2;&#x7167;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
 
                     
                     </section>
@@ -822,10 +813,10 @@ StreamT&#x306F;ListT&#x3068;&#x540C;&#x3058;&#x9593;&#x9055;&#x3044;&#x306F;&#x3
         </div>
 
         
-        <a href="./listT.html" class="navigation navigation-prev " aria-label="Previous page: ListT"><i class="fa fa-angle-left"></i></a>
+        <a href="./cobind.html" class="navigation navigation-prev " aria-label="Previous page: Cobind"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="./kleisli.html" class="navigation navigation-next " aria-label="Next page: Kleisli"><i class="fa fa-angle-right"></i></a>
+        <a href="./notNothing.html" class="navigation navigation-next " aria-label="Next page: NotNothing"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
