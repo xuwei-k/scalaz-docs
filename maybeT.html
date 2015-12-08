@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Plus | Scalaz日本語ドキュメント</title>
+        <title>MaybeT | Scalaz日本語ドキュメント</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.4">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="./apply.html" />
+    <link rel="next" href="./eitherT.html" />
     
     
-    <link rel="prev" href="./enum.html" />
+    <link rel="prev" href="./optionT.html" />
     
 
         
@@ -49,9 +49,9 @@
         
         
     <div class="book"
-        data-level="4.4"
-        data-chapter-title="Plus"
-        data-filepath="plus.md"
+        data-level="3.2"
+        data-chapter-title="MaybeT"
+        data-filepath="maybeT.md"
         data-basepath="."
         data-revision="Tue Dec 08 2015 16:58:45 GMT+0000 (UTC)"
         data-innerlanguage="">
@@ -432,7 +432,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="maybeT.html">
+        <li class="chapter active" data-level="3.2" data-path="maybeT.html">
             
                 
                     <a href="./maybeT.html">
@@ -580,7 +580,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="4.4" data-path="plus.html">
+        <li class="chapter " data-level="4.4" data-path="plus.html">
             
                 
                     <a href="./plus.html">
@@ -826,8 +826,11 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="plus">Plus</h1>
-<p><a href="https://hackage.haskell.org/package/semigroupoids-5.0.0.4/docs/Data-Functor-Alt.html#t:Alt" target="_blank">ekmett/semigroupoids&#x306B;&#x304A;&#x3051;&#x308B;Alt</a>&#x3068;&#x540C;&#x3058;&#x3088;&#x3046;&#x306A;&#x3082;&#x306E;&#x3067;&#x3059;&#x304C;&#x3001;Scalaz&#x306E;&#x3082;&#x306E;&#x306F;Functor&#x3092;<strong>&#x7D99;&#x627F;&#x3057;&#x3066;&#x3044;&#x306A;&#x3044;</strong>&#x3068;&#x3044;&#x3046;&#x70B9;&#x304C;&#x7570;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+                        <h1 id="maybet">MaybeT</h1>
+<p><code>scalaz.Maybe</code>&#x306E;&#x30E2;&#x30CA;&#x30C9;&#x30C8;&#x30E9;&#x30F3;&#x30B9;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30FC;&#x3067;&#x3059;&#x3002;
+scalaz&#x306B;Maybe&#x304C;&#x5165;&#x3063;&#x305F;&#x306E;&#x3068;&#x307B;&#x307C;&#x540C;&#x3058;&#x30BF;&#x30A4;&#x30DF;&#x30F3;&#x30B0;&#x3067;MaybeT&#x3082;&#x8FFD;&#x52A0;&#x3055;&#x308C;&#x307E;&#x3057;&#x305F;&#x3002;&#x5B9F;&#x614B;&#x306F;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;case class&#x3067;&#x3059;&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">final</span> <span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MaybeT</span>[</span><span class="hljs-type">F</span>[_], <span class="hljs-type">A</span>](run: <span class="hljs-type">F</span>[<span class="hljs-type">Maybe</span>[<span class="hljs-type">A</span>]])
+</code></pre>
 
                     
                     </section>
@@ -838,10 +841,10 @@
         </div>
 
         
-        <a href="./enum.html" class="navigation navigation-prev " aria-label="Previous page: Enum"><i class="fa fa-angle-left"></i></a>
+        <a href="./optionT.html" class="navigation navigation-prev " aria-label="Previous page: OptionT"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="./apply.html" class="navigation navigation-next " aria-label="Next page: Apply"><i class="fa fa-angle-right"></i></a>
+        <a href="./eitherT.html" class="navigation navigation-next " aria-label="Next page: EitherT"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
