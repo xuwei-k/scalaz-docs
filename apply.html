@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Maybe | Scalaz日本語ドキュメント</title>
+        <title>Apply | Scalaz日本語ドキュメント</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.4">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="./iList.html" />
+    <link rel="next" href="./applicativePlus.html" />
     
     
-    <link rel="prev" href="./disjunction.html" />
+    <link rel="prev" href="./plus.html" />
     
 
         
@@ -49,9 +49,9 @@
         
         
     <div class="book"
-        data-level="2.3"
-        data-chapter-title="Maybe"
-        data-filepath="maybe.md"
+        data-level="4.5"
+        data-chapter-title="Apply"
+        data-filepath="apply.md"
         data-basepath="."
         data-revision="Tue Dec 08 2015 15:39:05 GMT+0000 (UTC)"
         data-innerlanguage="">
@@ -216,7 +216,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.3" data-path="maybe.html">
+        <li class="chapter " data-level="2.3" data-path="maybe.html">
             
                 
                     <a href="./maybe.html">
@@ -565,7 +565,7 @@
             
         </li>
     
-        <li class="chapter " data-level="4.5" data-path="apply.html">
+        <li class="chapter active" data-level="4.5" data-path="apply.html">
             
                 
                     <a href="./apply.html">
@@ -766,15 +766,11 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="maybe">Maybe</h1>
-<p>&#x3044;&#x308F;&#x3086;&#x308B;Haskell&#x306E;Maybe&#x3068;&#x540C;&#x3058;&#x3088;&#x3046;&#x306A;&#x3082;&#x306E;&#x3067;&#x3059;&#x3002;
-Scala&#x6A19;&#x6E96;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x306B;&#x306F;&#x3001;&#x3059;&#x3067;&#x306B;<a href="https://github.com/scala/scala/blob/v2.11.7/src/library/scala/Option.scala" target="_blank"><code>scala.Option</code></a>&#x3068;&#x3044;&#x3046;&#x3082;&#x306E;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x304C;&#x3001;&#x3044;&#x304F;&#x3064;&#x304B;&#x306E;&#x7406;&#x7531;&#x306B;&#x3088;&#x308A;&#x3001;Scalaz&#x72EC;&#x81EA;&#x306E;&#x3082;&#x306E;&#x304C;&#x4F5C;&#x3089;&#x308C;&#x307E;&#x3057;&#x305F;&#x3002;</p>
-<p>&#x5177;&#x4F53;&#x7684;&#x306B;&#x4F5C;&#x3089;&#x308C;&#x305F;&#x7406;&#x7531;&#x3001;&#x6A19;&#x6E96;&#x306E;Option&#x3068;&#x306E;&#x9055;&#x3044;&#x3092;&#x6319;&#x3052;&#x308B;&#x3068;</p>
-<ul>
-<li>&#x6A19;&#x6E96;&#x306E;Option&#x306F;&#x5171;&#x5909;(covariant)&#x3060;&#x304C;&#x3001;Scalaz&#x306E;Maybe&#x306F;&#x975E;&#x5909;(invariant)</li>
-<li>&#x6A19;&#x6E96;&#x306E; <code>implicit def option2Iterable[A](xo: Option[A]): Iterable[A]</code> &#x3068;&#x3044;&#x3046;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306E;&#x5B58;&#x5728;&#x3092;&#x5ACC;&#x3063;&#x305F;</li>
-<li>&#x6A19;&#x6E96;&#x306E;Option&#x306B;&#x306F;<code>get</code>&#x3084;<code>foreach</code>&#x306A;&#x3069;&#x306E;&#x3001;&#x5B89;&#x5168;&#x3067;&#x306F;&#x306A;&#x304B;&#x3063;&#x305F;&#x308A;&#x526F;&#x4F5C;&#x7528;&#x524D;&#x63D0;&#x306E;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x304C;&#x3042;&#x308B;&#x304C;&#x3001;Scalaz&#x306E;Maybe&#x306B;&#x306F;&#x305D;&#x3046;&#x3044;&#x3063;&#x305F;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306F;&#x5B58;&#x5728;&#x3057;&#x306A;&#x3044;</li>
-</ul>
+                        <h1 id="apply">Apply</h1>
+<p>Applicative&#x304B;&#x3089;point&#x3092;&#x9664;&#x3044;&#x305F;&#x578B;&#x30AF;&#x30E9;&#x30B9;&#x3067;&#x3059;&#x3002;Applicative&#x3068;Bind&#x306E;&#x89AA;&#x306E;&#x578B;&#x30AF;&#x30E9;&#x30B9;&#x3067;&#x3059;&#x3002;
+Haskell&#x306E;&#x6A19;&#x6E96;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x306B;&#x306F;&#x5B58;&#x5728;&#x3057;&#x3066;&#x3044;&#x307E;&#x305B;&#x3093;&#x3002;
+ekmett/semigroupoids&#x306B;&#x306F;&#x3001;&#x540C;&#x69D8;&#x306E;&#x578B;&#x30AF;&#x30E9;&#x30B9;&#x304C;&#x5B58;&#x5728;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<p><a href="http://hackage.haskell.org/package/semigroupoids-5.0.0.4/docs/Data-Functor-Apply.html#t:Apply" target="_blank">http://hackage.haskell.org/package/semigroupoids-5.0.0.4/docs/Data-Functor-Apply.html#t:Apply</a></p>
 
                     
                     </section>
@@ -785,10 +781,10 @@ Scala&#x6A19;&#x6E96;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x306B;&#x306F;&#x
         </div>
 
         
-        <a href="./disjunction.html" class="navigation navigation-prev " aria-label="Previous page: \/"><i class="fa fa-angle-left"></i></a>
+        <a href="./plus.html" class="navigation navigation-prev " aria-label="Previous page: Plus"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="./iList.html" class="navigation navigation-next " aria-label="Next page: IList"><i class="fa fa-angle-right"></i></a>
+        <a href="./applicativePlus.html" class="navigation navigation-next " aria-label="Next page: ApplicativePlus"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
