@@ -26,10 +26,7 @@ object build extends Build with NpmCliBase {
     else
       Map()
 
-  val weightMap: Map[(String, String), Int] = List(
-    ("MonadError", "Monad", 3),
-    ("Cobind", "Functor", 2),
-    ("Traverse", "Foldable", 2)
+  val weightMap: Map[(String, String), Int] = List[(String, String, Int)](
   ).map{
     case (x, y, z) => ((x, y), z)
   }.toMap
@@ -62,7 +59,7 @@ object build extends Build with NpmCliBase {
     },
     scalazDiagram1 := {
       val svg = DiagramKeys.classDiagramWrite.toTask(
-        "MonadPlus ComonadStore Traverse1 IsEmpty MonadReader MonadState MonadError MonadListen Nondeterminism Divisible BindRec".split(' ').map{
+        "MonadPlus ComonadStore Traverse1 IsEmpty MonadReader MonadState MonadError MonadListen Nondeterminism Divisible BindRec Align".split(' ').map{
           "scalaz." + _
         }.mkString(" ", " ", "")
       ).value
