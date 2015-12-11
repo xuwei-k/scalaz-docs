@@ -4,8 +4,15 @@
     "summary": "SUMMARY.md"
   },
   "plugins": [
+    "edit-link",
     "include-codeblock",
     "japanese-support",
     "footnote-string-to-number"
-  ]
+  ],
+  "pluginsConfig": {
+    "edit-link": {
+      "base": "https://github.com/xuwei-k/scalaz-docs/tree/master/src",
+      "label": "このページのソースコード"
+    }
+  }
 }
