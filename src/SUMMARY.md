@@ -43,6 +43,8 @@
  - [Foldable1](foldable1.md)
  - [Traverse1](traverse1.md)
  - [Cobind](cobind.md)
+ - [Divide](divide.md)
+ - [Divisible](divisible.md)
  - [Align](align.md)
  - [Distributive](distributive.md)
  - [Associative](associative.md)
