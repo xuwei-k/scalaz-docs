@@ -26,6 +26,7 @@
  - [ListT](listT.md)
  - [StreamT](streamT.md)
  - [Kleisli](kleisli.md)
+ - [IndexedStateT](indexedStateT.md)
  - [FreeT](freeT.md)
 - 型クラス
  - [Equal](equal.md)
