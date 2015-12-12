@@ -12,6 +12,7 @@
  - [Validation](validation.md)
  - [\&/](these.md)
  - [DList](dlist.md)
+ - [Dequeue](dequeue.md)
  - [==>>](imap.md)
  - [ISet](iset.md)
  - [Tree](tree.md)
