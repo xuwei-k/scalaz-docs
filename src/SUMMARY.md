@@ -13,6 +13,7 @@
  - [\&/](these.md)
  - [DList](dlist.md)
  - [Dequeue](dequeue.md)
+ - [Cord](cord.md)
  - [==>>](imap.md)
  - [ISet](iset.md)
  - [Tree](tree.md)
