@@ -18,6 +18,7 @@
  - [Tree](tree.md)
  - [Free](free.md)
  - [FreeAp](freeAp.md)
+ - [Coproduct](coproduct.md)
  - [Alpha](alpha.md)
  - [Digit](digit.md)
 - [モナドトランスフォーマー](monadTransformers.md)
