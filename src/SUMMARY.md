@@ -44,6 +44,7 @@
  - [Traverse1](traverse1.md)
  - [Cobind](cobind.md)
  - [Align](align.md)
+ - [Distributive](distributive.md)
 - その他
  - [NotNothing](notNothing.md)
 - [著者について](about_author.md)
