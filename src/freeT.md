@@ -8,3 +8,8 @@ Haskellでは数年前から存在していましたが、Scalaで実装され�
 まずpurescriptという言語で実現され、それがScalazに移植されました。
 
 [Stack Safety for Free](http://functorial.com/stack-safety-for-free/index.pdf)
+
+Haskellにおいては[ekmett/freeに対応するものが存在](https://github.com/ekmett/free/blob/v4.12.1/src/Control/Monad/Trans/Free.hs)しています[^freeT-church]。
+
+
+[^freeT-church]: 例によってChurch Encodeされたものと、2種類存在します https://github.com/ekmett/free/blob/v4.12.1/src/Control/Monad/Trans/Free/Church.hs
