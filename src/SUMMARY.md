@@ -45,6 +45,7 @@
  - [Cobind](cobind.md)
  - [Align](align.md)
  - [Distributive](distributive.md)
+ - [Associative](associative.md)
 - その他
  - [NotNothing](notNothing.md)
 - [著者について](about_author.md)
