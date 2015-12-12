@@ -59,7 +59,7 @@ object build extends Build with NpmCliBase {
     },
     scalazDiagram1 := {
       val svg = DiagramKeys.classDiagramWrite.toTask(
-        "MonadPlus ComonadStore Traverse1 IsEmpty MonadReader MonadState MonadError MonadListen Nondeterminism Divisible BindRec Align".split(' ').map{
+        "MonadPlus ComonadStore Traverse1 IsEmpty MonadReader MonadState MonadError MonadListen Nondeterminism Divisible BindRec Align Distributive".split(' ').map{
           "scalaz." + _
         }.mkString(" ", " ", "")
       ).value
