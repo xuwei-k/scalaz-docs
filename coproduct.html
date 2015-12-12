@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Inject | Scalaz日本語ドキュメント</title>
+        <title>Coproduct | Scalaz日本語ドキュメント</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.5">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="./traverse.html" />
+    <link rel="next" href="./alpha.html" />
     
     
-    <link rel="prev" href="./bindRec.html" />
+    <link rel="prev" href="./freeAp.html" />
     
 
         
@@ -49,9 +49,9 @@
         
         
     <div class="book"
-        data-level="4.9"
-        data-chapter-title="Inject"
-        data-filepath="inject.md"
+        data-level="2.15"
+        data-chapter-title="Coproduct"
+        data-filepath="coproduct.md"
         data-basepath="."
         data-revision="Sat Dec 12 2015 13:41:41 GMT+0000 (UTC)"
         data-innerlanguage="">
@@ -396,7 +396,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.15" data-path="coproduct.html">
+        <li class="chapter active" data-level="2.15" data-path="coproduct.html">
             
                 
                     <a href="./coproduct.html">
@@ -715,7 +715,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="4.9" data-path="inject.html">
+        <li class="chapter " data-level="4.9" data-path="inject.html">
             
                 
                     <a href="./inject.html">
@@ -961,9 +961,12 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="inject">Inject</h1>
-<p><a href="http://www.staff.science.uu.nl/~swier004/Publications/DataTypesALaCarte.pdf" target="_blank">Data types a la carte</a>&#x3068;&#x3044;&#x3046;&#x8AD6;&#x6587;&#x3067;&#x7D39;&#x4ECB;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x3001;Free&#x30E2;&#x30CA;&#x30C9;&#x3092;&#x5408;&#x6210;&#x3059;&#x308B;&#x969B;&#x306B;&#x3064;&#x304B;&#x3046;&#x3082;&#x306E;&#x3067;&#x3059;&#x3002;
-Inject&#x81EA;&#x4F53;&#x306F;&#x3001;&#x30C7;&#x30FC;&#x30BF;&#x578B;&#x3067;&#x306F;&#x306A;&#x304F;&#x578B;&#x30AF;&#x30E9;&#x30B9;&#x3067;&#x3059;&#x3002;</p>
+                        <h1 id="coproduct">Coproduct</h1>
+<p>&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;&#x30D5;&#x30A3;&#x30FC;&#x30EB;&#x30C9;&#x3092;1&#x3064;&#x4FDD;&#x6301;&#x3057;&#x305F;case class&#x3067;&#x3059;&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">final</span> <span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Coproduct</span>[</span><span class="hljs-type">F</span>[_], <span class="hljs-type">G</span>[_], <span class="hljs-type">A</span>](run: <span class="hljs-type">F</span>[<span class="hljs-type">A</span>] \/ <span class="hljs-type">G</span>[<span class="hljs-type">A</span>])
+</code></pre>
+<p>Free&#x3084;Inject&#x3068;&#x7D44;&#x307F;&#x5408;&#x308F;&#x305B;&#x3066;&#x4F7F;&#x308F;&#x308C;&#x308B;&#x3053;&#x3068;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<p><a href="https://github.com/milessabin/shapeless/blob/shapeless-2.2.5/core/src/main/scala/shapeless/coproduct.scala" target="_blank">shapelss&#x306E;Coproduct</a>&#x3068;&#x4F3C;&#x3066;&#x3044;&#x307E;&#x3059;&#x304C;&#x3001;&#x5FAE;&#x5999;&#x306B;&#x7570;&#x306A;&#x308B;&#x3082;&#x306E;&#x306A;&#x306E;&#x3067;&#x6CE8;&#x610F;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
 
                     
                     </section>
@@ -974,10 +977,10 @@ Inject&#x81EA;&#x4F53;&#x306F;&#x3001;&#x30C7;&#x30FC;&#x30BF;&#x578B;&#x3067;&#
         </div>
 
         
-        <a href="./bindRec.html" class="navigation navigation-prev " aria-label="Previous page: BindRec"><i class="fa fa-angle-left"></i></a>
+        <a href="./freeAp.html" class="navigation navigation-prev " aria-label="Previous page: FreeAp"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="./traverse.html" class="navigation navigation-next " aria-label="Next page: Traverse"><i class="fa fa-angle-right"></i></a>
+        <a href="./alpha.html" class="navigation navigation-next " aria-label="Next page: Alpha"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Inject | Scalaz日本語ドキュメント</title>
+        <title>Cord | Scalaz日本語ドキュメント</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.5">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="./traverse.html" />
+    <link rel="next" href="./imap.html" />
     
     
-    <link rel="prev" href="./bindRec.html" />
+    <link rel="prev" href="./dequeue.html" />
     
 
         
@@ -49,9 +49,9 @@
         
         
     <div class="book"
-        data-level="4.9"
-        data-chapter-title="Inject"
-        data-filepath="inject.md"
+        data-level="2.9"
+        data-chapter-title="Cord"
+        data-filepath="cord.md"
         data-basepath="."
         data-revision="Sat Dec 12 2015 13:41:41 GMT+0000 (UTC)"
         data-innerlanguage="">
@@ -306,7 +306,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.9" data-path="cord.html">
+        <li class="chapter active" data-level="2.9" data-path="cord.html">
             
                 
                     <a href="./cord.html">
@@ -715,7 +715,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="4.9" data-path="inject.html">
+        <li class="chapter " data-level="4.9" data-path="inject.html">
             
                 
                     <a href="./inject.html">
@@ -961,9 +961,15 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="inject">Inject</h1>
-<p><a href="http://www.staff.science.uu.nl/~swier004/Publications/DataTypesALaCarte.pdf" target="_blank">Data types a la carte</a>&#x3068;&#x3044;&#x3046;&#x8AD6;&#x6587;&#x3067;&#x7D39;&#x4ECB;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x3001;Free&#x30E2;&#x30CA;&#x30C9;&#x3092;&#x5408;&#x6210;&#x3059;&#x308B;&#x969B;&#x306B;&#x3064;&#x304B;&#x3046;&#x3082;&#x306E;&#x3067;&#x3059;&#x3002;
-Inject&#x81EA;&#x4F53;&#x306F;&#x3001;&#x30C7;&#x30FC;&#x30BF;&#x578B;&#x3067;&#x306F;&#x306A;&#x304F;&#x578B;&#x30AF;&#x30E9;&#x30B9;&#x3067;&#x3059;&#x3002;</p>
+                        <h1 id="cord">Cord</h1>
+<p>FingerTree&#x3092;&#x4F7F;&#x3063;&#x305F;&#x3001;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;&#x30C7;&#x30FC;&#x30BF;&#x578B;&#x3067;&#x3059;&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">final</span> <span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cord</span>(</span>self: <span class="hljs-type">FingerTree</span>[<span class="hljs-type">Int</span>, <span class="hljs-type">String</span>])
+</code></pre>
+<p><code>scalaz.Show</code>&#x306A;&#x3069;&#x3067;&#x4F7F;&#x308F;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x304C;&#x3001;&#x3069;&#x306E;&#x304F;&#x3089;&#x3044;&#x52B9;&#x7387;&#x7684;&#x306A;&#x306E;&#x304B;&#x306F;&#x5FAE;&#x5999;&#x306A;&#x90E8;&#x5206;&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;<sup><a href="#fn_1" id="reffn_1">1</a></sup>&#x3002;
+<a href="https://en.wikipedia.org/wiki/Rope_(data_structure" target="_blank">Rope</a>&#x3068;&#x547C;&#x3070;&#x308C;&#x308B;&#x30C7;&#x30FC;&#x30BF;&#x69CB;&#x9020;&#x306B;&#x8FD1;&#x304F;&#x3001;&#x5B9F;&#x969B;7.1.x&#x307E;&#x3067;&#x306F;<a href="https://github.com/scalaz/scalaz/blob/series/7.1.x/core/src/main/scala/scalaz/Rope.scala" target="_blank">Rope&#x304C;Scalaz&#x5185;&#x306B;&#x5B58;&#x5728;</a>&#x3057;&#x3066;&#x3044;&#x307E;&#x3057;&#x305F;&#x3002;</p>
+<blockquote id="fn_1">
+<sup>1</sup>. String&#x3092;&#x666E;&#x901A;&#x306B;&#x9023;&#x7D50;&#x3059;&#x308B;&#x3088;&#x308A;&#x9045;&#x3044;&#x5834;&#x5408;&#x304C;&#x3042;&#x308A;&#x3048;&#x308B;&#xFF1F;&#x305D;&#x3082;&#x305D;&#x3082;Scalaz&#x306E;FingerTree&#x81EA;&#x4F53;&#x304C;&#x3001;&#x3042;&#x307E;&#x308A;&#x30D1;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30F3;&#x30B9;&#x8A08;&#x6E2C;&#x304C;&#x3055;&#x308C;&#x3066;&#x3044;&#x306A;&#x3044;&#xFF1F;<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#x21A9;</a>
+</blockquote>
 
                     
                     </section>
@@ -974,10 +980,10 @@ Inject&#x81EA;&#x4F53;&#x306F;&#x3001;&#x30C7;&#x30FC;&#x30BF;&#x578B;&#x3067;&#
         </div>
 
         
-        <a href="./bindRec.html" class="navigation navigation-prev " aria-label="Previous page: BindRec"><i class="fa fa-angle-left"></i></a>
+        <a href="./dequeue.html" class="navigation navigation-prev " aria-label="Previous page: Dequeue"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="./traverse.html" class="navigation navigation-next " aria-label="Next page: Traverse"><i class="fa fa-angle-right"></i></a>
+        <a href="./imap.html" class="navigation navigation-next " aria-label="Next page: ==&gt;&gt;"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
