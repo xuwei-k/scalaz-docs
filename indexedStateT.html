@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>MaybeT | Scalaz日本語ドキュメント</title>
+        <title>IndexedStateT | Scalaz日本語ドキュメント</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.5">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="./eitherT.html" />
+    <link rel="next" href="./freeT.html" />
     
     
-    <link rel="prev" href="./optionT.html" />
+    <link rel="prev" href="./kleisli.html" />
     
 
         
@@ -49,9 +49,9 @@
         
         
     <div class="book"
-        data-level="3.2"
-        data-chapter-title="MaybeT"
-        data-filepath="maybeT.md"
+        data-level="3.7"
+        data-chapter-title="IndexedStateT"
+        data-filepath="indexedStateT.md"
         data-basepath="."
         data-revision="Sat Dec 12 2015 11:28:40 GMT+0000 (UTC)"
         data-innerlanguage="">
@@ -432,7 +432,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.2" data-path="maybeT.html">
+        <li class="chapter " data-level="3.2" data-path="maybeT.html">
             
                 
                     <a href="./maybeT.html">
@@ -507,7 +507,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.7" data-path="indexedStateT.html">
+        <li class="chapter active" data-level="3.7" data-path="indexedStateT.html">
             
                 
                     <a href="./indexedStateT.html">
@@ -841,11 +841,22 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="maybet">MaybeT</h1>
-<p><code>scalaz.Maybe</code>&#x306E;&#x30E2;&#x30CA;&#x30C9;&#x30C8;&#x30E9;&#x30F3;&#x30B9;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30FC;&#x3067;&#x3059;&#x3002;
-scalaz&#x306B;Maybe&#x304C;&#x5165;&#x3063;&#x305F;&#x306E;&#x3068;&#x307B;&#x307C;&#x540C;&#x3058;&#x30BF;&#x30A4;&#x30DF;&#x30F3;&#x30B0;&#x3067;MaybeT&#x3082;&#x8FFD;&#x52A0;&#x3055;&#x308C;&#x307E;&#x3057;&#x305F;&#x3002;&#x5B9F;&#x614B;&#x306F;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;case class&#x3067;&#x3059;&#x3002;</p>
-<pre><code class="lang-scala"><span class="hljs-keyword">final</span> <span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MaybeT</span>[</span><span class="hljs-type">F</span>[_], <span class="hljs-type">A</span>](run: <span class="hljs-type">F</span>[<span class="hljs-type">Maybe</span>[<span class="hljs-type">A</span>]])
+                        <h1 id="indexedstatet">IndexedStateT</h1>
+<p>State&#x30E2;&#x30CA;&#x30C9;&#x306E;&#x30C8;&#x30E9;&#x30F3;&#x30B9;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30FC;&#x3067;&#x3059;&#x3002;&#x540D;&#x524D;&#x306E;&#x901A;&#x308A;&#x5B9F;&#x969B;&#x306E;class&#x306F;<code>Indexed</code>&#x30E2;&#x30CA;&#x30C9;&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x307E;&#x3059;&#x304C;&#x3001;&#x6700;&#x521D;&#x306E;&#x3046;&#x3061;&#x306F;&#x5358;&#x306A;&#x308B;&#x666E;&#x901A;&#x306E;State&#x30E2;&#x30CA;&#x30C9;&#x30C8;&#x30E9;&#x30F3;&#x30B9;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30FC;&#x3068;&#x601D;&#x3063;&#x3066;&#x304A;&#x3051;&#x3070;&#x3044;&#x3044;&#x3067;&#x3057;&#x3087;&#x3046;&#x3002;</p>
+<p>&#x57FA;&#x672C;&#x7684;&#x306A;&#x4F7F;&#x3044;&#x65B9;&#x306B;&#x306F;&#x3042;&#x307E;&#x308A;&#x5909;&#x66F4;&#x306F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x304C;&#x3001;<a href="https://github.com/scalaz/scalaz/commit/a07dc366363a9b3ac311b35abd" target="_blank">7.1&#x3068;7.2&#x3067;&#x5185;&#x90E8;&#x69CB;&#x9020;&#x304C;&#x5909;&#x66F4;</a>&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;&#x5185;&#x90E8;&#x69CB;&#x9020;&#x306E;&#x5909;&#x66F4;&#x3068;&#x306F;&#x3001;&#x30B9;&#x30BF;&#x30C3;&#x30AF;&#x30AA;&#x30FC;&#x30D0;&#x30FC;&#x30D5;&#x30ED;&#x30FC;&#x3057;&#x306A;&#x3044;&#x3088;&#x3046;&#x306B;&#x3059;&#x308B;&#x305F;&#x3081;&#x306E;&#x5909;&#x66F4;&#x3067;&#x3059;&#x3002;</p>
+<p>&#x5B9F;&#x969B;&#x306E;7.2&#x6642;&#x70B9;&#x306E;IndexedStateT&#x306E;&#x5B9A;&#x7FA9;&#x306F;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;&#x3082;&#x306E;&#x3067;&#x3059;&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">sealed</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">IndexedStateT</span>[</span><span class="hljs-type">F</span>[_], -<span class="hljs-type">S1</span>, <span class="hljs-type">S2</span>, <span class="hljs-type">A</span>] {
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">getF</span>[</span><span class="hljs-type">S</span> &lt;: <span class="hljs-type">S1</span>]: <span class="hljs-type">Monad</span>[<span class="hljs-type">F</span>] =&gt; <span class="hljs-type">F</span>[<span class="hljs-type">S</span> =&gt; <span class="hljs-type">F</span>[(<span class="hljs-type">S2</span>, <span class="hljs-type">A</span>)]]
+
+  <span class="hljs-comment">// &#x305D;&#x306E;&#x4ED6;&#x306E;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x7701;&#x7565;</span>
+}
 </code></pre>
+<p>&#x305D;&#x306E;&#x4ED6;&#x306B;&#x3001;&#x95A2;&#x9023;&#x3059;&#x308B;<code>StateT</code>&#x3084;<code>State</code>&#x306F;<a href="https://github.com/scalaz/scalaz/blob/v7.2.0/core/src/main/scala/scalaz/package.scala#L145-L148" target="_blank">scalaz&#x306E;package object</a>&#x306B;type alias&#x3068;&#x3057;&#x3066;&#x5B9A;&#x7FA9;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">StateT</span>[</span><span class="hljs-type">F</span>[_], <span class="hljs-type">S</span>, <span class="hljs-type">A</span>] = <span class="hljs-type">IndexedStateT</span>[<span class="hljs-type">F</span>, <span class="hljs-type">S</span>, <span class="hljs-type">S</span>, <span class="hljs-type">A</span>]
+<span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">IndexedState</span>[</span>-<span class="hljs-type">S1</span>, <span class="hljs-type">S2</span>, <span class="hljs-type">A</span>] = <span class="hljs-type">IndexedStateT</span>[<span class="hljs-type">Id</span>, <span class="hljs-type">S1</span>, <span class="hljs-type">S2</span>, <span class="hljs-type">A</span>]
+<span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">State</span>[</span><span class="hljs-type">S</span>, <span class="hljs-type">A</span>] = <span class="hljs-type">StateT</span>[<span class="hljs-type">Id</span>, <span class="hljs-type">S</span>, <span class="hljs-type">A</span>]
+</code></pre>
+<p>&#x3053;&#x306E;&#x3088;&#x3046;&#x306B;&#x3001;&#x30E2;&#x30CA;&#x30C9;&#x30C8;&#x30E9;&#x30F3;&#x30B9;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30FC;&#x306E;alias&#x3068;&#x3057;&#x3066;&#x30E2;&#x30CA;&#x30C9;&#x3092;&#x5B9A;&#x7FA9;&#x3059;&#x308B;&#x306E;&#x306F;&#x3001;Scalaz&#x5185;&#x306E;&#x4ED6;&#x306E;&#x30E2;&#x30CA;&#x30C9;&#x30C8;&#x30E9;&#x30F3;&#x30B9;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30FC;&#x3067;&#x3082;&#x5171;&#x901A;&#x3059;&#x308B;&#x3053;&#x3068;&#x3067;&#x3059;&#x3057;&#x3001;Haskell&#x306B;&#x304A;&#x3044;&#x3066;&#x3082;&#x305D;&#x306E;&#x3088;&#x3046;&#x306B;&#x5B9A;&#x7FA9;&#x3055;&#x308C;&#x308B;&#x3053;&#x3068;&#x304C;&#x591A;&#x3044;&#x3067;&#x3059;&#x3002;</p>
 
                     
                     </section>
@@ -856,10 +867,10 @@ scalaz&#x306B;Maybe&#x304C;&#x5165;&#x3063;&#x305F;&#x306E;&#x3068;&#x307B;&#x30
         </div>
 
         
-        <a href="./optionT.html" class="navigation navigation-prev " aria-label="Previous page: OptionT"><i class="fa fa-angle-left"></i></a>
+        <a href="./kleisli.html" class="navigation navigation-prev " aria-label="Previous page: Kleisli"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="./eitherT.html" class="navigation navigation-next " aria-label="Next page: EitherT"><i class="fa fa-angle-right"></i></a>
+        <a href="./freeT.html" class="navigation navigation-next " aria-label="Next page: FreeT"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
