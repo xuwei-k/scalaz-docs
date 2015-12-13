@@ -52,6 +52,7 @@
  - [Align](align.md)
  - [Distributive](distributive.md)
  - [Associative](associative.md)
+ - [Compose](compose.md)
  - [Category](category.md)
 - その他
  - [NotNothing](notNothing.md)
