@@ -36,6 +36,7 @@
  - [Order](order.md)
  - [Enum](enum.md)
  - [Plus](plus.md)
+ - [PlusEmpty](plusEmpty.md)
  - [IsEmpty](isEmpty.md)
  - [Apply](apply.md)
  - [ApplicativePlus](applicativePlus.md)
