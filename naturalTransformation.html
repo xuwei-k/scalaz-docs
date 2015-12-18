@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>MaybeT | Scalaz日本語ドキュメント</title>
+        <title>NaturalTransformation | Scalaz日本語ドキュメント</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.6">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="./eitherT.html" />
+    <link rel="next" href="./free.html" />
     
     
-    <link rel="prev" href="./optionT.html" />
+    <link rel="prev" href="./tree.html" />
     
 
         
@@ -49,9 +49,9 @@
         
         
     <div class="book"
-        data-level="3.2"
-        data-chapter-title="MaybeT"
-        data-filepath="maybeT.md"
+        data-level="2.14"
+        data-chapter-title="NaturalTransformation"
+        data-filepath="naturalTransformation.md"
         data-basepath="."
         data-revision="Fri Dec 18 2015 21:36:14 GMT+0000 (UTC)"
         data-innerlanguage="">
@@ -381,7 +381,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.14" data-path="naturalTransformation.html">
+        <li class="chapter active" data-level="2.14" data-path="naturalTransformation.html">
             
                 
                     <a href="./naturalTransformation.html">
@@ -507,7 +507,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.2" data-path="maybeT.html">
+        <li class="chapter " data-level="3.2" data-path="maybeT.html">
             
                 
                     <a href="./maybeT.html">
@@ -1051,11 +1051,16 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="maybet">MaybeT</h1>
-<p><code>scalaz.Maybe</code>&#x306E;&#x30E2;&#x30CA;&#x30C9;&#x30C8;&#x30E9;&#x30F3;&#x30B9;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30FC;&#x3067;&#x3059;&#x3002;
-scalaz&#x306B;Maybe&#x304C;&#x5165;&#x3063;&#x305F;&#x306E;&#x3068;&#x307B;&#x307C;&#x540C;&#x3058;&#x30BF;&#x30A4;&#x30DF;&#x30F3;&#x30B0;&#x3067;MaybeT&#x3082;&#x8FFD;&#x52A0;&#x3055;&#x308C;&#x307E;&#x3057;&#x305F;&#x3002;&#x5B9F;&#x614B;&#x306F;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;case class&#x3067;&#x3059;&#x3002;</p>
-<pre><code class="lang-scala"><span class="hljs-keyword">final</span> <span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MaybeT</span>[</span><span class="hljs-type">F</span>[_], <span class="hljs-type">A</span>](run: <span class="hljs-type">F</span>[<span class="hljs-type">Maybe</span>[<span class="hljs-type">A</span>]])
+                        <h1 id="naturaltransformation">NaturalTransformation</h1>
+<p>Scala&#x306B;&#x304A;&#x3044;&#x3066;&#x3001;<a href="https://wiki.haskell.org/Rank-N_types" target="_blank">Haskell&#x306E;Rank N types</a>
+&#x304C;&#x76F4;&#x63A5;&#x30B5;&#x30DD;&#x30FC;&#x30C8;&#x3055;&#x308C;&#x3066;&#x3044;&#x306A;&#x3044;&#x3053;&#x3068;&#x306B;&#x3088;&#x308A;&#x5FC5;&#x8981;&#x306A;&#x30C7;&#x30FC;&#x30BF;&#x578B;<sup><a href="#fn_1" id="reffn_1">1</a></sup>&#x3067;&#x3059;&#x3002;</p>
+<p>scalaz&#x306E;package object&#x306B;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;type alias&#x304C;&#x5B9A;&#x7FA9;&#x3055;&#x308C;&#x3066;&#x3044;&#x3066;&#x3001;&#x3053;&#x3061;&#x3089;&#x304C;&#x4F7F;&#x308F;&#x308C;&#x308B;&#x3053;&#x3068;&#x304C;&#x591A;&#x3044;&#x3067;&#x3059;&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">~&gt;</span>[</span>-<span class="hljs-type">F</span>[_], +<span class="hljs-type">G</span>[_]] = <span class="hljs-type">NaturalTransformation</span>[<span class="hljs-type">F</span>, <span class="hljs-type">G</span>]
 </code></pre>
+<p>NaturalTransformation&#x306F;&#x3001;Scalaz&#x5185;&#x306E;&#x3044;&#x304F;&#x3064;&#x304B;&#x306E;&#x30AF;&#x30E9;&#x30B9;&#x3067;&#x4F7F;&#x308F;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x304C;&#x3001;&#x3042;&#x308B;&#x7A0B;&#x5EA6;&#x3088;&#x304F;&#x4F7F;&#x3046;&#x4EE3;&#x8868;&#x7684;&#x306A;&#x4F8B;&#x3068;&#x3057;&#x3066;&#x306F;<code>scalaz.Free</code>&#x306E;<code>foldMap</code>&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306A;&#x3069;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<blockquote id="fn_1">
+<sup>1</sup>. NaturalTransformation&#x306F;&#x95A2;&#x6570;&#x306E;&#x3088;&#x3046;&#x306A;&#x3082;&#x306E;&#x306A;&#x306E;&#x3067;&#x3001;&quot;&#x30C7;&#x30FC;&#x30BF;&#x578B;&quot;&#x3068;&#x3044;&#x3046;&#x8A00;&#x3044;&#x65B9;&#x306F;&#x5C11;&#x3057;&#x9055;&#x548C;&#x611F;&#x304C;&#x3042;&#x308B;&#x304B;&#x3082;&#x3057;&#x308C;&#x307E;&#x305B;&#x3093;&#x3002;&#x305F;&#x3060;&#x3001;&quot;&#x578B;&#x30AF;&#x30E9;&#x30B9;&quot;&#x3067;&#x306F;&#x306A;&#x3044;&#x305F;&#x3081;&#x3001;&#x305D;&#x3046;&#x3044;&#x3046;&#x610F;&#x5473;&#x3067;&#x3053;&#x3053;&#x3067;&#x306F;&quot;&#x30C7;&#x30FC;&#x30BF;&#x578B;&quot;&#x3068;&#x8A00;&#x3063;&#x3066;&#x3044;&#x307E;&#x3059;<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#x21A9;</a>
+</blockquote>
 
                     
                     </section>
@@ -1066,10 +1071,10 @@ scalaz&#x306B;Maybe&#x304C;&#x5165;&#x3063;&#x305F;&#x306E;&#x3068;&#x307B;&#x30
         </div>
 
         
-        <a href="./optionT.html" class="navigation navigation-prev " aria-label="Previous page: OptionT"><i class="fa fa-angle-left"></i></a>
+        <a href="./tree.html" class="navigation navigation-prev " aria-label="Previous page: Tree"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="./eitherT.html" class="navigation navigation-next " aria-label="Next page: EitherT"><i class="fa fa-angle-right"></i></a>
+        <a href="./free.html" class="navigation navigation-next " aria-label="Next page: Free"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
