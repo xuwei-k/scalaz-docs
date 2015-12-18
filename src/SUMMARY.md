@@ -18,6 +18,7 @@
  - [==>>](imap.md)
  - [ISet](iset.md)
  - [Tree](tree.md)
+ - [NaturalTransformation](naturalTransformation.md)
  - [Free](free.md)
  - [FreeAp](freeAp.md)
  - [Coproduct](coproduct.md)
