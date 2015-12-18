@@ -7,6 +7,7 @@
 - [データ型](dataStructures.md)
  - [NonEmptyList](nel.md)
  - [\/](disjunction.md)
+ - [Either3](either3.md)
  - [Maybe](maybe.md)
  - [IList](iList.md)
  - [Validation](validation.md)
