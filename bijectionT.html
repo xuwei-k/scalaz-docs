@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Traverse | Scalaz日本語ドキュメント</title>
+        <title>BijectionT | Scalaz日本語ドキュメント</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.6">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="./foldable1.html" />
+    <link rel="next" href="./monadTransformers.html" />
     
     
-    <link rel="prev" href="./inject.html" />
+    <link rel="prev" href="./digit.html" />
     
 
         
@@ -49,9 +49,9 @@
         
         
     <div class="book"
-        data-level="4.12"
-        data-chapter-title="Traverse"
-        data-filepath="traverse.md"
+        data-level="2.20"
+        data-chapter-title="BijectionT"
+        data-filepath="bijectionT.md"
         data-basepath="."
         data-revision="Sat Dec 19 2015 12:53:43 GMT+0000 (UTC)"
         data-innerlanguage="">
@@ -471,7 +471,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.20" data-path="bijectionT.html">
+        <li class="chapter active" data-level="2.20" data-path="bijectionT.html">
             
                 
                     <a href="./bijectionT.html">
@@ -805,7 +805,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="4.12" data-path="traverse.html">
+        <li class="chapter " data-level="4.12" data-path="traverse.html">
             
                 
                     <a href="./traverse.html">
@@ -1066,9 +1066,17 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="traverse">Traverse</h1>
-<p><a href="https://hackage.haskell.org/package/base-4.8.1.0/docs/Data-Traversable.html" target="_blank">Haskell&#x306B;&#x304A;&#x3051;&#x308B;Traversable</a>&#x306B;&#x5BFE;&#x5FDC;&#x3059;&#x308B;&#x578B;&#x30AF;&#x30E9;&#x30B9;&#x3067;&#x3059;&#x3002;
-Scala&#x6A19;&#x6E96;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x306B;Traversable&#x3068;&#x3044;&#x3046;&#x540D;&#x524D;&#x306E;trait&#x304C;&#x3042;&#x308B;&#x306E;&#x3067;&#x3001;&#x304A;&#x305D;&#x3089;&#x304F;&#x305D;&#x308C;&#x3068;&#x306E;&#x540D;&#x524D;&#x306E;&#x885D;&#x7A81;&#x3092;&#x907F;&#x3051;&#x308B;&#x305F;&#x3081;&#x306B;&#x3001;Haskell&#x3068;&#x306F;&#x9055;&#x3046;&#x540D;&#x524D;&#x306B;&#x3057;&#x3066;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+                        <h1 id="bijectiont">BijectionT</h1>
+<p>Bijection&#x3092;&#x65E5;&#x672C;&#x8A9E;&#x306B;&#x8A33;&#x3059;&#x3068;&quot;&#x5168;&#x5358;&#x5C04;&quot;&#x3068;&#x3044;&#x3046;&#x610F;&#x5473;&#x3067;&#x3059;&#x3002;
+BijectionT&#x81EA;&#x4F53;&#x306F;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;&#x5B9A;&#x7FA9;&#x3067;&#x3059;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">final</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BijectionT</span>[</span><span class="hljs-type">F</span>[_], <span class="hljs-type">G</span>[_], <span class="hljs-type">A</span>, <span class="hljs-type">B</span>] (_to: <span class="hljs-type">A</span> =&gt; <span class="hljs-type">F</span>[<span class="hljs-type">B</span>], _from: <span class="hljs-type">B</span> =&gt; <span class="hljs-type">G</span>[<span class="hljs-type">A</span>])
+</code></pre>
+<p>&#x307E;&#x305F;&#x3001;<code>Bijection</code>&#x3068;&#x3044;&#x3046;alias&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">Bijection</span>[</span><span class="hljs-type">A</span>, <span class="hljs-type">B</span>] = <span class="hljs-type">BijectionT</span>[<span class="hljs-type">Id</span>, <span class="hljs-type">Id</span>, <span class="hljs-type">A</span>, <span class="hljs-type">B</span>]
+</code></pre>
+<p>Scalaz&#x5185;&#x306B;&#x306F;Isomorphism&#x3068;&#x547C;&#x3070;&#x308C;&#x308B;&#x540C;&#x3058;&#x3088;&#x3046;&#x306A;&#x3082;&#x306E;&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;&#x305D;&#x3082;&#x305D;&#x3082;BijectionT&#x306E;<code>T</code>&#x306E;&#x90E8;&#x5206;&#x306F;&#x610F;&#x5473;&#x304C;&#x7121;&#x3044;&#x306E;&#x3067;&#x306F;&#x306A;&#x3044;&#x304B;&#xFF1F;&#x3068;&#x3044;&#x3046;issue&#x304C;&#x3042;&#x308A;&#x3001;</p>
+<p><a href="https://github.com/scalaz/scalaz/issues/757" target="_blank">https://github.com/scalaz/scalaz/issues/757</a></p>
+<p>BijectionT&#x304C;&#x305D;&#x306E;&#x307E;&#x307E;&#x4F7F;&#x308F;&#x308C;&#x308B;&#x3053;&#x3068;&#x306F;&#x591A;&#x304F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x3002;</p>
 
                     
                     </section>
@@ -1079,10 +1087,10 @@ Scala&#x6A19;&#x6E96;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x306B;Traversable
         </div>
 
         
-        <a href="./inject.html" class="navigation navigation-prev " aria-label="Previous page: Inject"><i class="fa fa-angle-left"></i></a>
+        <a href="./digit.html" class="navigation navigation-prev " aria-label="Previous page: Digit"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="./foldable1.html" class="navigation navigation-next " aria-label="Next page: Foldable1"><i class="fa fa-angle-right"></i></a>
+        <a href="./monadTransformers.html" class="navigation navigation-next " aria-label="Next page: モナドトランスフォーマー"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
