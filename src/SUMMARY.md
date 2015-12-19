@@ -24,6 +24,7 @@
  - [Coproduct](coproduct.md)
  - [Alpha](alpha.md)
  - [Digit](digit.md)
+ - [BijectionT](bijectionT.md)
 - [モナドトランスフォーマー](monadTransformers.md)
  - [OptionT](optionT.md)
  - [MaybeT](maybeT.md)
