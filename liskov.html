@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>ISet | Scalaz日本語ドキュメント</title>
+        <title>Liskov | Scalaz日本語ドキュメント</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.6">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="./tree.html" />
+    <link rel="next" href="./about_author.html" />
     
     
-    <link rel="prev" href="./imap.html" />
+    <link rel="prev" href="./tag.html" />
     
 
         
@@ -49,9 +49,9 @@
         
         
     <div class="book"
-        data-level="2.12"
-        data-chapter-title="ISet"
-        data-filepath="iset.md"
+        data-level="5.3"
+        data-chapter-title="Liskov"
+        data-filepath="liskov.md"
         data-basepath="."
         data-revision="Sun Dec 27 2015 16:21:39 GMT+0000 (UTC)"
         data-innerlanguage="">
@@ -351,7 +351,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.12" data-path="iset.html">
+        <li class="chapter " data-level="2.12" data-path="iset.html">
             
                 
                     <a href="./iset.html">
@@ -1013,7 +1013,7 @@
             
         </li>
     
-        <li class="chapter " data-level="5.3" data-path="liskov.html">
+        <li class="chapter active" data-level="5.3" data-path="liskov.html">
             
                 
                     <a href="./liskov.html">
@@ -1081,12 +1081,29 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="iset">ISet</h1>
-<p>Haskell&#x306E;Set&#x3092;&#x79FB;&#x690D;&#x3057;&#x305F;&#x3082;&#x306E;&#x3067;&#x3059;&#x3002;
-<code>==&gt;&gt;</code>&#x3068;&#x540C;&#x69D8;&#x3001;<code>scalaz.Order</code>&#x3092;&#x4F7F;&#x3063;&#x305F;tree&#x3068;&#x3057;&#x3066;&#x5B9F;&#x88C5;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
-<ul>
-<li><a href="https://hackage.haskell.org/package/containers-0.5.6.3/docs/Data-Set.html" target="_blank">https://hackage.haskell.org/package/containers-0.5.6.3/docs/Data-Set.html</a></li>
-</ul>
+                        <h1 id="liskov">Liskov</h1>
+<p><a href="https://github.com/scala/scala/blob/v2.11.7/src/library/scala/Predef.scala#L365-L388" target="_blank">Scala&#x6A19;&#x6E96;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x306E;<code>&lt;:&lt;</code></a>&#x3068;&#x540C;&#x3058;&#x3088;&#x3046;&#x306A;&#x5F79;&#x5272;&#x3092;&#x3059;&#x308B;&#x3082;&#x306E;&#x3067;&#x3059;&#x3002;</p>
+<p>&#x672C;&#x4F53;&#x306B;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306F;&#x305D;&#x308C;&#x307B;&#x3069;&#x591A;&#x304F;&#x306A;&#x304F;&#x3001;7.2.0&#x6642;&#x70B9;&#x3067;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;&#x5B9A;&#x7FA9;&#x3067;&#x3059;&#x3002;
+(&#x30B7;&#x30B0;&#x30CD;&#x30C1;&#x30E3;&#x306E;&#x307F;&#x3067;&#x3001;&#x5B9F;&#x88C5;&#x306F;&#x7701;&#x7565;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;)</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">sealed</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Liskov</span>[</span>-<span class="hljs-type">A</span>, +<span class="hljs-type">B</span>] {
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">apply</span>(</span>a: <span class="hljs-type">A</span>): <span class="hljs-type">B</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">subst</span>[</span><span class="hljs-type">F</span>[-_]](p: <span class="hljs-type">F</span>[<span class="hljs-type">B</span>]): <span class="hljs-type">F</span>[<span class="hljs-type">A</span>]
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">*</span>[</span>+[+_, +_], <span class="hljs-type">C</span>, <span class="hljs-type">D</span>](that: <span class="hljs-type">Liskov</span>[<span class="hljs-type">C</span>, <span class="hljs-type">D</span>]): <span class="hljs-type">Liskov</span>[<span class="hljs-type">A</span> + <span class="hljs-type">C</span>, <span class="hljs-type">B</span> + <span class="hljs-type">D</span>]
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">andThen</span>[</span><span class="hljs-type">C</span>](that: <span class="hljs-type">Liskov</span>[<span class="hljs-type">B</span>, <span class="hljs-type">C</span>]): <span class="hljs-type">Liskov</span>[<span class="hljs-type">A</span>, <span class="hljs-type">C</span>]
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">compose</span>[</span><span class="hljs-type">C</span>](that: <span class="hljs-type">Liskov</span>[<span class="hljs-type">C</span>, <span class="hljs-type">A</span>]): <span class="hljs-type">Liskov</span>[<span class="hljs-type">C</span>, <span class="hljs-type">B</span>]
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">onF</span>[</span><span class="hljs-type">X</span>](fa: <span class="hljs-type">X</span> =&gt; <span class="hljs-type">A</span>): <span class="hljs-type">X</span> =&gt; <span class="hljs-type">B</span>
+}
+</code></pre>
+<p>&#x30B3;&#x30F3;&#x30D1;&#x30CB;&#x30AA;&#x30F3;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306B;<code>&lt;~&lt;</code>&#x3068;<code>&gt;~&gt;</code>&#x3068;&#x3044;&#x3046;alias&#x304C;&#x5B9A;&#x7FA9;&#x3055;&#x308C;&#x3066;&#x3044;&#x3066;&#x3001;&#x57FA;&#x672C;&#x7684;&#x306B;&#x306F;&#x3053;&#x306E;alias&#x304C;&#x4F7F;&#x308F;&#x308C;&#x307E;&#x3059;&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">&lt;~&lt;</span>[</span>-<span class="hljs-type">A</span>, +<span class="hljs-type">B</span>] = <span class="hljs-type">Liskov</span>[<span class="hljs-type">A</span>, <span class="hljs-type">B</span>]
+
+<span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">&gt;~&gt;</span>[</span>+<span class="hljs-type">B</span>, -<span class="hljs-type">A</span>] = <span class="hljs-type">Liskov</span>[<span class="hljs-type">A</span>, <span class="hljs-type">B</span>]
+</code></pre>
+<p><code>def apply(a: A): B</code>&#x306B;&#x95A2;&#x3057;&#x3066;&#x306F;&#x3001;Predef&#x306E;&#x3082;&#x306E;&#x3068;&#x5168;&#x304F;&#x540C;&#x3058;&#x7528;&#x9014;&#x3067;&#x3059;&#x3002;scalaz.Liskov&#x304C;&#x512A;&#x308C;&#x3066;&#x3044;&#x308B;&#x306E;&#x306F;&#x3001;&#x305D;&#x306E;&#x4ED6;&#x306B;&#x3082;&#x3044;&#x304F;&#x3064;&#x304B;&#x306E;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3092;&#x6301;&#x3063;&#x3066;&#x3044;&#x308B;&#x70B9;&#x3067;&#x3059;&#x3002;</p>
+<p>&#x3061;&#x306A;&#x307F;&#x306B;&#x3001;Scala&#x672C;&#x4F53;&#x306B;&#x3082;&#x540C;&#x69D8;&#x306E;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3092;&#x5165;&#x308C;&#x308B;&#x52D5;&#x304D;&#x304C;&#x3042;&#x308A;&#x307E;&#x3057;&#x305F;&#x304C;&#x3001;&#x7D50;&#x5C40;merge&#x3059;&#x308B;&#x307E;&#x3067;&#x306B;&#x306F;&#x81F3;&#x3063;&#x3066;&#x3044;&#x307E;&#x305B;&#x3093;&#x3002;</p>
+<p><a href="https://github.com/scala/scala/pull/3992" target="_blank">Add composition and subst methods to =:= and &lt;:&lt; by puffnfresh &#xB7; Pull Request #3992 &#xB7; scala/scala</a></p>
+<p>Liskov&#x306B;&#x95A2;&#x3057;&#x3066;&#x306F;&#x3001;&#x4EE5;&#x4E0B;&#x306E;&#x8A18;&#x4E8B;&#x3082;&#x8AAD;&#x3080;&#x3068;&#x3088;&#x3044;&#x3067;&#x3057;&#x3087;&#x3046;&#x3002;</p>
+<p><a href="http://typelevel.org/blog/2014/03/09/liskov_lifting.html" target="_blank">typelevel.scala | When can Liskov be lifted?</a></p>
 
                     
                     </section>
@@ -1097,10 +1114,10 @@
         </div>
 
         
-        <a href="./imap.html" class="navigation navigation-prev " aria-label="Previous page: ==&gt;&gt;"><i class="fa fa-angle-left"></i></a>
+        <a href="./tag.html" class="navigation navigation-prev " aria-label="Previous page: Tag"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="./tree.html" class="navigation navigation-next " aria-label="Next page: Tree"><i class="fa fa-angle-right"></i></a>
+        <a href="./about_author.html" class="navigation navigation-next " aria-label="Next page: 著者について"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
