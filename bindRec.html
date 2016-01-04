@@ -53,7 +53,7 @@
         data-chapter-title="BindRec"
         data-filepath="bindRec.md"
         data-basepath="."
-        data-revision="Mon Jan 04 2016 13:22:10 GMT+0000 (UTC)"
+        data-revision="Mon Jan 04 2016 15:41:18 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -1082,12 +1082,13 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="bindrec">BindRec</h1>
-<p><code>scalaz.Bind</code>&#x3092;&#x7D99;&#x627F;&#x3057;&#x305F;&#x578B;&#x30AF;&#x30E9;&#x30B9;&#x3067;&#x3059;&#x3002;<code>scalaz.FreeT</code>&#x3067;&#x4F7F;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<p><code>scalaz.Bind</code>&#x3092;&#x7D99;&#x627F;&#x3057;&#x305F;&#x578B;&#x30AF;&#x30E9;&#x30B9;&#x3067;&#x3059;&#x3002;<code>scalaz.Free</code>&#x3084;<code>scalaz.FreeT</code>&#x3067;&#x4F7F;&#x3044;&#x307E;&#x3059;&#x3002;</p>
 <p>&#x79FB;&#x690D;&#x5143;&#x306E;purescript&#x306B;&#x304A;&#x3044;&#x3066;&#x306F;&#x3001;BindRec&#x3067;&#x306F;&#x306A;&#x304F;MonadRec&#x3067;&#x3057;&#x305F;&#x3002;&#x3064;&#x307E;&#x308A;&#x3001;Bind&#x3067;&#x306F;&#x306A;&#x304F;Monad&#x3092;&#x7D99;&#x627F;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
 <p><a href="https://github.com/purescript/purescript-tailrec/blob/v0.3.1/src/Control/Monad/Rec/Class.purs" target="_blank">https://github.com/purescript/purescript-tailrec/blob/v0.3.1/src/Control/Monad/Rec/Class.purs</a></p>
 <pre><code class="lang-haskell"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-container">(<span class="hljs-type">Monad</span> <span class="hljs-title">m</span>)</span> &lt;= <span class="hljs-type">MonadRec</span> m <span class="hljs-keyword">where</span></span>
   tailRecM :: <span class="hljs-keyword">forall</span> a b. (a -&gt; m (<span class="hljs-type">Either</span> a b)) -&gt; a -&gt; m b
 </code></pre>
+<p>Free&#x306E;&#x5834;&#x5408;&#x306F;&#x3001;<code>runM</code>&#x3084;<code>foldMap</code>&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306F;stack safe&#x3067;&#x306F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x304C;&#x3001;BindRec&#x3092;&#x4F7F;&#x3063;&#x305F;<code>runRecM</code>&#x3084;<code>foldMapRec</code>&#x306F;stack safe&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;</p>
 
                     
                     </section>
