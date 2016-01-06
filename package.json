@@ -2,10 +2,10 @@
   "name": "textbook",
   "private": true,
   "version": "1.0.0",
-  "description": "gitbook sample",
+  "description": "scalaz docs",
   "repository": {
     "type": "git",
-    "url": "http://github.com/xuwei-k/gitbook-sample"
+    "url": "http://github.com/xuwei-k/scalaz-docs"
   },
   "scripts": {
     "prepublish": "gitbook install"
