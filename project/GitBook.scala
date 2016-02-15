@@ -14,6 +14,14 @@ object GitBook extends NpmCliBase {
   def buildBook(format: Format) = Def.inputTask[Unit] {
     val options = rawStringArg("<gitbook command>").parsed
     printRun(Process(s"$gitbookBin ${format.command} $bookBuildDir $options"))
+
+    if(format == Format.Html) {
+      val cssPath = s"$bookBuildDir/_book/gitbook/style.css"
+      val src = IO.read(file(cssPath))
+      val modified = src.replace("text-rendering:optimizeLegibility;", "")
+      assert(src.length != modified.length, "CSSの削除に失敗？ " + src.length)
+      IO.write(file(cssPath), modified)
+    }
   }
 
   lazy val pluginInstall = taskKey[Unit]("install GitBook plugin")
