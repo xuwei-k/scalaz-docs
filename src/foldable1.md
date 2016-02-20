@@ -1,6 +1,6 @@
 # Foldable1
 
-Foldableを継承した型クラスです。Traverse1も含めて、基本的には[ekmett/semigroupoids](https://hackage.haskell.org/package/semigroupoids-5.0.0.4/docs/Data-Semigroup-Foldable-Class.html#t:Foldable1)にあるものと同じです。
+Foldableを継承した型クラスです。Traverse1も含めて、基本的には[ekmett/semigroupoids](https://hackage.haskell.org/package/semigroupoids-5.0.1/docs/Data-Semigroup-Foldable-Class.html#t:Foldable1)にあるものと同じです。
 
 一言で表すと、
 「要素が1つ以上あることが必ず保証されているもの」

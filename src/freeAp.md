@@ -12,4 +12,4 @@ ScalaにおいてのFree Applicativeの発表があったので、それも参�
 
 https://github.com/jdegoes/scalaworld-2015/
 
-Haskellの場合は、[ekmett/freeにFree Applicative Functorの実装があります。](https://github.com/ekmett/free/blob/v4.12.1/src/Control/Applicative/Free.hs)
+Haskellの場合は、[ekmett/freeにFree Applicative Functorの実装があります。](https://github.com/ekmett/free/blob/v4.12.4/src/Control/Applicative/Free.hs)
