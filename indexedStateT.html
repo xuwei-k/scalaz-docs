@@ -53,7 +53,7 @@
         data-chapter-title="IndexedStateT"
         data-filepath="indexedStateT.md"
         data-basepath="."
-        data-revision="Fri Feb 26 2016 13:39:50 GMT+0000 (UTC)"
+        data-revision="Wed Mar 02 2016 15:47:41 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -1091,7 +1091,7 @@
   <span class="hljs-comment">// &#x305D;&#x306E;&#x4ED6;&#x306E;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x7701;&#x7565;</span>
 }
 </code></pre>
-<p>&#x305D;&#x306E;&#x4ED6;&#x306B;&#x3001;&#x95A2;&#x9023;&#x3059;&#x308B;<code>StateT</code>&#x3084;<code>State</code>&#x306F;<a href="https://github.com/scalaz/scalaz/blob/v7.2.0/core/src/main/scala/scalaz/package.scala#L145-L148" target="_blank">scalaz&#x306E;package object</a>&#x306B;type alias&#x3068;&#x3057;&#x3066;&#x5B9A;&#x7FA9;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<p>&#x305D;&#x306E;&#x4ED6;&#x306B;&#x3001;&#x95A2;&#x9023;&#x3059;&#x308B;<code>StateT</code>&#x3084;<code>State</code>&#x306F;<a href="https://github.com/scalaz/scalaz/blob/v7.2.1/core/src/main/scala/scalaz/package.scala#L145-L148" target="_blank">scalaz&#x306E;package object</a>&#x306B;type alias&#x3068;&#x3057;&#x3066;&#x5B9A;&#x7FA9;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
 <pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">StateT</span>[</span><span class="hljs-type">F</span>[_], <span class="hljs-type">S</span>, <span class="hljs-type">A</span>] = <span class="hljs-type">IndexedStateT</span>[<span class="hljs-type">F</span>, <span class="hljs-type">S</span>, <span class="hljs-type">S</span>, <span class="hljs-type">A</span>]
 <span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">IndexedState</span>[</span>-<span class="hljs-type">S1</span>, <span class="hljs-type">S2</span>, <span class="hljs-type">A</span>] = <span class="hljs-type">IndexedStateT</span>[<span class="hljs-type">Id</span>, <span class="hljs-type">S1</span>, <span class="hljs-type">S2</span>, <span class="hljs-type">A</span>]
 <span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">State</span>[</span><span class="hljs-type">S</span>, <span class="hljs-type">A</span>] = <span class="hljs-type">StateT</span>[<span class="hljs-type">Id</span>, <span class="hljs-type">S</span>, <span class="hljs-type">A</span>]
