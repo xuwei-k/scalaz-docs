@@ -2,7 +2,7 @@
 
 [Scala標準ライブラリの`<:<`](https://github.com/scala/scala/blob/v2.11.7/src/library/scala/Predef.scala#L365-L388)と同じような役割をするものです。
 
-本体にメソッドはそれほど多くなく、7.2.0時点で以下のような定義です。
+本体にメソッドはそれほど多くなく、7.2.1時点で以下のような定義です。
 (シグネチャのみで、実装は省略しています)
 
 ```tut:invisible
