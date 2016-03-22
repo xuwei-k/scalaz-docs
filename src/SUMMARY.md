@@ -34,6 +34,9 @@
  - [Kleisli](kleisli.md)
  - [IndexedStateT](indexedStateT.md)
  - [FreeT](freeT.md)
+- コモナドトランスフォーマー
+ - [TracedT](tracedT.md)
+ - [StoreT](storeT.md)
 - 型クラス
  - [Equal](equal.md)
  - [Order](order.md)
