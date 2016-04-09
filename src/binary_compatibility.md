@@ -21,7 +21,7 @@ Scalazでは、バージョン`7.0.0`以降は、同じ規則でバイナリ互�
  - 例 `7.2.0-M4`
 
 
-バイナリ互換は、typesafe社がOSSで公開している [migration-manager](https://github.com/typesafehub/migration-manager) と呼ばれるツールで自動でチェックされています。
+バイナリ互換は、Lightbend(旧 Typesafe)社がOSSで公開している [migration-manager](https://github.com/typesafehub/migration-manager) と呼ばれるツールで自動でチェックされています。
 このmigration-managerは、Scala本体のライブラリ自体のバイナリ互換のチェックにも使われているものです。
 
 
