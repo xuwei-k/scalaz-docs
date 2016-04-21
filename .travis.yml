@@ -36,10 +36,12 @@ after_success:
   -a -m "auto commit on travis $TRAVIS_JOB_NUMBER $TRAVIS_COMMIT" && tree ./
 - if [[ "${TRAVIS_BRANCH}" == "master" && "${TRAVIS_PULL_REQUEST}" == "false" ]];
   then git push git@github.com:xuwei-k/scalaz-docs.git gh-pages:gh-pages ; fi
+- ./push-preview.sh
 after_script:
 - find $HOME/.sbt -name "*.lock" | xargs rm
 - find $HOME/.ivy2 -name "ivydata-*.properties" | xargs rm
 - find $HOME/.ivy2/cache -name "*SNAPSHOT*" | xargs rm -rf
 env:
   global:
-    secure: sD3fD7EM+X3Afm+CodPiPJ8u/kfNfzUWt++pKcLQe+oSnbbx6Tu2zI25yAcY8Q43CDthiAEjnAz0bf3hukpeznWyd3VssNcFwu/9nNT47E2i3bWpZLp532/8kgdh4EE7b5D4im0F1xj/8/F1jucFtfO003ZIn5iTpB726fXcnsDt2zCvUE4+ks76lyyxltMxxHRIxmaTLU9e+AIclrBjq8BxTpYAwUH+iCxObwG+CZSN2HMBIbNC9nwkTJUJBhgPnSABPw8HP71bnmKbTxYC/HdBV5uc5HRGpH5kEfPT48Ksddj+khl6ZmAvwiiNDXDQ4ViijCfDh2F+zR6/t1wKYR51jifxbU5wakU9xAkS7gov8A/g6nurutE9sgGNWbo6FfcSS8iqNkjIzg/bLOuBggvbCh/bxoSQkRPjuigzzp6xkoiMslo3khj9M4O+2w48eCkupVJqeNzVVL6ktw3eUJZfLGRbg0KDHWE8SssbOcSi4Z/HRB5k9tpGgQitqjN4Db348hundHj6uDm+Qquw2yG1KyuGN4GExOt2DPtf8Y32p6Vj4xGTdp3+1cj4CJey1j26oJzKZZQMKYFqnRogxTMUXZMQ3M3I9ABdYo86AMaqrtqK1+IUSUTNwYVnV8jjzogybjo7hga/lm2+SJ7BY5NMdwAMuNjQ1JagCkTxdNA=
+  - secure: sD3fD7EM+X3Afm+CodPiPJ8u/kfNfzUWt++pKcLQe+oSnbbx6Tu2zI25yAcY8Q43CDthiAEjnAz0bf3hukpeznWyd3VssNcFwu/9nNT47E2i3bWpZLp532/8kgdh4EE7b5D4im0F1xj/8/F1jucFtfO003ZIn5iTpB726fXcnsDt2zCvUE4+ks76lyyxltMxxHRIxmaTLU9e+AIclrBjq8BxTpYAwUH+iCxObwG+CZSN2HMBIbNC9nwkTJUJBhgPnSABPw8HP71bnmKbTxYC/HdBV5uc5HRGpH5kEfPT48Ksddj+khl6ZmAvwiiNDXDQ4ViijCfDh2F+zR6/t1wKYR51jifxbU5wakU9xAkS7gov8A/g6nurutE9sgGNWbo6FfcSS8iqNkjIzg/bLOuBggvbCh/bxoSQkRPjuigzzp6xkoiMslo3khj9M4O+2w48eCkupVJqeNzVVL6ktw3eUJZfLGRbg0KDHWE8SssbOcSi4Z/HRB5k9tpGgQitqjN4Db348hundHj6uDm+Qquw2yG1KyuGN4GExOt2DPtf8Y32p6Vj4xGTdp3+1cj4CJey1j26oJzKZZQMKYFqnRogxTMUXZMQ3M3I9ABdYo86AMaqrtqK1+IUSUTNwYVnV8jjzogybjo7hga/lm2+SJ7BY5NMdwAMuNjQ1JagCkTxdNA=
+  - secure: Ny9vs9yNs8F5jz2TtfDgxMFolMQtiT+VFE46AcXzcF1Wav+n5nK2HJNnGR/cdD4m+CWHXHhuQ+CnKe4MruYxZzDQ2LinrcT1HJTUy6EhqmT+w0VtA52ng5PaOhnh+A/QrcocP81RFKeX108bmCVMSYog1Yh36s8EM1FjcGR068mRCjAUlGShgNkM+xZHsQJqyqtZzFjDHWuTd+Eo+UWj4/Dw+S9DMbu04+lmuqIJp41NOrcYm1CbGKTv72LjZ2V/GZMYa6vfJf1/QvYkfnfkAyJVvvYDA1OJZd8uFg5Qxf8f+rFQt/s4O+sOn76TS6pfNf9pc1Xuusv6HPYBnTWn8sbYQonHMpBeX7QYdjwsLEO/Ef0+9XYzcMYq+FyFTEbjMxXIwKBtzYAOkeUo7SI+tTh8FHPv4DZeD/M+2twHFNsmhGFg7cEZLAmCiaeXdIwP5OvRoBYzuGGFepxlte6GTOlO1ve/6TGEdfra0r8qUSmirE3IRJOsFZ3MZAo57dea9v/eR0eU/D2zQsEsAeTcaAXVrDgT0o7lfloXJptCwy3PWiTg7xLXDvO+3pXMaFCV3QYZI7pZ3yIItJ6aww9/wboiUtzOWtVq6vkyAGyvaEvSQWiNilv9rFHUhAuP1/6H627SkHBOiKtR7F41uQeTZToboCxYKqMr3EhwLwJHeKg=
