@@ -13,7 +13,7 @@ object GitBook extends NpmCliBase {
 
   def buildBook(format: Format) = Def.inputTask[Unit] {
     val options = rawStringArg("<gitbook command>").parsed
-    printRun(Process(s"$gitbookBin ${format.command} $bookBuildDir $options"))
+    printRun(Process(s"$gitbookBin ${format.command} $bookBuildDir --gitbook=2.6.7 $options"))
 
     if(format == Format.Html) {
       val cssPath = s"$bookBuildDir/_book/gitbook/style.css"
