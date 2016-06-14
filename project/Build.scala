@@ -11,7 +11,7 @@ object build extends Build with NpmCliBase {
   val scalazDiagram1 = TaskKey[Unit]("scalazDiagram1")
   val scalazDiagram2 = TaskKey[Unit]("scalazDiagram2")
 
-  val scalazVersion = "7.2.3"
+  val scalazVersion = "7.2.4"
 
   def urlMap(clazz: Class[_]): Map[String, String] =
     if (clazz.getName.startsWith("scalaz"))
