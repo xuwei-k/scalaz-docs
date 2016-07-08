@@ -45,7 +45,7 @@ Scalazでは、バージョン`7.0.0`以降は、同じ規則でバイナリ互�
 - バージョン `7.1.0` は、2014年8月にリリースされました
 - [リリースの際のgoogle groupのスレッド](https://groups.google.com/d/msg/scalaz/79x3Frhe0Hs/tcGACPaXND8J)
 - Scala 2.9.3, 2.10.x, 2.11.x をサポートしています
-- 執筆時点でのバージョン `7.1.x` 系統の最新は [`7.1.8`](https://github.com/scalaz/scalaz/wiki/7.1.8) (2016年4月リリース)です
+- 執筆時点でのバージョン `7.1.x` 系統の最新は [`7.1.9`](https://github.com/scalaz/scalaz/wiki/7.1.9) (2016年7月リリース)です
 - `7.1.x` は、まだ何回かは細かい機能追加やバグ修正のリリースの予定をしています
 
 ### 7.2.x
