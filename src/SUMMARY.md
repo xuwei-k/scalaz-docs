@@ -34,6 +34,7 @@
  - [Kleisli](kleisli.md)
  - [IndexedStateT](indexedStateT.md)
  - [FreeT](freeT.md)
+ - [TheseT](theseT.md)
 - コモナドトランスフォーマー
  - [TracedT](tracedT.md)
  - [StoreT](storeT.md)
