@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>PlusEmpty | Scalaz日本語ドキュメント</title>
+        <title>TheseT | Scalaz日本語ドキュメント</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="./isEmpty.html" />
+    <link rel="next" href="./tracedT.html" />
     
     
-    <link rel="prev" href="./plus.html" />
+    <link rel="prev" href="./freeT.html" />
     
 
         
@@ -49,9 +49,9 @@
         
         
     <div class="book"
-        data-level="5.5"
-        data-chapter-title="PlusEmpty"
-        data-filepath="plusEmpty.md"
+        data-level="3.9"
+        data-chapter-title="TheseT"
+        data-filepath="theseT.md"
         data-basepath="."
         data-revision="Sun Jul 10 2016 15:13:50 GMT+0000 (UTC)"
         data-innerlanguage="">
@@ -627,7 +627,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.9" data-path="theseT.html">
+        <li class="chapter active" data-level="3.9" data-path="theseT.html">
             
                 
                     <a href="./theseT.html">
@@ -758,7 +758,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="5.5" data-path="plusEmpty.html">
+        <li class="chapter " data-level="5.5" data-path="plusEmpty.html">
             
                 
                     <a href="./plusEmpty.html">
@@ -1139,15 +1139,16 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="plusempty">PlusEmpty</h1>
-<p><code>scalaz.Plus</code>&#x3092;&#x7D99;&#x627F;&#x3057;&#x3066;&#x3044;&#x308B;&#x578B;&#x30AF;&#x30E9;&#x30B9;&#x3067;&#x3059;&#x3002;&#x307E;&#x305F;&#x3001;&#x30B5;&#x30D6;&#x30AF;&#x30E9;&#x30B9;&#x3068;&#x3057;&#x3066;<code>ApplicativePlus</code>&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;
-<a href="http://hackage.haskell.org/package/semigroupoids-5.0.1/docs/Data-Functor-Plus.html" target="_blank">ekmett/semigroupoids&#x306B;&#x304A;&#x3051;&#x308B;Plus</a>&#x306E;&#x3088;&#x3046;&#x306A;&#x3082;&#x306E;&#x3067;&#x3059;&#x3002;&#x305F;&#x3060;&#x3057;<code>scalaz.Plus</code>&#x306E;&#x30DA;&#x30FC;&#x30B8;&#x3067;&#x3082;&#x8AAC;&#x660E;&#x3057;&#x307E;&#x3057;&#x305F;&#x304C;&#x3001;Scalaz&#x306E;&#x307B;&#x3046;&#x306F;Functor&#x3092;&#x7D99;&#x627F;&#x3057;&#x3066;&#x3044;&#x306A;&#x3044;&#x70B9;&#x304C;&#x7570;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x307E;&#x305F;</p>
-<ul>
-<li>&#x300C;semigroupoids&#x306B;&#x304A;&#x3051;&#x308B;Plus&#x300D;&#x304C;<code>scalaz.PlusEmpty</code></li>
-<li>&#x300C;semigroupoids&#x306B;&#x304A;&#x3051;&#x308B;Alt&#x300D;&#x304C;<code>scalaz.Plus</code></li>
-</ul>
-<p>&#x3068;&#x3044;&#x3046;&#x3053;&#x3068;&#x306F;<code>scalaz.Plus</code>&#x3068;&#x300C;semigroupoids&#x306E;<code>Plus</code>&#x300D;&#x306F;&#x7570;&#x306A;&#x308B;&#x3082;&#x306E;&#x306A;&#x306E;&#x3067;&#x6CE8;&#x610F;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
+                        <h1 id="theset">TheseT</h1>
+<p>These&#x306E;&#x30E2;&#x30CA;&#x30C9;&#x30C8;&#x30E9;&#x30F3;&#x30B9;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30FC;&#x3067;&#x3059;&#x3002;7.2.x&#x7CFB;&#x3060;&#x3068;&#x3001;7.2.4&#x4EE5;&#x964D;&#x304B;&#x3089;&#x5165;&#x3063;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;&#x4ED6;&#x306E;&#x8A00;&#x8A9E;&#x3067;&#x306E;&#x4F8B;&#x3092;&#x898B;&#x305F;&#x3053;&#x3068;&#x304C;&#x306A;&#x3044;&#x306E;&#x3067;&#x3059;&#x304C;<sup><a href="#fn_1" id="reffn_1">1</a></sup>&#x3001;&#x30E2;&#x30CA;&#x30C9;&#x5247;&#x306F;&#x6E80;&#x305F;&#x3059;&#x3088;&#x3046;&#x3067;&#x3059;&#x3002;</p>
+<p>&#x5B9A;&#x7FA9;&#x306F;&#x3001;&#x5358;&#x7D14;&#x306B;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">final</span> <span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TheseT</span>[</span><span class="hljs-type">F</span>[_], <span class="hljs-type">A</span>, <span class="hljs-type">B</span>](run: <span class="hljs-type">F</span>[<span class="hljs-type">A</span> \&amp;/ <span class="hljs-type">B</span>]) {
+  <span class="hljs-comment">// &#x305D;&#x306E;&#x4ED6;&#x306E;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x7701;&#x7565;</span>
+}
+</code></pre>
+<blockquote id="fn_1">
+<sup>1</sup>. &#x3082;&#x3057;&#x4ED6;&#x306E;&#x8A00;&#x8A9E;&#x3001;&#x3082;&#x3057;&#x304F;&#x306F;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x3067;&#x3001;scalaz&#x3088;&#x308A;&#x5148;&#x306B;&#x5B9F;&#x88C5;&#x3055;&#x308C;&#x305F;&#x4F8B;&#x304C;&#x3042;&#x308C;&#x3070;&#x6559;&#x3048;&#x3066;&#x4E0B;&#x3055;&#x3044;&#x3002;<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#x21A9;</a>
+</blockquote>
 
                     
                     </section>
@@ -1158,10 +1159,10 @@
         </div>
 
         
-        <a href="./plus.html" class="navigation navigation-prev " aria-label="Previous page: Plus"><i class="fa fa-angle-left"></i></a>
+        <a href="./freeT.html" class="navigation navigation-prev " aria-label="Previous page: FreeT"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="./isEmpty.html" class="navigation navigation-next " aria-label="Next page: IsEmpty"><i class="fa fa-angle-right"></i></a>
+        <a href="./tracedT.html" class="navigation navigation-next " aria-label="Next page: TracedT"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
