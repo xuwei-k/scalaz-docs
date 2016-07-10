@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Kleisli | Scalaz日本語ドキュメント</title>
+        <title>StrictTree | Scalaz日本語ドキュメント</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="./indexedStateT.html" />
+    <link rel="next" href="./naturalTransformation.html" />
     
     
-    <link rel="prev" href="./streamT.html" />
+    <link rel="prev" href="./tree.html" />
     
 
         
@@ -49,9 +49,9 @@
         
         
     <div class="book"
-        data-level="3.6"
-        data-chapter-title="Kleisli"
-        data-filepath="kleisli.md"
+        data-level="2.14"
+        data-chapter-title="StrictTree"
+        data-filepath="strictTree.md"
         data-basepath="."
         data-revision="Sun Jul 10 2016 15:21:48 GMT+0000 (UTC)"
         data-innerlanguage="">
@@ -381,7 +381,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.14" data-path="strictTree.html">
+        <li class="chapter active" data-level="2.14" data-path="strictTree.html">
             
                 
                     <a href="./strictTree.html">
@@ -597,7 +597,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.6" data-path="kleisli.html">
+        <li class="chapter " data-level="3.6" data-path="kleisli.html">
             
                 
                     <a href="./kleisli.html">
@@ -1154,13 +1154,11 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="kleisli">Kleisli</h1>
-<p><code>ReaderT</code>&#x3068;&#x3044;&#x3046;&#x5225;&#x540D;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;&#x3064;&#x307E;&#x308A;&#x3001;Reader&#x30E2;&#x30CA;&#x30C9;&#x30C8;&#x30E9;&#x30F3;&#x30B9;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30FC;&#x3067;&#x3059;&#x3002;&#x5B9F;&#x614B;&#x306F;&#x3001;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;case class&#x3067;&#x3059;&#x3002;</p>
-<pre><code class="lang-scala"><span class="hljs-keyword">final</span> <span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Kleisli</span>[</span><span class="hljs-type">M</span>[_], <span class="hljs-type">A</span>, <span class="hljs-type">B</span>](run: <span class="hljs-type">A</span> =&gt; <span class="hljs-type">M</span>[<span class="hljs-type">B</span>])
-</code></pre>
-<ul>
-<li><a href="https://hackage.haskell.org/package/mtl-2.2.1/docs/Control-Monad-Reader.html#t:ReaderT" target="_blank">https://hackage.haskell.org/package/mtl-2.2.1/docs/Control-Monad-Reader.html#t:ReaderT</a></li>
-</ul>
+                        <h1 id="stricttree">StrictTree</h1>
+<p>&#x305D;&#x306E;&#x540D;&#x306E;&#x901A;&#x308A;&#x3001;Strict&#x306A;Tree&#x3067;&#x3059;&#x3002;&#x4EE5;&#x524D;&#x304B;&#x3089;&#x5B58;&#x5728;&#x3057;&#x3066;&#x3044;&#x305F;<code>scalaz.Tree</code>&#x306F;<code>scala.Stream</code>&#x3092;&#x4F7F;&#x7528;&#x3057;&#x305F;lazy&#x306A;&#x5B9F;&#x88C5;&#x306E;&#x305F;&#x3081;&#x3001;&#x5F8C;&#x304B;&#x3089;&#x8FFD;&#x52A0;&#x3055;&#x308C;&#x305F;&#x3053;&#x3061;&#x3089;&#x304C;&#x3053;&#x3046;&#x3044;&#x3046;&#x540D;&#x524D;&#x306B;&#x306A;&#x308A;&#x307E;&#x3057;&#x305F;&#x3002;
+7.2.x&#x7CFB;&#x3067;&#x306F;&#x3001;version 7.2.4&#x304B;&#x3089;&#x8FFD;&#x52A0;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<p><code>scalaz.Tree</code>&#x3068;&#x6BD4;&#x8F03;&#x3057;&#x305F;&#x5834;&#x5408;&#x3001;lazy&#x304B;strict&#x304B;&#x304C;&#x9055;&#x3046;&#x3060;&#x3051;&#x3067;&#x3001;&#x69CB;&#x9020;&#x306F;&#x540C;&#x3058;rose tree&#x3068;&#x547C;&#x3070;&#x308C;&#x308B;&#x3082;&#x306E;&#x3067;&#x3059;&#x3002;&#x307E;&#x305F;&#x3001;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306B;&#x95A2;&#x3057;&#x3066;&#x3082;&#x5927;&#x4F53;lazy&#x306A;&#x307B;&#x3046;&#x3068;&#x540C;&#x3058;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x304C;&#x5B9F;&#x88C5;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;&#x7D20;&#x76F4;&#x306B;&#x5B9F;&#x88C5;&#x3059;&#x308B;&#x3068;&#x30B9;&#x30BF;&#x30C3;&#x30AF;&#x30AA;&#x30FC;&#x30D0;&#x30FC;&#x30D5;&#x30ED;&#x30FC;&#x3057;&#x3066;&#x3057;&#x307E;&#x3046;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3067;&#x3082;&#x3001;
+Trampoline&#x3092;&#x99C6;&#x4F7F;&#x3057;&#x3066;&#x30B9;&#x30BF;&#x30C3;&#x30AF;&#x304C;&#x6EA2;&#x308C;&#x306A;&#x3044;&#x5DE5;&#x592B;&#x304C;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
 
                     
                     </section>
@@ -1171,10 +1169,10 @@
         </div>
 
         
-        <a href="./streamT.html" class="navigation navigation-prev " aria-label="Previous page: StreamT"><i class="fa fa-angle-left"></i></a>
+        <a href="./tree.html" class="navigation navigation-prev " aria-label="Previous page: Tree"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="./indexedStateT.html" class="navigation navigation-next " aria-label="Next page: IndexedStateT"><i class="fa fa-angle-right"></i></a>
+        <a href="./naturalTransformation.html" class="navigation navigation-next " aria-label="Next page: NaturalTransformation"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
