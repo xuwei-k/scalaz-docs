@@ -1,6 +1,8 @@
 import sbt._
 import sbt.complete.Parser
 
+object NpmCliBase extends NpmCliBase
+
 trait NpmCliBase {
   val nodeBin = file("node_modules/.bin/")
 
