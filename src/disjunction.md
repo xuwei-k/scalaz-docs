@@ -1,7 +1,7 @@
 # \/
 
-- [ソースコード](https://github.com/scalaz/scalaz/blob/v7.2.4/core/src/main/scala/scalaz/Either.scala)
-- [scaladoc](https://oss.sonatype.org/service/local/repositories/releases/archive/org/scalaz/scalaz_2.11/7.2.4/scalaz_2.11-7.2.4-javadoc.jar/!/index.html#scalaz.$bslash$div)
+- [ソースコード](https://github.com/scalaz/scalaz/blob/v7.2.5/core/src/main/scala/scalaz/Either.scala)
+- [scaladoc](https://oss.sonatype.org/service/local/repositories/releases/archive/org/scalaz/scalaz_2.11/7.2.5/scalaz_2.11-7.2.5-javadoc.jar/!/index.html#scalaz.$bslash$div)
 - 記号のクラス名でとっつきにくそうですが、かなり多く使われている、とても便利なクラスです
 - 読み方は`Disjunction`あるいは`Either`です
 - 数学の論理和 ∨ の記号由来です
