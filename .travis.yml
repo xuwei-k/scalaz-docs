@@ -5,13 +5,15 @@ jdk:
 before_install:
 - export CXX='g++-4.8'
 - nvm install 4.4.5 && nvm use 4.4.5 && npm install
-- wget -nv -O- https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py | python -c "import sys; main=lambda x,y:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main('~/calibre-bin', True)" >/dev/null
+- wget -nv -O- https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py
+  | python -c "import sys; main=lambda x,y:sys.stderr.write('Download failed\n');
+  exec(sys.stdin.read()); main('~/calibre-bin', True)" >/dev/null
 - export PATH="~/calibre-bin/calibre/:/home/travis/calibre-bin/calibre/:$PATH"
 cache:
   directories:
-  - $HOME/.ivy2/cache
-  - $HOME/.sbt/boot
-  - $HOME/.sbt/launchers
+  - "$HOME/.ivy2/cache"
+  - "$HOME/.sbt/boot"
+  - "$HOME/.sbt/launchers"
   - node_modules
 addons:
   apt:
@@ -24,23 +26,12 @@ addons:
 script:
 - sbt scalazDiagram build epub
 after_success:
-- echo -e "Host github.com\n\tStrictHostKeyChecking no\nIdentityFile ~/.ssh/deploy.key\n"
-  >> ~/.ssh/config
-- openssl aes-256-cbc -k "$SERVER_KEY" -in .travis/deploy_key.enc -d -a -out deploy.key
-- cp deploy.key ~/.ssh/
-- chmod 600 ~/.ssh/deploy.key
-- git config --global user.email "6b656e6a69@gmail.com"
-- git config --global user.name "xuwei-k"
-- mv gitbook/_book ../ &&
-  mv gitbook/book.epub ../_book/scalaz-docs.epub && git fetch origin gh-pages:gh-pages && git clean -fdx &&
-  git checkout gh-pages && rm -rf ./* && cp -r ../_book/* ./ && git add . && git commit
-  -a -m "auto commit on travis $TRAVIS_JOB_NUMBER $TRAVIS_COMMIT" && tree ./
-- if [[ "${TRAVIS_BRANCH}" == "master" && "${TRAVIS_PULL_REQUEST}" == "false" ]];
-  then git push git@github.com:xuwei-k/scalaz-docs.git gh-pages:gh-pages ; fi
+- "./deploy.sh"
 after_script:
 - find $HOME/.sbt -name "*.lock" | xargs rm
 - find $HOME/.ivy2 -name "ivydata-*.properties" | xargs rm
 - find $HOME/.ivy2/cache -name "*SNAPSHOT*" | xargs rm -rf
 env:
   global:
-    secure: sD3fD7EM+X3Afm+CodPiPJ8u/kfNfzUWt++pKcLQe+oSnbbx6Tu2zI25yAcY8Q43CDthiAEjnAz0bf3hukpeznWyd3VssNcFwu/9nNT47E2i3bWpZLp532/8kgdh4EE7b5D4im0F1xj/8/F1jucFtfO003ZIn5iTpB726fXcnsDt2zCvUE4+ks76lyyxltMxxHRIxmaTLU9e+AIclrBjq8BxTpYAwUH+iCxObwG+CZSN2HMBIbNC9nwkTJUJBhgPnSABPw8HP71bnmKbTxYC/HdBV5uc5HRGpH5kEfPT48Ksddj+khl6ZmAvwiiNDXDQ4ViijCfDh2F+zR6/t1wKYR51jifxbU5wakU9xAkS7gov8A/g6nurutE9sgGNWbo6FfcSS8iqNkjIzg/bLOuBggvbCh/bxoSQkRPjuigzzp6xkoiMslo3khj9M4O+2w48eCkupVJqeNzVVL6ktw3eUJZfLGRbg0KDHWE8SssbOcSi4Z/HRB5k9tpGgQitqjN4Db348hundHj6uDm+Qquw2yG1KyuGN4GExOt2DPtf8Y32p6Vj4xGTdp3+1cj4CJey1j26oJzKZZQMKYFqnRogxTMUXZMQ3M3I9ABdYo86AMaqrtqK1+IUSUTNwYVnV8jjzogybjo7hga/lm2+SJ7BY5NMdwAMuNjQ1JagCkTxdNA=
+  - secure: sD3fD7EM+X3Afm+CodPiPJ8u/kfNfzUWt++pKcLQe+oSnbbx6Tu2zI25yAcY8Q43CDthiAEjnAz0bf3hukpeznWyd3VssNcFwu/9nNT47E2i3bWpZLp532/8kgdh4EE7b5D4im0F1xj/8/F1jucFtfO003ZIn5iTpB726fXcnsDt2zCvUE4+ks76lyyxltMxxHRIxmaTLU9e+AIclrBjq8BxTpYAwUH+iCxObwG+CZSN2HMBIbNC9nwkTJUJBhgPnSABPw8HP71bnmKbTxYC/HdBV5uc5HRGpH5kEfPT48Ksddj+khl6ZmAvwiiNDXDQ4ViijCfDh2F+zR6/t1wKYR51jifxbU5wakU9xAkS7gov8A/g6nurutE9sgGNWbo6FfcSS8iqNkjIzg/bLOuBggvbCh/bxoSQkRPjuigzzp6xkoiMslo3khj9M4O+2w48eCkupVJqeNzVVL6ktw3eUJZfLGRbg0KDHWE8SssbOcSi4Z/HRB5k9tpGgQitqjN4Db348hundHj6uDm+Qquw2yG1KyuGN4GExOt2DPtf8Y32p6Vj4xGTdp3+1cj4CJey1j26oJzKZZQMKYFqnRogxTMUXZMQ3M3I9ABdYo86AMaqrtqK1+IUSUTNwYVnV8jjzogybjo7hga/lm2+SJ7BY5NMdwAMuNjQ1JagCkTxdNA=
+  - secure: ZIIuOCwqpF+TUzwn7ZJS83263mdnpnt5/ddP/Z+zX9WArrl2z4huR3rVTvNBbHt4R2J/5VdLUAQ4heGrjD7LEpzfpC6qyM7DaqGD3yUOH5dEszJD9xkHqeNXrCpOin2evhrMEG2/DzA8EkzdFefqXr/CGTKmo/c74J6o4zBO1TgugpyymHS7Hm0RZyh6WiKeEMl0m4DjiKlGgE64PcKq/DNYVEUlXuYNkSK8RtF26jbyA8mY5B0Ohr++Dvh5gRXg4C1MMlfaFz3q3Slf3s/iRf87hFC7OJBF/qVDxNt+zpm84z9Cpln6/zpmvlTH1JkryZJQEOSmed1AyIVkDc/ggpFZAg2B9q7OwGH9KZod9BzlfjTcOU5RU4qpvijVKhg9NuPPTl0yUkCUy5B/s3LTmLXS6hLRlgCvmcGpQ9NTZlBa+6crGMWjQSddsIPoLl19aXV8WS6Dy6CTyKuqKFse10VO7qwFSZ5GJ2HX9WRw7mKTtIQMtiRrqRa+zrJ8FRUrdUmhCorum52Lxn+kHnByNFS8S26/37yncmxxUq4uk5SgSR0ZbR+ZsaM+4cxMwAK5Y3sVavd1kqMYWES51dPEpRVzArgGdKd2BQgsjKoQdFesUh6n40d9kioClm+kIIT3BulwFpV10aiQ2mdzJ2XM6yq9+i4r07lnQVev3v06YOc=
