@@ -1,6 +1,6 @@
 # Liskov
 
-[Scala標準ライブラリの`<:<`](https://github.com/scala/scala/blob/v2.11.8/src/library/scala/Predef.scala#L370-L389)と同じような役割をするものです。
+[Scala標準ライブラリの`<:<`](https://github.com/scala/scala/blob/v2.12.0/src/library/scala/Predef.scala#L480-L500)と同じような役割をするものです。
 
 本体にメソッドはそれほど多くなく、7.2.6時点で以下のような定義です。
 (シグネチャのみで、実装は省略しています)
