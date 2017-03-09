@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>==&gt;&gt; | Scalaz日本語ドキュメント</title>
+        <title>CorecursiveList | Scalaz日本語ドキュメント</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="./iset.html" />
+    <link rel="next" href="./validation.html" />
     
     
-    <link rel="prev" href="./cord.html" />
+    <link rel="prev" href="./iList.html" />
     
 
         
@@ -49,9 +49,9 @@
         
         
     <div class="book"
-        data-level="2.12"
-        data-chapter-title="==&gt;&gt;"
-        data-filepath="imap.md"
+        data-level="2.6"
+        data-chapter-title="CorecursiveList"
+        data-filepath="corecursiveList.md"
         data-basepath="."
         data-revision="Thu Mar 09 2017 03:06:03 GMT+0000 (UTC)"
         data-innerlanguage="">
@@ -261,7 +261,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.6" data-path="corecursiveList.html">
+        <li class="chapter active" data-level="2.6" data-path="corecursiveList.html">
             
                 
                     <a href="./corecursiveList.html">
@@ -351,7 +351,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.12" data-path="imap.html">
+        <li class="chapter " data-level="2.12" data-path="imap.html">
             
                 
                     <a href="./imap.html">
@@ -1169,19 +1169,10 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="">==&gt;&gt;</h1>
-<p><code>IMap</code>&#x3068;&#x3044;&#x3046;&#x5225;&#x540D;&#x304C;&#x3064;&#x3044;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;Haskell&#x306E;Map&#x3092;&#x79FB;&#x690D;&#x3057;&#x305F;&#x3082;&#x306E;&#x3067;&#x3059;&#x3002;
-<code>scalaz.Order</code>&#x3092;&#x4F7F;&#x3063;&#x3066;&#x3044;&#x3066;&#x3001;&#x9806;&#x5E8F;&#x3092;&#x4FDD;&#x6301;&#x3059;&#x308B;tree map&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;&#x5148;&#x982D;&#x306E;I&#x306F;&#x3001;IList&#x3084;ISet&#x3068;&#x540C;&#x69D8;&#x3001;&#x3042;&#x307E;&#x308A;&#x6DF1;&#x3044;&#x610F;&#x5473;&#x306F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x3002;<sup><a href="#fn_1" id="reffn_1">1</a></sup></p>
-<ul>
-<li><a href="https://hackage.haskell.org/package/containers-0.5.6.3/docs/Data-Map.html" target="_blank">https://hackage.haskell.org/package/containers-0.5.6.3/docs/Data-Map.html</a></li>
-</ul>
-<p>&#x77E2;&#x5370;&#x306E;&#x3088;&#x3046;&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x308B;&#x306E;&#x306F;&#x3001;<code>Key ==&gt;&gt; Value</code>&#x3068;&#x3044;&#x3046;&#x5F62;&#x5F0F;&#x3067;&#x4E2D;&#x7F6E;&#x8A18;&#x6CD5;&#x3067;&#x578B;&#x3092;&#x66F8;&#x304F;&#x305F;&#x3081;&#x3060;&#x3068;&#x601D;&#x308F;&#x308C;&#x307E;&#x3059;<sup><a href="#fn_2" id="reffn_2">2</a></sup>&#x3002;&#x5B9F;&#x969B;Scalaz&#x5185;&#x90E8;&#x3067;&#x3082;&#x57FA;&#x672C;&#x7684;&#x306B;<code>==&gt;&gt;</code>&#x306E;&#x578B;&#x306F;&#x4E2D;&#x7F6E;&#x8A18;&#x6CD5;&#x3067;&#x66F8;&#x304B;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
-<blockquote id="fn_1">
-<sup>1</sup>. (&#x3042;&#x3048;&#x3066;&#x8A00;&#x3046;&#x306A;&#x3089;&#x3001;invariant&#x3082;&#x3057;&#x304F;&#x306F;immutable&#x3042;&#x305F;&#x308A;&#x304C;&#x7531;&#x6765;?)<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#x21A9;</a>
-</blockquote>
-<blockquote id="fn_2">
-<sup>2</sup>. &#x8A18;&#x53F7;&#x306B;&#x9650;&#x3089;&#x305A;&#x3001;&#x578B;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x3092;2&#x3064;&#x3068;&#x308B;&#x578B;&#x306B;&#x3064;&#x3044;&#x3066;<code>A[B, C]</code>&#x3092;<code>B A C</code>&#x3068;&#x66F8;&#x3051;&#x308B;&#x306E;&#x306F;&#x3001;Scala&#x81EA;&#x4F53;&#x306E;&#x8A00;&#x8A9E;&#x4ED5;&#x69D8;&#x3067;&#x3059;&#x3002;&#x305F;&#x3068;&#x3048;&#x3070;<code>Either[String, Int]</code>&#x306F;<code>String Either Int</code>&#x3068;&#x66F8;&#x3051;&#x307E;&#x3059;&#x3002;<a href="#reffn_2" title="Jump back to footnote [2] in the text."> &#x21A9;</a>
-</blockquote>
+                        <h1 id="corecursivelist">CorecursiveList</h1>
+<p><code>scalaz.EphemeralStream</code>&#x3068;&#x540C;&#x3058;&#x3088;&#x3046;&#x306A;&#x3001;&quot;&#x6B21;&#x306E;&#x8981;&#x7D20;&#x3092;&#x8A08;&#x7B97;&#x3059;&#x308B;&#x95A2;&#x6570;&quot;&#x3092;&#x4FDD;&#x6301;&#x3059;&#x308B;&#x3053;&#x3068;&#x306B;&#x3088;&#x3063;&#x3066;&#x69CB;&#x6210;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x30EA;&#x30B9;&#x30C8;&#x3067;&#x3059;&#x3002;
+<code>EphemeralStream</code>&#x3068;&#x540C;&#x69D8;&#x306B;&#x7121;&#x9650;&#x306E;&#x9577;&#x3055;&#x306B;&#x306A;&#x308B;&#x3053;&#x3068;&#x304C;&#x3042;&#x308A;&#x3048;&#x307E;&#x3059;&#x3002;
+7.3&#x7CFB;&#x3067;&#x306F;7.3.0-M10&#x304B;&#x3089;&#x8FFD;&#x52A0;&#x3055;&#x308C;&#x307E;&#x3057;&#x305F;&#x3002;</p>
 
                     
                     </section>
@@ -1192,10 +1183,10 @@
         </div>
 
         
-        <a href="./cord.html" class="navigation navigation-prev " aria-label="Previous page: Cord"><i class="fa fa-angle-left"></i></a>
+        <a href="./iList.html" class="navigation navigation-prev " aria-label="Previous page: IList"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="./iset.html" class="navigation navigation-next " aria-label="Next page: ISet"><i class="fa fa-angle-right"></i></a>
+        <a href="./validation.html" class="navigation navigation-next " aria-label="Next page: Validation"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
