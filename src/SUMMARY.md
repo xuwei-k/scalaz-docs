@@ -10,6 +10,7 @@
  - [Either3](either3.md)
  - [Maybe](maybe.md)
  - [IList](iList.md)
+ - [CorecursiveList](corecursiveList.md)
  - [Validation](validation.md)
  - [\&/](these.md)
  - [DList](dlist.md)
