@@ -64,7 +64,7 @@ Scalazでは、バージョン`7.0.0`以降は、同じ規則でバイナリ互�
 
 - 7.2.0のfinalがリリースされたことにより、2015年12月頃から開発がはじまりました
 - いまのところ、次のversionは7.3の予定です
-- サポートするScalaのversionは未定です(Scala 2.10を切り捨てるか否か)
+- サポートするScalaのversionは2.11以降です(Scala 2.10は切り捨て)
 - [Java 7のサポートを打ち切って、Java 8以上必須にする予定です](https://github.com/scalaz/scalaz/pull/1063)
 
 [^oldz]: Scalaz 6以前はこの規則にしたがっていません。migration-managerでもチェックされていません。
