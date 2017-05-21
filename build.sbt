@@ -46,9 +46,9 @@ libraryDependencies ++= (
   Nil
 )
 
-diagram.Plugin.classDiagramSettings
+enablePlugins(ClassDiagramPlugin)
 
-DiagramKeys.classDiagramSetting ~= { s =>
+classDiagramSetting ~= { s =>
   s.copy(
     name = s"scalaz $scalazVersion diagram",
     nodeSetting = clazz => s.nodeSetting(clazz) ++ urlMap(clazz),
@@ -62,7 +62,7 @@ DiagramKeys.classDiagramSetting ~= { s =>
 }
 
 scalazDiagram1 := {
-  val svg = DiagramKeys.classDiagramWrite.toTask(
+  val svg = classDiagramWrite.toTask(
     "MonadPlus ComonadStore Traverse1 IsEmpty MonadReader MonadState MonadError MonadListen Nondeterminism Divisible BindRec Align Distributive".split(' ').map{
       "scalaz." + _
     }.mkString(" ", " ", "")
@@ -71,7 +71,7 @@ scalazDiagram1 := {
 }
 
 scalazDiagram2 := {
-  val svg = DiagramKeys.classDiagramWrite.toTask(
+  val svg = classDiagramWrite.toTask(
     "Monoid Enum Bitraverse Choice Arrow Associative ProChoice".split(' ').map{
       "scalaz." + _
     }.mkString(" ", " ", "")
