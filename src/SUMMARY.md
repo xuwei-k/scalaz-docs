@@ -43,6 +43,7 @@
 - 型クラス
  - [Equal](equal.md)
  - [Order](order.md)
+ - [Band](band.md)
  - [Enum](enum.md)
  - [Plus](plus.md)
  - [PlusEmpty](plusEmpty.md)
