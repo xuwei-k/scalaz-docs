@@ -7,7 +7,7 @@ lazy val buildWithCheck = taskKey[Unit]("lintAll testAll build")
 val scalazDiagram1 = TaskKey[Unit]("scalazDiagram1")
 val scalazDiagram2 = TaskKey[Unit]("scalazDiagram2")
 
-val scalazVersion = "7.2.12"
+val scalazVersion = "7.2.13"
 
 def urlMap(clazz: Class[_]): Map[String, String] =
   if (clazz.getName.startsWith("scalaz"))
@@ -72,7 +72,7 @@ scalazDiagram1 := {
 
 scalazDiagram2 := {
   val svg = classDiagramWrite.toTask(
-    "Monoid Enum Bitraverse Choice Arrow Associative ProChoice".split(' ').map{
+    "Band Monoid Enum Bitraverse Choice Arrow Associative ProChoice".split(' ').map{
       "scalaz." + _
     }.mkString(" ", " ", "")
   ).value
