@@ -57,7 +57,10 @@ classDiagramSetting ~= { s =>
         s.edgeSetting(x, y) + ("weight" -> weight.toString)
       }
     },
-    commonNodeSetting = s.commonNodeSetting + ("target" -> "_blank")
+    commonNodeSetting = s.commonNodeSetting + ("target" -> "_blank"),
+    filter = { clazz =>
+      clazz != classOf[java.lang.Object] && !clazz.getName.endsWith("Parent")
+    }
   )
 }
 
