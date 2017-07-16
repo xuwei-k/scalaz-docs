@@ -39,7 +39,7 @@ TextLint.settings
 
 LinkTest.settings
 
-libraryDependencies <+= sbtDependency
+libraryDependencies += sbtDependency.value
 
 libraryDependencies ++= (
   ("org.scalaz" %% "scalaz-scalacheck-binding" % scalazVersion) ::

@@ -18,7 +18,9 @@ trait NpmCliBase {
     Def.spaceDelimited(argLabel).map(_.mkString(" "))
   }
 
-  def printRun(p: ProcessBuilder) : Unit = {
-    p.lines foreach println
+  def printRun(p: ProcessBuilder): Seq[String] = {
+    val lines = p.lines.toList
+    lines.foreach(println)
+    lines
   }
 }
