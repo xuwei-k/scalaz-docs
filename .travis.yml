@@ -35,7 +35,7 @@ after_success:
   mv gitbook/book.epub ../_book/scalaz-docs.epub && git fetch origin gh-pages:gh-pages && git clean -fdx &&
   git checkout gh-pages && rm -rf ./* && cp -r ../_book/* ./ && git add . && git commit
   -a -m "auto commit on travis $TRAVIS_JOB_NUMBER $TRAVIS_COMMIT" && tree ./
-- if [[ "${TRAVIS_BRANCH}" == "master" && "${TRAVIS_PULL_REQUEST}" == "false" ]];
+- if [[ "${TRAVIS_BRANCH}" == "master" && "${TRAVIS_EVENT_TYPE}" == "push" && "${TRAVIS_REPO_SLUG}" == "xuwei-k/scalaz-docs" ]];
   then git push git@github.com:xuwei-k/scalaz-docs.git gh-pages:gh-pages ; fi
 after_script:
 - find $HOME/.sbt -name "*.lock" | xargs rm
