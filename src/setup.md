@@ -15,5 +15,5 @@ libraryDependencies += "org.scalaz" %% "scalaz-core" % "7.2.15"
 必要に応じて、以下のように `scalaVersion` など他のkeyの設定をしてください。
 
 ```tut:silent
-scalaVersion := "2.12.2"
+scalaVersion := "2.12.3"
 ```

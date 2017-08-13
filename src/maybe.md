@@ -1,7 +1,7 @@
 # Maybe
 
 いわゆるHaskellのMaybeと同じようなものです。
-Scala標準ライブラリには、すでに[`scala.Option`](https://github.com/scala/scala/blob/v2.12.2/src/library/scala/Option.scala)というものがありますが、いくつかの理由により、Scalaz独自のものが作られました。
+Scala標準ライブラリには、すでに[`scala.Option`](https://github.com/scala/scala/blob/v2.12.3/src/library/scala/Option.scala)というものがありますが、いくつかの理由により、Scalaz独自のものが作られました。
 
 具体的に作られた理由、標準のOptionとの違いを挙げると
 - 標準のOptionは共変(covariant)だが、ScalazのMaybeは非変(invariant)
