@@ -31,9 +31,9 @@ type >~>[+B, -A] = Liskov[A, B]
 
 `def apply(a: A): B`に関しては、Predefのものと全く同じ用途です。scalaz.Liskovが優れているのは、その他にもいくつかのメソッドを持っている点です。
 
-ちなみに、Scala本体にも同様のメソッドを入れる動きがありましたが、結局mergeするまでには至っていません。
+ただし、Scala 2.13 からは、Scala本体にも同様のメソッドが入ります。
 
-[Add composition and subst methods to =:= and &lt;:&lt; by puffnfresh · Pull Request #3992 · scala/scala](https://github.com/scala/scala/pull/3992)
+[Add substitute methods and tests](https://github.com/scala/scala/commit/0c9f08068dfd4b49239fe68b95eaa3ea9341554f)
 
 Liskovに関しては、以下の記事も読むとよいでしょう。
 
