@@ -1,5 +1,5 @@
-addSbtPlugin("org.tpolecat" % "tut-plugin" % "0.4.7")
+addSbtPlugin("org.tpolecat" % "tut-plugin" % "0.6.1")
 
 fullResolvers ~= {_.filterNot(_.name == "jcenter")}
 
-addSbtPlugin("com.github.xuwei-k" % "sbt-class-diagram" % "0.2.0")
+addSbtPlugin("com.github.xuwei-k" % "sbt-class-diagram" % "0.2.1")
