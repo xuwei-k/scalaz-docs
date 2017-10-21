@@ -53,7 +53,7 @@
         data-chapter-title="Align"
         data-filepath="align.md"
         data-basepath="."
-        data-revision="Sat Oct 21 2017 05:03:01 GMT+0000 (UTC)"
+        data-revision="Sat Oct 21 2017 05:23:24 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -1200,10 +1200,10 @@ res0: <span class="hljs-type">List</span>[(<span class="hljs-type">String</span>
 </code></pre>
 <p>Align&#x3092;&#x4F7F;&#x7528;&#x3057;&#x305F;&#x5834;&#x5408;&#x3001;&#x5207;&#x308A;&#x6368;&#x3066;&#x3089;&#x308C;&#x308B;&#x306E;&#x3067;&#x306F;&#x306A;&#x304F;</p>
 <pre><code class="lang-scala">scala&gt; <span class="hljs-type">Align</span>[<span class="hljs-type">List</span>].align(x, y)
-res1: <span class="hljs-type">List</span>[scalaz.\&amp;/[<span class="hljs-type">String</span>,<span class="hljs-type">Int</span>]] = <span class="hljs-type">List</span>(<span class="hljs-type">Both</span>(a,<span class="hljs-number">1</span>), <span class="hljs-type">Both</span>(b,<span class="hljs-number">2</span>), <span class="hljs-type">This</span>(c), <span class="hljs-type">This</span>(d))
+res1: <span class="hljs-type">List</span>[<span class="hljs-type">String</span> \&amp;/ <span class="hljs-type">Int</span>] = <span class="hljs-type">List</span>(<span class="hljs-type">Both</span>(a,<span class="hljs-number">1</span>), <span class="hljs-type">Both</span>(b,<span class="hljs-number">2</span>), <span class="hljs-type">This</span>(c), <span class="hljs-type">This</span>(d))
 
 scala&gt; <span class="hljs-type">Align</span>[<span class="hljs-type">List</span>].align(y, x)
-res2: <span class="hljs-type">List</span>[scalaz.\&amp;/[<span class="hljs-type">Int</span>,<span class="hljs-type">String</span>]] = <span class="hljs-type">List</span>(<span class="hljs-type">Both</span>(<span class="hljs-number">1</span>,a), <span class="hljs-type">Both</span>(<span class="hljs-number">2</span>,b), <span class="hljs-type">That</span>(c), <span class="hljs-type">That</span>(d))
+res2: <span class="hljs-type">List</span>[<span class="hljs-type">Int</span> \&amp;/ <span class="hljs-type">String</span>] = <span class="hljs-type">List</span>(<span class="hljs-type">Both</span>(<span class="hljs-number">1</span>,a), <span class="hljs-type">Both</span>(<span class="hljs-number">2</span>,b), <span class="hljs-type">That</span>(c), <span class="hljs-type">That</span>(d))
 </code></pre>
 <ul>
 <li>&#x4E21;&#x65B9;&#x304C;&#x5B58;&#x5728;&#x3059;&#x308B;&#x90E8;&#x5206;&#x307E;&#x3067;&#x306F;Both</li>

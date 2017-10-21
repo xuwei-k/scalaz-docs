@@ -53,7 +53,7 @@
         data-chapter-title="\/"
         data-filepath="disjunction.md"
         data-basepath="."
-        data-revision="Sat Oct 21 2017 05:03:01 GMT+0000 (UTC)"
+        data-revision="Sat Oct 21 2017 05:23:24 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -1198,25 +1198,25 @@
 <span class="hljs-keyword">import</span> scalaz._
 
 scala&gt; <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">a</span>:</span> <span class="hljs-type">Int</span> \/ <span class="hljs-type">String</span> = \/-(<span class="hljs-string">&quot;foo&quot;</span>)  <span class="hljs-comment">// right&#x3092;&#x751F;&#x6210;</span>
-a: scalaz.\/[<span class="hljs-type">Int</span>,<span class="hljs-type">String</span>] = \/-(foo)
+a: <span class="hljs-type">Int</span> \/ <span class="hljs-type">String</span> = \/-(foo)
 
 scala&gt; <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">b</span>:</span> \/[<span class="hljs-type">Int</span>, <span class="hljs-type">String</span>] = a <span class="hljs-comment">// &#x578B;&#x306F;&#x4E2D;&#x7F6E;&#x8A18;&#x6CD5;&#x3067;&#x66F8;&#x304B;&#x308C;&#x308B;&#x3053;&#x3068;&#x304C;&#x591A;&#x3044;&#x304C;&#x3001;&#x4E2D;&#x7F6E;&#x8A18;&#x6CD5;&#x3092;&#x4F7F;&#x308F;&#x306A;&#x304F;&#x3066;&#x3082;&#x66F8;&#x3051;&#x308B;</span>
-b: scalaz.\/[<span class="hljs-type">Int</span>,<span class="hljs-type">String</span>] = \/-(foo)
+b: <span class="hljs-type">Int</span> \/ <span class="hljs-type">String</span> = \/-(foo)
 
 scala&gt; <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">c</span>:</span> <span class="hljs-type">Int</span> \/ <span class="hljs-type">String</span>  = \/.right(<span class="hljs-string">&quot;foo&quot;</span>) <span class="hljs-comment">// right&#x3068;&#x3044;&#x3046;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3082;&#x3042;&#x308B;</span>
-c: scalaz.\/[<span class="hljs-type">Int</span>,<span class="hljs-type">String</span>] = \/-(foo)
+c: <span class="hljs-type">Int</span> \/ <span class="hljs-type">String</span> = \/-(foo)
 
 scala&gt; <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">d</span> =</span> a.map(_ + <span class="hljs-string">&quot;bar&quot;</span>) <span class="hljs-comment">// right&#x3092;map&#x3059;&#x308B;&#x3068;&#x53CD;&#x6620;&#x3055;&#x308C;&#x308B;</span>
-d: scalaz.\/[<span class="hljs-type">Int</span>,<span class="hljs-type">String</span>] = \/-(foobar)
+d: <span class="hljs-type">Int</span> \/ <span class="hljs-type">String</span> = \/-(foobar)
 
 scala&gt; <span class="hljs-function"><span class="hljs-keyword">val</span> <span class="hljs-title">e</span>:</span> <span class="hljs-type">Int</span> \/ <span class="hljs-type">String</span>  = \/.left(<span class="hljs-number">42</span>)
-e: scalaz.\/[<span class="hljs-type">Int</span>,<span class="hljs-type">String</span>] = -\/(<span class="hljs-number">42</span>)
+e: <span class="hljs-type">Int</span> \/ <span class="hljs-type">String</span> = -\/(<span class="hljs-number">42</span>)
 
 scala&gt; e.map(_ + <span class="hljs-string">&quot;bar&quot;</span>) <span class="hljs-comment">// left&#x3092;map&#x3057;&#x3066;&#x3082;&#x5909;&#x308F;&#x3089;&#x306A;&#x3044;</span>
-res0: scalaz.\/[<span class="hljs-type">Int</span>,<span class="hljs-type">String</span>] = -\/(<span class="hljs-number">42</span>)
+res0: <span class="hljs-type">Int</span> \/ <span class="hljs-type">String</span> = -\/(<span class="hljs-number">42</span>)
 
 scala&gt; e.leftMap(_ * <span class="hljs-number">100</span>) <span class="hljs-comment">// left&#x306E;&#x5834;&#x5408;&#x306B;map&#x3059;&#x308B;&#x306B;&#x306F;&#x3001;leftMap&#x3092;&#x4F7F;&#x3046;</span>
-res1: scalaz.\/[<span class="hljs-type">Int</span>,<span class="hljs-type">String</span>] = -\/(<span class="hljs-number">4200</span>)
+res1: <span class="hljs-type">Int</span> \/ <span class="hljs-type">String</span> = -\/(<span class="hljs-number">4200</span>)
 </code></pre>
 
                     
