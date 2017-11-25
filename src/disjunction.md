@@ -1,6 +1,6 @@
 # \/
 
-- [ソースコード](https://github.com/scalaz/scalaz/blob/v7.2.16/core/src/main/scala/scalaz/Either.scala)
+- [ソースコード](https://github.com/scalaz/scalaz/blob/v7.2.17/core/src/main/scala/scalaz/Either.scala)
 - [scaladoc](https://static.javadoc.io/org.scalaz/scalaz_2.12/7.2.16/scalaz/$bslash$div.html)
 - 記号のクラス名でとっつきにくそうですが、かなり多く使われている、とても便利なクラスです
 - 読み方は`Disjunction`あるいは`Either`です

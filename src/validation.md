@@ -1,6 +1,6 @@
 # Validation
 
-- [ソースコード](https://github.com/scalaz/scalaz/blob/v7.2.16/core/src/main/scala/scalaz/Validation.scala)
+- [ソースコード](https://github.com/scalaz/scalaz/blob/v7.2.17/core/src/main/scala/scalaz/Validation.scala)
 - [scaladoc](https://static.javadoc.io/org.scalaz/scalaz_2.12/7.2.16/scalaz/Validation.html)
 
 
