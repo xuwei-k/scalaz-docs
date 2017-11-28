@@ -227,12 +227,12 @@
 <polygon fill="black" stroke="black" points="356.5,-105.553 353,-95.5532 349.5,-105.553 356.5,-105.553"/>
 </g>
 <!-- scalaz.Split&#45;&gt;scalaz.Compose -->
-<g id="edge5" class="edge"><title>scalaz.Split&#45;&gt;scalaz.Compose</title>
+<g id="edge4" class="edge"><title>scalaz.Split&#45;&gt;scalaz.Compose</title>
 <path fill="none" stroke="black" d="M81.517,-66.4272C76.3729,-58.1966 69.6868,-47.4988 63.7971,-38.0754"/>
 <polygon fill="black" stroke="black" points="66.7388,-36.1782 58.4707,-29.5532 60.8028,-39.8882 66.7388,-36.1782"/>
 </g>
 <!-- scalaz.Strong&#45;&gt;scalaz.Profunctor -->
-<g id="edge4" class="edge"><title>scalaz.Strong&#45;&gt;scalaz.Profunctor</title>
+<g id="edge5" class="edge"><title>scalaz.Strong&#45;&gt;scalaz.Profunctor</title>
 <path fill="none" stroke="black" d="M154.786,-66.4272C158.817,-58.3663 164.031,-47.9389 168.67,-38.6599"/>
 <polygon fill="black" stroke="black" points="171.882,-40.0627 173.223,-29.5532 165.621,-36.9322 171.882,-40.0627"/>
 </g>
