@@ -37,4 +37,4 @@ type >~>[+B, -A] = Liskov[A, B]
 
 Liskovに関しては、以下の記事も読むとよいでしょう。
 
-[typelevel.scala | When can Liskov be lifted?](http://typelevel.org/blog/2014/03/09/liskov_lifting.html)
+[typelevel.scala | When can Liskov be lifted?](https://typelevel.org/blog/2014/03/09/liskov_lifting.html)

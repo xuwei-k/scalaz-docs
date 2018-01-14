@@ -12,7 +12,7 @@ Scalazでは、バージョン`7.0.0`以降は、同じ規則でバイナリ互�
  - 例 `7.0.0` から `7.0.2`, `7.1.3` から `7.1.5` など
 - `7.x.y` の `x` の部分が変わった場合はバイナリ互換はない
 
-[Semantic Versioning](http://semver.org/) にはしたがっていないので注意してください。
+[Semantic Versioning](https://semver.org/) にはしたがっていないので注意してください。
 
 また、release candidateやmilestoneのリリースは、上記の範囲外であり、バイナリ互換は保証されません。release candidateとmilestoneのversion番号の規則は、以下のようになっています。
 - release candidateの場合は後ろに`-RC` と数字がつく
