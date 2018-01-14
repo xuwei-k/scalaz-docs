@@ -38,7 +38,7 @@ Scalazでは、バージョン`7.0.0`以降は、同じ規則でバイナリ互�
 - バージョン `7.0.0` は、2013年4月にリリースされました。  [リリースの際のgoogle groupのスレッド](https://groups.google.com/d/topic/scalaz/_QFqVn3jOPU/discussion)
 - Scala 2.9.2, 2.9.3, 2.10.x, 2.11.x, 2.12.xをサポートしています
 - 執筆時点でのバージョン `7.0.x` 系統の最新は `7.0.9` です
-- `7.0.x` 系統は、 `7.1.x` 系統がすでにだいぶ安定していたり `7.2.x` もfinalがリリースされたことにより、今後はほぼ更新されない予定です
+- `7.0.x` 系統は、 `7.1.x` や `7.2.x` 系統がすでにだいぶ安定して広まっているので、今後はほぼ更新されない予定です
 
 ### 7.1.x
 
@@ -46,7 +46,7 @@ Scalazでは、バージョン`7.0.0`以降は、同じ規則でバイナリ互�
 - [リリースの際のgoogle groupのスレッド](https://groups.google.com/d/msg/scalaz/79x3Frhe0Hs/tcGACPaXND8J)
 - Scala 2.9.3, 2.10.x, 2.11.x, 2.12.x をサポートしています
 - 執筆時点でのバージョン `7.1.x` 系統の最新は [`7.1.16`](https://github.com/scalaz/scalaz/wiki/7.1.16) (2017年12月リリース)です
-- `7.1.x` は、まだ何回かは細かい機能追加やバグ修正のリリースの予定をしています
+- `7.1.x` 系統も、 `7.2.x` 系統がすでにだいぶ安定して広まっているので、多少リリースされる可能性はありますが、今後はあまり更新されない予定です
 
 ### 7.2.x
 
@@ -66,6 +66,13 @@ Scalazでは、バージョン`7.0.0`以降は、同じ規則でバイナリ互�
 - いまのところ、次のversionは7.3の予定です
 - サポートするScalaのversionは2.11以降です(Scala 2.10は切り捨て)
 - [Java 7のサポートを打ち切って、Java 8以上必須にする予定です](https://github.com/scalaz/scalaz/pull/1063)
+
+### 8.x
+
+- [7.3.xの次は8.xになりそうな雰囲気](https://github.com/scalaz/scalaz/issues/1480)だけありますが、詳細は未定です
+- 7.3.x以前のgitの履歴をほぼ引き継がずに、ほとんど一から書き直しています
+- これを書いている現在は `series/8.0.x` というbranchで開発されています https://github.com/scalaz/scalaz/tree/series/8.0.x
+- 型クラス同士の関係を継承を使って表現することをやめることにより、implicitの衝突の問題を回避する予定らしいです
 
 [^oldz]: Scalaz 6以前はこの規則にしたがっていません。migration-managerでもチェックされていません。
 [^mima-bug]: migration-manager そのもののバグにより、一部7.1.x系統でバイナリ互換が崩れた、という問題はあります。 https://github.com/scalaz/scalaz/issues/1199 scalaz.syntax.ToTypeClassOps という、普通直接使わないものを継承した場合のみ発生するので、殆どの場合は問題ないでしょう。
