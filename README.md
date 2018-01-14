@@ -1,6 +1,7 @@
 # Scalaz 日本語ドキュメント
 
-<https://xuwei-k.github.io/scalaz-docs/scalaz-docs.epub>
+- html <https://xuwei-k.github.io/scalaz-docs/>
+- epub <https://xuwei-k.github.io/scalaz-docs/scalaz-docs.epub>
 
 [![Build Status](https://travis-ci.org/xuwei-k/scalaz-docs.svg?branch=master)](https://travis-ci.org/xuwei-k/scalaz-docs)
 
