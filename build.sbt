@@ -7,7 +7,7 @@ lazy val buildWithCheck = taskKey[Unit]("lintAll testAll build")
 val scalazDiagram1 = TaskKey[Unit]("scalazDiagram1")
 val scalazDiagram2 = TaskKey[Unit]("scalazDiagram2")
 
-val scalazVersion = "7.2.21"
+val scalazVersion = "7.2.22"
 
 def urlMap(clazz: Class[_]): Map[String, String] =
   if (clazz.getName.startsWith("scalaz"))
@@ -42,7 +42,7 @@ LinkTest.settings
 libraryDependencies += sbtDependency.value
 
 libraryDependencies ++= (
-  ("org.scalaz" %% "scalaz-scalacheck-binding" % scalazVersion) ::
+  ("org.scalaz" %% "scalaz-scalacheck-binding" % s"${scalazVersion}-scalacheck-1.14") ::
   Nil
 )
 

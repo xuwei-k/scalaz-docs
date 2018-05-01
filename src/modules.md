@@ -9,7 +9,7 @@ import sbt._, Keys._
 ## scalaz-core
 
 ```tut:silent
-libraryDependencies += "org.scalaz" %% "scalaz-core" % "7.2.21"
+libraryDependencies += "org.scalaz" %% "scalaz-core" % "7.2.22"
 ```
 
 - 一番多く利用されるモジュールです 
@@ -23,7 +23,7 @@ libraryDependencies += "org.scalaz" %% "scalaz-core" % "7.2.21"
 ## scalaz-effect
 
 ```tut:silent
-libraryDependencies += "org.scalaz" %% "scalaz-effect" % "7.2.21"
+libraryDependencies += "org.scalaz" %% "scalaz-effect" % "7.2.22"
 ```
 
 - `scalaz-core` に依存します
@@ -33,7 +33,7 @@ libraryDependencies += "org.scalaz" %% "scalaz-effect" % "7.2.21"
 ## scalaz-concurrent
 
 ```tut:silent
-libraryDependencies += "org.scalaz" %% "scalaz-concurrent" % "7.2.21"
+libraryDependencies += "org.scalaz" %% "scalaz-concurrent" % "7.2.22"
 ```
 
 - `scalaz-effect` に依存します
@@ -42,7 +42,7 @@ libraryDependencies += "org.scalaz" %% "scalaz-concurrent" % "7.2.21"
 ## scalaz-iteratee
 
 ```tut:silent
-libraryDependencies += "org.scalaz" %% "scalaz-iteratee" % "7.2.21"
+libraryDependencies += "org.scalaz" %% "scalaz-iteratee" % "7.2.22"
 ```
 
 - `scalaz-effect` に依存します
@@ -51,8 +51,9 @@ libraryDependencies += "org.scalaz" %% "scalaz-iteratee" % "7.2.21"
 ## scalaz-scalacheck-binding
 
 ```tut:silent
-libraryDependencies += "org.scalaz" %% "scalaz-scalacheck-binding" % "7.2.21"
+libraryDependencies += "org.scalaz" %% "scalaz-scalacheck-binding" % "7.2.22-scalacheck-1.14"
 ```
 
 - iteratee, concurrent に依存します
 - 主に [scalacheck](https://github.com/rickynils/scalacheck) によるテストをする場合に使います
+- scalacheckのversion毎にクロスビルドされています
