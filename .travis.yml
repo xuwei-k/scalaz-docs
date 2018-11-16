@@ -4,7 +4,7 @@ jdk:
 - oraclejdk8
 before_install:
 - export CXX='g++-4.8'
-- nvm install 4.4.5 && nvm use 4.4.5 && npm install
+- nvm install 10.13.0 && nvm use 10.13.0 && npm install
 - wget -nv -O- https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py | python -c "import sys; main=lambda x,y:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main('~/calibre-bin', True)" >/dev/null
 - export PATH="~/calibre-bin/calibre/:/home/travis/calibre-bin/calibre/:$PATH"
 cache:
