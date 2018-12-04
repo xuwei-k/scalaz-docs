@@ -1,4 +1,4 @@
-addSbtPlugin("org.tpolecat" % "tut-plugin" % "0.6.9")
+addSbtPlugin("org.tpolecat" % "tut-plugin" % "0.6.10")
 
 fullResolvers ~= {_.filterNot(_.name == "jcenter")}
 
