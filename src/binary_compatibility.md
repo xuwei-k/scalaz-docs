@@ -54,7 +54,7 @@ Scalazでは、バージョン`7.0.0`以降は、同じ規則でバイナリ互�
 - [リリースの際のgoogle groupのスレッド](https://groups.google.com/d/topic/scalaz/BXW6BVxYEPE/discussion)
 - 2019年6月現在の最新版は7.2.28です
 - 7.2.0 final以降、7.2.1, 7.2.2という順番でリリースされており、それらはバイナリ互換を保持しています
-- Scala 2.10.x, 2.11.x, 2.12.x をサポートしています
+- Scala 2.10.x, 2.11.x, 2.12.x, 2.13.x をサポートしています
 - 7.2.1以降、公式でScala.jsをサポートしています(concurrentモジュールを除く)
 - 7.2.10以降、[scala-native](http://www.scala-native.org/) をサポートしています(core, effect, iterateeのみ)
 - Java 7以降をサポートしています
