@@ -23,6 +23,7 @@ addons:
     - graphviz
 script:
 - sbt scalazDiagram build epub
+- git checkout .
 - mv gitbook/_book ../
 - mv book.epub ../_book/scalaz-docs.epub
 after_success:
