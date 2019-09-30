@@ -1,1240 +1,1185 @@
+
 <!DOCTYPE HTML>
-<html lang="en" >
-    
+<html lang="" >
     <head>
-        
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>NotNothing | Scalaz日本語ドキュメント</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>NotNothing · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="generator" content="GitBook 3.2.2">
         
         
-        <meta name="HandheldFriendly" content="true"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
-        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
         
+    
     <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
     
         
-        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+    
         
     
         
-        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-search/search.css">
+    
         
     
         
-        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
-        
     
+        
     
 
         
     
     
-    <link rel="next" href="./tag.html" />
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
     
+    <link rel="next" href="tag.html" />
     
-    <link rel="prev" href="./category.html" />
     
 
-        
     </head>
     <body>
         
+<div class="book">
+    <div class="book-summary">
         
-    <div class="book"
-        data-level="6.1"
-        data-chapter-title="NotNothing"
-        data-filepath="notNothing.md"
-        data-basepath="."
-        data-revision="Tue Aug 07 2018 05:46:34 GMT+0000 (UTC)"
-        data-innerlanguage="">
-    
-
-<div class="book-summary">
-    <nav role="navigation">
-        <ul class="summary">
             
-            
-            
-            
-
-            
-
-            
-    
-        <li class="chapter " data-level="0" data-path="index.html">
-            
-                
-                    <a href="./index.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                        Introduction
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="1" >
-            
-            <span><b>1.</b> はじめに</span>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.1" data-path="overview.html">
-            
-                
-                    <a href="./overview.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>1.1.</b>
-                        
-                        Scalazとは
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2" data-path="setup.html">
-            
-                
-                    <a href="./setup.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>1.2.</b>
-                        
-                        セットアップ
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3" data-path="binary_compatibility.html">
-            
-                
-                    <a href="./binary_compatibility.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>1.3.</b>
-                        
-                        バイナリ互換とバージョン
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4" data-path="modules.html">
-            
-                
-                    <a href="./modules.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>1.4.</b>
-                        
-                        モジュール構成
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5" data-path="diagram.html">
-            
-                
-                    <a href="./diagram.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>1.5.</b>
-                        
-                        型クラスの継承関係
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="2" data-path="dataStructures.html">
-            
-                
-                    <a href="./dataStructures.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.</b>
-                        
-                        データ型
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="2.1" data-path="nel.html">
-            
-                
-                    <a href="./nel.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.1.</b>
-                        
-                        NonEmptyList
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="2.2" data-path="disjunction.html">
-            
-                
-                    <a href="./disjunction.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.2.</b>
-                        
-                        \/
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="2.3" data-path="either3.html">
-            
-                
-                    <a href="./either3.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.3.</b>
-                        
-                        Either3
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="2.4" data-path="maybe.html">
-            
-                
-                    <a href="./maybe.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.4.</b>
-                        
-                        Maybe
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="2.5" data-path="iList.html">
-            
-                
-                    <a href="./iList.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.5.</b>
-                        
-                        IList
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="2.6" data-path="corecursiveList.html">
-            
-                
-                    <a href="./corecursiveList.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.6.</b>
-                        
-                        CorecursiveList
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="2.7" data-path="validation.html">
-            
-                
-                    <a href="./validation.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.7.</b>
-                        
-                        Validation
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="2.8" data-path="these.html">
-            
-                
-                    <a href="./these.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.8.</b>
-                        
-                        \&amp;/
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="2.9" data-path="dlist.html">
-            
-                
-                    <a href="./dlist.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.9.</b>
-                        
-                        DList
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="2.10" data-path="dequeue.html">
-            
-                
-                    <a href="./dequeue.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.10.</b>
-                        
-                        Dequeue
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="2.11" data-path="cord.html">
-            
-                
-                    <a href="./cord.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.11.</b>
-                        
-                        Cord
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="2.12" data-path="imap.html">
-            
-                
-                    <a href="./imap.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.12.</b>
-                        
-                        ==&gt;&gt;
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="2.13" data-path="iset.html">
-            
-                
-                    <a href="./iset.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.13.</b>
-                        
-                        ISet
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="2.14" data-path="tree.html">
-            
-                
-                    <a href="./tree.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.14.</b>
-                        
-                        Tree
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="2.15" data-path="strictTree.html">
-            
-                
-                    <a href="./strictTree.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.15.</b>
-                        
-                        StrictTree
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="2.16" data-path="naturalTransformation.html">
-            
-                
-                    <a href="./naturalTransformation.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.16.</b>
-                        
-                        NaturalTransformation
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="2.17" data-path="free.html">
-            
-                
-                    <a href="./free.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.17.</b>
-                        
-                        Free
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="2.18" data-path="freeAp.html">
-            
-                
-                    <a href="./freeAp.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.18.</b>
-                        
-                        FreeAp
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="2.19" data-path="coproduct.html">
-            
-                
-                    <a href="./coproduct.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.19.</b>
-                        
-                        Coproduct
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="2.20" data-path="alpha.html">
-            
-                
-                    <a href="./alpha.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.20.</b>
-                        
-                        Alpha
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="2.21" data-path="digit.html">
-            
-                
-                    <a href="./digit.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.21.</b>
-                        
-                        Digit
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="2.22" data-path="bijectionT.html">
-            
-                
-                    <a href="./bijectionT.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>2.22.</b>
-                        
-                        BijectionT
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="3" data-path="monadTransformers.html">
-            
-                
-                    <a href="./monadTransformers.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.</b>
-                        
-                        モナドトランスフォーマー
-                    </a>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="3.1" data-path="optionT.html">
-            
-                
-                    <a href="./optionT.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.1.</b>
-                        
-                        OptionT
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.2" data-path="maybeT.html">
-            
-                
-                    <a href="./maybeT.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.2.</b>
-                        
-                        MaybeT
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.3" data-path="eitherT.html">
-            
-                
-                    <a href="./eitherT.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.3.</b>
-                        
-                        EitherT
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.4" data-path="listT.html">
-            
-                
-                    <a href="./listT.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.4.</b>
-                        
-                        ListT
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.5" data-path="streamT.html">
-            
-                
-                    <a href="./streamT.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.5.</b>
-                        
-                        StreamT
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.6" data-path="kleisli.html">
-            
-                
-                    <a href="./kleisli.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.6.</b>
-                        
-                        Kleisli
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.7" data-path="indexedStateT.html">
-            
-                
-                    <a href="./indexedStateT.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.7.</b>
-                        
-                        IndexedStateT
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.8" data-path="freeT.html">
-            
-                
-                    <a href="./freeT.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.8.</b>
-                        
-                        FreeT
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="3.9" data-path="theseT.html">
-            
-                
-                    <a href="./theseT.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>3.9.</b>
-                        
-                        TheseT
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="4" >
-            
-            <span><b>4.</b> コモナドトランスフォーマー</span>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="4.1" data-path="tracedT.html">
-            
-                
-                    <a href="./tracedT.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.1.</b>
-                        
-                        TracedT
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="4.2" data-path="storeT.html">
-            
-                
-                    <a href="./storeT.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.2.</b>
-                        
-                        StoreT
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="5" >
-            
-            <span><b>5.</b> 型クラス</span>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="5.1" data-path="equal.html">
-            
-                
-                    <a href="./equal.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.1.</b>
-                        
-                        Equal
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.2" data-path="order.html">
-            
-                
-                    <a href="./order.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.2.</b>
-                        
-                        Order
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.3" data-path="band.html">
-            
-                
-                    <a href="./band.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.3.</b>
-                        
-                        Band
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.4" data-path="enum.html">
-            
-                
-                    <a href="./enum.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.4.</b>
-                        
-                        Enum
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.5" data-path="plus.html">
-            
-                
-                    <a href="./plus.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.5.</b>
-                        
-                        Plus
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.6" data-path="plusEmpty.html">
-            
-                
-                    <a href="./plusEmpty.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.6.</b>
-                        
-                        PlusEmpty
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.7" data-path="isEmpty.html">
-            
-                
-                    <a href="./isEmpty.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.7.</b>
-                        
-                        IsEmpty
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.8" data-path="apply.html">
-            
-                
-                    <a href="./apply.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.8.</b>
-                        
-                        Apply
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.9" data-path="applicativePlus.html">
-            
-                
-                    <a href="./applicativePlus.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.9.</b>
-                        
-                        ApplicativePlus
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.10" data-path="bind.html">
-            
-                
-                    <a href="./bind.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.10.</b>
-                        
-                        Bind
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.11" data-path="bindRec.html">
-            
-                
-                    <a href="./bindRec.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.11.</b>
-                        
-                        BindRec
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.12" data-path="inject.html">
-            
-                
-                    <a href="./inject.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.12.</b>
-                        
-                        Inject
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.13" data-path="traverse.html">
-            
-                
-                    <a href="./traverse.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.13.</b>
-                        
-                        Traverse
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.14" data-path="foldable1.html">
-            
-                
-                    <a href="./foldable1.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.14.</b>
-                        
-                        Foldable1
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.15" data-path="traverse1.html">
-            
-                
-                    <a href="./traverse1.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.15.</b>
-                        
-                        Traverse1
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.16" data-path="cobind.html">
-            
-                
-                    <a href="./cobind.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.16.</b>
-                        
-                        Cobind
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.17" data-path="divide.html">
-            
-                
-                    <a href="./divide.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.17.</b>
-                        
-                        Divide
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.18" data-path="divisible.html">
-            
-                
-                    <a href="./divisible.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.18.</b>
-                        
-                        Divisible
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.19" data-path="align.html">
-            
-                
-                    <a href="./align.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.19.</b>
-                        
-                        Align
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.20" data-path="distributive.html">
-            
-                
-                    <a href="./distributive.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.20.</b>
-                        
-                        Distributive
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.21" data-path="associative.html">
-            
-                
-                    <a href="./associative.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.21.</b>
-                        
-                        Associative
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.22" data-path="compose.html">
-            
-                
-                    <a href="./compose.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.22.</b>
-                        
-                        Compose
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.23" data-path="category.html">
-            
-                
-                    <a href="./category.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.23.</b>
-                        
-                        Category
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="6" >
-            
-            <span><b>6.</b> その他</span>
-            
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter active" data-level="6.1" data-path="notNothing.html">
-            
-                
-                    <a href="./notNothing.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>6.1.</b>
-                        
-                        NotNothing
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="6.2" data-path="tag.html">
-            
-                
-                    <a href="./tag.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>6.2.</b>
-                        
-                        Tag
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="6.3" data-path="liskov.html">
-            
-                
-                    <a href="./liskov.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>6.3.</b>
-                        
-                        Liskov
-                    </a>
-            
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="7" data-path="about_author.html">
-            
-                
-                    <a href="./about_author.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>7.</b>
-                        
-                        著者について
-                    </a>
-            
-            
-        </li>
-    
-
-
-            
-            <li class="divider"></li>
-            <li>
-                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-                    Published with GitBook
-                </a>
-            </li>
-            
-        </ul>
-    </nav>
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
 </div>
 
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    はじめに
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="overview.html">
+            
+                <a href="overview.html">
+            
+                    
+                    Scalazとは
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="setup.html">
+            
+                <a href="setup.html">
+            
+                    
+                    セットアップ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="binary_compatibility.html">
+            
+                <a href="binary_compatibility.html">
+            
+                    
+                    バイナリ互換とバージョン
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="modules.html">
+            
+                <a href="modules.html">
+            
+                    
+                    モジュール構成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="diagram.html">
+            
+                <a href="diagram.html">
+            
+                    
+                    型クラスの継承関係
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="dataStructures.html">
+            
+                <a href="dataStructures.html">
+            
+                    
+                    データ型
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="nel.html">
+            
+                <a href="nel.html">
+            
+                    
+                    NonEmptyList
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="disjunction.html">
+            
+                <a href="disjunction.html">
+            
+                    
+                    \/
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="either3.html">
+            
+                <a href="either3.html">
+            
+                    
+                    Either3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="maybe.html">
+            
+                <a href="maybe.html">
+            
+                    
+                    Maybe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="iList.html">
+            
+                <a href="iList.html">
+            
+                    
+                    IList
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="corecursiveList.html">
+            
+                <a href="corecursiveList.html">
+            
+                    
+                    CorecursiveList
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="validation.html">
+            
+                <a href="validation.html">
+            
+                    
+                    Validation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="these.html">
+            
+                <a href="these.html">
+            
+                    
+                    \&/
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="dlist.html">
+            
+                <a href="dlist.html">
+            
+                    
+                    DList
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="dequeue.html">
+            
+                <a href="dequeue.html">
+            
+                    
+                    Dequeue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="cord.html">
+            
+                <a href="cord.html">
+            
+                    
+                    Cord
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="imap.html">
+            
+                <a href="imap.html">
+            
+                    
+                    ==>>
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="iset.html">
+            
+                <a href="iset.html">
+            
+                    
+                    ISet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="tree.html">
+            
+                <a href="tree.html">
+            
+                    
+                    Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="strictTree.html">
+            
+                <a href="strictTree.html">
+            
+                    
+                    StrictTree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="naturalTransformation.html">
+            
+                <a href="naturalTransformation.html">
+            
+                    
+                    NaturalTransformation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="free.html">
+            
+                <a href="free.html">
+            
+                    
+                    Free
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18" data-path="freeAp.html">
+            
+                <a href="freeAp.html">
+            
+                    
+                    FreeAp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.19" data-path="coproduct.html">
+            
+                <a href="coproduct.html">
+            
+                    
+                    Coproduct
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.20" data-path="alpha.html">
+            
+                <a href="alpha.html">
+            
+                    
+                    Alpha
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.21" data-path="digit.html">
+            
+                <a href="digit.html">
+            
+                    
+                    Digit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.22" data-path="bijectionT.html">
+            
+                <a href="bijectionT.html">
+            
+                    
+                    BijectionT
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="monadTransformers.html">
+            
+                <a href="monadTransformers.html">
+            
+                    
+                    モナドトランスフォーマー
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="optionT.html">
+            
+                <a href="optionT.html">
+            
+                    
+                    OptionT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="maybeT.html">
+            
+                <a href="maybeT.html">
+            
+                    
+                    MaybeT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="eitherT.html">
+            
+                <a href="eitherT.html">
+            
+                    
+                    EitherT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="listT.html">
+            
+                <a href="listT.html">
+            
+                    
+                    ListT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="streamT.html">
+            
+                <a href="streamT.html">
+            
+                    
+                    StreamT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="kleisli.html">
+            
+                <a href="kleisli.html">
+            
+                    
+                    Kleisli
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="indexedStateT.html">
+            
+                <a href="indexedStateT.html">
+            
+                    
+                    IndexedStateT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="freeT.html">
+            
+                <a href="freeT.html">
+            
+                    
+                    FreeT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="theseT.html">
+            
+                <a href="theseT.html">
+            
+                    
+                    TheseT
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    コモナドトランスフォーマー
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="tracedT.html">
+            
+                <a href="tracedT.html">
+            
+                    
+                    TracedT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="storeT.html">
+            
+                <a href="storeT.html">
+            
+                    
+                    StoreT
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    型クラス
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="equal.html">
+            
+                <a href="equal.html">
+            
+                    
+                    Equal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="order.html">
+            
+                <a href="order.html">
+            
+                    
+                    Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="band.html">
+            
+                <a href="band.html">
+            
+                    
+                    Band
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="enum.html">
+            
+                <a href="enum.html">
+            
+                    
+                    Enum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="plus.html">
+            
+                <a href="plus.html">
+            
+                    
+                    Plus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="plusEmpty.html">
+            
+                <a href="plusEmpty.html">
+            
+                    
+                    PlusEmpty
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="isEmpty.html">
+            
+                <a href="isEmpty.html">
+            
+                    
+                    IsEmpty
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="apply.html">
+            
+                <a href="apply.html">
+            
+                    
+                    Apply
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="applicativePlus.html">
+            
+                <a href="applicativePlus.html">
+            
+                    
+                    ApplicativePlus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="bind.html">
+            
+                <a href="bind.html">
+            
+                    
+                    Bind
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="bindRec.html">
+            
+                <a href="bindRec.html">
+            
+                    
+                    BindRec
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="inject.html">
+            
+                <a href="inject.html">
+            
+                    
+                    Inject
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="traverse.html">
+            
+                <a href="traverse.html">
+            
+                    
+                    Traverse
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="foldable1.html">
+            
+                <a href="foldable1.html">
+            
+                    
+                    Foldable1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.15" data-path="traverse1.html">
+            
+                <a href="traverse1.html">
+            
+                    
+                    Traverse1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.16" data-path="cobind.html">
+            
+                <a href="cobind.html">
+            
+                    
+                    Cobind
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.17" data-path="divide.html">
+            
+                <a href="divide.html">
+            
+                    
+                    Divide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.18" data-path="divisible.html">
+            
+                <a href="divisible.html">
+            
+                    
+                    Divisible
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.19" data-path="align.html">
+            
+                <a href="align.html">
+            
+                    
+                    Align
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.20" data-path="distributive.html">
+            
+                <a href="distributive.html">
+            
+                    
+                    Distributive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.21" data-path="associative.html">
+            
+                <a href="associative.html">
+            
+                    
+                    Associative
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.22" data-path="compose.html">
+            
+                <a href="compose.html">
+            
+                    
+                    Compose
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.23" data-path="category.html">
+            
+                <a href="category.html">
+            
+                    
+                    Category
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    その他
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.7.1" data-path="notNothing.html">
+            
+                <a href="notNothing.html">
+            
+                    
+                    NotNothing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="tag.html">
+            
+                <a href="tag.html">
+            
+                    
+                    Tag
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="liskov.html">
+            
+                <a href="liskov.html">
+            
+                    
+                    Liskov
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="about_author.html">
+            
+                <a href="about_author.html">
+            
+                    
+                    著者について
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
     <div class="book-body">
-        <div class="body-inner">
-            <div class="book-header" role="navigation">
-    <!-- Actions Left -->
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
     
 
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="./" >Scalaz日本語ドキュメント</a>
+        <a href="." >NotNothing</a>
     </h1>
 </div>
 
-            <div class="page-wrapper" tabindex="-1" role="main">
-                <div class="page-inner">
-                
-                
-                    <section class="normal" id="section-">
-                    
-                        <h1 id="notnothing">NotNothing</h1>
-<p>&#x578B;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x304C;<code>scala.Nothing</code>&#x578B;&#x306B;&#x63A8;&#x8AD6;&#x3055;&#x308C;&#x305D;&#x3046;&#x306B;&#x306A;&#x3063;&#x305F;&#x5834;&#x5408;&#x306B;&#x3001;&#x308F;&#x3056;&#x3068;implicit&#x3092;&#x885D;&#x7A81;&#x3055;&#x305B;&#x308B;&#x3066;&#x305D;&#x308C;&#x3092;&#x56DE;&#x907F;&#x3059;&#x308B;&#x3001;&#x3068;&#x3044;&#x3046;&#x3053;&#x3068;&#x3092;&#x53EF;&#x80FD;&#x306B;&#x3059;&#x308B;&#x7279;&#x6B8A;&#x306A;&#x578B;&#x3067;&#x3059;&#x3002;</p>
 
-                    
-                    </section>
-                
-                
-                </div>
-            </div>
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="notnothing">NotNothing</h1>
+<p>&#x578B;&#x30D1;&#x30E9;&#x30E1;&#x30FC;&#x30BF;&#x304C;<code>scala.Nothing</code>&#x578B;&#x306B;&#x63A8;&#x8AD6;&#x3055;&#x308C;&#x305D;&#x3046;&#x306B;&#x306A;&#x3063;&#x305F;&#x5834;&#x5408;&#x306B;&#x3001;
+&#x308F;&#x3056;&#x3068;implicit&#x3092;&#x885D;&#x7A81;&#x3055;&#x305B;&#x308B;&#x3066;&#x305D;&#x308C;&#x3092;&#x56DE;&#x907F;&#x3059;&#x308B;&#x3001;&#x3068;&#x3044;&#x3046;&#x3053;&#x3068;&#x3092;&#x53EF;&#x80FD;&#x306B;&#x3059;&#x308B;&#x7279;&#x6B8A;&#x306A;&#x578B;&#x3067;&#x3059;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
         </div>
-
-        
-        <a href="./category.html" class="navigation navigation-prev " aria-label="Previous page: Category"><i class="fa fa-angle-left"></i></a>
-        
-        
-        <a href="./tag.html" class="navigation navigation-next " aria-label="Next page: Tag"><i class="fa fa-angle-right"></i></a>
-        
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
     </div>
 </div>
 
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="tag.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Tag">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
         
-<script src="gitbook/app.js"></script>
+    </div>
 
-    
-    <script src="gitbook/plugins/gitbook-plugin-edit-link/plugin.js"></script>
-    
-
-    
-    <script src="gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
-    
-
-    
-    <script src="gitbook/plugins/gitbook-plugin-search/search.js"></script>
-    
-
-    
-    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
-    
-
-    
-    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
-    
-
-<script>
-require(["gitbook"], function(gitbook) {
-    var config = {"edit-link":{"base":"https://github.com/xuwei-k/scalaz-docs/tree/master/src","label":"このページのソースコード"},"include-codeblock":{},"japanese-support":{},"footnote-string-to-number":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
-    gitbook.start(config);
-});
-</script>
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"NotNothing","level":"1.7.1","depth":2,"next":{"title":"Tag","level":"1.7.2","depth":2,"path":"tag.md","ref":"tag.md","articles":[]},"previous":{"title":"その他","level":"1.7","depth":1,"ref":"","articles":[{"title":"NotNothing","level":"1.7.1","depth":2,"path":"notNothing.md","ref":"notNothing.md","articles":[]},{"title":"Tag","level":"1.7.2","depth":2,"path":"tag.md","ref":"tag.md","articles":[]},{"title":"Liskov","level":"1.7.3","depth":2,"path":"liskov.md","ref":"liskov.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"notNothing.md","mtime":"2019-09-30T13:01:20.255Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-09-30T13:01:49.486Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
 
         
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
     </body>
-    
 </html>
+
