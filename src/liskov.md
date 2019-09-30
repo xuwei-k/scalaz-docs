@@ -1,6 +1,6 @@
 # Liskov
 
-[Scala標準ライブラリの`<:<`](https://github.com/scala/scala/blob/v2.12.8/src/library/scala/Predef.scala#L484-L504)と同じような役割をするものです。
+[Scala標準ライブラリの`<:<`](https://github.com/scala/scala/blob/v2.13.1/src/library/scala/typeConstraints.scala#L63)と同じような役割をするものです。
 
 本体にメソッドはそれほど多くなく、7.2.28時点で以下のような定義です。
 (シグネチャのみで、実装は省略しています)
@@ -29,9 +29,9 @@ type <~<[-A, +B] = Liskov[A, B]
 type >~>[+B, -A] = Liskov[A, B]
 ```
 
-`def apply(a: A): B`に関しては、Predefのものと全く同じ用途です。scalaz.Liskovが優れているのは、その他にもいくつかのメソッドを持っている点です。
+`def apply(a: A): B`に関しては、Scala標準ライブラリのものと全く同じ用途です。scalaz.Liskovが優れているのは、その他にもいくつかのメソッドを持っている点です。
 
-ただし、Scala 2.13 からは、Scala本体にも同様のメソッドが入ります。
+ただし、Scala 2.13 からは、Scala本体にも同様のメソッドが入っています。
 
 [Add substitute methods and tests](https://github.com/scala/scala/commit/0c9f08068dfd4b49239fe68b95eaa3ea9341554f)
 
