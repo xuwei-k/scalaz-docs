@@ -1,7 +1,8 @@
 sudo: false
 language: scala
+dist: bionic
 jdk:
-- openjdk8
+- openjdk11
 before_install:
 - export CXX='g++-4.8'
 - nvm install 10.13.0 && nvm use 10.13.0 && npm install
@@ -30,7 +31,8 @@ script:
 after_success:
 - echo -e "Host github.com\n\tStrictHostKeyChecking no\nIdentityFile ~/.ssh/deploy.key\n"
   >> ~/.ssh/config
-- openssl aes-256-cbc -k "$SERVER_KEY" -in .travis/deploy_key.enc -d -a -out deploy.key
+- openssl aes-256-cbc -pass "pass:$SERVER_KEY" -pbkdf2 -in ./.travis/deploy_key.enc
+  -d -a -out deploy.key
 - cp deploy.key ~/.ssh/
 - chmod 600 ~/.ssh/deploy.key
 - git config --global user.email "6b656e6a69@gmail.com"
@@ -46,4 +48,4 @@ after_script:
 - find $HOME/.ivy2/cache -name "*SNAPSHOT*" | xargs rm -rf
 env:
   global:
-    secure: sD3fD7EM+X3Afm+CodPiPJ8u/kfNfzUWt++pKcLQe+oSnbbx6Tu2zI25yAcY8Q43CDthiAEjnAz0bf3hukpeznWyd3VssNcFwu/9nNT47E2i3bWpZLp532/8kgdh4EE7b5D4im0F1xj/8/F1jucFtfO003ZIn5iTpB726fXcnsDt2zCvUE4+ks76lyyxltMxxHRIxmaTLU9e+AIclrBjq8BxTpYAwUH+iCxObwG+CZSN2HMBIbNC9nwkTJUJBhgPnSABPw8HP71bnmKbTxYC/HdBV5uc5HRGpH5kEfPT48Ksddj+khl6ZmAvwiiNDXDQ4ViijCfDh2F+zR6/t1wKYR51jifxbU5wakU9xAkS7gov8A/g6nurutE9sgGNWbo6FfcSS8iqNkjIzg/bLOuBggvbCh/bxoSQkRPjuigzzp6xkoiMslo3khj9M4O+2w48eCkupVJqeNzVVL6ktw3eUJZfLGRbg0KDHWE8SssbOcSi4Z/HRB5k9tpGgQitqjN4Db348hundHj6uDm+Qquw2yG1KyuGN4GExOt2DPtf8Y32p6Vj4xGTdp3+1cj4CJey1j26oJzKZZQMKYFqnRogxTMUXZMQ3M3I9ABdYo86AMaqrtqK1+IUSUTNwYVnV8jjzogybjo7hga/lm2+SJ7BY5NMdwAMuNjQ1JagCkTxdNA=
+  - secure: p1gVVRL+RH4G5ULpgFwavm7hjq1Z6Iir4aYazlr8dWu788e2aAFXGtz6GTBWDLDF/nD3mVtB1ytok8vPILrixu1LowfbpEKi/hQjzxc4cjSgMwzZr+dIOFlKBe4i4APMcx2JYbR4txzDxzdRtAtjy/BsVu+J13HV5qzrvdA4dvdIH/+l+SDQ2VWeCnMI5vjcqAygEIpgCPvbFmdiCRS0ARGl4vCIsMpAI2qMBkPRE+NoYg3axThoCp0rkmyhfvrImZyuX7kzq5RSBZYPzCmeRdcsHBSztffQxEL68bdoVEKe7GBMJCu4vRpF8nBXEsCvQ5yGoocalzSpCoyYibPJTz+f7GfaFSlzf4Vdr1OoYLjxjINSxofzE0QS6PWmJfgQ61gReXkE/bGFt0vDBdDPUQQ+BWLUbKmvEi6IkI1kSF+jqSLYxZQugaI3M67/6MRcBvVQ/h52HLkbBfxbZbX86+5y6EBovWeSnoG+UaYCWAlUxt7Qym3QVaPooCBoOzP40Q+Euq/HX8rgzd1Llw9xN6Vd/JLva2vdNOkkH5d2W8Mabv/88e2iEkiB7I6XQYwTe/7s91lBaeENkNBe5WtZ5Z/h5eZm3AKnNU+RDC6VvItR7WJG7JEbiYBH/TEFR1kZAOBdl+vw82eQgdCJ+i5KpqrjO5HeCeEmv6umW3UVV6I=
