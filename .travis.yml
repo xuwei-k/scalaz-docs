@@ -6,13 +6,15 @@ jdk:
 before_install:
 - export CXX='g++-4.8'
 - nvm install 10.13.0 && nvm use 10.13.0 && npm install
-- wget -nv -O- https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py | python -c "import sys; main=lambda x,y:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main('~/calibre-bin', True)" >/dev/null
+- wget -nv -O- https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py
+  | python -c "import sys; main=lambda x,y:sys.stderr.write('Download failed\n');
+  exec(sys.stdin.read()); main('~/calibre-bin', True)" >/dev/null
 - export PATH="~/calibre-bin/calibre/:/home/travis/calibre-bin/calibre/:$PATH"
 cache:
   directories:
-  - $HOME/.ivy2/cache
-  - $HOME/.sbt/boot
-  - $HOME/.sbt/launchers
+  - "$HOME/.ivy2/cache"
+  - "$HOME/.sbt/boot"
+  - "$HOME/.sbt/launchers"
   - node_modules
 addons:
   apt:
@@ -37,11 +39,12 @@ after_success:
 - chmod 600 ~/.ssh/deploy.key
 - git config --global user.email "6b656e6a69@gmail.com"
 - git config --global user.name "xuwei-k"
-- git fetch origin gh-pages:gh-pages && git clean -fdx &&
-  git checkout gh-pages && rm -rf ./* && cp -r ../_book/* ./ && git add . && git commit
-  -a -m "auto commit on travis $TRAVIS_JOB_NUMBER $TRAVIS_COMMIT ${TRAVIS_COMMIT_MESSAGE}" && tree ./
-- if [[ "${TRAVIS_BRANCH}" == "master" && "${TRAVIS_EVENT_TYPE}" == "push" && "${TRAVIS_REPO_SLUG}" == "xuwei-k/scalaz-docs" ]];
-  then git push git@github.com:xuwei-k/scalaz-docs.git gh-pages:gh-pages ; fi
+- git fetch origin gh-pages:gh-pages && git clean -fdx && git checkout gh-pages &&
+  rm -rf ./* && cp -r ../_book/* ./ && git add . && git commit -a -m "auto commit
+  on travis $TRAVIS_JOB_NUMBER $TRAVIS_COMMIT ${TRAVIS_COMMIT_MESSAGE}" && tree ./
+- if [[ "${TRAVIS_BRANCH}" == "master" && "${TRAVIS_EVENT_TYPE}" == "push" && "${TRAVIS_REPO_SLUG}"
+  == "xuwei-k/scalaz-docs" ]]; then git push git@github.com:xuwei-k/scalaz-docs.git
+  gh-pages:gh-pages ; fi
 after_script:
 - find $HOME/.sbt -name "*.lock" | xargs rm
 - find $HOME/.ivy2 -name "ivydata-*.properties" | xargs rm
