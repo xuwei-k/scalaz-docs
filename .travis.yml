@@ -21,6 +21,7 @@ addons:
     - gcc-4.8
     - g++-4.8
     - graphviz
+    - tree
 script:
 - sbt scalazDiagram build epub
 - git checkout .
