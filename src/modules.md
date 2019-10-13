@@ -55,5 +55,5 @@ libraryDependencies += "org.scalaz" %% "scalaz-scalacheck-binding" % "7.2.28-sca
 ```
 
 - iteratee, concurrent に依存します
-- 主に [scalacheck](https://github.com/rickynils/scalacheck) によるテストをする場合に使います
+- 主に [scalacheck](https://github.com/typelevel/scalacheck) によるテストをする場合に使います
 - scalacheckのversion毎にクロスビルドされています
