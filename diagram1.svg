@@ -52,7 +52,7 @@
 </g>
 </g>
 <!-- scalaz.Applicative&#45;&gt;scalaz.Apply -->
-<g id="edge1" class="edge">
+<g id="edge9" class="edge">
 <title>scalaz.Applicative&#45;&gt;scalaz.Apply</title>
 <path fill="none" stroke="#000000" d="M227.3877,-198.3525C227.8642,-190.4913 228.4641,-180.5927 229.0097,-171.5892"/>
 <polygon fill="#000000" stroke="#000000" points="232.5033,-171.8 229.6148,-161.6066 225.5161,-171.3765 232.5033,-171.8"/>
@@ -88,7 +88,7 @@
 <polygon fill="#000000" stroke="#000000" points="142.0001,-237.6066 138.5,-227.6066 135.0001,-237.6066 142.0001,-237.6066"/>
 </g>
 <!-- scalaz.Apply&#45;&gt;scalaz.Functor -->
-<g id="edge4" class="edge">
+<g id="edge5" class="edge">
 <title>scalaz.Apply&#45;&gt;scalaz.Functor</title>
 <path fill="none" stroke="#000000" d="M237.8238,-132.3525C241.8825,-124.2349 247.0275,-113.945 251.6443,-104.7113"/>
 <polygon fill="#000000" stroke="#000000" points="254.855,-106.1161 256.1967,-95.6066 248.594,-102.9856 254.855,-106.1161"/>
@@ -103,7 +103,7 @@
 </g>
 </g>
 <!-- scalaz.Bind&#45;&gt;scalaz.Apply -->
-<g id="edge9" class="edge">
+<g id="edge6" class="edge">
 <title>scalaz.Bind&#45;&gt;scalaz.Apply</title>
 <path fill="none" stroke="#000000" d="M284.1867,-198.3525C275.0748,-189.6368 263.3448,-178.4168 253.1746,-168.6887"/>
 <polygon fill="#000000" stroke="#000000" points="255.4163,-165.9896 245.7705,-161.6066 250.5777,-171.0481 255.4163,-165.9896"/>
@@ -133,7 +133,7 @@
 </g>
 </g>
 <!-- scalaz.Cobind&#45;&gt;scalaz.Functor -->
-<g id="edge10" class="edge">
+<g id="edge11" class="edge">
 <title>scalaz.Cobind&#45;&gt;scalaz.Functor</title>
 <path fill="none" stroke="#000000" d="M289.1762,-132.3525C285.1175,-124.2349 279.9725,-113.945 275.3557,-104.7113"/>
 <polygon fill="#000000" stroke="#000000" points="278.406,-102.9856 270.8033,-95.6066 272.145,-106.1161 278.406,-102.9856"/>
@@ -148,7 +148,7 @@
 </g>
 </g>
 <!-- scalaz.Comonad&#45;&gt;scalaz.Cobind -->
-<g id="edge11" class="edge">
+<g id="edge10" class="edge">
 <title>scalaz.Comonad&#45;&gt;scalaz.Cobind</title>
 <path fill="none" stroke="#000000" d="M365.748,-198.3525C353.6494,-189.3804 337.9721,-177.7546 324.5948,-167.8343"/>
 <polygon fill="#000000" stroke="#000000" points="326.314,-164.7519 316.1968,-161.6066 322.1443,-170.3746 326.314,-164.7519"/>
@@ -262,7 +262,7 @@
 <polygon fill="#000000" stroke="#000000" points="520.8237,-102.2541 512.5738,-95.6066 514.8776,-105.9479 520.8237,-102.2541"/>
 </g>
 <!-- scalaz.Functor&#45;&gt;scalaz.InvariantFunctor -->
-<g id="edge5" class="edge">
+<g id="edge1" class="edge">
 <title>scalaz.Functor&#45;&gt;scalaz.InvariantFunctor</title>
 <path fill="none" stroke="#000000" d="M243.748,-66.3525C231.6494,-57.3804 215.9721,-45.7546 202.5948,-35.8343"/>
 <polygon fill="#000000" stroke="#000000" points="204.314,-32.7519 194.1968,-29.6066 200.1443,-38.3746 204.314,-32.7519"/>
@@ -424,7 +424,7 @@
 </g>
 </g>
 <!-- scalaz.PlusEmpty&#45;&gt;scalaz.Plus -->
-<g id="edge6" class="edge">
+<g id="edge4" class="edge">
 <title>scalaz.PlusEmpty&#45;&gt;scalaz.Plus</title>
 <path fill="none" stroke="#000000" d="M145.8238,-198.3525C149.8825,-190.2349 155.0275,-179.945 159.6443,-170.7113"/>
 <polygon fill="#000000" stroke="#000000" points="162.855,-172.1161 164.1967,-161.6066 156.594,-168.9856 162.855,-172.1161"/>
