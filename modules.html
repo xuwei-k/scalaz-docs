@@ -1109,7 +1109,7 @@
                                 <h1 id="&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x69CB;&#x6210;">&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x69CB;&#x6210;</h1>
 <p>&#x521D;&#x5FC3;&#x8005;&#x3084;&#x3001;core&#x4EE5;&#x5916;&#x306B;&#x8208;&#x5473;&#x304C;&#x7121;&#x3044;&#x5927;&#x534A;&#x306E;&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#x306F;&#x3001;&#x3053;&#x306E;&#x30DA;&#x30FC;&#x30B8;&#x306F;&#x8AAD;&#x307F;&#x98DB;&#x3070;&#x3057;&#x3066;&#x3082;&#x3089;&#x3063;&#x3066;&#x69CB;&#x3044;&#x307E;&#x305B;&#x3093;</p>
 <h2 id="scalaz-core">scalaz-core</h2>
-<pre><code class="lang-scala">libraryDependencies += <span class="hljs-string">&quot;org.scalaz&quot;</span> %% <span class="hljs-string">&quot;scalaz-core&quot;</span> % <span class="hljs-string">&quot;7.2.29&quot;</span>
+<pre><code class="lang-scala">libraryDependencies += <span class="hljs-string">&quot;org.scalaz&quot;</span> %% <span class="hljs-string">&quot;scalaz-core&quot;</span> % <span class="hljs-string">&quot;7.3.1&quot;</span>
 </code></pre>
 <ul>
 <li>&#x4E00;&#x756A;&#x591A;&#x304F;&#x5229;&#x7528;&#x3055;&#x308C;&#x308B;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x3067;&#x3059; </li>
@@ -1117,37 +1117,32 @@
 <li>&#x9006;&#x306B;&#x3001;Scalaz&#x306E;&#x4ED6;&#x306E;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x306F;&#x3059;&#x3079;&#x3066;core&#x306B;&#x4F9D;&#x5B58;&#x3057;&#x307E;&#x3059;</li>
 <li>&#x3082;&#x3046;&#x5C11;&#x3057;&#x6B63;&#x78BA;&#x306B;&#x306F;<ul>
 <li><code>7.1.x</code> &#x306B;&#x304A;&#x3044;&#x3066;&#x306F;&#x3001;&#x6A19;&#x6E96;&#x306E;xml&#x3068;parser&#x306B;&#x306F;&#x4F9D;&#x5B58;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;</li>
-<li><code>7.2.x</code> &#x3067;&#x306F;&#x3001;xml&#x3084;parser&#x306B;&#x3082;&#x4F9D;&#x5B58;&#x3057;&#x307E;&#x305B;&#x3093;</li>
+<li><code>7.2.x</code> &#x4EE5;&#x964D;&#x3067;&#x306F;&#x3001;xml&#x3084;parser&#x306B;&#x3082;&#x4F9D;&#x5B58;&#x3057;&#x307E;&#x305B;&#x3093;</li>
 </ul>
 </li>
 <li>&#x69D8;&#x3005;&#x306A;&#x30C7;&#x30FC;&#x30BF;&#x578B;&#x3084;&#x578B;&#x30AF;&#x30E9;&#x30B9;&#x304C;&#x542B;&#x307E;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;</li>
 </ul>
 <h2 id="scalaz-effect">scalaz-effect</h2>
-<pre><code class="lang-scala">libraryDependencies += <span class="hljs-string">&quot;org.scalaz&quot;</span> %% <span class="hljs-string">&quot;scalaz-effect&quot;</span> % <span class="hljs-string">&quot;7.2.29&quot;</span>
+<pre><code class="lang-scala">libraryDependencies += <span class="hljs-string">&quot;org.scalaz&quot;</span> %% <span class="hljs-string">&quot;scalaz-effect&quot;</span> % <span class="hljs-string">&quot;7.3.1&quot;</span>
 </code></pre>
 <ul>
 <li><code>scalaz-core</code> &#x306B;&#x4F9D;&#x5B58;&#x3057;&#x307E;&#x3059;</li>
 <li>IO&#x30E2;&#x30CA;&#x30C9;&#x3001;ST&#x30E2;&#x30CA;&#x30C9;&#x306A;&#x3069;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;</li>
 </ul>
 <h2 id="scalaz-concurrent">scalaz-concurrent</h2>
-<pre><code class="lang-scala">libraryDependencies += <span class="hljs-string">&quot;org.scalaz&quot;</span> %% <span class="hljs-string">&quot;scalaz-concurrent&quot;</span> % <span class="hljs-string">&quot;7.2.29&quot;</span>
-</code></pre>
-<ul>
-<li><code>scalaz-effect</code> &#x306B;&#x4F9D;&#x5B58;&#x3057;&#x307E;&#x3059;</li>
-<li>Task, Future, Actor&#x306A;&#x3069;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;</li>
-</ul>
+<p>Task, Future, Actor&#x306A;&#x3069;&#x304C;&#x3042;&#x308A;&#x307E;&#x3057;&#x305F;&#x304C;&#x3001;Scalaz 7.3&#x304B;&#x3089;&#x306F;&#x3053;&#x306E;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x81EA;&#x4F53;&#x6D88;&#x3048;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
 <h2 id="scalaz-iteratee">scalaz-iteratee</h2>
-<pre><code class="lang-scala">libraryDependencies += <span class="hljs-string">&quot;org.scalaz&quot;</span> %% <span class="hljs-string">&quot;scalaz-iteratee&quot;</span> % <span class="hljs-string">&quot;7.2.29&quot;</span>
+<pre><code class="lang-scala">libraryDependencies += <span class="hljs-string">&quot;org.scalaz&quot;</span> %% <span class="hljs-string">&quot;scalaz-iteratee&quot;</span> % <span class="hljs-string">&quot;7.3.1&quot;</span>
 </code></pre>
 <ul>
 <li><code>scalaz-effect</code> &#x306B;&#x4F9D;&#x5B58;&#x3057;&#x307E;&#x3059;</li>
 <li>Iteratee&#x305D;&#x306E;&#x3082;&#x306E;&#x304C;Scala&#x754C;&#x9688;&#x3067;&#x3082;Haskell&#x754C;&#x9688;&#x3067;&#x3082;&#x30AA;&#x30EF;&#x30B3;&#x30F3;&#x3089;&#x3057;&#x304F;&#x3001;&#x65B0;&#x6A5F;&#x80FD;&#x8FFD;&#x52A0;&#x3082;&#x5168;&#x7136;&#x3055;&#x308C;&#x3066;&#x3044;&#x306A;&#x3044;&#x306E;&#x3067;&#x3001;&#x4F7F;&#x308F;&#x306A;&#x3044;&#x307B;&#x3046;&#x304C;&#x3044;&#x3044;&#x3067;&#x3059;</li>
 </ul>
 <h2 id="scalaz-scalacheck-binding">scalaz-scalacheck-binding</h2>
-<pre><code class="lang-scala">libraryDependencies += <span class="hljs-string">&quot;org.scalaz&quot;</span> %% <span class="hljs-string">&quot;scalaz-scalacheck-binding&quot;</span> % <span class="hljs-string">&quot;7.2.29-scalacheck-1.14&quot;</span>
+<pre><code class="lang-scala">libraryDependencies += <span class="hljs-string">&quot;org.scalaz&quot;</span> %% <span class="hljs-string">&quot;scalaz-scalacheck-binding&quot;</span> % <span class="hljs-string">&quot;7.3.1&quot;</span>
 </code></pre>
 <ul>
-<li>iteratee, concurrent &#x306B;&#x4F9D;&#x5B58;&#x3057;&#x307E;&#x3059;</li>
+<li>iteratee &#x306B;&#x4F9D;&#x5B58;&#x3057;&#x307E;&#x3059;</li>
 <li>&#x4E3B;&#x306B; <a href="https://github.com/typelevel/scalacheck" target="_blank">scalacheck</a> &#x306B;&#x3088;&#x308B;&#x30C6;&#x30B9;&#x30C8;&#x3092;&#x3059;&#x308B;&#x5834;&#x5408;&#x306B;&#x4F7F;&#x3044;&#x307E;&#x3059;</li>
 <li>scalacheck&#x306E;version&#x6BCE;&#x306B;&#x30AF;&#x30ED;&#x30B9;&#x30D3;&#x30EB;&#x30C9;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;</li>
 </ul>
@@ -1194,7 +1189,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"モジュール構成","level":"1.2.4","depth":2,"next":{"title":"型クラスの継承関係","level":"1.2.5","depth":2,"path":"diagram.md","ref":"diagram.md","articles":[]},"previous":{"title":"バイナリ互換とバージョン","level":"1.2.3","depth":2,"path":"binary_compatibility.md","ref":"binary_compatibility.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"modules.md","mtime":"2020-05-30T01:46:04.748Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2020-05-30T01:46:35.927Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"モジュール構成","level":"1.2.4","depth":2,"next":{"title":"型クラスの継承関係","level":"1.2.5","depth":2,"path":"diagram.md","ref":"diagram.md","articles":[]},"previous":{"title":"バイナリ互換とバージョン","level":"1.2.3","depth":2,"path":"binary_compatibility.md","ref":"binary_compatibility.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"modules.md","mtime":"2020-05-30T14:01:35.627Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2020-05-30T14:02:07.002Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

@@ -1107,14 +1107,21 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="cord">Cord</h1>
-<p>FingerTree&#x3092;&#x4F7F;&#x3063;&#x305F;&#x3001;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;&#x30C7;&#x30FC;&#x30BF;&#x578B;&#x3067;&#x3059;&#x3002;</p>
-<pre><code class="lang-scala"><span class="hljs-keyword">final</span> <span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cord</span>(<span class="hljs-params">self: <span class="hljs-type">FingerTree</span>[<span class="hljs-type">Int</span>, <span class="hljs-type">String</span>]</span>)</span>
+<p>&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;&#x3001;String&#x3092;&#x5185;&#x90E8;&#x306B;&#x6301;&#x3063;&#x305F;Tree&#x306E;&#x3088;&#x3046;&#x306A;&#x30C7;&#x30FC;&#x30BF;&#x578B;&#x3067;&#x3059;&#x3002;</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">sealed</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cord</span> </span>{
+  <span class="hljs-comment">// &#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x7701;&#x7565;</span>
+}
+
+<span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">Cord</span> </span>{
+  <span class="hljs-keyword">final</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Leaf</span> <span class="hljs-title">private</span>(<span class="hljs-params">val s: <span class="hljs-type">String</span></span>) <span class="hljs-keyword">extends</span> <span class="hljs-title">Cord</span></span>
+  <span class="hljs-keyword">final</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Branch</span> <span class="hljs-title">private</span> (<span class="hljs-params">
+    val leftDepth: <span class="hljs-type">Int</span>,
+    val left: <span class="hljs-type">Cord</span>,
+    val right: <span class="hljs-type">Cord</span>
+  </span>) <span class="hljs-keyword">extends</span> <span class="hljs-title">Cord</span></span>
+}
 </code></pre>
-<p><code>scalaz.Show</code>&#x306A;&#x3069;&#x3067;&#x4F7F;&#x308F;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x304C;&#x3001;&#x3069;&#x306E;&#x304F;&#x3089;&#x3044;&#x52B9;&#x7387;&#x7684;&#x306A;&#x306E;&#x304B;&#x306F;&#x5FAE;&#x5999;&#x306A;&#x90E8;&#x5206;&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;<sup><a href="#fn_performance" id="reffn_performance">performance</a></sup>&#x3002;
-<a href="https://en.wikipedia.org/wiki/Rope_(data_structure" target="_blank">Rope</a>&#x3068;&#x547C;&#x3070;&#x308C;&#x308B;&#x30C7;&#x30FC;&#x30BF;&#x69CB;&#x9020;&#x306B;&#x8FD1;&#x304F;&#x3001;&#x5B9F;&#x969B;7.1.x&#x307E;&#x3067;&#x306F;<a href="https://github.com/scalaz/scalaz/blob/series/7.1.x/core/src/main/scala/scalaz/Rope.scala" target="_blank">Rope&#x304C;Scalaz&#x5185;&#x306B;&#x5B58;&#x5728;</a>&#x3057;&#x3066;&#x3044;&#x307E;&#x3057;&#x305F;&#x3002;</p>
-<blockquote id="fn_performance">
-<sup>performance</sup>. String&#x3092;&#x666E;&#x901A;&#x306B;&#x9023;&#x7D50;&#x3059;&#x308B;&#x3088;&#x308A;&#x9045;&#x3044;&#x5834;&#x5408;&#x304C;&#x3042;&#x308A;&#x3048;&#x308B;&#xFF1F;&#x305D;&#x3082;&#x305D;&#x3082;Scalaz&#x306E;FingerTree&#x81EA;&#x4F53;&#x304C;&#x3001;&#x3042;&#x307E;&#x308A;&#x30D1;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30F3;&#x30B9;&#x8A08;&#x6E2C;&#x304C;&#x3055;&#x308C;&#x3066;&#x3044;&#x306A;&#x3044;&#xFF1F;<a href="#reffn_performance" title="Jump back to footnote [performance] in the text."> &#x21A9;</a>
-</blockquote>
+<p><code>scalaz.Show</code>&#x306A;&#x3069;&#x3067;&#x4F7F;&#x308F;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;7.2&#x4EE5;&#x524D;&#x306F;&#x5185;&#x90E8;&#x5B9F;&#x88C5;&#x304C;FingerTree&#x3067;&#x3057;&#x305F;&#x304C;&#x3001;7.3&#x304B;&#x3089;&#x4E0A;&#x8A18;&#x306E;&#x3088;&#x3046;&#x306A;&#x3082;&#x306E;&#x306B;&#x7F6E;&#x304D;&#x63DB;&#x3048;&#x3089;&#x308C;&#x307E;&#x3057;&#x305F;&#x3002;</p>
 
                                 
                                 </section>
@@ -1158,7 +1165,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Cord","level":"1.3.11","depth":2,"next":{"title":"==>>","level":"1.3.12","depth":2,"path":"imap.md","ref":"imap.md","articles":[]},"previous":{"title":"Dequeue","level":"1.3.10","depth":2,"path":"dequeue.md","ref":"dequeue.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"cord.md","mtime":"2020-05-30T01:46:05.448Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2020-05-30T01:46:35.927Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Cord","level":"1.3.11","depth":2,"next":{"title":"==>>","level":"1.3.12","depth":2,"path":"imap.md","ref":"imap.md","articles":[]},"previous":{"title":"Dequeue","level":"1.3.10","depth":2,"path":"dequeue.md","ref":"dequeue.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"cord.md","mtime":"2020-05-30T14:01:36.183Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2020-05-30T14:02:07.002Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
