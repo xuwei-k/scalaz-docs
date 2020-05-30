@@ -9,7 +9,7 @@ import sbt._, Keys._
 ## scalaz-core
 
 ```tut:silent
-libraryDependencies += "org.scalaz" %% "scalaz-core" % "7.2.29"
+libraryDependencies += "org.scalaz" %% "scalaz-core" % "7.3.1"
 ```
 
 - 一番多く利用されるモジュールです 
@@ -17,13 +17,13 @@ libraryDependencies += "org.scalaz" %% "scalaz-core" % "7.2.29"
 - 逆に、Scalazの他のモジュールはすべてcoreに依存します
 - もう少し正確には
  - `7.1.x` においては、標準のxmlとparserには依存しています
- - `7.2.x` では、xmlやparserにも依存しません
+ - `7.2.x` 以降では、xmlやparserにも依存しません
 - 様々なデータ型や型クラスが含まれています
 
 ## scalaz-effect
 
 ```tut:silent
-libraryDependencies += "org.scalaz" %% "scalaz-effect" % "7.2.29"
+libraryDependencies += "org.scalaz" %% "scalaz-effect" % "7.3.1"
 ```
 
 - `scalaz-core` に依存します
@@ -32,17 +32,12 @@ libraryDependencies += "org.scalaz" %% "scalaz-effect" % "7.2.29"
 
 ## scalaz-concurrent
 
-```tut:silent
-libraryDependencies += "org.scalaz" %% "scalaz-concurrent" % "7.2.29"
-```
-
-- `scalaz-effect` に依存します
-- Task, Future, Actorなどがあります
+Task, Future, Actorなどがありましたが、Scalaz 7.3からはこのモジュール自体消えています。
 
 ## scalaz-iteratee
 
 ```tut:silent
-libraryDependencies += "org.scalaz" %% "scalaz-iteratee" % "7.2.29"
+libraryDependencies += "org.scalaz" %% "scalaz-iteratee" % "7.3.1"
 ```
 
 - `scalaz-effect` に依存します
@@ -51,9 +46,9 @@ libraryDependencies += "org.scalaz" %% "scalaz-iteratee" % "7.2.29"
 ## scalaz-scalacheck-binding
 
 ```tut:silent
-libraryDependencies += "org.scalaz" %% "scalaz-scalacheck-binding" % "7.2.29-scalacheck-1.14"
+libraryDependencies += "org.scalaz" %% "scalaz-scalacheck-binding" % "7.3.1"
 ```
 
-- iteratee, concurrent に依存します
+- iteratee に依存します
 - 主に [scalacheck](https://github.com/typelevel/scalacheck) によるテストをする場合に使います
 - scalacheckのversion毎にクロスビルドされています

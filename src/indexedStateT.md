@@ -13,19 +13,19 @@ import scalaz.Id.Id
 ```
 
 ```tut:silent
-sealed abstract class IndexedStateT[F[_], -S1, S2, A] {
-  def getF[S <: S1]: Monad[F] => F[S => F[(S2, A)]]
-
+sealed abstract class IndexedStateT[S1, S2, F[_], A] { self =>
   // その他のメソッド省略
 }
 ```
 
-その他に、関連する`StateT`や`State`は[scalazのpackage object](https://github.com/scalaz/scalaz/blob/v7.2.29/core/src/main/scala/scalaz/package.scala#L151-L154)にtype aliasとして定義されています。
+その他に、関連する`StateT`や`State`は[scalazのpackage object](https://github.com/scalaz/scalaz/blob/v7.3.1/core/src/main/scala/scalaz/package.scala#L136-L146)にtype aliasとして定義されています。
 
 ```tut:silent
-type StateT[F[_], S, A] = IndexedStateT[F, S, S, A]
-type IndexedState[-S1, S2, A] = IndexedStateT[Id, S1, S2, A]
-type State[S, A] = StateT[Id, S, A]
+type StateT[S, F[_], A] = IndexedStateT[S, S, F, A]
+
+type IndexedState[S1, S2, A] = IndexedStateT[S1, S2, Id, A]
+
+type State[S, A] = StateT[S, Id, A]
 ```
 
 このように、モナドトランスフォーマーのaliasとしてモナドを定義するのは、Scalaz内の他のモナドトランスフォーマーでも共通することですし、Haskellにおいてもそのように定義されることが多いです。

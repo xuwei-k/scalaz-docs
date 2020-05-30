@@ -11,7 +11,7 @@ import scalaz._
 ```
 
 ```tut:silent
-final case class EitherT[F[_], A, B](run: F[A \/ B])
+final case class EitherT[A, F[_], B](run: F[A \/ B])
 ```
 
 関連するclassとして、`LazyEitherT`も存在します。

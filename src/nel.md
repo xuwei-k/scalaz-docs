@@ -1,7 +1,7 @@
 # NonEmptyList
 
-- [ソースコード](https://github.com/scalaz/scalaz/blob/v7.2.29/core/src/main/scala/scalaz/NonEmptyList.scala)
-- [scaladoc](https://static.javadoc.io/org.scalaz/scalaz_2.12/7.2.29/scalaz/NonEmptyList.html)
+- [ソースコード](https://github.com/scalaz/scalaz/blob/v7.3.1/core/src/main/scala/scalaz/NonEmptyList.scala)
+- [scaladoc](https://static.javadoc.io/org.scalaz/scalaz_2.12/7.3.1/scalaz/NonEmptyList.html)
 - 名前の通り、**Non Empty**なListです。要素が1つ以上なことが必ず保証されています
 - 内部実装は、以下のものが使われています
  - `7.1.x` まではScala標準ライブラリのList

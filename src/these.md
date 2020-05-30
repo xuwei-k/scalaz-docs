@@ -8,9 +8,9 @@ Theseとも呼ばれるデータ構造です。記号名の由来は、
 
 
 ```tut:silent
-sealed abstract class \&/[+A, +B] extends Product with Serializable
-final case class This[A](aa: A) extends (A \&/ Nothing)
-final case class That[B](bb: B) extends (Nothing \&/ B)
+sealed abstract class \&/[A, B] extends Product with Serializable
+final case class This[A, B](aa: A) extends (A \&/ B)
+final case class That[A, B](bb: B) extends (A \&/ B)
 final case class Both[A, B](aa: A, bb: B) extends (A \&/ B)
 ```
 

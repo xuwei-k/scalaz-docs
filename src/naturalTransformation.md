@@ -10,7 +10,7 @@ import scalaz.NaturalTransformation
 scalazのpackage objectに以下のようなtype aliasが定義されていて、こちらが使われることが多いです。
 
 ```tut:silent
-type ~>[-F[_], +G[_]] = NaturalTransformation[F, G]
+type ~>[F[_], G[_]] = NaturalTransformation[F, G]
 ```
 
 NaturalTransformationは、Scalaz内のいくつかのクラスで使われていますが、

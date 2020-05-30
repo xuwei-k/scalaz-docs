@@ -2,7 +2,7 @@
 
 [Scala標準ライブラリの`<:<`](https://github.com/scala/scala/blob/v2.13.1/src/library/scala/typeConstraints.scala#L63)と同じような役割をするものです。
 
-本体にメソッドはそれほど多くなく、7.2.29時点で以下のような定義です。
+本体にメソッドはそれほど多くなく、7.3.1時点で以下のような定義です。
 (シグネチャのみで、実装は省略しています)
 
 ```tut:invisible
@@ -12,7 +12,8 @@ import scalaz._
 ```tut:silent
 sealed abstract class Liskov[-A, +B] {
   def apply(a: A): B
-  def subst[F[-_]](p: F[B]): F[A]
+  def substCo[F[+_]](p: F[A]): F[B]
+  def substCt[F[-_]](p: F[B]): F[A]
   def *[+[+_, +_], C, D](that: Liskov[C, D]): Liskov[A + C, B + D]
   def andThen[C](that: Liskov[B, C]): Liskov[A, C]
   def compose[C](that: Liskov[C, A]): Liskov[C, B]

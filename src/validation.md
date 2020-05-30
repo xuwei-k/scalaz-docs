@@ -1,15 +1,15 @@
 # Validation
 
-- [ソースコード](https://github.com/scalaz/scalaz/blob/v7.2.29/core/src/main/scala/scalaz/Validation.scala)
-- [scaladoc](https://static.javadoc.io/org.scalaz/scalaz_2.12/7.2.29/scalaz/Validation.html)
+- [ソースコード](https://github.com/scalaz/scalaz/blob/v7.3.1/core/src/main/scala/scalaz/Validation.scala)
+- [scaladoc](https://static.javadoc.io/org.scalaz/scalaz_2.12/7.3.1/scalaz/Validation.html)
 
 
 `Validation`自体は、以下のようなsealed abstract classで、`Success`と`Failure`という2つのサブクラスがあります。
 
 ```tut:silent
-sealed abstract class Validation[+E, +A]
-final case class Success[A](a: A) extends Validation[Nothing, A]
-final case class Failure[E](e: E) extends Validation[E, Nothing]
+sealed abstract class Validation[E, A] extends Product with Serializable
+final case class Success[E, A](a: A) extends Validation[E, A]
+final case class Failure[E, A](e: E) extends Validation[E, A]
 ```
 
 つまり、`scala.Either`や`scalaz.\/`と同型です。

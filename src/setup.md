@@ -9,11 +9,11 @@ Scalazにはいくつかのモジュールがありますが、`"scalaz-core"` �
 ひとまず `"scalaz-core"` のみを使う場合は、`build.sbt` に以下のように記述してください。
 
 ```tut:silent
-libraryDependencies += "org.scalaz" %% "scalaz-core" % "7.2.29"
+libraryDependencies += "org.scalaz" %% "scalaz-core" % "7.3.1"
 ```
 
 必要に応じて、以下のように `scalaVersion` など他のkeyの設定をしてください。
 
 ```tut:silent
-scalaVersion := "2.13.1"
+scalaVersion := "2.13.2"
 ```
