@@ -27,7 +27,13 @@ jobs:
     - run: npm install -g npm
     - run: npm ci
     - run: npm install svgexport -g
-    - run: sbt -v scalazDiagram build
+    - run: |
+        wget -nv -O- https://raw.githubusercontent.com/kovidgoyal/calibre/614d94496efdcf960871429e1c090c56d2018f68/setup/linux-installer.py |
+        python -c "import sys; main=lambda x,y:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main('~/calibre-bin', True)" >/dev/null
+    - run: |
+        export PATH="~/calibre-bin/calibre/:$HOME/calibre-bin/calibre/:$PATH"
+        sbt -v scalazDiagram build epub
+    - run: mv book.epub gitbook/_book/scalaz-docs.epub
     - run: find . -name "*.class" | xargs rm -rf
     - run: find . -name target | xargs rm -rf
     - name: push to gh-pages
