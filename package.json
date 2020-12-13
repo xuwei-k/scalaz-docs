@@ -1,5 +1,5 @@
 {
-  "name": "textbook",
+  "name": "scalaz-docs",
   "private": true,
   "version": "1.0.0",
   "description": "scalaz docs",
@@ -7,9 +7,7 @@
     "type": "git",
     "url": "https://github.com/xuwei-k/scalaz-docs"
   },
-  "scripts": {
-    "prepublish": "gitbook install"
-  },
+  "scripts": {},
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-preset-es2015": "6.24.1",
@@ -17,15 +15,15 @@
     "cheerio": "1.0.0-rc.3",
     "eslint": "^4.19.1",
     "eslint-config-eslint": "4.0.0",
-    "gitbook-cli": "2.3.2",
     "gitbook-plugin-anchors": "0.7.1",
     "gitbook-plugin-footnote-string-to-number": "0.0.2",
     "gitbook-plugin-forkmegithub": "^2.2.0",
     "gitbook-plugin-include-codeblock": "3.2.2",
     "gitbook-plugin-japanese-support": "0.0.1",
     "gitbook-plugin-regexplace": "2.1.2",
+    "honkit": "3.6.15",
     "kramed": "0.5.6",
-    "mocha": "4.0.1",
+    "mocha": "^8.2.1",
     "npm-check-updates": "^10.2.3",
     "npm-run-all": "4.1.5",
     "power-assert": "1.4.4",

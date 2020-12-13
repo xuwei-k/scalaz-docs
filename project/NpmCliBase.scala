@@ -10,7 +10,7 @@ trait NpmCliBase {
   val srcDir = file("src")
   def srcMarkdowns = srcDir.listFiles("*.md")
 
-  val bookBuildDir = file("gitbook")
+  val bookBuildDir = file("honkit")
   val compiledSrcDir = bookBuildDir
 
   val testDir = file("test")

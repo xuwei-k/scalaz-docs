@@ -23,8 +23,8 @@ jobs:
     - run: sudo apt-get install graphviz
     - uses: actions/setup-node@v2.1.3
       with:
-        node-version: '12.18.2' # https://github.com/nodejs/node/issues/34529
-    - run: npm install -g npm
+        node-version: '14.15.1'
+    - run: npm install
     - run: npm ci
     - run: npm install svgexport -g
     - run: |
@@ -33,7 +33,7 @@ jobs:
     - run: |
         export PATH="~/calibre-bin/calibre/:$HOME/calibre-bin/calibre/:$PATH"
         sbt -v scalazDiagram build epub
-    - run: mv book.epub gitbook/_book/scalaz-docs.epub
+    - run: mv book.epub honkit/_book/scalaz-docs.epub
     - run: find . -name "*.class" | xargs rm -rf
     - run: find . -name target | xargs rm -rf
     - name: push to gh-pages
@@ -42,5 +42,5 @@ jobs:
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
-        FOLDER: gitbook/_book/
+        FOLDER: honkit/_book/
         CLEAN: true

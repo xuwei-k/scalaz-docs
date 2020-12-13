@@ -33,7 +33,7 @@ tutSourceDirectory := srcDir
 
 tutTargetDirectory := compiledSrcDir
 
-GitBook.settings
+Honkit.settings
 
 TextLint.settings
 
@@ -70,7 +70,7 @@ scalazDiagram1 := {
       "scalaz." + _
     }.mkString(" ", " ", "")
   ).value
-  IO.move(svg, file("gitbook") / "diagram1.svg")
+  IO.move(svg, file("honkit") / "diagram1.svg")
 }
 
 scalazDiagram2 := {
@@ -79,7 +79,7 @@ scalazDiagram2 := {
       "scalaz." + _
     }.mkString(" ", " ", "")
   ).value
-  IO.move(svg, file("gitbook") / "diagram2.svg")
+  IO.move(svg, file("honkit") / "diagram2.svg")
 }
 
 TaskKey[Unit]("scalazDiagram") := Def.sequential(scalazDiagram1, scalazDiagram2).value
@@ -88,4 +88,4 @@ lintAll := Def.sequential(LinkTest.eslint, TextLint.textlint.toTask("")).value
 
 testAll := Def.sequential(compile in Test, LinkTest.linkTest).value
 
-buildWithCheck := Def.sequential(lintAll, testAll, GitBook.build).value
+buildWithCheck := Def.sequential(lintAll, testAll, Honkit.build).value
