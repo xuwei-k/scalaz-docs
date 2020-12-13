@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>IndexedStateT · GitBook</title>
+        <title>IndexedStateT · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="HonKit 3.6.15">
         
         
         
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -1067,8 +1066,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -1107,22 +1106,22 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="indexedstatet">IndexedStateT</h1>
-<p>State&#x30E2;&#x30CA;&#x30C9;&#x306E;&#x30C8;&#x30E9;&#x30F3;&#x30B9;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30FC;&#x3067;&#x3059;&#x3002;&#x540D;&#x524D;&#x306E;&#x901A;&#x308A;&#x5B9F;&#x969B;&#x306E;class&#x306F;<code>Indexed</code>&#x30E2;&#x30CA;&#x30C9;&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x307E;&#x3059;&#x304C;&#x3001;&#x6700;&#x521D;&#x306E;&#x3046;&#x3061;&#x306F;&#x5358;&#x306A;&#x308B;&#x666E;&#x901A;&#x306E;State&#x30E2;&#x30CA;&#x30C9;&#x30C8;&#x30E9;&#x30F3;&#x30B9;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30FC;&#x3068;&#x601D;&#x3063;&#x3066;&#x304A;&#x3051;&#x3070;&#x3044;&#x3044;&#x3067;&#x3057;&#x3087;&#x3046;&#x3002;</p>
-<p>&#x57FA;&#x672C;&#x7684;&#x306A;&#x4F7F;&#x3044;&#x65B9;&#x306B;&#x306F;&#x3042;&#x307E;&#x308A;&#x5909;&#x66F4;&#x306F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x304C;&#x3001;<a href="https://github.com/scalaz/scalaz/commit/a07dc366363a9b3ac311b35abd" target="_blank">7.1&#x3068;7.2&#x3067;&#x5185;&#x90E8;&#x69CB;&#x9020;&#x304C;&#x5909;&#x66F4;</a>&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;
-&#x5185;&#x90E8;&#x69CB;&#x9020;&#x306E;&#x5909;&#x66F4;&#x3068;&#x306F;&#x3001;&#x30B9;&#x30BF;&#x30C3;&#x30AF;&#x30AA;&#x30FC;&#x30D0;&#x30FC;&#x30D5;&#x30ED;&#x30FC;&#x3057;&#x306A;&#x3044;&#x3088;&#x3046;&#x306B;&#x3059;&#x308B;&#x305F;&#x3081;&#x306E;&#x5909;&#x66F4;&#x3067;&#x3059;&#x3002;</p>
-<p>&#x5B9F;&#x969B;&#x306E;7.2&#x6642;&#x70B9;&#x306E;IndexedStateT&#x306E;&#x5B9A;&#x7FA9;&#x306F;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;&#x3082;&#x306E;&#x3067;&#x3059;&#x3002;</p>
+<p>Stateモナドのトランスフォーマーです。名前の通り実際のclassは<code>Indexed</code>モナドになっていますが、最初のうちは単なる普通のStateモナドトランスフォーマーと思っておけばいいでしょう。</p>
+<p>基本的な使い方にはあまり変更はありませんが、<a href="https://github.com/scalaz/scalaz/commit/a07dc366363a9b3ac311b35abd" target="_blank">7.1と7.2で内部構造が変更</a>されています。
+内部構造の変更とは、スタックオーバーフローしないようにするための変更です。</p>
+<p>実際の7.2時点のIndexedStateTの定義は以下のようなものです。</p>
 <pre><code class="lang-scala"><span class="hljs-keyword">sealed</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">IndexedStateT</span>[<span class="hljs-type">S1</span>, <span class="hljs-type">S2</span>, <span class="hljs-type">F</span>[_], <span class="hljs-title">A</span>] </span>{ self =&gt;
-  <span class="hljs-comment">// &#x305D;&#x306E;&#x4ED6;&#x306E;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x7701;&#x7565;</span>
+  <span class="hljs-comment">// その他のメソッド省略</span>
 }
 </code></pre>
-<p>&#x305D;&#x306E;&#x4ED6;&#x306B;&#x3001;&#x95A2;&#x9023;&#x3059;&#x308B;<code>StateT</code>&#x3084;<code>State</code>&#x306F;<a href="https://github.com/scalaz/scalaz/blob/v7.3.2/core/src/main/scala/scalaz/package.scala#L136-L146" target="_blank">scalaz&#x306E;package object</a>&#x306B;type alias&#x3068;&#x3057;&#x3066;&#x5B9A;&#x7FA9;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<p>その他に、関連する<code>StateT</code>や<code>State</code>は<a href="https://github.com/scalaz/scalaz/blob/v7.3.2/core/src/main/scala/scalaz/package.scala#L136-L146" target="_blank">scalazのpackage object</a>にtype aliasとして定義されています。</p>
 <pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">StateT</span>[<span class="hljs-type">S</span>, <span class="hljs-type">F</span>[_], <span class="hljs-title">A</span>] </span>= <span class="hljs-type">IndexedStateT</span>[<span class="hljs-type">S</span>, <span class="hljs-type">S</span>, <span class="hljs-type">F</span>, <span class="hljs-type">A</span>]
 
 <span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">IndexedState</span>[<span class="hljs-type">S1</span>, <span class="hljs-type">S2</span>, <span class="hljs-type">A</span>] </span>= <span class="hljs-type">IndexedStateT</span>[<span class="hljs-type">S1</span>, <span class="hljs-type">S2</span>, <span class="hljs-type">Id</span>, <span class="hljs-type">A</span>]
 
 <span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">State</span>[<span class="hljs-type">S</span>, <span class="hljs-type">A</span>] </span>= <span class="hljs-type">StateT</span>[<span class="hljs-type">S</span>, <span class="hljs-type">Id</span>, <span class="hljs-type">A</span>]
 </code></pre>
-<p>&#x3053;&#x306E;&#x3088;&#x3046;&#x306B;&#x3001;&#x30E2;&#x30CA;&#x30C9;&#x30C8;&#x30E9;&#x30F3;&#x30B9;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30FC;&#x306E;alias&#x3068;&#x3057;&#x3066;&#x30E2;&#x30CA;&#x30C9;&#x3092;&#x5B9A;&#x7FA9;&#x3059;&#x308B;&#x306E;&#x306F;&#x3001;Scalaz&#x5185;&#x306E;&#x4ED6;&#x306E;&#x30E2;&#x30CA;&#x30C9;&#x30C8;&#x30E9;&#x30F3;&#x30B9;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30FC;&#x3067;&#x3082;&#x5171;&#x901A;&#x3059;&#x308B;&#x3053;&#x3068;&#x3067;&#x3059;&#x3057;&#x3001;Haskell&#x306B;&#x304A;&#x3044;&#x3066;&#x3082;&#x305D;&#x306E;&#x3088;&#x3046;&#x306B;&#x5B9A;&#x7FA9;&#x3055;&#x308C;&#x308B;&#x3053;&#x3068;&#x304C;&#x591A;&#x3044;&#x3067;&#x3059;&#x3002;</p>
+<p>このように、モナドトランスフォーマーのaliasとしてモナドを定義するのは、Scalaz内の他のモナドトランスフォーマーでも共通することですし、Haskellにおいてもそのように定義されることが多いです。</p>
 
                                 
                                 </section>
@@ -1166,12 +1165,56 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"IndexedStateT","level":"1.4.7","depth":2,"next":{"title":"FreeT","level":"1.4.8","depth":2,"path":"freeT.md","ref":"freeT.md","articles":[]},"previous":{"title":"Kleisli","level":"1.4.6","depth":2,"path":"kleisli.md","ref":"kleisli.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"indexedStateT.md","mtime":"2020-12-13T01:28:41.789Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2020-12-13T01:29:23.662Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"IndexedStateT","level":"1.4.7","depth":2,"next":{"title":"FreeT","level":"1.4.8","depth":2,"path":"freeT.md","ref":"freeT.md","articles":[]},"previous":{"title":"Kleisli","level":"1.4.6","depth":2,"path":"kleisli.md","ref":"kleisli.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"indexedStateT.md","mtime":"2020-12-13T01:55:28.633Z","type":"markdown"},"gitbook":{"version":"3.6.15","time":"2020-12-13T01:55:38.935Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
     
@@ -1189,10 +1232,6 @@
     
         
         <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

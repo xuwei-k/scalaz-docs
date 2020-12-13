@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Maybe · GitBook</title>
+        <title>Maybe · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="HonKit 3.6.15">
         
         
         
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -1067,8 +1066,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -1107,13 +1106,13 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="maybe">Maybe</h1>
-<p>&#x3044;&#x308F;&#x3086;&#x308B;Haskell&#x306E;Maybe&#x3068;&#x540C;&#x3058;&#x3088;&#x3046;&#x306A;&#x3082;&#x306E;&#x3067;&#x3059;&#x3002;
-Scala&#x6A19;&#x6E96;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x306B;&#x306F;&#x3001;&#x3059;&#x3067;&#x306B;<a href="https://github.com/scala/scala/blob/v2.13.1/src/library/scala/Option.scala" target="_blank"><code>scala.Option</code></a>&#x3068;&#x3044;&#x3046;&#x3082;&#x306E;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x304C;&#x3001;&#x3044;&#x304F;&#x3064;&#x304B;&#x306E;&#x7406;&#x7531;&#x306B;&#x3088;&#x308A;&#x3001;Scalaz&#x72EC;&#x81EA;&#x306E;&#x3082;&#x306E;&#x304C;&#x4F5C;&#x3089;&#x308C;&#x307E;&#x3057;&#x305F;&#x3002;</p>
-<p>&#x5177;&#x4F53;&#x7684;&#x306B;&#x4F5C;&#x3089;&#x308C;&#x305F;&#x7406;&#x7531;&#x3001;&#x6A19;&#x6E96;&#x306E;Option&#x3068;&#x306E;&#x9055;&#x3044;&#x3092;&#x6319;&#x3052;&#x308B;&#x3068;</p>
+<p>いわゆるHaskellのMaybeと同じようなものです。
+Scala標準ライブラリには、すでに<a href="https://github.com/scala/scala/blob/v2.13.1/src/library/scala/Option.scala" target="_blank"><code>scala.Option</code></a>というものがありますが、いくつかの理由により、Scalaz独自のものが作られました。</p>
+<p>具体的に作られた理由、標準のOptionとの違いを挙げると</p>
 <ul>
-<li>&#x6A19;&#x6E96;&#x306E;Option&#x306F;&#x5171;&#x5909;(covariant)&#x3060;&#x304C;&#x3001;Scalaz&#x306E;Maybe&#x306F;&#x975E;&#x5909;(invariant)</li>
-<li>&#x6A19;&#x6E96;&#x306E; <code>implicit def option2Iterable[A](xo: Option[A]): Iterable[A]</code> &#x3068;&#x3044;&#x3046;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306E;&#x5B58;&#x5728;&#x3092;&#x5ACC;&#x3063;&#x305F;</li>
-<li>&#x6A19;&#x6E96;&#x306E;Option&#x306B;&#x306F;<code>get</code>&#x3084;<code>foreach</code>&#x306A;&#x3069;&#x306E;&#x3001;&#x5B89;&#x5168;&#x3067;&#x306F;&#x306A;&#x304B;&#x3063;&#x305F;&#x308A;&#x526F;&#x4F5C;&#x7528;&#x524D;&#x63D0;&#x306E;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x304C;&#x3042;&#x308B;&#x304C;&#x3001;Scalaz&#x306E;Maybe&#x306B;&#x306F;&#x305D;&#x3046;&#x3044;&#x3063;&#x305F;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306F;&#x5B58;&#x5728;&#x3057;&#x306A;&#x3044;</li>
+<li>標準のOptionは共変(covariant)だが、ScalazのMaybeは非変(invariant)</li>
+<li>標準の <code>implicit def option2Iterable[A](xo: Option[A]): Iterable[A]</code> というメソッドの存在を嫌った</li>
+<li>標準のOptionには<code>get</code>や<code>foreach</code>などの、安全ではなかったり副作用前提のメソッドがあるが、ScalazのMaybeにはそういったメソッドは存在しない</li>
 </ul>
 
                                 
@@ -1158,12 +1157,56 @@ Scala&#x6A19;&#x6E96;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x306B;&#x306F;&#x
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Maybe","level":"1.3.4","depth":2,"next":{"title":"IList","level":"1.3.5","depth":2,"path":"iList.md","ref":"iList.md","articles":[]},"previous":{"title":"Either3","level":"1.3.3","depth":2,"path":"either3.md","ref":"either3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"maybe.md","mtime":"2020-12-13T01:28:34.549Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2020-12-13T01:29:23.662Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Maybe","level":"1.3.4","depth":2,"next":{"title":"IList","level":"1.3.5","depth":2,"path":"iList.md","ref":"iList.md","articles":[]},"previous":{"title":"Either3","level":"1.3.3","depth":2,"path":"either3.md","ref":"either3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"maybe.md","mtime":"2020-12-13T01:55:23.021Z","type":"markdown"},"gitbook":{"version":"3.6.15","time":"2020-12-13T01:55:38.935Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
     
@@ -1181,10 +1224,6 @@ Scala&#x6A19;&#x6E96;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x306B;&#x306F;&#x
     
         
         <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

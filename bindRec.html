@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>BindRec · GitBook</title>
+        <title>BindRec · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="HonKit 3.6.15">
         
         
         
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -1067,8 +1066,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -1107,14 +1106,14 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="bindrec">BindRec</h1>
-<p><code>scalaz.Bind</code>&#x3092;&#x7D99;&#x627F;&#x3057;&#x305F;&#x578B;&#x30AF;&#x30E9;&#x30B9;&#x3067;&#x3059;&#x3002;<code>scalaz.Free</code>&#x3084;<code>scalaz.FreeT</code>&#x3067;&#x4F7F;&#x3044;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x79FB;&#x690D;&#x5143;&#x306E;purescript&#x306B;&#x304A;&#x3044;&#x3066;&#x306F;&#x3001;BindRec&#x3067;&#x306F;&#x306A;&#x304F;MonadRec&#x3067;&#x3057;&#x305F;&#x3002;
-&#x3064;&#x307E;&#x308A;&#x3001;Bind&#x3067;&#x306F;&#x306A;&#x304F;Monad&#x3092;&#x7D99;&#x627F;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<p><code>scalaz.Bind</code>を継承した型クラスです。<code>scalaz.Free</code>や<code>scalaz.FreeT</code>で使います。</p>
+<p>移植元のpurescriptにおいては、BindRecではなくMonadRecでした。
+つまり、BindではなくMonadを継承しています。</p>
 <p><a href="https://github.com/purescript/purescript-tailrec/blob/v0.3.1/src/Control/Monad/Rec/Class.purs" target="_blank">https://github.com/purescript/purescript-tailrec/blob/v0.3.1/src/Control/Monad/Rec/Class.purs</a></p>
 <pre><code class="lang-haskell"><span class="hljs-class"><span class="hljs-keyword">class</span> (<span class="hljs-type">Monad</span> <span class="hljs-title">m</span>) &lt;= <span class="hljs-type">MonadRec</span> m <span class="hljs-keyword">where</span></span>
   tailRecM :: <span class="hljs-keyword">forall</span> a b. (a -&gt; m (<span class="hljs-type">Either</span> a b)) -&gt; a -&gt; m b
 </code></pre>
-<p>Free&#x306E;&#x5834;&#x5408;&#x306F;&#x3001;<code>runM</code>&#x3084;<code>foldMap</code>&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306F;stack safe&#x3067;&#x306F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x304C;&#x3001;BindRec&#x3092;&#x4F7F;&#x3063;&#x305F;<code>runRecM</code>&#x3084;<code>foldMapRec</code>&#x306F;stack safe&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<p>Freeの場合は、<code>runM</code>や<code>foldMap</code>メソッドはstack safeではありませんが、BindRecを使った<code>runRecM</code>や<code>foldMapRec</code>はstack safeになります。</p>
 
                                 
                                 </section>
@@ -1158,12 +1157,56 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"BindRec","level":"1.6.11","depth":2,"next":{"title":"Inject","level":"1.6.12","depth":2,"path":"inject.md","ref":"inject.md","articles":[]},"previous":{"title":"Bind","level":"1.6.10","depth":2,"path":"bind.md","ref":"bind.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"bindRec.md","mtime":"2020-12-13T01:28:53.709Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2020-12-13T01:29:23.662Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"BindRec","level":"1.6.11","depth":2,"next":{"title":"Inject","level":"1.6.12","depth":2,"path":"inject.md","ref":"inject.md","articles":[]},"previous":{"title":"Bind","level":"1.6.10","depth":2,"path":"bind.md","ref":"bind.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"bindRec.md","mtime":"2020-12-13T01:55:38.157Z","type":"markdown"},"gitbook":{"version":"3.6.15","time":"2020-12-13T01:55:38.935Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
     
@@ -1181,10 +1224,6 @@
     
         
         <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

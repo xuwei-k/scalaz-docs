@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>\/ · GitBook</title>
+        <title>\/ · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="HonKit 3.6.15">
         
         
         
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -1067,8 +1066,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -1108,36 +1107,36 @@
                                 
                                 <h1 id="">\/</h1>
 <ul>
-<li><a href="https://github.com/scalaz/scalaz/blob/v7.3.2/core/src/main/scala/scalaz/Either.scala" target="_blank">&#x30BD;&#x30FC;&#x30B9;&#x30B3;&#x30FC;&#x30C9;</a></li>
+<li><a href="https://github.com/scalaz/scalaz/blob/v7.3.2/core/src/main/scala/scalaz/Either.scala" target="_blank">ソースコード</a></li>
 <li><a href="https://static.javadoc.io/org.scalaz/scalaz_2.13/7.3.2/scalaz/$bslash$div.html" target="_blank">scaladoc</a></li>
-<li>&#x8A18;&#x53F7;&#x306E;&#x30AF;&#x30E9;&#x30B9;&#x540D;&#x3067;&#x3068;&#x3063;&#x3064;&#x304D;&#x306B;&#x304F;&#x305D;&#x3046;&#x3067;&#x3059;&#x304C;&#x3001;&#x304B;&#x306A;&#x308A;&#x591A;&#x304F;&#x4F7F;&#x308F;&#x308C;&#x3066;&#x3044;&#x308B;&#x3001;&#x3068;&#x3066;&#x3082;&#x4FBF;&#x5229;&#x306A;&#x30AF;&#x30E9;&#x30B9;&#x3067;&#x3059;</li>
-<li>&#x8AAD;&#x307F;&#x65B9;&#x306F;<code>Disjunction</code>&#x3042;&#x308B;&#x3044;&#x306F;<code>Either</code>&#x3067;&#x3059;</li>
-<li>&#x6570;&#x5B66;&#x306E;&#x8AD6;&#x7406;&#x548C; &#x2228; &#x306E;&#x8A18;&#x53F7;&#x7531;&#x6765;&#x3067;&#x3059;</li>
-<li><code>\/</code> &#x81EA;&#x4F53;&#x306F;<code>sealed abstract class</code>&#x3067;&#x3042;&#x308A;&#x3001;<code>\/-</code>&#x3068;<code>-\/</code>&#x3068;&#x3044;&#x3046;&#x30B5;&#x30D6;&#x30AF;&#x30E9;&#x30B9;&#x304C;&#x5B58;&#x5728;&#x3059;&#x308B;</li>
-<li>&#x53F3;&#x306B;<code>-</code>&#x304C;&#x304F;&#x3063;&#x3064;&#x3044;&#x3066;&#x3044;&#x308B;&#x306E;&#x304C;Right&#x3001;&#x5DE6;&#x306B;<code>-</code>&#x304C;&#x304F;&#x3063;&#x3064;&#x3044;&#x3066;&#x3044;&#x308B;&#x306E;&#x304C;Left</li>
+<li>記号のクラス名でとっつきにくそうですが、かなり多く使われている、とても便利なクラスです</li>
+<li>読み方は<code>Disjunction</code>あるいは<code>Either</code>です</li>
+<li>数学の論理和 ∨ の記号由来です</li>
+<li><code>\/</code> 自体は<code>sealed abstract class</code>であり、<code>\/-</code>と<code>-\/</code>というサブクラスが存在する</li>
+<li>右に<code>-</code>がくっついているのがRight、左に<code>-</code>がくっついているのがLeft</li>
 </ul>
 <pre><code class="lang-scala">scala&gt; <span class="hljs-keyword">import</span> scalaz._
 <span class="hljs-keyword">import</span> scalaz._
 
-scala&gt; <span class="hljs-keyword">val</span> a: <span class="hljs-type">Int</span> \/ <span class="hljs-type">String</span> = \/-(<span class="hljs-string">&quot;foo&quot;</span>)  <span class="hljs-comment">// right&#x3092;&#x751F;&#x6210;</span>
+scala&gt; <span class="hljs-keyword">val</span> a: <span class="hljs-type">Int</span> \/ <span class="hljs-type">String</span> = \/-(<span class="hljs-string">&quot;foo&quot;</span>)  <span class="hljs-comment">// rightを生成</span>
 a: <span class="hljs-type">Int</span> \/ <span class="hljs-type">String</span> = \/-(foo)
 
-scala&gt; <span class="hljs-keyword">val</span> b: \/[<span class="hljs-type">Int</span>, <span class="hljs-type">String</span>] = a <span class="hljs-comment">// &#x578B;&#x306F;&#x4E2D;&#x7F6E;&#x8A18;&#x6CD5;&#x3067;&#x66F8;&#x304B;&#x308C;&#x308B;&#x3053;&#x3068;&#x304C;&#x591A;&#x3044;&#x304C;&#x3001;&#x4E2D;&#x7F6E;&#x8A18;&#x6CD5;&#x3092;&#x4F7F;&#x308F;&#x306A;&#x304F;&#x3066;&#x3082;&#x66F8;&#x3051;&#x308B;</span>
+scala&gt; <span class="hljs-keyword">val</span> b: \/[<span class="hljs-type">Int</span>, <span class="hljs-type">String</span>] = a <span class="hljs-comment">// 型は中置記法で書かれることが多いが、中置記法を使わなくても書ける</span>
 b: <span class="hljs-type">Int</span> \/ <span class="hljs-type">String</span> = \/-(foo)
 
-scala&gt; <span class="hljs-keyword">val</span> c: <span class="hljs-type">Int</span> \/ <span class="hljs-type">String</span>  = \/.right(<span class="hljs-string">&quot;foo&quot;</span>) <span class="hljs-comment">// right&#x3068;&#x3044;&#x3046;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3082;&#x3042;&#x308B;</span>
+scala&gt; <span class="hljs-keyword">val</span> c: <span class="hljs-type">Int</span> \/ <span class="hljs-type">String</span>  = \/.right(<span class="hljs-string">&quot;foo&quot;</span>) <span class="hljs-comment">// rightというメソッドもある</span>
 c: <span class="hljs-type">Int</span> \/ <span class="hljs-type">String</span> = \/-(foo)
 
-scala&gt; <span class="hljs-keyword">val</span> d = a.map(_ + <span class="hljs-string">&quot;bar&quot;</span>) <span class="hljs-comment">// right&#x3092;map&#x3059;&#x308B;&#x3068;&#x53CD;&#x6620;&#x3055;&#x308C;&#x308B;</span>
+scala&gt; <span class="hljs-keyword">val</span> d = a.map(_ + <span class="hljs-string">&quot;bar&quot;</span>) <span class="hljs-comment">// rightをmapすると反映される</span>
 d: <span class="hljs-type">Int</span> \/ <span class="hljs-type">String</span> = \/-(foobar)
 
 scala&gt; <span class="hljs-keyword">val</span> e: <span class="hljs-type">Int</span> \/ <span class="hljs-type">String</span>  = \/.left(<span class="hljs-number">42</span>)
 e: <span class="hljs-type">Int</span> \/ <span class="hljs-type">String</span> = -\/(<span class="hljs-number">42</span>)
 
-scala&gt; e.map(_ + <span class="hljs-string">&quot;bar&quot;</span>) <span class="hljs-comment">// left&#x3092;map&#x3057;&#x3066;&#x3082;&#x5909;&#x308F;&#x3089;&#x306A;&#x3044;</span>
+scala&gt; e.map(_ + <span class="hljs-string">&quot;bar&quot;</span>) <span class="hljs-comment">// leftをmapしても変わらない</span>
 res0: <span class="hljs-type">Int</span> \/ <span class="hljs-type">String</span> = -\/(<span class="hljs-number">42</span>)
 
-scala&gt; e.leftMap(_ * <span class="hljs-number">100</span>) <span class="hljs-comment">// left&#x306E;&#x5834;&#x5408;&#x306B;map&#x3059;&#x308B;&#x306B;&#x306F;&#x3001;leftMap&#x3092;&#x4F7F;&#x3046;</span>
+scala&gt; e.leftMap(_ * <span class="hljs-number">100</span>) <span class="hljs-comment">// leftの場合にmapするには、leftMapを使う</span>
 res1: <span class="hljs-type">Int</span> \/ <span class="hljs-type">String</span> = -\/(<span class="hljs-number">4200</span>)
 </code></pre>
 
@@ -1183,12 +1182,56 @@ res1: <span class="hljs-type">Int</span> \/ <span class="hljs-type">String</span
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"\\/","level":"1.3.2","depth":2,"next":{"title":"Either3","level":"1.3.3","depth":2,"path":"either3.md","ref":"either3.md","articles":[]},"previous":{"title":"NonEmptyList","level":"1.3.1","depth":2,"path":"nel.md","ref":"nel.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"disjunction.md","mtime":"2020-12-13T01:28:50.017Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2020-12-13T01:29:23.662Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"\\/","level":"1.3.2","depth":2,"next":{"title":"Either3","level":"1.3.3","depth":2,"path":"either3.md","ref":"either3.md","articles":[]},"previous":{"title":"NonEmptyList","level":"1.3.1","depth":2,"path":"nel.md","ref":"nel.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"disjunction.md","mtime":"2020-12-13T01:55:35.169Z","type":"markdown"},"gitbook":{"version":"3.6.15","time":"2020-12-13T01:55:38.935Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
     
@@ -1206,10 +1249,6 @@ res1: <span class="hljs-type">Int</span> \/ <span class="hljs-type">String</span
     
         
         <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

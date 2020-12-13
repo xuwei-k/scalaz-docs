@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Cobind · GitBook</title>
+        <title>Cobind · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="HonKit 3.6.15">
         
         
         
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -1067,8 +1066,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -1107,12 +1106,12 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="cobind">Cobind</h1>
-<p>Functor&#x306E;&#x5B50;&#x3067;&#x3042;&#x308A;&#x3001;Comonad&#x306E;&#x89AA;&#x306E;&#x578B;&#x30AF;&#x30E9;&#x30B9;&#x3067;&#x3059;&#x3002;
-Haskell&#x306E;&#x6A19;&#x6E96;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x306B;&#x306F;&#x76F4;&#x63A5;&#x5BFE;&#x5FDC;&#x3059;&#x308B;&#x3082;&#x306E;&#x306F;&#x5B58;&#x5728;&#x3057;&#x307E;&#x305B;&#x3093;&#x3002;
-ekmett/semigroupoids&#x306B;&#x306F;&#x3001;Extend&#x3068;&#x3044;&#x3046;&#x540D;&#x524D;&#x3067;&#x540C;&#x69D8;&#x306E;&#x3082;&#x306E;&#x304C;&#x5B58;&#x5728;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<p>Functorの子であり、Comonadの親の型クラスです。
+Haskellの標準ライブラリには直接対応するものは存在しません。
+ekmett/semigroupoidsには、Extendという名前で同様のものが存在します。</p>
 <p><a href="https://hackage.haskell.org/package/semigroupoids-5.0.1/docs/Data-Functor-Extend.html#t:Extend" target="_blank">https://hackage.haskell.org/package/semigroupoids-5.0.1/docs/Data-Functor-Extend.html#t:Extend</a></p>
-<p>&#x904E;&#x53BB;&#x306B;&#x306F;Haskell&#x306E;Comonad&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x306E;Comonad&#x578B;&#x30AF;&#x30E9;&#x30B9;&#x306F;Extend&#x3092;&#x7D99;&#x627F;&#x3057;&#x3066;&#x3044;&#x305F;&#x3088;&#x3046;&#x3067;&#x3059;&#x304C;&#x3001;
-&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x9593;&#x306E;&#x4F9D;&#x5B58;&#x95A2;&#x4FC2;&#x306E;&#x90FD;&#x5408;&#x4E0A;&#x3001;&#x7D99;&#x627F;&#x3092;&#x3084;&#x3081;&#x305F;&#x3088;&#x3046;&#x3067;&#x3059;&#x3002;</p>
+<p>過去にはHaskellのComonadパッケージのComonad型クラスはExtendを継承していたようですが、
+ライブラリ間の依存関係の都合上、継承をやめたようです。</p>
 <ul>
 <li><a href="https://github.com/ekmett/comonad/commit/532c2c324463c" target="_blank">https://github.com/ekmett/comonad/commit/532c2c324463c</a></li>
 <li><a href="https://github.com/ekmett/comonad/commit/a847f527a8fe3" target="_blank">https://github.com/ekmett/comonad/commit/a847f527a8fe3</a></li>
@@ -1160,12 +1159,56 @@ ekmett/semigroupoids&#x306B;&#x306F;&#x3001;Extend&#x3068;&#x3044;&#x3046;&#x540
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Cobind","level":"1.6.16","depth":2,"next":{"title":"Divide","level":"1.6.17","depth":2,"path":"divide.md","ref":"divide.md","articles":[]},"previous":{"title":"Traverse1","level":"1.6.15","depth":2,"path":"traverse1.md","ref":"traverse1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"cobind.md","mtime":"2020-12-13T01:28:48.661Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2020-12-13T01:29:23.662Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Cobind","level":"1.6.16","depth":2,"next":{"title":"Divide","level":"1.6.17","depth":2,"path":"divide.md","ref":"divide.md","articles":[]},"previous":{"title":"Traverse1","level":"1.6.15","depth":2,"path":"traverse1.md","ref":"traverse1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"cobind.md","mtime":"2020-12-13T01:55:33.953Z","type":"markdown"},"gitbook":{"version":"3.6.15","time":"2020-12-13T01:55:38.935Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
     
@@ -1183,10 +1226,6 @@ ekmett/semigroupoids&#x306B;&#x306F;&#x3001;Extend&#x3068;&#x3044;&#x3046;&#x540
     
         
         <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

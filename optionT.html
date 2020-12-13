@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>OptionT · GitBook</title>
+        <title>OptionT · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="HonKit 3.6.15">
         
         
         
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -1067,8 +1066,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -1107,9 +1106,9 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="optiont">OptionT</h1>
-<p><code>scala.Option</code> &#x306E;&#x30E2;&#x30CA;&#x30C9;&#x30C8;&#x30E9;&#x30F3;&#x30B9;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30FC;&#x3067;&#x3059;&#x3002;
-&#x95A2;&#x9023;&#x3059;&#x308B;&#x3082;&#x306E;&#x3068;&#x3057;&#x3066;&#x3001;<code>scalaz.MaybeT</code>, <code>scalaz.LazyOptionT</code> &#x3068;&#x3044;&#x3046;&#x3082;&#x306E;&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x5B9F;&#x88C5;&#x3068;&#x3057;&#x3066;&#x306F;&#x3001;&#x5358;&#x306B;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;<code>run</code>&#x3068;&#x3044;&#x3046;&#x30D5;&#x30A3;&#x30FC;&#x30EB;&#x30C9;&#x3092;1&#x3064;&#x3060;&#x3051;&#x4FDD;&#x6301;&#x3057;&#x305F;case class&#x3067;&#x3059;&#x3002;</p>
+<p><code>scala.Option</code> のモナドトランスフォーマーです。
+関連するものとして、<code>scalaz.MaybeT</code>, <code>scalaz.LazyOptionT</code> というものもあります。</p>
+<p>実装としては、単に以下のような<code>run</code>というフィールドを1つだけ保持したcase classです。</p>
 <pre><code class="lang-scala"><span class="hljs-keyword">final</span> <span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OptionT</span>[<span class="hljs-type">F</span>[_], <span class="hljs-title">A</span>](<span class="hljs-params">run: <span class="hljs-type">F</span>[<span class="hljs-type">Option</span>[<span class="hljs-type">A</span>]]</span>)</span>
 </code></pre>
 
@@ -1155,12 +1154,56 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"OptionT","level":"1.4.1","depth":2,"next":{"title":"MaybeT","level":"1.4.2","depth":2,"path":"maybeT.md","ref":"maybeT.md","articles":[]},"previous":{"title":"モナドトランスフォーマー","level":"1.4","depth":1,"path":"monadTransformers.md","ref":"monadTransformers.md","articles":[{"title":"OptionT","level":"1.4.1","depth":2,"path":"optionT.md","ref":"optionT.md","articles":[]},{"title":"MaybeT","level":"1.4.2","depth":2,"path":"maybeT.md","ref":"maybeT.md","articles":[]},{"title":"EitherT","level":"1.4.3","depth":2,"path":"eitherT.md","ref":"eitherT.md","articles":[]},{"title":"ListT","level":"1.4.4","depth":2,"path":"listT.md","ref":"listT.md","articles":[]},{"title":"StreamT","level":"1.4.5","depth":2,"path":"streamT.md","ref":"streamT.md","articles":[]},{"title":"Kleisli","level":"1.4.6","depth":2,"path":"kleisli.md","ref":"kleisli.md","articles":[]},{"title":"IndexedStateT","level":"1.4.7","depth":2,"path":"indexedStateT.md","ref":"indexedStateT.md","articles":[]},{"title":"FreeT","level":"1.4.8","depth":2,"path":"freeT.md","ref":"freeT.md","articles":[]},{"title":"TheseT","level":"1.4.9","depth":2,"path":"theseT.md","ref":"theseT.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"optionT.md","mtime":"2020-12-13T01:28:40.421Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2020-12-13T01:29:23.662Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"OptionT","level":"1.4.1","depth":2,"next":{"title":"MaybeT","level":"1.4.2","depth":2,"path":"maybeT.md","ref":"maybeT.md","articles":[]},"previous":{"title":"モナドトランスフォーマー","level":"1.4","depth":1,"path":"monadTransformers.md","ref":"monadTransformers.md","articles":[{"title":"OptionT","level":"1.4.1","depth":2,"path":"optionT.md","ref":"optionT.md","articles":[]},{"title":"MaybeT","level":"1.4.2","depth":2,"path":"maybeT.md","ref":"maybeT.md","articles":[]},{"title":"EitherT","level":"1.4.3","depth":2,"path":"eitherT.md","ref":"eitherT.md","articles":[]},{"title":"ListT","level":"1.4.4","depth":2,"path":"listT.md","ref":"listT.md","articles":[]},{"title":"StreamT","level":"1.4.5","depth":2,"path":"streamT.md","ref":"streamT.md","articles":[]},{"title":"Kleisli","level":"1.4.6","depth":2,"path":"kleisli.md","ref":"kleisli.md","articles":[]},{"title":"IndexedStateT","level":"1.4.7","depth":2,"path":"indexedStateT.md","ref":"indexedStateT.md","articles":[]},{"title":"FreeT","level":"1.4.8","depth":2,"path":"freeT.md","ref":"freeT.md","articles":[]},{"title":"TheseT","level":"1.4.9","depth":2,"path":"theseT.md","ref":"theseT.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"optionT.md","mtime":"2020-12-13T01:55:27.445Z","type":"markdown"},"gitbook":{"version":"3.6.15","time":"2020-12-13T01:55:38.935Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
     
@@ -1178,10 +1221,6 @@
     
         
         <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

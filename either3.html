@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Either3 · GitBook</title>
+        <title>Either3 · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="HonKit 3.6.15">
         
         
         
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -1067,8 +1066,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -1107,9 +1106,9 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="either3">Either3</h1>
-<p>&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;&#x3001;3&#x3064;&#x306E;&#x3046;&#x3061;&#x306E;&#x3069;&#x308C;&#x304B;&#xFF1F;&#x3092;&#x8868;&#x3059;&#x30C7;&#x30FC;&#x30BF;&#x578B;&#x3067;&#x3059;&#x3002;</p>
+<p>以下のような、3つのうちのどれか？を表すデータ型です。</p>
 <pre><code class="lang-scala"><span class="hljs-keyword">sealed</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Either3</span>[<span class="hljs-type">A</span>, <span class="hljs-type">B</span>, <span class="hljs-type">C</span>] <span class="hljs-keyword">extends</span> <span class="hljs-title">Product</span> <span class="hljs-keyword">with</span> <span class="hljs-title">Serializable</span> </span>{
-  <span class="hljs-comment">// &#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x7701;&#x7565;</span>
+  <span class="hljs-comment">// メソッド省略</span>
 }
 
 <span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">Either3</span> </span>{
@@ -1117,12 +1116,12 @@
   <span class="hljs-keyword">final</span> <span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Middle3</span>[<span class="hljs-type">A</span>, <span class="hljs-type">B</span>, <span class="hljs-type">C</span>](<span class="hljs-params">b: <span class="hljs-type">B</span></span>) <span class="hljs-keyword">extends</span> <span class="hljs-title">Either3</span>[<span class="hljs-type">A</span>, <span class="hljs-type">B</span>, <span class="hljs-type">C</span>]</span>
   <span class="hljs-keyword">final</span> <span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Right3</span>[<span class="hljs-type">A</span>, <span class="hljs-type">B</span>, <span class="hljs-type">C</span>](<span class="hljs-params">c: <span class="hljs-type">C</span></span>) <span class="hljs-keyword">extends</span> <span class="hljs-title">Either3</span>[<span class="hljs-type">A</span>, <span class="hljs-type">B</span>, <span class="hljs-type">C</span>]</span>
 
-  <span class="hljs-comment">// &#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x7701;&#x7565;</span>
+  <span class="hljs-comment">// メソッド省略</span>
 }
 </code></pre>
-<p>&#x305D;&#x308C;&#x307B;&#x3069;&#x591A;&#x304F;&#x4F7F;&#x308F;&#x308C;&#x3066;&#x308B;&#x306E;&#x306F;&#x898B;&#x304B;&#x3051;&#x307E;&#x305B;&#x3093;&#x3002;
-&#x901A;&#x5E38;&#x306E;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30DF;&#x30F3;&#x30B0;&#x306B;&#x304A;&#x3044;&#x3066;&#x306F;&#x3001;&#x540C;&#x3058;&#x3088;&#x3046;&#x306A;&#x30C7;&#x30FC;&#x30BF;&#x578B;&#x3060;&#x3068;&#x3057;&#x3066;&#x3082;
-Either3&#x3092;&#x4F7F;&#x3046;&#x306E;&#x3067;&#x306F;&#x306A;&#x304F;&#x3001;&#x308F;&#x304B;&#x308A;&#x3084;&#x3059;&#x3055;&#x306E;&#x305F;&#x3081;&#x306B;&#x5C02;&#x7528;&#x306E;&#x30C7;&#x30FC;&#x30BF;&#x578B;&#x3092;&#x4F5C;&#x3063;&#x305F;&#x307B;&#x3046;&#x304C;&#x3044;&#x3044;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<p>それほど多く使われてるのは見かけません。
+通常のプログラミングにおいては、同じようなデータ型だとしても
+Either3を使うのではなく、わかりやすさのために専用のデータ型を作ったほうがいいと思います。</p>
 
                                 
                                 </section>
@@ -1166,12 +1165,56 @@ Either3&#x3092;&#x4F7F;&#x3046;&#x306E;&#x3067;&#x306F;&#x306A;&#x304F;&#x3001;&
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Either3","level":"1.3.3","depth":2,"next":{"title":"Maybe","level":"1.3.4","depth":2,"path":"maybe.md","ref":"maybe.md","articles":[]},"previous":{"title":"\\/","level":"1.3.2","depth":2,"path":"disjunction.md","ref":"disjunction.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"either3.md","mtime":"2020-12-13T01:28:38.629Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2020-12-13T01:29:23.662Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Either3","level":"1.3.3","depth":2,"next":{"title":"Maybe","level":"1.3.4","depth":2,"path":"maybe.md","ref":"maybe.md","articles":[]},"previous":{"title":"\\/","level":"1.3.2","depth":2,"path":"disjunction.md","ref":"disjunction.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"either3.md","mtime":"2020-12-13T01:55:26.237Z","type":"markdown"},"gitbook":{"version":"3.6.15","time":"2020-12-13T01:55:38.935Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
     
@@ -1189,10 +1232,6 @@ Either3&#x3092;&#x4F7F;&#x3046;&#x306E;&#x3067;&#x306F;&#x306A;&#x304F;&#x3001;&
     
         
         <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

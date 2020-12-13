@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>StrictTree · GitBook</title>
+        <title>StrictTree · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="HonKit 3.6.15">
         
         
         
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -1067,8 +1066,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -1107,14 +1106,14 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="stricttree">StrictTree</h1>
-<p>&#x305D;&#x306E;&#x540D;&#x306E;&#x901A;&#x308A;&#x3001;Strict&#x306A;Tree&#x3067;&#x3059;&#x3002;
-&#x4EE5;&#x524D;&#x304B;&#x3089;&#x5B58;&#x5728;&#x3057;&#x3066;&#x3044;&#x305F;<code>scalaz.Tree</code>&#x306F;<code>scala.Stream</code>&#x3092;&#x4F7F;&#x7528;&#x3057;&#x305F;lazy&#x306A;&#x5B9F;&#x88C5;&#x306E;&#x305F;&#x3081;&#x3001;
-&#x5F8C;&#x304B;&#x3089;&#x8FFD;&#x52A0;&#x3055;&#x308C;&#x305F;&#x3053;&#x3061;&#x3089;&#x304C;&#x3053;&#x3046;&#x3044;&#x3046;&#x540D;&#x524D;&#x306B;&#x306A;&#x308A;&#x307E;&#x3057;&#x305F;&#x3002;
-7.2.x&#x7CFB;&#x3067;&#x306F;&#x3001;version 7.2.4&#x304B;&#x3089;&#x8FFD;&#x52A0;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
-<p><code>scalaz.Tree</code>&#x3068;&#x6BD4;&#x8F03;&#x3057;&#x305F;&#x5834;&#x5408;&#x3001;lazy&#x304B;strict&#x304B;&#x304C;&#x9055;&#x3046;&#x3060;&#x3051;&#x3067;&#x3001;&#x69CB;&#x9020;&#x306F;&#x540C;&#x3058;rose tree&#x3068;&#x547C;&#x3070;&#x308C;&#x308B;&#x3082;&#x306E;&#x3067;&#x3059;&#x3002;
-&#x307E;&#x305F;&#x3001;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306B;&#x95A2;&#x3057;&#x3066;&#x3082;&#x5927;&#x4F53;lazy&#x306A;&#x307B;&#x3046;&#x3068;&#x540C;&#x3058;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x304C;&#x5B9F;&#x88C5;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;
-&#x7D20;&#x76F4;&#x306B;&#x5B9F;&#x88C5;&#x3059;&#x308B;&#x3068;&#x30B9;&#x30BF;&#x30C3;&#x30AF;&#x30AA;&#x30FC;&#x30D0;&#x30FC;&#x30D5;&#x30ED;&#x30FC;&#x3057;&#x3066;&#x3057;&#x307E;&#x3046;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3067;&#x3082;&#x3001;
-Trampoline&#x3092;&#x99C6;&#x4F7F;&#x3057;&#x3066;&#x30B9;&#x30BF;&#x30C3;&#x30AF;&#x304C;&#x6EA2;&#x308C;&#x306A;&#x3044;&#x5DE5;&#x592B;&#x304C;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<p>その名の通り、StrictなTreeです。
+以前から存在していた<code>scalaz.Tree</code>は<code>scala.Stream</code>を使用したlazyな実装のため、
+後から追加されたこちらがこういう名前になりました。
+7.2.x系では、version 7.2.4から追加されています。</p>
+<p><code>scalaz.Tree</code>と比較した場合、lazyかstrictかが違うだけで、構造は同じrose treeと呼ばれるものです。
+また、メソッドに関しても大体lazyなほうと同じメソッドが実装されています。
+素直に実装するとスタックオーバーフローしてしまうメソッドでも、
+Trampolineを駆使してスタックが溢れない工夫がされています。</p>
 
                                 
                                 </section>
@@ -1158,12 +1157,56 @@ Trampoline&#x3092;&#x99C6;&#x4F7F;&#x3057;&#x3066;&#x30B9;&#x30BF;&#x30C3;&#x30A
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"StrictTree","level":"1.3.15","depth":2,"next":{"title":"NaturalTransformation","level":"1.3.16","depth":2,"path":"naturalTransformation.md","ref":"naturalTransformation.md","articles":[]},"previous":{"title":"Tree","level":"1.3.14","depth":2,"path":"tree.md","ref":"tree.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"strictTree.md","mtime":"2020-12-13T01:28:53.713Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2020-12-13T01:29:23.662Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"StrictTree","level":"1.3.15","depth":2,"next":{"title":"NaturalTransformation","level":"1.3.16","depth":2,"path":"naturalTransformation.md","ref":"naturalTransformation.md","articles":[]},"previous":{"title":"Tree","level":"1.3.14","depth":2,"path":"tree.md","ref":"tree.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"strictTree.md","mtime":"2020-12-13T01:55:38.169Z","type":"markdown"},"gitbook":{"version":"3.6.15","time":"2020-12-13T01:55:38.935Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
     
@@ -1181,10 +1224,6 @@ Trampoline&#x3092;&#x99C6;&#x4F7F;&#x3057;&#x3066;&#x30B9;&#x30BF;&#x30C3;&#x30A
     
         
         <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>StreamT · GitBook</title>
+        <title>StreamT · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="HonKit 3.6.15">
         
         
         
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -1067,8 +1066,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -1107,22 +1106,22 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="streamt">StreamT</h1>
-<p><code>Stream</code>&#x306E;&#x30E2;&#x30CA;&#x30C9;&#x30C8;&#x30E9;&#x30F3;&#x30B9;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30FC;&#x3001;&#x3068;&#x3044;&#x3063;&#x3066;&#x9593;&#x9055;&#x3044;&#x3067;&#x306F;&#x306A;&#x3044;&#x306E;&#x3067;&#x3059;&#x304C;&#x3001;
-&#x3053;&#x306E;&#x30AF;&#x30E9;&#x30B9;&#x306E;&#x4F7F;&#x3044;&#x65B9;&#x306A;&#x3069;&#x306E;&#x8AAC;&#x660E;&#x306B;&#x5165;&#x308B;&#x524D;&#x306B;&#x3001;&#x591A;&#x5C11;&#x524D;&#x63D0;&#x306E;&#x8AAC;&#x660E;&#x304C;&#x5FC5;&#x8981;&#x3067;&#x3059;&#x3002;</p>
-<p>&#x307E;&#x305A;&#x3001;Scala&#x6A19;&#x6E96;&#x306E;Stream&#x304C;&#x5B9F;&#x88C5;&#x306B;&#x4F7F;&#x308F;&#x308C;&#x3066;&#x3044;&#x308B;&#x308F;&#x3051;&#x3067;&#x306F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x3002;
-<code>ListT</code>&#x306E;&#x30DA;&#x30FC;&#x30B8;&#x306B;&#x3082;&#x66F8;&#x304D;&#x307E;&#x3057;&#x305F;&#x304C;&#x5358;&#x7D14;&#x306B;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;&#x30AF;&#x30E9;&#x30B9;</p>
+<p><code>Stream</code>のモナドトランスフォーマー、といって間違いではないのですが、
+このクラスの使い方などの説明に入る前に、多少前提の説明が必要です。</p>
+<p>まず、Scala標準のStreamが実装に使われているわけではありません。
+<code>ListT</code>のページにも書きましたが単純に以下のようなクラス</p>
 <pre><code class="lang-scala"><span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StreamT</span>[<span class="hljs-type">F</span>[_], <span class="hljs-title">A</span>](<span class="hljs-params">run: <span class="hljs-type">F</span>[<span class="hljs-type">Stream</span>[<span class="hljs-type">A</span>]]</span>)</span>
 </code></pre>
-<p>&#x306B;&#x3059;&#x308B;&#x3068;&#x3001;&#x3059;&#x3079;&#x3066;&#x306E;&#x5834;&#x5408;&#x3067;&#x30E2;&#x30CA;&#x30C9;&#x5247;&#x3092;&#x6E80;&#x305F;&#x3055;&#x306A;&#x3044;&#x306E;&#x3067;&#x3001;
-Scala&#x6A19;&#x6E96;&#x306E;Stream&#x3092;&#x4F7F;&#x3063;&#x3066;&#x4E0A;&#x8A18;&#x306E;&#x3088;&#x3046;&#x306A;&#x5B9F;&#x88C5;&#x306B;&#x3059;&#x308B;&#x308F;&#x3051;&#x306B;&#x306F;&#x3044;&#x304D;&#x307E;&#x305B;&#x3093;&#x3002;
-&#x307E;&#x305F;&#x3001;&#x73FE;&#x72B6;&#x306E;<code>scalaz.ListT</code>&#x306F;&#x9593;&#x9055;&#x3063;&#x3066;&#x3044;&#x308B;&#x306E;&#x3067;&#x3001;<strong>&#x6B63;&#x3057;&#x3044;List&#x30E2;&#x30CA;&#x30C9;&#x30C8;&#x30E9;&#x30F3;&#x30B9;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30FC;</strong>&#x304C;&#x5FC5;&#x8981;&#x306A;&#x5834;&#x5408;&#x306F;&#x3001;Scalaz&#x306E;&#x7BC4;&#x56F2;&#x5185;&#x3067;&#x306F;<code>StreamT</code>&#x304C;&#x3042;&#x308B;&#x610F;&#x5473;&#x552F;&#x4E00;&#x306E;&#x9078;&#x629E;&#x80A2;&#x3067;&#x3042;&#x308B;&#x3068;&#x3082;&#x8A00;&#x3048;&#x307E;&#x3059;&#x3002;<sup><a href="#fn_listT-freeT" id="reffn_listT-freeT">listT-freeT</a></sup>
-StreamT&#x306F;ListT&#x3068;&#x540C;&#x3058;&#x9593;&#x9055;&#x3044;&#x306F;&#x3057;&#x3066;&#x3044;&#x307E;&#x305B;&#x3093;&#x3002;</p>
-<p>&#x8A00;&#x3044;&#x63DB;&#x3048;&#x308B;&#x3068;</p>
-<p><strong>StreamT&#x306F;&#x5358;&#x306A;&#x308B;ListT&#x306E;&#x9045;&#x5EF6;&#x8A55;&#x4FA1;&#x7248;&#x3067;&#x306F;&#x306A;&#x304F;&#x3001;&#x69CB;&#x9020;&#x304C;&#x5168;&#x304F;&#x7570;&#x306A;&#x308B;&#x5225;&#x306E;&#x3082;&#x306E;</strong></p>
-<p>&#x3068;&#x3044;&#x3046;&#x3053;&#x3068;&#x3067;&#x3059;&#x3002;</p>
-<p>&#x3055;&#x3066;&#x3001;&#x524D;&#x7F6E;&#x304D;&#x306F;&#x3053;&#x308C;&#x304F;&#x3089;&#x3044;&#x306B;&#x3057;&#x3066;&#x3001;&#x5B9F;&#x969B;&#x306B;<code>StreamT</code>&#x305D;&#x306E;&#x3082;&#x306E;&#x306E;&#x8AAC;&#x660E;&#x306B;&#x5165;&#x3063;&#x3066;&#x3044;&#x304D;&#x307E;&#x3059;&#x3002;</p>
+<p>にすると、すべての場合でモナド則を満たさないので、
+Scala標準のStreamを使って上記のような実装にするわけにはいきません。
+また、現状の<code>scalaz.ListT</code>は間違っているので、<strong>正しいListモナドトランスフォーマー</strong>が必要な場合は、Scalazの範囲内では<code>StreamT</code>がある意味唯一の選択肢であるとも言えます。<sup><a href="#fn_listT-freeT" id="reffn_listT-freeT">listT-freeT</a></sup>
+StreamTはListTと同じ間違いはしていません。</p>
+<p>言い換えると</p>
+<p><strong>StreamTは単なるListTの遅延評価版ではなく、構造が全く異なる別のもの</strong></p>
+<p>ということです。</p>
+<p>さて、前置きはこれくらいにして、実際に<code>StreamT</code>そのものの説明に入っていきます。</p>
 <blockquote id="fn_listT-freeT">
-<sup>listT-freeT</sup>. &#x305F;&#x3060;&#x3057;&#x3001;FreeT&#x3092;&#x4F7F;&#x3063;&#x3066;ListT&#x3092;&#x4F5C;&#x6210;&#x3067;&#x304D;&#x308B;&#x304B;&#x3082;&#x3057;&#x308C;&#x306A;&#x3044;&#xFF1F;&#x3068;&#x3044;&#x3046;&#x8A71;&#x306F;&#x3042;&#x308A;&#x307E;&#x3059; <a href="https://gist.github.com/paf31/eac16f0795165a285820" target="_blank">https://gist.github.com/paf31/eac16f0795165a285820</a><a href="#reffn_listT-freeT" title="Jump back to footnote [listT-freeT] in the text."> &#x21A9;</a>
+<sup>listT-freeT</sup>. ただし、FreeTを使ってListTを作成できるかもしれない？という話はあります <a href="https://gist.github.com/paf31/eac16f0795165a285820" target="_blank">https://gist.github.com/paf31/eac16f0795165a285820</a><a href="#reffn_listT-freeT" title="Jump back to footnote [listT-freeT] in the text."> ↩</a>
 </blockquote>
 
                                 
@@ -1167,12 +1166,56 @@ StreamT&#x306F;ListT&#x3068;&#x540C;&#x3058;&#x9593;&#x9055;&#x3044;&#x306F;&#x3
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"StreamT","level":"1.4.5","depth":2,"next":{"title":"Kleisli","level":"1.4.6","depth":2,"path":"kleisli.md","ref":"kleisli.md","articles":[]},"previous":{"title":"ListT","level":"1.4.4","depth":2,"path":"listT.md","ref":"listT.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"streamT.md","mtime":"2020-12-13T01:28:53.681Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2020-12-13T01:29:23.662Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"StreamT","level":"1.4.5","depth":2,"next":{"title":"Kleisli","level":"1.4.6","depth":2,"path":"kleisli.md","ref":"kleisli.md","articles":[]},"previous":{"title":"ListT","level":"1.4.4","depth":2,"path":"listT.md","ref":"listT.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"streamT.md","mtime":"2020-12-13T01:55:38.097Z","type":"markdown"},"gitbook":{"version":"3.6.15","time":"2020-12-13T01:55:38.935Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
     
@@ -1190,10 +1233,6 @@ StreamT&#x306F;ListT&#x3068;&#x540C;&#x3058;&#x9593;&#x9055;&#x3044;&#x306F;&#x3
     
         
         <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

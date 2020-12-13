@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Band · GitBook</title>
+        <title>Band · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="HonKit 3.6.15">
         
         
         
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -1067,8 +1066,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -1107,17 +1106,17 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="band">Band</h1>
-<p>Semigroup&#x306E;&#x30B5;&#x30D6;&#x30AF;&#x30E9;&#x30B9;&#x3067;&#x3059;&#x3002;Semigroup&#x3068;&#x6BD4;&#x3079;&#x3066;&#x8FFD;&#x52A0;&#x306E;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x3002;</p>
-<p>Band&#x306F;
-&quot;&#x540C;&#x3058;&#x3082;&#x306E;&#x3092;append&#x3057;&#x305F;&#x5834;&#x5408;&#x306B;&#x3001;&#x5FC5;&#x305A;&#x540C;&#x3058;&#x3082;&#x306E;&#x306B;&#x306A;&#x308B;&quot;
-&#x3068;&#x3044;&#x3046;&#x3082;&#x306E;&#x3067;&#x3059;&#x3002;</p>
-<p>&#x4F8B;&#x3048;&#x3070;</p>
+<p>Semigroupのサブクラスです。Semigroupと比べて追加のメソッドはありません。</p>
+<p>Bandは
+&quot;同じものをappendした場合に、必ず同じものになる&quot;
+というものです。</p>
+<p>例えば</p>
 <ul>
-<li><code>List(1, 2)</code> &#x3068; <code>List(1, 2)</code> &#x3092;append&#x3059;&#x308B;&#x3068; <code>List(1, 2, 1, 2)</code> &#x3068;&#x306A;&#x308B;&#x305F;&#x3081;&#x3001;List&#x306F;Semigroup&#x3067;&#x3059;&#x304C;Band&#x3067;&#x306F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;</li>
-<li>&#x4E00;&#x65B9; <code>Set(1, 2)</code> &#x3068; <code>Set(1, 2)</code> &#x3092;append&#x3059;&#x308B;&#x3068; <code>Set(1, 2)</code> &#x3068;&#x306A;&#x308B;&#x305F;&#x3081;&#x3001;Set&#x306F;Band&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x3067;&#x3059;</li>
+<li><code>List(1, 2)</code> と <code>List(1, 2)</code> をappendすると <code>List(1, 2, 1, 2)</code> となるため、ListはSemigroupですがBandではありません</li>
+<li>一方 <code>Set(1, 2)</code> と <code>Set(1, 2)</code> をappendすると <code>Set(1, 2)</code> となるため、SetはBandのインスタンスです</li>
 </ul>
-<p>&#x3082;&#x3061;&#x308D;&#x3093;Set&#x4EE5;&#x5916;&#x306B;&#x3082;&#x3001;&#x3044;&#x304F;&#x3064;&#x304B;Band&#x306B;&#x306A;&#x308B;&#x3082;&#x306E;&#x306F;&#x5B58;&#x5728;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<p>Band&#x3068;&#x3044;&#x3046;&#x306E;&#x306F;&#x305D;&#x308C;&#x307B;&#x3069;&#x805E;&#x304D;&#x6163;&#x308C;&#x306A;&#x3044;&#x8A00;&#x8449;&#x304B;&#x3082;&#x3057;&#x308C;&#x307E;&#x305B;&#x3093;&#x304C;&#x3001;&#x6570;&#x5B66;&#x306E;&#x7528;&#x8A9E;&#x306E;&#x3088;&#x3046;&#x3067;&#x3059;&#x3002;</p>
+<p>もちろんSet以外にも、いくつかBandになるものは存在します。</p>
+<p>Bandというのはそれほど聞き慣れない言葉かもしれませんが、数学の用語のようです。</p>
 <p><a href="https://en.wikipedia.org/wiki/Band_(mathematics)" target="_blank">https://en.wikipedia.org/wiki/Band_(mathematics)</a></p>
 
                                 
@@ -1162,12 +1161,56 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Band","level":"1.6.3","depth":2,"next":{"title":"Enum","level":"1.6.4","depth":2,"path":"enum.md","ref":"enum.md","articles":[]},"previous":{"title":"Order","level":"1.6.2","depth":2,"path":"order.md","ref":"order.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"band.md","mtime":"2020-12-13T01:28:39.745Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2020-12-13T01:29:23.662Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Band","level":"1.6.3","depth":2,"next":{"title":"Enum","level":"1.6.4","depth":2,"path":"enum.md","ref":"enum.md","articles":[]},"previous":{"title":"Order","level":"1.6.2","depth":2,"path":"order.md","ref":"order.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"band.md","mtime":"2020-12-13T01:55:27.061Z","type":"markdown"},"gitbook":{"version":"3.6.15","time":"2020-12-13T01:55:38.935Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
     
@@ -1185,10 +1228,6 @@
     
         
         <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

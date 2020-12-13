@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>TheseT · GitBook</title>
+        <title>TheseT · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="HonKit 3.6.15">
         
         
         
@@ -64,7 +63,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -1065,8 +1064,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -1105,15 +1104,15 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="theset">TheseT</h1>
-<p>These&#x306E;&#x30E2;&#x30CA;&#x30C9;&#x30C8;&#x30E9;&#x30F3;&#x30B9;&#x30D5;&#x30A9;&#x30FC;&#x30DE;&#x30FC;&#x3067;&#x3059;&#x3002;7.2.x&#x7CFB;&#x3060;&#x3068;&#x3001;7.2.4&#x4EE5;&#x964D;&#x304B;&#x3089;&#x5165;&#x3063;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;
-&#x4ED6;&#x306E;&#x8A00;&#x8A9E;&#x3067;&#x306E;&#x4F8B;&#x3092;&#x898B;&#x305F;&#x3053;&#x3068;&#x304C;&#x306A;&#x3044;&#x306E;&#x3067;&#x3059;&#x304C;<sup><a href="#fn_other-impl" id="reffn_other-impl">other-impl</a></sup>&#x3001;&#x30E2;&#x30CA;&#x30C9;&#x5247;&#x306F;&#x6E80;&#x305F;&#x3059;&#x3088;&#x3046;&#x3067;&#x3059;&#x3002;</p>
-<p>&#x5B9A;&#x7FA9;&#x306F;&#x3001;&#x5358;&#x7D14;&#x306B;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<p>Theseのモナドトランスフォーマーです。7.2.x系だと、7.2.4以降から入っています。
+他の言語での例を見たことがないのですが<sup><a href="#fn_other-impl" id="reffn_other-impl">other-impl</a></sup>、モナド則は満たすようです。</p>
+<p>定義は、単純に以下のようになっています。</p>
 <pre><code class="lang-scala"><span class="hljs-keyword">final</span> <span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TheseT</span>[<span class="hljs-type">F</span>[_], <span class="hljs-title">A</span>, <span class="hljs-title">B</span>](<span class="hljs-params">run: <span class="hljs-type">F</span>[<span class="hljs-type">A</span> \&amp;/ <span class="hljs-type">B</span>]</span>) </span>{
-  <span class="hljs-comment">// &#x305D;&#x306E;&#x4ED6;&#x306E;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x7701;&#x7565;</span>
+  <span class="hljs-comment">// その他のメソッド省略</span>
 }
 </code></pre>
 <blockquote id="fn_other-impl">
-<sup>other-impl</sup>. &#x3082;&#x3057;&#x4ED6;&#x306E;&#x8A00;&#x8A9E;&#x3001;&#x3082;&#x3057;&#x304F;&#x306F;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x3067;&#x3001;scalaz&#x3088;&#x308A;&#x5148;&#x306B;&#x5B9F;&#x88C5;&#x3055;&#x308C;&#x305F;&#x4F8B;&#x304C;&#x3042;&#x308C;&#x3070;&#x6559;&#x3048;&#x3066;&#x4E0B;&#x3055;&#x3044;&#x3002;<a href="#reffn_other-impl" title="Jump back to footnote [other-impl] in the text."> &#x21A9;</a>
+<sup>other-impl</sup>. もし他の言語、もしくはライブラリで、scalazより先に実装された例があれば教えて下さい。<a href="#reffn_other-impl" title="Jump back to footnote [other-impl] in the text."> ↩</a>
 </blockquote>
 
                                 
@@ -1154,12 +1153,56 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"TheseT","level":"1.4.9","depth":2,"next":{"title":"コモナドトランスフォーマー","level":"1.5","depth":1,"ref":"","articles":[{"title":"TracedT","level":"1.5.1","depth":2,"path":"tracedT.md","ref":"tracedT.md","articles":[]},{"title":"StoreT","level":"1.5.2","depth":2,"path":"storeT.md","ref":"storeT.md","articles":[]}]},"previous":{"title":"FreeT","level":"1.4.8","depth":2,"path":"freeT.md","ref":"freeT.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"theseT.md","mtime":"2020-12-13T01:28:54.017Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2020-12-13T01:29:23.662Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"TheseT","level":"1.4.9","depth":2,"next":{"title":"コモナドトランスフォーマー","level":"1.5","depth":1,"ref":"","articles":[{"title":"TracedT","level":"1.5.1","depth":2,"path":"tracedT.md","ref":"tracedT.md","articles":[]},{"title":"StoreT","level":"1.5.2","depth":2,"path":"storeT.md","ref":"storeT.md","articles":[]}]},"previous":{"title":"FreeT","level":"1.4.8","depth":2,"path":"freeT.md","ref":"freeT.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"theseT.md","mtime":"2020-12-13T01:55:38.441Z","type":"markdown"},"gitbook":{"version":"3.6.15","time":"2020-12-13T01:55:38.935Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
     
@@ -1177,10 +1220,6 @@
     
         
         <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

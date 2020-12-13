@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>PlusEmpty · GitBook</title>
+        <title>PlusEmpty · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="HonKit 3.6.15">
         
         
         
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -1067,8 +1066,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -1107,15 +1106,15 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="plusempty">PlusEmpty</h1>
-<p><code>scalaz.Plus</code>&#x3092;&#x7D99;&#x627F;&#x3057;&#x3066;&#x3044;&#x308B;&#x578B;&#x30AF;&#x30E9;&#x30B9;&#x3067;&#x3059;&#x3002;&#x307E;&#x305F;&#x3001;&#x30B5;&#x30D6;&#x30AF;&#x30E9;&#x30B9;&#x3068;&#x3057;&#x3066;<code>ApplicativePlus</code>&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;
-<a href="https://hackage.haskell.org/package/semigroupoids-5.0.1/docs/Data-Functor-Plus.html" target="_blank">ekmett/semigroupoids&#x306B;&#x304A;&#x3051;&#x308B;Plus</a>&#x306E;&#x3088;&#x3046;&#x306A;&#x3082;&#x306E;&#x3067;&#x3059;&#x3002;
-&#x305F;&#x3060;&#x3057;<code>scalaz.Plus</code>&#x306E;&#x30DA;&#x30FC;&#x30B8;&#x3067;&#x3082;&#x8AAC;&#x660E;&#x3057;&#x307E;&#x3057;&#x305F;&#x304C;&#x3001;Scalaz&#x306E;&#x307B;&#x3046;&#x306F;Functor&#x3092;&#x7D99;&#x627F;&#x3057;&#x3066;&#x3044;&#x306A;&#x3044;&#x70B9;&#x304C;&#x7570;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;</p>
-<p>&#x307E;&#x305F;</p>
+<p><code>scalaz.Plus</code>を継承している型クラスです。また、サブクラスとして<code>ApplicativePlus</code>があります。
+<a href="https://hackage.haskell.org/package/semigroupoids-5.0.1/docs/Data-Functor-Plus.html" target="_blank">ekmett/semigroupoidsにおけるPlus</a>のようなものです。
+ただし<code>scalaz.Plus</code>のページでも説明しましたが、ScalazのほうはFunctorを継承していない点が異なります。</p>
+<p>また</p>
 <ul>
-<li>&#x300C;semigroupoids&#x306B;&#x304A;&#x3051;&#x308B;Plus&#x300D;&#x304C;<code>scalaz.PlusEmpty</code></li>
-<li>&#x300C;semigroupoids&#x306B;&#x304A;&#x3051;&#x308B;Alt&#x300D;&#x304C;<code>scalaz.Plus</code></li>
+<li>「semigroupoidsにおけるPlus」が<code>scalaz.PlusEmpty</code></li>
+<li>「semigroupoidsにおけるAlt」が<code>scalaz.Plus</code></li>
 </ul>
-<p>&#x3068;&#x3044;&#x3046;&#x3053;&#x3068;&#x306F;<code>scalaz.Plus</code>&#x3068;&#x300C;semigroupoids&#x306E;<code>Plus</code>&#x300D;&#x306F;&#x7570;&#x306A;&#x308B;&#x3082;&#x306E;&#x306A;&#x306E;&#x3067;&#x6CE8;&#x610F;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
+<p>ということは<code>scalaz.Plus</code>と「semigroupoidsの<code>Plus</code>」は異なるものなので注意してください。</p>
 
                                 
                                 </section>
@@ -1159,12 +1158,56 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"PlusEmpty","level":"1.6.6","depth":2,"next":{"title":"IsEmpty","level":"1.6.7","depth":2,"path":"isEmpty.md","ref":"isEmpty.md","articles":[]},"previous":{"title":"Plus","level":"1.6.5","depth":2,"path":"plus.md","ref":"plus.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"plusEmpty.md","mtime":"2020-12-13T01:28:50.033Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2020-12-13T01:29:23.662Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"PlusEmpty","level":"1.6.6","depth":2,"next":{"title":"IsEmpty","level":"1.6.7","depth":2,"path":"isEmpty.md","ref":"isEmpty.md","articles":[]},"previous":{"title":"Plus","level":"1.6.5","depth":2,"path":"plus.md","ref":"plus.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"plusEmpty.md","mtime":"2020-12-13T01:55:35.189Z","type":"markdown"},"gitbook":{"version":"3.6.15","time":"2020-12-13T01:55:38.935Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
     
@@ -1182,10 +1225,6 @@
     
         
         <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

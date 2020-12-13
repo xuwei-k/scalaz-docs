@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>BijectionT · GitBook</title>
+        <title>BijectionT · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="HonKit 3.6.15">
         
         
         
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -1067,8 +1066,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -1107,17 +1106,17 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="bijectiont">BijectionT</h1>
-<p>Bijection&#x3092;&#x65E5;&#x672C;&#x8A9E;&#x306B;&#x8A33;&#x3059;&#x3068;&quot;&#x5168;&#x5358;&#x5C04;&quot;&#x3068;&#x3044;&#x3046;&#x610F;&#x5473;&#x3067;&#x3059;&#x3002;
-BijectionT&#x81EA;&#x4F53;&#x306F;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;&#x5B9A;&#x7FA9;&#x3067;&#x3059;</p>
+<p>Bijectionを日本語に訳すと&quot;全単射&quot;という意味です。
+BijectionT自体は以下のような定義です</p>
 <pre><code class="lang-scala"><span class="hljs-keyword">final</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BijectionT</span>[<span class="hljs-type">F</span>[_], <span class="hljs-title">G</span>[_], <span class="hljs-title">A</span>, <span class="hljs-title">B</span>] (<span class="hljs-params">_to: <span class="hljs-type">A</span> =&gt; <span class="hljs-type">F</span>[<span class="hljs-type">B</span>], _from: <span class="hljs-type">B</span> =&gt; <span class="hljs-type">G</span>[<span class="hljs-type">A</span>]</span>)</span>
 </code></pre>
-<p>&#x307E;&#x305F;&#x3001;<code>Bijection</code>&#x3068;&#x3044;&#x3046;alias&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;</p>
+<p>また、<code>Bijection</code>というaliasもあります</p>
 <pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">Bijection</span>[<span class="hljs-type">A</span>, <span class="hljs-type">B</span>] </span>= <span class="hljs-type">BijectionT</span>[<span class="hljs-type">Id</span>, <span class="hljs-type">Id</span>, <span class="hljs-type">A</span>, <span class="hljs-type">B</span>]
 </code></pre>
-<p>Scalaz&#x5185;&#x306B;&#x306F;Isomorphism&#x3068;&#x547C;&#x3070;&#x308C;&#x308B;&#x540C;&#x3058;&#x3088;&#x3046;&#x306A;&#x3082;&#x306E;&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;
-&#x305D;&#x3082;&#x305D;&#x3082;BijectionT&#x306E;<code>T</code>&#x306E;&#x90E8;&#x5206;&#x306F;&#x610F;&#x5473;&#x304C;&#x7121;&#x3044;&#x306E;&#x3067;&#x306F;&#x306A;&#x3044;&#x304B;&#xFF1F;&#x3068;&#x3044;&#x3046;issue&#x304C;&#x3042;&#x308A;&#x3001;</p>
+<p>Scalaz内にはIsomorphismと呼ばれる同じようなものもあります。
+そもそもBijectionTの<code>T</code>の部分は意味が無いのではないか？というissueがあり、</p>
 <p><a href="https://github.com/scalaz/scalaz/issues/757" target="_blank">https://github.com/scalaz/scalaz/issues/757</a></p>
-<p>BijectionT&#x304C;&#x305D;&#x306E;&#x307E;&#x307E;&#x4F7F;&#x308F;&#x308C;&#x308B;&#x3053;&#x3068;&#x306F;&#x591A;&#x304F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x3002;</p>
+<p>BijectionTがそのまま使われることは多くありません。</p>
 
                                 
                                 </section>
@@ -1161,12 +1160,56 @@ BijectionT&#x81EA;&#x4F53;&#x306F;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"BijectionT","level":"1.3.22","depth":2,"next":{"title":"モナドトランスフォーマー","level":"1.4","depth":1,"path":"monadTransformers.md","ref":"monadTransformers.md","articles":[{"title":"OptionT","level":"1.4.1","depth":2,"path":"optionT.md","ref":"optionT.md","articles":[]},{"title":"MaybeT","level":"1.4.2","depth":2,"path":"maybeT.md","ref":"maybeT.md","articles":[]},{"title":"EitherT","level":"1.4.3","depth":2,"path":"eitherT.md","ref":"eitherT.md","articles":[]},{"title":"ListT","level":"1.4.4","depth":2,"path":"listT.md","ref":"listT.md","articles":[]},{"title":"StreamT","level":"1.4.5","depth":2,"path":"streamT.md","ref":"streamT.md","articles":[]},{"title":"Kleisli","level":"1.4.6","depth":2,"path":"kleisli.md","ref":"kleisli.md","articles":[]},{"title":"IndexedStateT","level":"1.4.7","depth":2,"path":"indexedStateT.md","ref":"indexedStateT.md","articles":[]},{"title":"FreeT","level":"1.4.8","depth":2,"path":"freeT.md","ref":"freeT.md","articles":[]},{"title":"TheseT","level":"1.4.9","depth":2,"path":"theseT.md","ref":"theseT.md","articles":[]}]},"previous":{"title":"Digit","level":"1.3.21","depth":2,"path":"digit.md","ref":"digit.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"bijectionT.md","mtime":"2020-12-13T01:28:48.637Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2020-12-13T01:29:23.662Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"BijectionT","level":"1.3.22","depth":2,"next":{"title":"モナドトランスフォーマー","level":"1.4","depth":1,"path":"monadTransformers.md","ref":"monadTransformers.md","articles":[{"title":"OptionT","level":"1.4.1","depth":2,"path":"optionT.md","ref":"optionT.md","articles":[]},{"title":"MaybeT","level":"1.4.2","depth":2,"path":"maybeT.md","ref":"maybeT.md","articles":[]},{"title":"EitherT","level":"1.4.3","depth":2,"path":"eitherT.md","ref":"eitherT.md","articles":[]},{"title":"ListT","level":"1.4.4","depth":2,"path":"listT.md","ref":"listT.md","articles":[]},{"title":"StreamT","level":"1.4.5","depth":2,"path":"streamT.md","ref":"streamT.md","articles":[]},{"title":"Kleisli","level":"1.4.6","depth":2,"path":"kleisli.md","ref":"kleisli.md","articles":[]},{"title":"IndexedStateT","level":"1.4.7","depth":2,"path":"indexedStateT.md","ref":"indexedStateT.md","articles":[]},{"title":"FreeT","level":"1.4.8","depth":2,"path":"freeT.md","ref":"freeT.md","articles":[]},{"title":"TheseT","level":"1.4.9","depth":2,"path":"theseT.md","ref":"theseT.md","articles":[]}]},"previous":{"title":"Digit","level":"1.3.21","depth":2,"path":"digit.md","ref":"digit.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"bijectionT.md","mtime":"2020-12-13T01:55:33.853Z","type":"markdown"},"gitbook":{"version":"3.6.15","time":"2020-12-13T01:55:38.935Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
     
@@ -1184,10 +1227,6 @@ BijectionT&#x81EA;&#x4F53;&#x306F;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306
     
         
         <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

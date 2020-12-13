@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Enum · GitBook</title>
+        <title>Enum · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="HonKit 3.6.15">
         
         
         
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -1067,8 +1066,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -1107,10 +1106,10 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="enum">Enum</h1>
-<p><a href="https://hackage.haskell.org/package/base-4.8.1.0/docs/Prelude.html#t:Enum" target="_blank">Haskell&#x306B;&#x304A;&#x3051;&#x308B;Enum</a>&#x3068;&#x3042;&#x308B;&#x7A0B;&#x5EA6;&#x8FD1;&#x3044;&#x3067;&#x3059;&#x304C;&#x3001;Scalaz&#x306E;&#x3082;&#x306E;&#x306F;&#x3001;&#x3044;&#x304F;&#x3064;&#x306E;&#x70B9;&#x3067;Haskell&#x306E;&#x3082;&#x306E;&#x3068;&#x306F;&#x7570;&#x306A;&#x3063;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<p><a href="https://hackage.haskell.org/package/base-4.8.1.0/docs/Prelude.html#t:Enum" target="_blank">HaskellにおけるEnum</a>とある程度近いですが、Scalazのものは、いくつの点でHaskellのものとは異なっています。</p>
 <ul>
-<li>Scalaz&#x306E;Enum&#x306F;Order&#x3092;&#x7D99;&#x627F;&#x3057;&#x3066;&#x3044;&#x308B;&#x304C;&#x3001;Haskell&#x306E;Enum&#x306B;&#x89AA;&#x306E;&#x30AF;&#x30E9;&#x30B9;&#x306F;&#x306A;&#x3044;</li>
-<li>Scalaz&#x306E;Enum&#x306B;&#x306F;<a href="https://hackage.haskell.org/package/base-4.8.1.0/docs/Prelude.html#t:Bounded" target="_blank">Haskell&#x306E;Bounded</a>&#x306E;&#x3088;&#x3046;&#x306A;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3082;&#x3042;&#x308B;&#x304C;&#x3001;Haskell&#x306B;&#x304A;&#x3044;&#x3066;Enum&#x3068;Bounded&#x306F;&#x7D99;&#x627F;&#x95A2;&#x4FC2;&#x306E;&#x306A;&#x3044;&#x5225;&#x306E;&#x30AF;&#x30E9;&#x30B9;</li>
+<li>ScalazのEnumはOrderを継承しているが、HaskellのEnumに親のクラスはない</li>
+<li>ScalazのEnumには<a href="https://hackage.haskell.org/package/base-4.8.1.0/docs/Prelude.html#t:Bounded" target="_blank">HaskellのBounded</a>のようなメソッドもあるが、HaskellにおいてEnumとBoundedは継承関係のない別のクラス</li>
 </ul>
 
                                 
@@ -1155,12 +1154,56 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Enum","level":"1.6.4","depth":2,"next":{"title":"Plus","level":"1.6.5","depth":2,"path":"plus.md","ref":"plus.md","articles":[]},"previous":{"title":"Band","level":"1.6.3","depth":2,"path":"band.md","ref":"band.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"enum.md","mtime":"2020-12-13T01:28:53.697Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2020-12-13T01:29:23.662Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Enum","level":"1.6.4","depth":2,"next":{"title":"Plus","level":"1.6.5","depth":2,"path":"plus.md","ref":"plus.md","articles":[]},"previous":{"title":"Band","level":"1.6.3","depth":2,"path":"band.md","ref":"band.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"enum.md","mtime":"2020-12-13T01:55:38.129Z","type":"markdown"},"gitbook":{"version":"3.6.15","time":"2020-12-13T01:55:38.935Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
     
@@ -1178,10 +1221,6 @@
     
         
         <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

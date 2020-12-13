@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Liskov · GitBook</title>
+        <title>Liskov · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="HonKit 3.6.15">
         
         
         
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -1067,8 +1066,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -1107,9 +1106,9 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="liskov">Liskov</h1>
-<p><a href="https://github.com/scala/scala/blob/v2.13.1/src/library/scala/typeConstraints.scala#L63" target="_blank">Scala&#x6A19;&#x6E96;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x306E;<code>&lt;:&lt;</code></a>&#x3068;&#x540C;&#x3058;&#x3088;&#x3046;&#x306A;&#x5F79;&#x5272;&#x3092;&#x3059;&#x308B;&#x3082;&#x306E;&#x3067;&#x3059;&#x3002;</p>
-<p>&#x672C;&#x4F53;&#x306B;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306F;&#x305D;&#x308C;&#x307B;&#x3069;&#x591A;&#x304F;&#x306A;&#x304F;&#x3001;7.3.2&#x6642;&#x70B9;&#x3067;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;&#x5B9A;&#x7FA9;&#x3067;&#x3059;&#x3002;
-(&#x30B7;&#x30B0;&#x30CD;&#x30C1;&#x30E3;&#x306E;&#x307F;&#x3067;&#x3001;&#x5B9F;&#x88C5;&#x306F;&#x7701;&#x7565;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;)</p>
+<p><a href="https://github.com/scala/scala/blob/v2.13.1/src/library/scala/typeConstraints.scala#L63" target="_blank">Scala標準ライブラリの<code>&lt;:&lt;</code></a>と同じような役割をするものです。</p>
+<p>本体にメソッドはそれほど多くなく、7.3.2時点で以下のような定義です。
+(シグネチャのみで、実装は省略しています)</p>
 <pre><code class="lang-scala"><span class="hljs-keyword">sealed</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Liskov</span>[-<span class="hljs-type">A</span>, +<span class="hljs-type">B</span>] </span>{
   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">apply</span></span>(a: <span class="hljs-type">A</span>): <span class="hljs-type">B</span>
   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">substCo</span></span>[<span class="hljs-type">F</span>[+_]](p: <span class="hljs-type">F</span>[<span class="hljs-type">A</span>]): <span class="hljs-type">F</span>[<span class="hljs-type">B</span>]
@@ -1120,15 +1119,15 @@
   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">onF</span></span>[<span class="hljs-type">X</span>](fa: <span class="hljs-type">X</span> =&gt; <span class="hljs-type">A</span>): <span class="hljs-type">X</span> =&gt; <span class="hljs-type">B</span>
 }
 </code></pre>
-<p>&#x30B3;&#x30F3;&#x30D1;&#x30CB;&#x30AA;&#x30F3;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306B;<code>&lt;~&lt;</code>&#x3068;<code>&gt;~&gt;</code>&#x3068;&#x3044;&#x3046;alias&#x304C;&#x5B9A;&#x7FA9;&#x3055;&#x308C;&#x3066;&#x3044;&#x3066;&#x3001;&#x57FA;&#x672C;&#x7684;&#x306B;&#x306F;&#x3053;&#x306E;alias&#x304C;&#x4F7F;&#x308F;&#x308C;&#x307E;&#x3059;&#x3002;</p>
+<p>コンパニオンオブジェクトに<code>&lt;~&lt;</code>と<code>&gt;~&gt;</code>というaliasが定義されていて、基本的にはこのaliasが使われます。</p>
 <pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">&lt;~&lt;</span>[-<span class="hljs-type">A</span>, +<span class="hljs-type">B</span>] </span>= <span class="hljs-type">Liskov</span>[<span class="hljs-type">A</span>, <span class="hljs-type">B</span>]
 
 <span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">&gt;~&gt;</span>[+<span class="hljs-type">B</span>, -<span class="hljs-type">A</span>] </span>= <span class="hljs-type">Liskov</span>[<span class="hljs-type">A</span>, <span class="hljs-type">B</span>]
 </code></pre>
-<p><code>def apply(a: A): B</code>&#x306B;&#x95A2;&#x3057;&#x3066;&#x306F;&#x3001;Scala&#x6A19;&#x6E96;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x306E;&#x3082;&#x306E;&#x3068;&#x5168;&#x304F;&#x540C;&#x3058;&#x7528;&#x9014;&#x3067;&#x3059;&#x3002;scalaz.Liskov&#x304C;&#x512A;&#x308C;&#x3066;&#x3044;&#x308B;&#x306E;&#x306F;&#x3001;&#x305D;&#x306E;&#x4ED6;&#x306B;&#x3082;&#x3044;&#x304F;&#x3064;&#x304B;&#x306E;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3092;&#x6301;&#x3063;&#x3066;&#x3044;&#x308B;&#x70B9;&#x3067;&#x3059;&#x3002;</p>
-<p>&#x305F;&#x3060;&#x3057;&#x3001;Scala 2.13 &#x304B;&#x3089;&#x306F;&#x3001;Scala&#x672C;&#x4F53;&#x306B;&#x3082;&#x540C;&#x69D8;&#x306E;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x304C;&#x5165;&#x3063;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<p><code>def apply(a: A): B</code>に関しては、Scala標準ライブラリのものと全く同じ用途です。scalaz.Liskovが優れているのは、その他にもいくつかのメソッドを持っている点です。</p>
+<p>ただし、Scala 2.13 からは、Scala本体にも同様のメソッドが入っています。</p>
 <p><a href="https://github.com/scala/scala/commit/0c9f08068dfd4b49239fe68b95eaa3ea9341554f" target="_blank">Add substitute methods and tests</a></p>
-<p>Liskov&#x306B;&#x95A2;&#x3057;&#x3066;&#x306F;&#x3001;&#x4EE5;&#x4E0B;&#x306E;&#x8A18;&#x4E8B;&#x3082;&#x8AAD;&#x3080;&#x3068;&#x3088;&#x3044;&#x3067;&#x3057;&#x3087;&#x3046;&#x3002;</p>
+<p>Liskovに関しては、以下の記事も読むとよいでしょう。</p>
 <p><a href="https://typelevel.org/blog/2014/03/09/liskov_lifting.html" target="_blank">typelevel.scala | When can Liskov be lifted?</a></p>
 
                                 
@@ -1173,12 +1172,56 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Liskov","level":"1.7.3","depth":2,"next":{"title":"著者について","level":"1.8","depth":1,"path":"about_author.md","ref":"about_author.md","articles":[]},"previous":{"title":"Tag","level":"1.7.2","depth":2,"path":"tag.md","ref":"tag.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"liskov.md","mtime":"2020-12-13T01:28:52.645Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2020-12-13T01:29:23.662Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Liskov","level":"1.7.3","depth":2,"next":{"title":"著者について","level":"1.8","depth":1,"path":"about_author.md","ref":"about_author.md","articles":[]},"previous":{"title":"Tag","level":"1.7.2","depth":2,"path":"tag.md","ref":"tag.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"liskov.md","mtime":"2020-12-13T01:55:37.397Z","type":"markdown"},"gitbook":{"version":"3.6.15","time":"2020-12-13T01:55:38.935Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
     
@@ -1196,10 +1239,6 @@
     
         
         <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

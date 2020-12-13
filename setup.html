@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>セットアップ · GitBook</title>
+        <title>セットアップ · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="HonKit 3.6.15">
         
         
         
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -1067,8 +1066,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -1106,13 +1105,13 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x30BB;&#x30C3;&#x30C8;&#x30A2;&#x30C3;&#x30D7;">&#x30BB;&#x30C3;&#x30C8;&#x30A2;&#x30C3;&#x30D7;</h1>
-<p>Scalaz&#x306B;&#x306F;&#x3044;&#x304F;&#x3064;&#x304B;&#x306E;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x304C;&#x3001;<code>&quot;scalaz-core&quot;</code> &#x304C;&#x4E00;&#x756A;&#x5927;&#x304D;&#x304F;&#x3088;&#x304F;&#x5229;&#x7528;&#x3055;&#x308C;&#x308B;&#x3053;&#x3068;&#x304C;&#x591A;&#x3044;&#x3067;&#x3059;&#x3002;
-&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x306E;&#x8A73;&#x7D30;&#x306B;&#x3064;&#x3044;&#x3066;&#x306F;&#x3001;&#x5225;&#x306E;&#x30DA;&#x30FC;&#x30B8;&#x3067;&#x8AAC;&#x660E;&#x3057;&#x307E;&#x3059;&#x3002;
-&#x3072;&#x3068;&#x307E;&#x305A; <code>&quot;scalaz-core&quot;</code> &#x306E;&#x307F;&#x3092;&#x4F7F;&#x3046;&#x5834;&#x5408;&#x306F;&#x3001;<code>build.sbt</code> &#x306B;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x8A18;&#x8FF0;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
+                                <h1 id="セットアップ">セットアップ</h1>
+<p>Scalazにはいくつかのモジュールがありますが、<code>&quot;scalaz-core&quot;</code> が一番大きくよく利用されることが多いです。
+モジュールの詳細については、別のページで説明します。
+ひとまず <code>&quot;scalaz-core&quot;</code> のみを使う場合は、<code>build.sbt</code> に以下のように記述してください。</p>
 <pre><code class="lang-scala">libraryDependencies += <span class="hljs-string">&quot;org.scalaz&quot;</span> %% <span class="hljs-string">&quot;scalaz-core&quot;</span> % <span class="hljs-string">&quot;7.3.2&quot;</span>
 </code></pre>
-<p>&#x5FC5;&#x8981;&#x306B;&#x5FDC;&#x3058;&#x3066;&#x3001;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B; <code>scalaVersion</code> &#x306A;&#x3069;&#x4ED6;&#x306E;key&#x306E;&#x8A2D;&#x5B9A;&#x3092;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
+<p>必要に応じて、以下のように <code>scalaVersion</code> など他のkeyの設定をしてください。</p>
 <pre><code class="lang-scala">scalaVersion := <span class="hljs-string">&quot;2.13.2&quot;</span>
 </code></pre>
 
@@ -1158,12 +1157,56 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"セットアップ","level":"1.2.2","depth":2,"next":{"title":"バイナリ互換とバージョン","level":"1.2.3","depth":2,"path":"binary_compatibility.md","ref":"binary_compatibility.md","articles":[]},"previous":{"title":"Scalazとは","level":"1.2.1","depth":2,"path":"overview.md","ref":"overview.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"setup.md","mtime":"2020-12-13T01:28:52.153Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2020-12-13T01:29:23.662Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"セットアップ","level":"1.2.2","depth":2,"next":{"title":"バイナリ互換とバージョン","level":"1.2.3","depth":2,"path":"binary_compatibility.md","ref":"binary_compatibility.md","articles":[]},"previous":{"title":"Scalazとは","level":"1.2.1","depth":2,"path":"overview.md","ref":"overview.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"setup.md","mtime":"2020-12-13T01:55:37.017Z","type":"markdown"},"gitbook":{"version":"3.6.15","time":"2020-12-13T01:55:38.935Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
     
@@ -1181,10 +1224,6 @@
     
         
         <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

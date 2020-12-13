@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Align · GitBook</title>
+        <title>Align · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="HonKit 3.6.15">
         
         
         
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -1067,8 +1066,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -1107,22 +1106,22 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="align">Align</h1>
-<p>Zip&#x3068;&#x4F3C;&#x305F;&#x3088;&#x3046;&#x306A;&#x578B;&#x30AF;&#x30E9;&#x30B9;&#x3067;&#x3059;&#x304C;&#x3001;Zip&#x3088;&#x308A;&#x3042;&#x308B;&#x610F;&#x5473;&#x6C4E;&#x7528;&#x7684;&#x306B;&#x4F7F;&#x3048;&#x308B;&#x578B;&#x30AF;&#x30E9;&#x30B9;&#x3067;&#x3059;&#x3002;
-&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;&#x30B7;&#x30B0;&#x30CD;&#x30C1;&#x30E3;&#x306E;<code>alignWith</code>&#x3068;&#x3044;&#x3046;&#x62BD;&#x8C61;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<p>Zipと似たような型クラスですが、Zipよりある意味汎用的に使える型クラスです。
+以下のようなシグネチャの<code>alignWith</code>という抽象メソッドがあります。</p>
 <pre><code class="lang-scala"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">alignWith</span></span>[<span class="hljs-type">A</span>, <span class="hljs-type">B</span>, <span class="hljs-type">C</span>](f: <span class="hljs-type">A</span> \&amp;/ <span class="hljs-type">B</span> =&gt; <span class="hljs-type">C</span>): (<span class="hljs-type">F</span>[<span class="hljs-type">A</span>], <span class="hljs-type">F</span>[<span class="hljs-type">B</span>]) =&gt; <span class="hljs-type">F</span>[<span class="hljs-type">C</span>]
 </code></pre>
-<p><code>\&amp;/</code>&#x306F;These&#x3068;&#x3082;&#x547C;&#x3070;&#x308C;&#x308B;&#x30C7;&#x30FC;&#x30BF;&#x69CB;&#x9020;&#x3067;&#x3059;&#x3002;
-Align&#x306F;<code>\&amp;/</code>&#x3068;&#x5BC6;&#x63A5;&#x306B;&#x95A2;&#x9023;&#x3057;&#x3066;&#x304A;&#x308A;&#x3001;<code>\&amp;/</code>&#x3092;&#x7406;&#x89E3;&#x3057;&#x3066;&#x3044;&#x306A;&#x3044;&#x3068;Align&#x306E;&#x8AAC;&#x660E;&#x3092;&#x3059;&#x308B;&#x306E;&#x306F;&#x96E3;&#x3057;&#x3044;&#x306E;&#x3067;&#x3001;
-<code>\&amp;/</code>&#x3092;&#x77E5;&#x3089;&#x306A;&#x3044;&#x4EBA;&#x306F;&#x307E;&#x305A;&#x305D;&#x3061;&#x3089;&#x306E;&#x8AAC;&#x660E;&#x3092;&#x53C2;&#x7167;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
-<p>&#x307E;&#x305A;&#x3001;&#x6A19;&#x6E96;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x306E;List&#x3092;&#x4F7F;&#x3063;&#x305F;&#x4F8B;&#x3092;&#x898B;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;
-&#x6A19;&#x6E96;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x306E;List&#x306E;zip&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3067;&#x306F;&#x3001;&#x9577;&#x3055;&#x304C;&#x63C3;&#x3063;&#x3066;&#x3044;&#x306A;&#x3044;&#x5834;&#x5408;&#x306F;&#x3001;&#x77ED;&#x3044;&#x65B9;&#x306B;&#x5408;&#x308F;&#x305B;&#x3066;&#x5207;&#x308A;&#x6368;&#x3066;&#x3089;&#x308C;&#x307E;&#x3059;&#x304C;</p>
+<p><code>\&amp;/</code>はTheseとも呼ばれるデータ構造です。
+Alignは<code>\&amp;/</code>と密接に関連しており、<code>\&amp;/</code>を理解していないとAlignの説明をするのは難しいので、
+<code>\&amp;/</code>を知らない人はまずそちらの説明を参照してください。</p>
+<p>まず、標準ライブラリのListを使った例を見てみましょう。
+標準ライブラリのListのzipメソッドでは、長さが揃っていない場合は、短い方に合わせて切り捨てられますが</p>
 <pre><code class="lang-scala"><span class="hljs-keyword">val</span> x = <span class="hljs-type">List</span>(<span class="hljs-string">&quot;a&quot;</span>, <span class="hljs-string">&quot;b&quot;</span>, <span class="hljs-string">&quot;c&quot;</span>, <span class="hljs-string">&quot;d&quot;</span>)
 <span class="hljs-keyword">val</span> y = <span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)
 </code></pre>
 <pre><code class="lang-scala">scala&gt; x zip y
 res0: <span class="hljs-type">List</span>[(<span class="hljs-type">String</span>, <span class="hljs-type">Int</span>)] = <span class="hljs-type">List</span>((a,<span class="hljs-number">1</span>), (b,<span class="hljs-number">2</span>))
 </code></pre>
-<p>Align&#x3092;&#x4F7F;&#x7528;&#x3057;&#x305F;&#x5834;&#x5408;&#x3001;&#x5207;&#x308A;&#x6368;&#x3066;&#x3089;&#x308C;&#x308B;&#x306E;&#x3067;&#x306F;&#x306A;&#x304F;</p>
+<p>Alignを使用した場合、切り捨てられるのではなく</p>
 <pre><code class="lang-scala">scala&gt; <span class="hljs-type">Align</span>[<span class="hljs-type">List</span>].align(x, y)
 res1: <span class="hljs-type">List</span>[<span class="hljs-type">String</span> \&amp;/ <span class="hljs-type">Int</span>] = <span class="hljs-type">List</span>(<span class="hljs-type">Both</span>(a,<span class="hljs-number">1</span>), <span class="hljs-type">Both</span>(b,<span class="hljs-number">2</span>), <span class="hljs-type">This</span>(c), <span class="hljs-type">This</span>(d))
 
@@ -1130,12 +1129,12 @@ scala&gt; <span class="hljs-type">Align</span>[<span class="hljs-type">List</spa
 res2: <span class="hljs-type">List</span>[<span class="hljs-type">Int</span> \&amp;/ <span class="hljs-type">String</span>] = <span class="hljs-type">List</span>(<span class="hljs-type">Both</span>(<span class="hljs-number">1</span>,a), <span class="hljs-type">Both</span>(<span class="hljs-number">2</span>,b), <span class="hljs-type">That</span>(c), <span class="hljs-type">That</span>(d))
 </code></pre>
 <ul>
-<li>&#x4E21;&#x65B9;&#x304C;&#x5B58;&#x5728;&#x3059;&#x308B;&#x90E8;&#x5206;&#x307E;&#x3067;&#x306F;Both</li>
-<li>1&#x3064;&#x3081;&#x306E;&#x5F15;&#x6570;&#x306E;&#x307B;&#x3046;&#x304C;&#x9577;&#x3044;&#x5834;&#x5408;&#x306F;&#x3001;&#x6B8B;&#x308A;&#x306F;This</li>
-<li>2&#x3064;&#x3081;&#x306E;&#x5F15;&#x6570;&#x306E;&#x307B;&#x3046;&#x304C;&#x9577;&#x3044;&#x5834;&#x5408;&#x306F;&#x3001;&#x6B8B;&#x308A;&#x306F;That</li>
+<li>両方が存在する部分まではBoth</li>
+<li>1つめの引数のほうが長い場合は、残りはThis</li>
+<li>2つめの引数のほうが長い場合は、残りはThat</li>
 </ul>
-<p>&#x3068;&#x3044;&#x3046;&#x3088;&#x3046;&#x306A;&#x7D50;&#x679C;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;</p>
-<p>List&#x4EE5;&#x5916;&#x306B;&#x3082;Align&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x308B;&#x30C7;&#x30FC;&#x30BF;&#x578B;&#x306F;&#x3044;&#x304F;&#x3064;&#x304B;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<p>というような結果になります。</p>
+<p>List以外にもAlignのインスタンスになっているデータ型はいくつかあります。</p>
 
                                 
                                 </section>
@@ -1179,12 +1178,56 @@ res2: <span class="hljs-type">List</span>[<span class="hljs-type">Int</span> \&a
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Align","level":"1.6.19","depth":2,"next":{"title":"Distributive","level":"1.6.20","depth":2,"path":"distributive.md","ref":"distributive.md","articles":[]},"previous":{"title":"Divisible","level":"1.6.18","depth":2,"path":"divisible.md","ref":"divisible.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"align.md","mtime":"2020-12-13T01:28:48.289Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2020-12-13T01:29:23.662Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Align","level":"1.6.19","depth":2,"next":{"title":"Distributive","level":"1.6.20","depth":2,"path":"distributive.md","ref":"distributive.md","articles":[]},"previous":{"title":"Divisible","level":"1.6.18","depth":2,"path":"divisible.md","ref":"divisible.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"align.md","mtime":"2020-12-13T01:55:33.577Z","type":"markdown"},"gitbook":{"version":"3.6.15","time":"2020-12-13T01:55:38.935Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
     
@@ -1202,10 +1245,6 @@ res2: <span class="hljs-type">List</span>[<span class="hljs-type">Int</span> \&a
     
         
         <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>IsEmpty · GitBook</title>
+        <title>IsEmpty · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="HonKit 3.6.15">
         
         
         
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -1067,8 +1066,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -1107,25 +1106,25 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="isempty">IsEmpty</h1>
-<p><code>PlusEmpty</code>&#x3092;&#x7D99;&#x627F;&#x3057;&#x305F;&#x578B;&#x30AF;&#x30E9;&#x30B9;&#x3067;&#x3059;&#x3002;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;&#x5B9A;&#x7FA9;&#x3067;&#x3059;&#x3002;</p>
+<p><code>PlusEmpty</code>を継承した型クラスです。以下のような定義です。</p>
 <pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">IsEmpty</span>[<span class="hljs-type">F</span>[_]] <span class="hljs-keyword">extends</span> <span class="hljs-title">PlusEmpty</span>[<span class="hljs-type">F</span>] </span>{ self =&gt;
 
   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">isEmpty</span></span>[<span class="hljs-type">A</span>](fa: <span class="hljs-type">F</span>[<span class="hljs-type">A</span>]): <span class="hljs-type">Boolean</span>
 
-  <span class="hljs-comment">// &#x305D;&#x306E;&#x4ED6;&#x306E;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x7701;&#x7565;</span>
+  <span class="hljs-comment">// その他のメソッド省略</span>
 }
 </code></pre>
-<p>&#x65E5;&#x672C;&#x8A9E;&#x3067;&#x8AAC;&#x660E;&#x3059;&#x308C;&#x3070;</p>
-<p>&#x300C;&#x578B;&#x5F15;&#x6570;&#x304C;&#x3069;&#x3093;&#x306A;&#x3082;&#x306E;&#x3067;&#x3042;&#x308D;&#x3046;&#x3068;&#x3082;&#x3001;&#x305D;&#x308C;&#x306B;&#x95A2;&#x4FC2;&#x306A;&#x304F;&#x7A7A;&#x304B;&#x3069;&#x3046;&#x304B;&#xFF1F;&#x304C;&#x5FC5;&#x305A;&#x5224;&#x65AD;&#x53EF;&#x80FD;&#x306A;&#x578B;&#x30AF;&#x30E9;&#x30B9;&#x300D;</p>
-<p>&#x3068;&#x3044;&#x3063;&#x305F;&#x3068;&#x3053;&#x308D;&#x3067;&#x3057;&#x3087;&#x3046;&#x304B;&#x3002;
-&#x3053;&#x306E;&#x8AAC;&#x660E;&#x306F;<code>PlusEmpty</code>&#x3068;&#x6BD4;&#x3079;&#x305F;&#x5834;&#x5408;&#x306E;&#x8A71;&#x3067;&#x3059;&#x3002;</p>
-<p><code>PlusEmpty</code>&#x306B;&#x306F;<code>def empty[A]: F[A]</code>&#x3068;&#x3044;&#x3046;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;
-F&#x304C;<code>PlusEmpty</code>&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x3067;<code>IsEmpty</code>&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x3067;&#x306F;&#x306A;&#x3044;&#x5834;&#x5408;&#x3067;&#x3082;&#x3001;<code>Equal[F[A]]</code>&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x304C;&#x3042;&#x308C;&#x3070;<code>empty</code>&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3067;&#x751F;&#x6210;&#x3057;&#x305F;&#x3082;&#x306E;&#x3068;&#x6BD4;&#x8F03;&#x3059;&#x308B;&#x3053;&#x3068;&#x306B;&#x3088;&#x3063;&#x3066;&#x300C;&#x7A7A;&#x304B;&#x3069;&#x3046;&#x304B;&#xFF1F;&#x300D;&#x306F;&#x5224;&#x65AD;&#x53EF;&#x80FD;&#x3067;&#x3059;&#x3002;
-&#x9006;&#x306B;&#x8A00;&#x3046;&#x3068;
-<code>PlusEmpty</code>&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x3060;&#x304C;<code>IsEmpty</code>&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x3067;&#x306F;&#x306A;&#x3044;&#x5834;&#x5408;&#x306F; <strong><code>Equal[F[A]]</code>&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x304C;&#x306A;&#x3051;&#x308C;&#x3070;</strong> &#x7A7A;&#x304B;&#x3069;&#x3046;&#x304B;&#x306F;&#x5224;&#x65AD;&#x3067;&#x304D;&#x307E;&#x305B;&#x3093;&#x3002;</p>
-<p>&#x5358;&#x306B;&#x305D;&#x308C;&#x3060;&#x3051;&#x306E;&#x578B;&#x30AF;&#x30E9;&#x30B9;&#x3067;&#x3001;&#x3042;&#x307E;&#x308A;&#x96E3;&#x3057;&#x304F;&#x306F;&#x306A;&#x3044;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;&#x3002;&#x81EA;&#x5206;&#x304C;&#x77E5;&#x308B;&#x9650;&#x308A;&#x3001;&#x4ED6;&#x306E;&#x578B;&#x30AF;&#x30E9;&#x30B9;&#x304C;&#x3042;&#x308B;&#x8A00;&#x8A9E;&#x3067;&#x3082;&#x3001;&#x3053;&#x306E;&#x578B;&#x30AF;&#x30E9;&#x30B9;&#x306F;&#x3042;&#x307E;&#x308A;&#x898B;&#x304B;&#x3051;&#x307E;&#x305B;&#x3093;<sup><a href="#fn_other-lang" id="reffn_other-lang">other-lang</a></sup>&#x3002;</p>
+<p>日本語で説明すれば</p>
+<p>「型引数がどんなものであろうとも、それに関係なく空かどうか？が必ず判断可能な型クラス」</p>
+<p>といったところでしょうか。
+この説明は<code>PlusEmpty</code>と比べた場合の話です。</p>
+<p><code>PlusEmpty</code>には<code>def empty[A]: F[A]</code>というメソッドがあります。
+Fが<code>PlusEmpty</code>のインスタンスで<code>IsEmpty</code>のインスタンスではない場合でも、<code>Equal[F[A]]</code>のインスタンスがあれば<code>empty</code>メソッドで生成したものと比較することによって「空かどうか？」は判断可能です。
+逆に言うと
+<code>PlusEmpty</code>のインスタンスだが<code>IsEmpty</code>のインスタンスではない場合は <strong><code>Equal[F[A]]</code>のインスタンスがなければ</strong> 空かどうかは判断できません。</p>
+<p>単にそれだけの型クラスで、あまり難しくはないと思います。自分が知る限り、他の型クラスがある言語でも、この型クラスはあまり見かけません<sup><a href="#fn_other-lang" id="reffn_other-lang">other-lang</a></sup>。</p>
 <blockquote id="fn_other-lang">
-<sup>other-lang</sup>. &#x8AB0;&#x304B;&#x4ED6;&#x306E;&#x8A00;&#x8A9E;&#x3067;&#x306E;&#x4F8B;&#x304C;&#x3042;&#x308C;&#x3070;&#x6559;&#x3048;&#x3066;&#x4E0B;&#x3055;&#x3044;<a href="#reffn_other-lang" title="Jump back to footnote [other-lang] in the text."> &#x21A9;</a>
+<sup>other-lang</sup>. 誰か他の言語での例があれば教えて下さい<a href="#reffn_other-lang" title="Jump back to footnote [other-lang] in the text."> ↩</a>
 </blockquote>
 
                                 
@@ -1170,12 +1169,56 @@ F&#x304C;<code>PlusEmpty</code>&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"IsEmpty","level":"1.6.7","depth":2,"next":{"title":"Apply","level":"1.6.8","depth":2,"path":"apply.md","ref":"apply.md","articles":[]},"previous":{"title":"PlusEmpty","level":"1.6.6","depth":2,"path":"plusEmpty.md","ref":"plusEmpty.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"isEmpty.md","mtime":"2020-12-13T01:28:46.725Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2020-12-13T01:29:23.662Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"IsEmpty","level":"1.6.7","depth":2,"next":{"title":"Apply","level":"1.6.8","depth":2,"path":"apply.md","ref":"apply.md","articles":[]},"previous":{"title":"PlusEmpty","level":"1.6.6","depth":2,"path":"plusEmpty.md","ref":"plusEmpty.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"isEmpty.md","mtime":"2020-12-13T01:55:32.385Z","type":"markdown"},"gitbook":{"version":"3.6.15","time":"2020-12-13T01:55:38.935Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
     
@@ -1193,10 +1236,6 @@ F&#x304C;<code>PlusEmpty</code>&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&
     
         
         <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         
