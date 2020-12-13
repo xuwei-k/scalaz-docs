@@ -27,7 +27,6 @@ object GitBook extends NpmCliBase {
     0
   }
 
-  lazy val pluginInstall = taskKey[Seq[String]]("install GitBook plugin")
   lazy val helpGitBook = taskKey[Seq[String]]("help GitBook")
   lazy val build = taskKey[Int]("build GitBook to html (an alias of html)")
   lazy val pdf = taskKey[Int]("build GitBook to pdf")
@@ -36,7 +35,6 @@ object GitBook extends NpmCliBase {
   lazy val buildAll = taskKey[Int]("build GitBook to all format")
 
   val settings = Seq(
-    pluginInstall := printRun(Process(s"$gitbookBin install")),
     helpGitBook := printRun(Process(s"$gitbookBin help")),
     html := buildBook(Format.Html).dependsOn(tut).evaluated,
     build := html.toTask("").value,
