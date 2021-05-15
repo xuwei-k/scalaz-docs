@@ -86,6 +86,6 @@ TaskKey[Unit]("scalazDiagram") := Def.sequential(scalazDiagram1, scalazDiagram2)
 
 lintAll := Def.sequential(LinkTest.eslint, TextLint.textlint.toTask("")).value
 
-testAll := Def.sequential(compile in Test, LinkTest.linkTest).value
+testAll := Def.sequential(Test / compile, LinkTest.linkTest).value
 
 buildWithCheck := Def.sequential(lintAll, testAll, Honkit.build).value
