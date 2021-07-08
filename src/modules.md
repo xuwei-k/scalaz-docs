@@ -46,7 +46,7 @@ libraryDependencies += "org.scalaz" %% "scalaz-iteratee" % "7.3.3"
 ## scalaz-scalacheck-binding
 
 ```tut:silent
-libraryDependencies += "org.scalaz" %% "scalaz-scalacheck-binding" % "7.3.3"
+libraryDependencies += "org.scalaz" %% "scalaz-scalacheck-binding" % "7.3.4"
 ```
 
 - iteratee に依存します
