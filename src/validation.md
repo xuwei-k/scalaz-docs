@@ -1,7 +1,7 @@
 # Validation
 
-- [ソースコード](https://github.com/scalaz/scalaz/blob/v7.3.3/core/src/main/scala/scalaz/Validation.scala)
-- [scaladoc](https://static.javadoc.io/org.scalaz/scalaz_2.12/7.3.3/scalaz/Validation.html)
+- [ソースコード](https://github.com/scalaz/scalaz/blob/v7.3.4/core/src/main/scala/scalaz/Validation.scala)
+- [scaladoc](https://static.javadoc.io/org.scalaz/scalaz_2.12/7.3.4/scalaz/Validation.html)
 
 
 `Validation`自体は、以下のようなsealed abstract classで、`Success`と`Failure`という2つのサブクラスがあります。
