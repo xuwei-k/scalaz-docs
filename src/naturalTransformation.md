@@ -3,13 +3,13 @@
 Scalaにおいて、[HaskellのRank N types](https://wiki.haskell.org/Rank-N_types)
 が直接サポートされていないことにより必要なデータ型[^data]です。
 
-```tut:invisible
+```scala mdoc:invisible
 import scalaz.NaturalTransformation
 ```
 
 scalazのpackage objectに以下のようなtype aliasが定義されていて、こちらが使われることが多いです。
 
-```tut:silent
+```scala mdoc:silent
 type ~>[F[_], G[_]] = NaturalTransformation[F, G]
 ```
 

@@ -27,11 +27,11 @@ val weightMap: Map[(String, String), Int] = List[(String, String, Int)](
   case (x, y, z) => ((x, y), z)
 }.toMap
 
-enablePlugins(TutPlugin)
+enablePlugins(MdocPlugin)
 
-tutSourceDirectory := srcDir
+mdocIn := srcDir
 
-tutTargetDirectory := compiledSrcDir
+mdocOut := compiledSrcDir
 
 Honkit.settings
 

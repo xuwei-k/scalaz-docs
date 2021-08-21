@@ -9,7 +9,7 @@
 - 右に`-`がくっついているのがRight、左に`-`がくっついているのがLeft
 
 
-```tut
+```scala mdoc
 import scalaz._
 
 val a: Int \/ String = \/-("foo")  // rightを生成

@@ -2,7 +2,7 @@
 
 以下のような、Stringを内部に持ったTreeのようなデータ型です。
 
-```tut:silent
+```scala mdoc:silent
 sealed abstract class Cord {
   // メソッド省略
 }

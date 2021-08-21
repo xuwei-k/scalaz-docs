@@ -2,11 +2,11 @@
 
 以下のようなフィールドを1つ保持したcase classです。
 
-```tut:invisible
+```scala mdoc:invisible
 import scalaz._
 ```
 
-```tut:silent
+```scala mdoc:silent
 final case class Coproduct[F[_], G[_], A](run: F[A] \/ G[A])
 ```
 

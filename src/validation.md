@@ -6,7 +6,7 @@
 
 `Validation`自体は、以下のようなsealed abstract classで、`Success`と`Failure`という2つのサブクラスがあります。
 
-```tut:silent
+```scala mdoc:silent
 sealed abstract class Validation[E, A] extends Product with Serializable
 final case class Success[E, A](a: A) extends Validation[E, A]
 final case class Failure[E, A](e: E) extends Validation[E, A]

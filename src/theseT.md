@@ -5,11 +5,11 @@ Theseのモナドトランスフォーマーです。7.2.x系だと、7.2.4以�
 
 定義は、単純に以下のようになっています。
 
-```tut:invisible
+```scala mdoc:invisible
 import scalaz.\&/
 ```
 
-```tut:silent
+```scala mdoc:silent
 final case class TheseT[F[_], A, B](run: F[A \&/ B]) {
   // その他のメソッド省略
 }

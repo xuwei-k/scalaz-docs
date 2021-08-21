@@ -6,7 +6,7 @@
 まず、Scala標準のStreamが実装に使われているわけではありません。
 `ListT`のページにも書きましたが単純に以下のようなクラス
 
-```tut:silent
+```scala mdoc:silent
 case class StreamT[F[_], A](run: F[Stream[A]])
 ```
 

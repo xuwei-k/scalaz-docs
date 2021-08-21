@@ -5,11 +5,11 @@
 本体にメソッドはそれほど多くなく、7.3.5時点で以下のような定義です。
 (シグネチャのみで、実装は省略しています)
 
-```tut:invisible
+```scala mdoc:invisible
 import scalaz._
 ```
 
-```tut:silent
+```scala mdoc:silent
 sealed abstract class Liskov[-A, +B] {
   def apply(a: A): B
   def substCo[F[+_]](p: F[A]): F[B]
@@ -24,7 +24,7 @@ sealed abstract class Liskov[-A, +B] {
 コンパニオンオブジェクトに`<~<`と`>~>`というaliasが定義されていて、基本的にはこのaliasが使われます。
 
 
-```tut:silent
+```scala mdoc:silent
 type <~<[-A, +B] = Liskov[A, B]
 
 type >~>[+B, -A] = Liskov[A, B]

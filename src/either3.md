@@ -2,7 +2,7 @@
 
 以下のような、3つのうちのどれか？を表すデータ型です。
 
-```tut:silent
+```scala mdoc:silent
 sealed abstract class Either3[A, B, C] extends Product with Serializable {
   // メソッド省略
 }

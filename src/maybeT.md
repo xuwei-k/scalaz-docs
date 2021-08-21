@@ -4,10 +4,10 @@
 scalazにMaybeが入ったのとほぼ同じタイミングでMaybeTも追加されました。
 実態は以下のようなcase classです。
 
-```tut:invisible
+```scala mdoc:invisible
 import scalaz.Maybe
 ```
 
-```tut:silent
+```scala mdoc:silent
 final case class MaybeT[F[_], A](run: F[Maybe[A]])
 ```

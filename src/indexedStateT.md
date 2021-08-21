@@ -7,12 +7,12 @@ Stateモナドのトランスフォーマーです。名前の通り実際のcla
 
 実際の7.2時点のIndexedStateTの定義は以下のようなものです。
 
-```tut:invisible
+```scala mdoc:invisible
 import scalaz._
 import scalaz.Id.Id
 ```
 
-```tut:silent
+```scala mdoc:silent
 sealed abstract class IndexedStateT[S1, S2, F[_], A] { self =>
   // その他のメソッド省略
 }
@@ -20,7 +20,7 @@ sealed abstract class IndexedStateT[S1, S2, F[_], A] { self =>
 
 その他に、関連する`StateT`や`State`は[scalazのpackage object](https://github.com/scalaz/scalaz/blob/v7.3.5/core/src/main/scala/scalaz/package.scala#L136-L146)にtype aliasとして定義されています。
 
-```tut:silent
+```scala mdoc:silent
 type StateT[S, F[_], A] = IndexedStateT[S, S, F, A]
 
 type IndexedState[S1, S2, A] = IndexedStateT[S1, S2, Id, A]

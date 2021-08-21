@@ -7,7 +7,7 @@ Theseとも呼ばれるデータ構造です。記号名の由来は、
 と`&`を合成したものです。以下のような、3通りのどれかを表現するデータ型です。
 
 
-```tut:silent
+```scala mdoc:silent
 sealed abstract class \&/[A, B] extends Product with Serializable
 final case class This[A, B](aa: A) extends (A \&/ B)
 final case class That[A, B](bb: B) extends (A \&/ B)

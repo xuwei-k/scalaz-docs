@@ -2,11 +2,11 @@
 
 `PlusEmpty`を継承した型クラスです。以下のような定義です。
 
-```tut:invisible
+```scala mdoc:invisible
 import scalaz._
 ```
 
-```tut:silent
+```scala mdoc:silent
 trait IsEmpty[F[_]] extends PlusEmpty[F] { self =>
 
   def isEmpty[A](fa: F[A]): Boolean

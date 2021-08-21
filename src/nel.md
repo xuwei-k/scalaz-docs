@@ -14,7 +14,7 @@
  - 末尾の要素へのアクセス、末尾への追加、sizeの取得などは、長さに比例した時間がかかる
 - いくつかのメソッドの使用例を書いておきます
 
-```tut
+```scala mdoc
 import scalaz._
 
 val a = NonEmptyList(1, 2, 3) // applyメソッドによる生成

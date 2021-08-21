@@ -1,6 +1,6 @@
 import sbt._
 import scala.sys.process.Process
-import tut.TutPlugin.autoImport.tut
+import mdoc.MdocPlugin.autoImport.mdoc
 
 object Honkit extends NpmCliBase {
   val honkitBin = nodeBin / "honkit"
@@ -26,12 +26,14 @@ object Honkit extends NpmCliBase {
   lazy val epub = inputKey[Int]("build Honkit to epub")
   lazy val buildAll = taskKey[Int]("build Honkit to all format")
 
+  private[this] val mdocTask = mdoc.toTask("")
+
   val settings = Seq(
     helpHonkit := printRun(Process(s"$honkitBin help")),
-    html := buildBook(Format.Html).dependsOn(tut).evaluated,
+    html := buildBook(Format.Html).dependsOn(mdocTask).evaluated,
     build := html.toTask("").value,
-    epub := buildBook(Format.Epub).dependsOn(tut).evaluated,
-    pdf := buildBook(Format.Pdf).dependsOn(tut).toTask("").value,
+    epub := buildBook(Format.Epub).dependsOn(mdocTask).evaluated,
+    pdf := buildBook(Format.Pdf).dependsOn(mdocTask).toTask("").value,
     buildAll := epub.toTask("").dependsOn(html.toTask("")).value
   )
 }

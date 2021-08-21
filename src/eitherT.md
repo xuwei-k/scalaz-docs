@@ -6,11 +6,11 @@ Eitherのモナドトランスフォーマーです。
 
 実態は以下のようなcase classです
 
-```tut:invisible
+```scala mdoc:invisible
 import scalaz._
 ```
 
-```tut:silent
+```scala mdoc:silent
 final case class EitherT[A, F[_], B](run: F[A \/ B])
 ```
 

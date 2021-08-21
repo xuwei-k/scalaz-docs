@@ -16,22 +16,22 @@ Alignは`\&/`と密接に関連しており、`\&/`を理解していないとAl
 標準ライブラリのListのzipメソッドでは、長さが揃っていない場合は、短い方に合わせて切り捨てられますが
 
 
-```tut:invisible
+```scala mdoc:invisible
 import scalaz._, std.list._
 ```
 
-```tut:silent
+```scala mdoc:silent
 val x = List("a", "b", "c", "d")
 val y = List(1, 2)
 ```
 
-```tut
+```scala mdoc
 x zip y
 ```
 
 Alignを使用した場合、切り捨てられるのではなく
 
-```tut
+```scala mdoc
 Align[List].align(x, y)
 Align[List].align(y, x)
 ```

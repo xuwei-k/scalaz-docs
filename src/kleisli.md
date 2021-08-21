@@ -3,7 +3,7 @@
 `ReaderT`という別名があります。つまり、Readerモナドトランスフォーマーです。
 実態は、以下のようなcase classです。
 
-```tut:silent
+```scala mdoc:silent
 final case class Kleisli[M[_], A, B](run: A => M[B])
 ```
 

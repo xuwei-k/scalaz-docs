@@ -2,13 +2,13 @@
 
 初心者や、core以外に興味が無い大半のユーザーは、このページは読み飛ばしてもらって構いません
 
-```tut:invisible
+```scala mdoc:invisible
 import sbt._, Keys._
 ```
 
 ## scalaz-core
 
-```tut:silent
+```scala mdoc:silent
 libraryDependencies += "org.scalaz" %% "scalaz-core" % "7.3.5"
 ```
 
@@ -22,7 +22,7 @@ libraryDependencies += "org.scalaz" %% "scalaz-core" % "7.3.5"
 
 ## scalaz-effect
 
-```tut:silent
+```scala mdoc:silent
 libraryDependencies += "org.scalaz" %% "scalaz-effect" % "7.3.5"
 ```
 
@@ -36,7 +36,7 @@ Task, Future, Actorなどがありましたが、Scalaz 7.3からはこのモジ
 
 ## scalaz-iteratee
 
-```tut:silent
+```scala mdoc:silent
 libraryDependencies += "org.scalaz" %% "scalaz-iteratee" % "7.3.5"
 ```
 
@@ -45,7 +45,7 @@ libraryDependencies += "org.scalaz" %% "scalaz-iteratee" % "7.3.5"
 
 ## scalaz-scalacheck-binding
 
-```tut:silent
+```scala mdoc:silent
 libraryDependencies += "org.scalaz" %% "scalaz-scalacheck-binding" % "7.3.5"
 ```
 

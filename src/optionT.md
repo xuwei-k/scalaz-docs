@@ -5,6 +5,6 @@
 
 実装としては、単に以下のような`run`というフィールドを1つだけ保持したcase classです。
 
-```tut:silent
+```scala mdoc:silent
 final case class OptionT[F[_], A](run: F[Option[A]])
 ```
