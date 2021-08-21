@@ -1118,15 +1118,24 @@ Alignは<code>\&amp;/</code>と密接に関連しており、<code>\&amp;/</code
 <pre><code class="lang-scala"><span class="hljs-keyword">val</span> x = <span class="hljs-type">List</span>(<span class="hljs-string">&quot;a&quot;</span>, <span class="hljs-string">&quot;b&quot;</span>, <span class="hljs-string">&quot;c&quot;</span>, <span class="hljs-string">&quot;d&quot;</span>)
 <span class="hljs-keyword">val</span> y = <span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)
 </code></pre>
-<pre><code class="lang-scala">scala&gt; x zip y
-res0: <span class="hljs-type">List</span>[(<span class="hljs-type">String</span>, <span class="hljs-type">Int</span>)] = <span class="hljs-type">List</span>((a,<span class="hljs-number">1</span>), (b,<span class="hljs-number">2</span>))
+<pre><code class="lang-scala">x zip y
+<span class="hljs-comment">// res0: List[(String, Int)] = List((&quot;a&quot;, 1), (&quot;b&quot;, 2))</span>
 </code></pre>
 <p>Alignを使用した場合、切り捨てられるのではなく</p>
-<pre><code class="lang-scala">scala&gt; <span class="hljs-type">Align</span>[<span class="hljs-type">List</span>].align(x, y)
-res1: <span class="hljs-type">List</span>[<span class="hljs-type">String</span> \&amp;/ <span class="hljs-type">Int</span>] = <span class="hljs-type">List</span>(<span class="hljs-type">Both</span>(a,<span class="hljs-number">1</span>), <span class="hljs-type">Both</span>(b,<span class="hljs-number">2</span>), <span class="hljs-type">This</span>(c), <span class="hljs-type">This</span>(d))
-
-scala&gt; <span class="hljs-type">Align</span>[<span class="hljs-type">List</span>].align(y, x)
-res2: <span class="hljs-type">List</span>[<span class="hljs-type">Int</span> \&amp;/ <span class="hljs-type">String</span>] = <span class="hljs-type">List</span>(<span class="hljs-type">Both</span>(<span class="hljs-number">1</span>,a), <span class="hljs-type">Both</span>(<span class="hljs-number">2</span>,b), <span class="hljs-type">That</span>(c), <span class="hljs-type">That</span>(d))
+<pre><code class="lang-scala"><span class="hljs-type">Align</span>[<span class="hljs-type">List</span>].align(x, y)
+<span class="hljs-comment">// res1: List[String \&amp;/ Int] = List(</span>
+<span class="hljs-comment">//   Both(&quot;a&quot;, 1),</span>
+<span class="hljs-comment">//   Both(&quot;b&quot;, 2),</span>
+<span class="hljs-comment">//   This(&quot;c&quot;),</span>
+<span class="hljs-comment">//   This(&quot;d&quot;)</span>
+<span class="hljs-comment">// )</span>
+<span class="hljs-type">Align</span>[<span class="hljs-type">List</span>].align(y, x)
+<span class="hljs-comment">// res2: List[Int \&amp;/ String] = List(</span>
+<span class="hljs-comment">//   Both(1, &quot;a&quot;),</span>
+<span class="hljs-comment">//   Both(2, &quot;b&quot;),</span>
+<span class="hljs-comment">//   That(&quot;c&quot;),</span>
+<span class="hljs-comment">//   That(&quot;d&quot;)</span>
+<span class="hljs-comment">// )</span>
 </code></pre>
 <ul>
 <li>両方が存在する部分まではBoth</li>
@@ -1178,7 +1187,7 @@ res2: <span class="hljs-type">List</span>[<span class="hljs-type">Int</span> \&a
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Align","level":"1.6.19","depth":2,"next":{"title":"Distributive","level":"1.6.20","depth":2,"path":"distributive.md","ref":"distributive.md","articles":[]},"previous":{"title":"Divisible","level":"1.6.18","depth":2,"path":"divisible.md","ref":"divisible.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"align.md","mtime":"2021-08-21T06:26:36.104Z","type":"markdown"},"gitbook":{"version":"3.6.20","time":"2021-08-21T06:26:45.499Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Align","level":"1.6.19","depth":2,"next":{"title":"Distributive","level":"1.6.20","depth":2,"path":"distributive.md","ref":"distributive.md","articles":[]},"previous":{"title":"Divisible","level":"1.6.18","depth":2,"path":"divisible.md","ref":"divisible.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"align.md","mtime":"2021-08-21T06:39:30.173Z","type":"markdown"},"gitbook":{"version":"3.6.20","time":"2021-08-21T06:39:38.974Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
