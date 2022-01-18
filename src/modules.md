@@ -46,7 +46,7 @@ libraryDependencies += "org.scalaz" %% "scalaz-iteratee" % "7.3.5"
 ## scalaz-scalacheck-binding
 
 ```scala mdoc:silent
-libraryDependencies += "org.scalaz" %% "scalaz-scalacheck-binding" % "7.3.5"
+libraryDependencies += "org.scalaz" %% "scalaz-scalacheck-binding" % "7.3.6"
 ```
 
 - iteratee に依存します
