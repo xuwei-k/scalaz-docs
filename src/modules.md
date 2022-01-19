@@ -51,4 +51,4 @@ libraryDependencies += "org.scalaz" %% "scalaz-scalacheck-binding" % "7.3.6"
 
 - iteratee に依存します
 - 主に [scalacheck](https://github.com/typelevel/scalacheck) によるテストをする場合に使います
-- scalacheckのversion毎にクロスビルドされています
+- Scalazの特定のversionでは、scalacheckのversion毎にクロスビルドされていたりしました
