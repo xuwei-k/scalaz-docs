@@ -18,7 +18,7 @@ sealed abstract class IndexedStateT[S1, S2, F[_], A] { self =>
 }
 ```
 
-その他に、関連する`StateT`や`State`は[scalazのpackage object](https://github.com/scalaz/scalaz/blob/v7.3.5/core/src/main/scala/scalaz/package.scala#L136-L146)にtype aliasとして定義されています。
+その他に、関連する`StateT`や`State`は[scalazのpackage object](https://github.com/scalaz/scalaz/blob/v7.3.6/core/src/main/scala/scalaz/package.scala#L136-L146)にtype aliasとして定義されています。
 
 ```scala mdoc:silent
 type StateT[S, F[_], A] = IndexedStateT[S, S, F, A]
