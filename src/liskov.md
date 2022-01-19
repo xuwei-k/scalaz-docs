@@ -1,6 +1,6 @@
 # Liskov
 
-[Scala標準ライブラリの`<:<`](https://github.com/scala/scala/blob/v2.13.6/src/library/scala/typeConstraints.scala#L63)と同じような役割をするものです。
+[Scala標準ライブラリの`<:<`](https://github.com/scala/scala/blob/v2.13.8/src/library/scala/typeConstraints.scala#L63)と同じような役割をするものです。
 
 本体にメソッドはそれほど多くなく、7.3.6時点で以下のような定義です。
 (シグネチャのみで、実装は省略しています)
@@ -14,11 +14,12 @@ sealed abstract class Liskov[-A, +B] {
   def apply(a: A): B
   def substCo[F[+_]](p: F[A]): F[B]
   def substCt[F[-_]](p: F[B]): F[A]
-  def *[+[+_, +_], C, D](that: Liskov[C, D]): Liskov[A + C, B + D]
+  def *[x[+_, +_], C, D](that: Liskov[C, D]): Liskov[A x C, B x D]
   def andThen[C](that: Liskov[B, C]): Liskov[A, C]
   def compose[C](that: Liskov[C, A]): Liskov[C, B]
   def onF[X](fa: X => A): X => B
 }
+
 ```
 
 コンパニオンオブジェクトに`<~<`と`>~>`というaliasが定義されていて、基本的にはこのaliasが使われます。
