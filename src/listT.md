@@ -6,4 +6,4 @@
 
 - [Scalaz Issue 921. ListT violate the associative law](https://github.com/scalaz/scalaz/issues/921)
 - https://wiki.haskell.org/ListT_done_right
-- http://togetter.com/li/800229
+- https://togetter.com/li/800229
