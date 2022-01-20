@@ -58,7 +58,7 @@ Scalazでは、バージョン`7.0.0`以降は、同じ規則でバイナリ互�
   - Scala 2.10は途中からサポートしなくなりました
   - Scala 3は7.2.34からサポート
 - 7.2.1以降、公式でScala.jsをサポートしています(concurrentモジュールを除く)
-- 7.2.10以降、[scala-native](http://www.scala-native.org/) をサポートしています(core, effect, iterateeのみ)
+- 7.2.10以降、[scala-native](https://www.scala-native.org/) をサポートしています(concurrentモジュールを除く)
 - Java 8以降をサポートしています(Java 7でも動く可能性はありますが、途中からJava 8でのビルドに変わったので保証はされません)
 
 
