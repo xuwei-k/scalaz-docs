@@ -7,7 +7,7 @@ Haskellでは数年前から存在していましたが、Scalaで実装され�
 スタックオーバーフローしないFreeTの実装は不可能かと思われていましたが、
 まずpurescriptという言語で実現され、それがScalazに移植されました。
 
-[Stack Safety for Free](http://functorial.com/stack-safety-for-free/index.pdf)
+[Stack Safety for Free](https://functorial.com/stack-safety-for-free/index.pdf)
 
 Haskellにおいては[ekmett/freeに対応するものが存在](https://github.com/ekmett/free/blob/v4.12.1/src/Control/Monad/Trans/Free.hs)しています[^freeT-church]。
 
