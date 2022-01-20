@@ -21,8 +21,8 @@ Scalazでは、バージョン`7.0.0`以降は、同じ規則でバイナリ互�
  - 例 `7.2.0-M4`
 
 
-バイナリ互換は、Lightbend(旧 Typesafe)社がOSSで公開している [migration-manager](https://github.com/lightbend/migration-manager) と呼ばれるツールで自動でチェックされています。[^mima-bug]
-このmigration-managerは、Scala本体のライブラリ自体のバイナリ互換のチェックにも使われているものです。
+バイナリ互換は、Lightbend(旧 Typesafe)社がOSSで公開している [mima](https://github.com/lightbend/mima) と呼ばれるツールで自動でチェックされています。[^mima-bug]
+このmima、Scala本体のライブラリ自体のバイナリ互換のチェックにも使われているものです。
 
 
 ## バージョン
@@ -83,4 +83,4 @@ Scalazでは、バージョン`7.0.0`以降は、同じ規則でバイナリ互�
 - 型クラス同士の関係を継承を使って表現することをやめることにより、implicitの衝突の問題を回避する予定らしいです
 
 [^oldz]: Scalaz 6以前はこの規則にしたがっていません。migration-managerでもチェックされていません。
-[^mima-bug]: migration-manager そのもののバグにより、一部7.1.x系統でバイナリ互換が崩れた、という問題はあります。 https://github.com/scalaz/scalaz/issues/1199 scalaz.syntax.ToTypeClassOps という、普通直接使わないものを継承した場合のみ発生するので、殆どの場合は問題ないでしょう。
+[^mima-bug]: mima そのもののバグにより、一部7.1.x系統でバイナリ互換が崩れた、という問題はあります。 https://github.com/scalaz/scalaz/issues/1199 scalaz.syntax.ToTypeClassOps という、普通直接使わないものを継承した場合のみ発生するので、殆どの場合は問題ないでしょう。
