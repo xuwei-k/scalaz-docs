@@ -28,8 +28,7 @@ jobs:
         python -c "import sys; main=lambda x,y:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main('~/calibre-bin', True)" >/dev/null
     - run: |
         export PATH="~/calibre-bin/calibre/:$HOME/calibre-bin/calibre/:$PATH"
-        sbt -v scalazDiagram build epub
-    - run: mv book.epub honkit/_book/scalaz-docs.epub
+        sbt -v scalazDiagram build
     - run: find . -name "*.class" | xargs rm -rf
     - run: find . -name target | xargs rm -rf
     - name: push to gh-pages
