@@ -9,7 +9,7 @@ import sbt._, Keys._
 ## scalaz-core
 
 ```scala mdoc:silent
-libraryDependencies += "org.scalaz" %% "scalaz-core" % "7.3.6"
+libraryDependencies += "org.scalaz" %% "scalaz-core" % "7.3.7"
 ```
 
 - 一番多く利用されるモジュールです 
@@ -23,7 +23,7 @@ libraryDependencies += "org.scalaz" %% "scalaz-core" % "7.3.6"
 ## scalaz-effect
 
 ```scala mdoc:silent
-libraryDependencies += "org.scalaz" %% "scalaz-effect" % "7.3.6"
+libraryDependencies += "org.scalaz" %% "scalaz-effect" % "7.3.7"
 ```
 
 - `scalaz-core` に依存します
@@ -37,7 +37,7 @@ Task, Future, Actorなどがありましたが、Scalaz 7.3からはこのモジ
 ## scalaz-iteratee
 
 ```scala mdoc:silent
-libraryDependencies += "org.scalaz" %% "scalaz-iteratee" % "7.3.6"
+libraryDependencies += "org.scalaz" %% "scalaz-iteratee" % "7.3.7"
 ```
 
 - `scalaz-effect` に依存します
@@ -46,7 +46,7 @@ libraryDependencies += "org.scalaz" %% "scalaz-iteratee" % "7.3.6"
 ## scalaz-scalacheck-binding
 
 ```scala mdoc:silent
-libraryDependencies += "org.scalaz" %% "scalaz-scalacheck-binding" % "7.3.6"
+libraryDependencies += "org.scalaz" %% "scalaz-scalacheck-binding" % "7.3.7"
 ```
 
 - iteratee に依存します

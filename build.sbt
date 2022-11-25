@@ -7,7 +7,7 @@ lazy val buildWithCheck = taskKey[Unit]("lintAll testAll build")
 val scalazDiagram1 = TaskKey[Unit]("scalazDiagram1")
 val scalazDiagram2 = TaskKey[Unit]("scalazDiagram2")
 
-val scalazVersion = "7.3.6"
+val scalazVersion = "7.3.7"
 
 def urlMap(clazz: Class[_]): Map[String, String] =
   if (clazz.getName.startsWith("scalaz"))
