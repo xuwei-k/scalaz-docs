@@ -15,7 +15,7 @@ jobs:
         java-version: 8
         distribution: adopt
     - run: sudo apt-get update
-    - run: sudo apt-get install graphviz
+    - run: sudo apt-get install graphviz libegl1 libopengl0
     - uses: actions/setup-node@v3.6.0
       with:
         node-version: '14.15.1'
