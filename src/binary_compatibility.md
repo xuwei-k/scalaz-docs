@@ -52,10 +52,10 @@ Scalazでは、バージョン`7.0.0`以降は、同じ規則でバイナリ互�
 
 - バージョン `7.2.0` のfinalは、2015年12月5日にリリースされました
 - [リリースの際のgoogle groupのスレッド](https://groups.google.com/d/topic/scalaz/BXW6BVxYEPE/discussion)
-- 2022年11月現在の最新版は7.2.35です
+- 2023年11月現在の最新版は7.2.35です
 - 7.2.0 final以降、7.2.1, 7.2.2という順番でリリースされており、それらはバイナリ互換を保持しています
-- Scala 2.11.x, 2.12.x, 2.13.x, 3.x をサポートしています
-  - Scala 2.10は途中からサポートしなくなりました
+- Scala 2.12.x, 2.13.x, 3.x をサポートしています
+  - Scala 2.10と2.11は途中からサポートしなくなりました
   - Scala 3は7.2.34からサポート
 - 7.2.1以降、公式でScala.jsをサポートしています(concurrentモジュールを除く)
 - 7.2.10以降、[scala-native](https://www.scala-native.org/) をサポートしています(concurrentモジュールを除く)
@@ -77,7 +77,7 @@ Scalazでは、バージョン`7.0.0`以降は、同じ規則でバイナリ互�
 
 ### 8.x
 
-- [7.3.xの次は8.xになりそうな雰囲気](https://github.com/scalaz/scalaz/issues/1480)だけありましたが、最近開発は停滞しています
+- [7.3.xの次は8.xになりそうな雰囲気](https://github.com/scalaz/scalaz/issues/1480)がありましたが、開発は停滞して、実質無かったことになりそうです
 - 7.xのgitの履歴をほぼ引き継がずに、ほとんど一から書き直しています
 - これを書いている現在は `series/8.0.x` というbranchで開発されています https://github.com/scalaz/scalaz/tree/series/8.0.x
 - 型クラス同士の関係を継承を使って表現することをやめることにより、implicitの衝突の問題を回避する予定らしいです
