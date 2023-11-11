@@ -15,5 +15,5 @@ libraryDependencies += "org.scalaz" %% "scalaz-core" % "7.3.8"
 必要に応じて、以下のように `scalaVersion` など他のkeyの設定をしてください。
 
 ```scala mdoc:silent
-scalaVersion := "3.1.0"
+scalaVersion := "3.3.1"
 ```
