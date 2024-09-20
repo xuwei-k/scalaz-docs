@@ -16,7 +16,7 @@ jobs:
         distribution: adopt
     - run: sudo apt-get update
     - run: sudo apt-get install graphviz libegl1 libopengl0
-    - uses: actions/setup-node@v4.0.3
+    - uses: actions/setup-node@v4.0.4
       with:
         node-version: '14.15.1'
     - run: npm install
