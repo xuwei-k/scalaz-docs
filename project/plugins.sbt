@@ -1,4 +1,4 @@
-addSbtPlugin("org.scalameta" % "sbt-mdoc" % "2.6.5")
+addSbtPlugin("org.scalameta" % "sbt-mdoc" % "2.7.0")
 
 fullResolvers ~= {_.filterNot(_.name == "jcenter")}
 
