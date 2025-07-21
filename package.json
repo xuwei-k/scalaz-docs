@@ -12,7 +12,7 @@
     "babel-core": "^6.26.3",
     "babel-preset-es2015": "6.24.1",
     "babel-preset-power-assert": "3.0.0",
-    "cheerio": "1.1.0",
+    "cheerio": "1.1.2",
     "eslint": "^9.31.0",
     "eslint-config-eslint": "11.0.0",
     "gitbook-plugin-anchors": "0.7.1",
