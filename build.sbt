@@ -1,15 +1,24 @@
 import NpmCliBase._
 
+@transient
 lazy val lintAll = taskKey[Unit]("lint text, html")
+@transient
 lazy val testAll = taskKey[Unit]("test scala, links")
+@transient
 lazy val buildWithCheck = taskKey[Unit]("lintAll testAll build")
 
+@transient
 val scalazDiagram1 = TaskKey[Unit]("scalazDiagram1")
+@transient
 val scalazDiagram2 = TaskKey[Unit]("scalazDiagram2")
 
 val scalazVersion = "7.3.8"
 
-def urlMap(clazz: Class[_]): Map[String, String] =
+scalaVersion := "3.8.2"
+
+evictionErrorLevel := Level.Warn
+
+def urlMap(clazz: Class[?]): Map[String, String] =
   if (clazz.getName.startsWith("scalaz"))
     Map(
       "href" -> s"https://github.com/scalaz/scalaz/tree/v${scalazVersion}/core/src/main/scala/${clazz.getName.replace('.', '/')}.scala",
@@ -82,7 +91,10 @@ scalazDiagram2 := {
   IO.move(svg, file("honkit") / "diagram2.svg")
 }
 
-TaskKey[Unit]("scalazDiagram") := Def.sequential(scalazDiagram1, scalazDiagram2).value
+@transient
+val scalazDiagram = TaskKey[Unit]("scalazDiagram")
+
+scalazDiagram := Def.sequential(scalazDiagram1, scalazDiagram2).value
 
 lintAll := Def.sequential(LinkTest.eslint, TextLint.textlint.toTask("")).value
 

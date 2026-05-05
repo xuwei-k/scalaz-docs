@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@v6
     - uses: actions/setup-java@v5
       with:
-        java-version: 11
+        java-version: 17
         distribution: adopt
     - uses: sbt/setup-sbt@v1
     - run: sudo apt-get update
@@ -28,7 +28,7 @@ jobs:
         python -c "import sys; main=lambda x,y:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main('~/calibre-bin', True)" >/dev/null
     - run: |
         export PATH="~/calibre-bin/calibre/:$HOME/calibre-bin/calibre/:$PATH"
-        sbt -v scalazDiagram build
+        sbt -v --server scalazDiagram build
     - run: find . -name "*.class" | xargs rm -rf
     - run: find . -name target | xargs rm -rf
     - name: push to gh-pages

@@ -20,7 +20,7 @@ trait NpmCliBase {
   }
 
   def printRun(p: ProcessBuilder): Seq[String] = {
-    val lines = p.lineStream.toList
+    val lines = p.lazyLines.toList
     lines.foreach(println)
     lines
   }
