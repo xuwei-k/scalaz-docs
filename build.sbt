@@ -14,7 +14,7 @@ val scalazDiagram2 = TaskKey[Unit]("scalazDiagram2")
 
 val scalazVersion = "7.3.8"
 
-scalaVersion := "3.8.3"
+scalaVersion := "3.8.4"
 
 evictionErrorLevel := Level.Warn
 
