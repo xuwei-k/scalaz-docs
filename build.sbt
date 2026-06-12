@@ -12,7 +12,7 @@ val scalazDiagram1 = TaskKey[Unit]("scalazDiagram1")
 @transient
 val scalazDiagram2 = TaskKey[Unit]("scalazDiagram2")
 
-val scalazVersion = "7.3.8"
+val scalazVersion = "7.3.9"
 
 scalaVersion := "3.8.4"
 
