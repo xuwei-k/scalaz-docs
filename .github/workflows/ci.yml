@@ -14,7 +14,7 @@ jobs:
       with:
         java-version: 17
         distribution: temurin
-    - uses: sbt/setup-sbt@v1
+    - uses: sbt/setup-sbt@v1.5.5
     - run: sudo apt-get update
     - run: sudo apt-get install graphviz libegl1 libopengl0
     - uses: actions/setup-node@v7.0.0
